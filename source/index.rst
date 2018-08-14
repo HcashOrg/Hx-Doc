@@ -3,14 +3,19 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to HX Document's documentation!
-=======================================
+Welcome to HyperExchange's documentation!
+=========================================
 
 .. toctree::
    :maxdepth: 2
+   :numbered:
+   :glob:
    :caption: Contents:
 
-
+   hx_deployment
+   hxcore/*
+   indicator/manual
+   testnet_guide
 
 Indices and tables
 ==================
