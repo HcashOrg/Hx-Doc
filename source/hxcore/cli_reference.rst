@@ -11,12 +11,14 @@ HX Core project releases two applications - **HX_node** and **HX_wallet**.
 * **HX_wallet** is the user client CLI. It connects to **HX_node** to access blockchain data and manages local wallet.
 
 HX_node can run with RPC enabled. Only when the RPC is enabled the HX_wallet can connect to HX_node.
-By default the RPC endpoint is 127.0.0.1:8090.
+By default the RPC endpoint is *127.0.0.1:8090*.
 On Windows please start HX_node with RPC by the following command::
 
     HX_node.exe --data-dir E:\coding\data --rpc-endpoint
 
+
 Then we can start the HX_wallet by the following command::
+
     HX_wallet.exe -s
 
 
@@ -161,47 +163,54 @@ Basic Command
 
 承兑单相关
 ^^^^^^^^^^
-    账户做交易时，需要消耗HX作为手续费，但是如果账户没有HX，就需要使用本账户内实际拥有的代币来支付手续费
+
+    This part introduce fee acceptance order operations. Actually the fee acceptance order is trading between HX and other IOU asset. Here we call the other IOU asset *target asset*.
 
 #. create_guarantee_order [account] [asset_orign] [asset_target] [symbol] [true]
-    :FUNCTION: 创建承兑单. 该操作用于账户下有HX，但是想要把HX利用承兑来换为其他代币，例如btc
+    :FUNCTION: create fee acceptance order.
     :PARAMETERS: 
-        :account: 为承兑单创建者
-        :asset_orign: 为该账户下用于承兑的HX数量
-        :asset_target: 想要承兑目的代币的数量
-        :symbol:    目的代币数字资产类型
+        :account: account to create the order
+        :asset_orign: amount of HX to accept
+        :asset_target: target asset to accept
+        :symbol: target asset symbol
         :true: XXX
+    :RETURN: XXX
 
 #. list_guarantee_order [symbol] [all]
-    :FUNCTION: 返回符合条件的承兑单队列
+    :FUNCTION: list fee acceptance orders by symbol
     :PARAMETERS: 
-        :symbol: 资产类型
-        :all: true/false是否列出所有承兑单，包含已经结束的
+        :symbol: target asset symbol
+        :all: true/false means if the result include completed order
+    :RETURN: XXX
 
 #. get_my_guarantee_order [account] [all]
-    :FUNCTION: 返回该地址创建的承兑单
+    :FUNCTION: list all fee acceptance orders create by account
     :PARAMETERS: 
-        :account: 地址
-        :all: 是否包含已经结束的承兑单
+        :account: account name
+        :all: true/false means if the result include completed order
+    :RETURN: XXX
 
 #. set_guarantee_id [guarantee_id]
     :FUNCTION: 设置需要的承兑单，该设置不会上链，只是用于当前即将执行的交易，该交易执行之后不论是否成功，本次设置都会失效
     :PARAMETERS: 
         :guarantee_id: 承兑单id
 
-senator相关
-^^^^^^^^^^^
-    senator 用于对跨链资产管理，大部分操作都是投票相关
+Senator COmmand
+^^^^^^^^^^^^^^^
+
+    Senator manage cross-chain assets and HX proposals. The following commands can be used to achieve this management.
 
 #. create_guard_member  [proposer_account] [account] [url] [expiration_time] [true]
-    :FUNCTION: 创建一个提案用于将特定账户变为候选senator
+    :FUNCTION: create a proposal to name an account to be a senator.
     :PARAMETERS: 
-        :proposer_account: 提案账户名
-        :account: 待候选senator
+        :proposer_account: proposer account name
+        :account: named account name
         :url:    网址
-        :expiration_time: 超时时间
+        :expiration_time: expiration time
+    :RETURN: XXX
 
 #. update_guard_formal [proposer_account] [formal] [expiration_time] [true]
+    :FUNCTION: XXX
     :PARAMETERS: 
         :proposer_account: 提案发起人以及成为正式senator账户名
         :formal: 默认为true,将senator变为正式senator
@@ -256,24 +265,26 @@ senator相关
         :account: 当前账户名
 
 #. approve_proposal [account] [proposal_id] [delta] [true]
-    :FUNCTION: 同意提案
+    :FUNCTION: approve a proposal
     :PARAMETERS: 
-        :account: 投票人
-        :proposal_id: 提案id
-        :delta: 投票内容,类似如下{"key_approvals_to_add":[addr]，“key_approvals_to_remove”：[addr]}
+        :account: voter account name
+        :proposal_id: proposal id
+        :delta: content ,for example {"key_approvals_to_add":[addr]，“key_approvals_to_remove”：[addr]}
         :true: XXX
 
 #. get_crosschain_transaction [type]
-    :FUNCTION: 返回对应状态下提现交易及状态
+    :FUNCTION: query withdraw transaction status
     :PARAMETERS: 
-        :type: 状态 0,1,2,3,4
-            + 0: 提现请求状态
-            + 1，2: 交易等待签名或签名中状态
-            + 3: 交易签名结束广播
-            + 4: 对应资产链已打包该交易
+        :type: 0,1,2,3,4
+            + 0: request is accepted
+            + 1，2: waiting for signatures
+            + 3: signing complete and broadcast
+            + 4: confirmed by original chain
+    :RETURN: XXX
 
 #. guard_sign_crosschain_transaction [trxid] [senator]
-    :FUNCTION: 对提现交易进行签名操作
+    :FUNCTION: sign for withdraw request
     :PARAMETERS: 
-        :trxid: 提现交易id，状态1下
-        :senator: senator账户名
+        :trxid: withdraw request transaction id
+        :senator: senator account name
+    :RETURN: XXX

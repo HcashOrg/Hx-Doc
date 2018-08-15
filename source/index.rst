@@ -13,7 +13,7 @@ Welcome to HyperExchange's documentation!
    :caption: Contents:
 
    hx_deployment
-   hxcore/*
+   hxcore/cli_reference
    indicator/manual
    testnet_guide
 
