@@ -52,14 +52,14 @@ Basic Command
         :private_key: private key
     :RETURN: XXX
 
-#. register_account [name] [true]
+#. register_account [name] [broadcast]
     :FUNCTION: register the account name to blockchain.
     :PARAMETERS: 
         :name: account name
-        :true: XXX
+        :broadcast: true/false broadcast or not
     :RETURN: XXX
 
-#. transfer_to_address [from] [to] [amount] [symbol] [memo] [true]
+#. transfer_to_address [from] [to] [amount] [symbol] [memo] [broadcast]
     :FUNCTION: transfer asset to other user.
     :PARAMETERS: 
         :from: sender address
@@ -67,7 +67,7 @@ Basic Command
         :amount: amount to transfer
         :symbol: asset symbol
         :memo: memo of this transaction
-        :true: XXX
+        :broadcast: true/false broadcast or not
     :RETURN: XXX
 
 #. get_transaction [trxid]
@@ -94,12 +94,12 @@ Basic Command
         :name: account name
     :RETURN: details of senator or null if it is not a senator
 
-#. create_miner [name] [url] [true]
+#. create_miner [name] [url] [broadcast]
     :FUNCTION: register to be a citizen.
     :PARAMETERS: 
         :name: account name
         :url: 网页地址
-        :true: XXX
+        :broadcast: true/false broadcast or not
     :RETURN: XXX
 
 #. create_crosschain_symbol [symbol]
@@ -108,21 +108,22 @@ Basic Command
         :symbol: asset symbol
     :RETURN: XXX
 
-#. bind_tunnel_account [account] [tunnel_account] [symbol] [true]
+#. bind_tunnel_account [account] [tunnel_account] [symbol] [broadcast]
     :FUNCTION: bind a HX account with a tunnel account. the private key of both accounts should be existed.
     :PARAMETERS:
         :account: HX account name
         :tunnel_account: account of IOU chain
         :symbol: IOU asset symbol
-        :true: XXX
+        :broadcast: true/false broadcast or not
     :RETURN: XXX
 
-#. unbind_tunnel_account [account] [tunnel_account] [symbol] [true]
+#. unbind_tunnel_account [account] [tunnel_account] [symbol] [broadcast]
     :FUNCTION: unbind tunnel account and HX account. the private key of both accounts should be existed.
     :PARAMETERS: 
         :account: HX account name
         :tunnel_account: account of IOU chain
         :symbol: IOU asset symbol
+        :broadcast: true/false broadcast or not
 
 #. get_binding_account [account] [symbol]
     :FUNCTION: query tunnel_account
@@ -143,7 +144,7 @@ Basic Command
         :symbol: IOU asset symbol
     :RETURN: XXX
 
-#. withdraw_cross_chain_transaction [account] [amount] [symbol] [crosschain_addr] [memo] [true]
+#. withdraw_cross_chain_transaction [account] [amount] [symbol] [crosschain_addr] [memo] [broadcast]
     :FUNCTION: initiate a withdraw request
     :PARAMETERS: 
         :account: withdraw HX account
@@ -151,14 +152,15 @@ Basic Command
         :symbol: asset symbol
         :crosschain_addr: target address of original chain
         :memo: memo
-        :true: XXX
+        :broadcast: true/false broadcast or not
     :RETURN: XXX
 
-#. refund_request [refund_acount] [txid] [true]
+#. refund_request [refund_acount] [txid] [broadcast]
     :FUNCTION: cancel withdraw request
     :PARAMETERS: 
         :runfund_account: withdraw HX account
         :txid:  transaction id to be canceled
+        :broadcast: true/false broadcast or not
     :RETURN: XXX
 
 承兑单相关
@@ -166,14 +168,14 @@ Basic Command
 
     This part introduce fee acceptance order operations. Actually the fee acceptance order is trading between HX and other IOU asset. Here we call the other IOU asset *target asset*.
 
-#. create_guarantee_order [account] [asset_orign] [asset_target] [symbol] [true]
+#. create_guarantee_order [account] [asset_orign] [asset_target] [symbol] [broadcast]
     :FUNCTION: create fee acceptance order.
     :PARAMETERS: 
         :account: account to create the order
         :asset_orign: amount of HX to accept
         :asset_target: target asset to accept
         :symbol: target asset symbol
-        :true: XXX
+        :broadcast: true/false broadcast or not
     :RETURN: XXX
 
 #. list_guarantee_order [symbol] [all]
@@ -200,56 +202,57 @@ Senator COmmand
 
     Senator manage cross-chain assets and HX proposals. The following commands can be used to achieve this management.
 
-#. create_guard_member  [proposer_account] [account] [url] [expiration_time] [true]
+#. create_guard_member  [proposer_account] [account] [url] [expiration_time] [broadcast]
     :FUNCTION: create a proposal to name an account to be a senator.
     :PARAMETERS: 
         :proposer_account: proposer account name
         :account: named account name
         :url:    网址
         :expiration_time: expiration time
+        :broadcast: true/false broadcast or not
     :RETURN: XXX
 
-#. update_guard_formal [proposer_account] [formal] [expiration_time] [true]
+#. update_guard_formal [proposer_account] [formal] [expiration_time] [broadcast]
     :FUNCTION: XXX
     :PARAMETERS: 
         :proposer_account: 提案发起人以及成为正式senator账户名
         :formal: 默认为true,将senator变为正式senator
         :expiration_time: XXX
-        :true: XXX
+        :broadcast: true/false broadcast or not
 
-#. guard_appointed_publisher [proposer] [publisher] [symbol] [expiration_time] [true]
+#. guard_appointed_publisher [proposer] [publisher] [symbol] [expiration_time] [broadcast]
     :FUNCTION: 对某一资产指明喂价人
     :PARAMETERS: 
         :proposer: 提案人
         :publisher: 喂价人accountid
         :symbol: 喂价资产类型
         :expiration_time: XXX
-        :true: XXX
+        :broadcast: true/false broadcast or not
 
-#. miner_appointed_crosschain_fee [proposer] [fee] [symbol] [expiration_time] [true]
+#. miner_appointed_crosschain_fee [proposer] [fee] [symbol] [expiration_time] [broadcast]
     :FUNCTION: 发起一个提案，指明特定资产类型跨链提现手续费
     :PARAMETERS: 
         :fee: 跨链提现手续费
         :symbol: 跨链资产类型
         :expiration_time: XXX
-        :true: XXX
+        :broadcast: true/false broadcast or not
 
-#. miner_appointed_lockbalance_guard [proposer] [lockbalance] [expiration_time] [true]
+#. miner_appointed_lockbalance_guard [proposer] [lockbalance] [expiration_time] [broadcast]
     :FUNCTION: 发起一个提案，修改senator需要质押的保证金极其资产类型
     :PARAMETERS: 
         :proposer: XXX
         :lockbalance: 为map<string,asset>类型，指明senator需要质押的保证金极其资产类型
         :expiration_time: XXX
-        :true: XXX
+        :broadcast: true/false broadcast or not
 
-#. update_asset_private_keys [account] [symbol] [true]
+#. update_asset_private_keys [account] [symbol] [broadcast]
     :FUNCTION: 用于生成一对特定资产的私钥，并将该私钥对所对应的公钥广播到链上. HX链会根据收到的公钥生成一对新的多签地址，冷热钱包
     :PARAMETERS: 
         :account: 交易发起账户
         :symbol: 资产类型
-        :true: XXX
+        :broadcast: true/false broadcast or not
 
-#. account_change_for_crosschain [proposer] [symbol] [hot] [cold] [expiration_time] [true]
+#. account_change_for_crosschain [proposer] [symbol] [hot] [cold] [expiration_time] [broadcast]
     :FUNCTION: 发起一个提案，使得hot和cold 在链上确认生效
     :PARAMETERS: 
         :proposer: XXX
@@ -257,20 +260,20 @@ Senator COmmand
         :hot: 热钱包地址
         :cold: 冷钱包地址
         :expiration_time: XXX
-        :true: XXX
+        :broadcast: true/false broadcast or not
 
 #. get_proposal_for_voter [account]
     :FUNCTION: 获取需要该账户签名的所有提案
     :PARAMETERS: 
         :account: 当前账户名
 
-#. approve_proposal [account] [proposal_id] [delta] [true]
+#. approve_proposal [account] [proposal_id] [delta] [broadcast]
     :FUNCTION: approve a proposal
     :PARAMETERS: 
         :account: voter account name
         :proposal_id: proposal id
         :delta: content ,for example {"key_approvals_to_add":[addr]，“key_approvals_to_remove”：[addr]}
-        :true: XXX
+        :broadcast: true/false broadcast or not
 
 #. get_crosschain_transaction [type]
     :FUNCTION: query withdraw transaction status
