@@ -46,7 +46,7 @@ HX_node启动时需要指明是否允许HX_wallet方式启动，否则启动节�
     :功能: 注册该账户名至链上
     :参数: 
         :name: 账户名称
-        :broadcast:是否进行广播
+        :broadcast: 是否进行广播
 
 #. transfer_to_address [from] [to] [amount] [symbol] [memo] [broadcast]
     :功能: 转账到某地址
