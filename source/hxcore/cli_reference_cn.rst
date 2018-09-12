@@ -56,7 +56,7 @@ HX_node启动时需要指明是否允许HX_wallet方式启动，否则启动节�
         :amount: 转账总额
         :symbol: 资产类型
         :memo: 信息
-        :broadcast:是否进行广播
+        :broadcast: 是否进行广播
 
 #. get_transaction [trxid]
     :功能: 根据交易id，获取本次交易全部信息，只有上链交易才能被查询到
@@ -83,7 +83,7 @@ HX_node启动时需要指明是否允许HX_wallet方式启动，否则启动节�
     :参数: 
         :name: 账户名
         :url: 网页地址
-        :broadcast:是否进行广播
+        :broadcast: 是否进行广播
 
 #. create_crosschain_symbol [symbol]
     :功能: 创建特定资产地址，返回地址
@@ -96,7 +96,7 @@ HX_node启动时需要指明是否允许HX_wallet方式启动，否则启动节�
         :account: XXX
         :tunnel_account: XXX
         :symbol: XXX
-        :broadcast:是否进行广播
+        :broadcast: 是否进行广播
 
 #. unbind_tunnel_account [account] [tunnel_account] [symbol] [broadcast]
     :功能: 解除绑定tunnel账户，其他链上地址与当前账户奖励绑定关系接触，tunnel_account私钥需要存在
@@ -125,7 +125,7 @@ HX_node启动时需要指明是否允许HX_wallet方式启动，否则启动节�
         :symbol: 提现资产类型
         :crosschain_addr: 特定资产目的地址
         :memo:    附加信息
-        :broadcast:是否进行广播
+        :broadcast: 是否进行广播
 
 #. refund_request [refund_acount] [txid] [broadcast]
     :功能: 发起取消跨链提现申请
@@ -144,13 +144,13 @@ HX_node启动时需要指明是否允许HX_wallet方式启动，否则启动节�
         :asset_orign: 为该账户下用于承兑的HX数量
         :asset_target: 想要承兑目的代币的数量
         :symbol:    目的代币数字资产类型
-        :broadcast:是否进行广播
+        :broadcast: 是否进行广播
 
 #. list_guarantee_order [symbol] [all]
     :功能: 返回符合条件的承兑单队列
     :参数: 
         :symbol: 资产类型
-        :all: broadcast/false是否列出所有承兑单，包含已经结束的
+        :all: true/false是否列出所有承兑单，包含已经结束的
 
 #. get_my_guarantee_order [account] [all]
     :功能: 返回该地址创建的承兑单
@@ -180,7 +180,7 @@ senator相关
         :proposer_account: 提案发起人以及成为正式senator账户名
         :formal: 默认为broadcast,将senator变为正式senator
         :expiration_time: XXX
-        :broadcast:是否进行广播
+        :broadcast: 是否进行广播
 
 #. guard_appointed_publisher [proposer] [publisher] [symbol] [expiration_time] [broadcast]
     :功能: 对某一资产指明喂价人
@@ -189,7 +189,7 @@ senator相关
         :publisher: 喂价人accountid
         :symbol: 喂价资产类型
         :expiration_time: XXX
-        :broadcast:是否进行广播
+        :broadcast: 是否进行广播
 
 #. miner_appointed_crosschain_fee [proposer] [fee] [symbol] [expiration_time] [broadcast]
     :功能: 发起一个提案，指明特定资产类型跨链提现手续费
@@ -197,7 +197,7 @@ senator相关
         :fee: 跨链提现手续费
         :symbol: 跨链资产类型
         :expiration_time: XXX
-        :broadcast:是否进行广播
+        :broadcast: 是否进行广播
 
 #. miner_appointed_lockbalance_guard [proposer] [lockbalance] [expiration_time] [broadcast]
     :功能: 发起一个提案，修改senator需要质押的保证金极其资产类型
@@ -205,14 +205,14 @@ senator相关
         :proposer: XXX
         :lockbalance: 为map<string,asset>类型，指明senator需要质押的保证金极其资产类型
         :expiration_time: XXX
-        :broadcast:是否进行广播
+        :broadcast: 是否进行广播
 
 #. update_asset_private_keys [account] [symbol] [broadcast]
     :功能: 用于生成一对特定资产的私钥，并将该私钥对所对应的公钥广播到链上. HX链会根据收到的公钥生成一对新的多签地址，冷热钱包
     :参数: 
         :account: 交易发起账户
         :symbol: 资产类型
-        :broadcast:是否进行广播
+        :broadcast: 是否进行广播
 
 #. account_change_for_crosschain [proposer] [symbol] [hot] [cold] [expiration_time] [broadcast]
     :功能: 发起一个提案，使得hot和cold 在链上确认生效
@@ -222,7 +222,7 @@ senator相关
         :hot: 热钱包地址
         :cold: 冷钱包地址
         :expiration_time: XXX
-        :broadcast:是否进行广播
+        :broadcast: 是否进行广播
 
 #. get_proposal_for_voter [account]
     :功能: 获取需要该账户签名的所有提案
@@ -235,7 +235,7 @@ senator相关
         :account: 投票人
         :proposal_id: 提案id
         :delta: 投票内容,类似如下{"key_approvals_to_add":[addr]，“key_approvals_to_remove”：[addr]}
-        :broadcast:是否进行广播
+        :broadcast: 是否进行广播
 
 #. get_crosschain_transaction [type]
     :功能: 返回对应状态下提现交易及状态
