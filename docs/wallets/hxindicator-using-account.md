@@ -1,4 +1,4 @@
-# <img class="hx-icon" src="/img/hx-icons/Wallet.svg" /> HyperExchange Indicator Using Guide
+# HyperExchange Indicator Using Guide
 
 Last updated for v1.0.7.
 
