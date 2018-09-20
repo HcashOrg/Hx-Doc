@@ -9,8 +9,24 @@ Together, HC and HX will help HCASH build an interlinked, bifocal, dual-chain ec
 
 ---
 
+## What is HIOU
+
+All the crosschain assets will correspond to the assets on the HX chain after being deposited to the HX chain.We call that HIOU.On the HX chain, all transactions are done using HIOU and HX.
+
+---
+
+## What is FeeAcceptance
+
+On the HX chain, almost all of the handling fees are charged with HX tokens.In this way, users who recharge across the chain need to obtain HX through some channels, which will be very inconvenient to use.
+
+Therefore, on the HX chain, we support the fee acceptance form, which is essentially an asset exchange form, except to uniformly convert HX from other currencies, and these HX are only used to pay the fee.Anyone can put up such an acceptance, and the user who wants to use it chooses the best price.
+
+In this case, for example, if A user wants to transfer HXBTC, and he does not have HX, he can choose an acceptance form that supports HXBTC to pay the fee.During the transfer process, A user will pay an additional part of HXBTC to pay the handling fee.And the user who issued the acceptance sheet consumed HX and got HXBTC
+
+---
+
 ## What is a Hshare chain?
-As one of its dual chains, HyperCash functions as an upgraded Hshare chain, focusing on non-interoperable blockchain features, such as advanced post-quantum and Zero Knowledge Proof technologies. This whitepaper aims to introduce HyperExchange. All subsequent information relating to HyperCash can be found in the HCASH technical yellow paper.
+As one of its dual chains, HyperCash functions as an upgraded Hshare chain, focusing on non-interoperable blockchain features, such as advanced post-quantum and Zero Knowledge Proof technologies. This document aims to introduce HyperExchange. All subsequent information relating to HyperCash can be found in the [HCASH technical official website](https://h.cash/).
 
 ---
 

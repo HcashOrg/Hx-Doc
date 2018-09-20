@@ -14,7 +14,7 @@ Last updated for v1.0.7.
 
 ---
 
-## Download and Install
+<h2 id="1">Download and Install</h2>
 
 The latest version of HXIndicator can be downloaded from [https://github.com/HcashOrg/HyperExchange/releases/tag/v0.1).
 
@@ -40,7 +40,7 @@ Not support now.
 
 ---
 
-## Open and Set Up HXIndicator on Windows/MAC OS
+<h2 id="2">Open and Set Up HXIndicator on Windows/MAC OS</h2>
 
 Opening HXIndicator for the first time will display the following screen:
 

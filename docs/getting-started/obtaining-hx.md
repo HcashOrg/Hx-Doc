@@ -1,4 +1,4 @@
-# Obtaining HX
+# Obtaining HX in mainnet
 
 ---
 

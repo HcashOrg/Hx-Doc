@@ -38,9 +38,12 @@ pages:
 - Getting Started:
   - "Beginner's Guide": 'getting-started/beginner-guide.md'
   - 'HyperExchange Features': 'getting-started/hx-features.md'
-  - 'Obtaining HX': 'getting-started/obtaining-hx.md'
+  - Obtaining HX:
+    - 'Obtaining HX in mainnet': 'getting-started/obtaining-hx.md'
   - 'Using the Block Explorer': 'getting-started/using-the-block-explorer.md'
-  - 'Using Testnet': 'getting-started/private-testnet.md'
+  - 'Using Testnet':
+    - 'Using Public Testnet': 'getting-started/public-testnet.md'
+    - 'Using Private Testnet': 'getting-started/private-testnet.md' 
 - Wallets:
   - HyperExchange Indicator:
     - 'HXIndicator Setup': 'wallets/hxindicator-setup.md'
@@ -52,33 +55,15 @@ pages:
       - 'Senator': 'wallets/hxindicator-using-senator.md'
       - 'Citizen': 'wallets/hxindicator-using-citizen.md'
   - 'Building': 'wallets/hx-building.md'
-  - HyperExchange Witness-node:
+  - HyperExchange Node:
     - 'startup': 'wallets/hxnode-setup.md'
-    - 'Using Witness-node': 'wallets/hxnode-using.md'
+    - 'Using hx-node': 'wallets/hxnode-using.md'
   - HyperExchange Cli-wallet:
-    - 'Cli-wallet Startup': 'wallets/hxwallet-cli.md'
-    - 'cli-wallet RPC Commands': 'wallets/hxwallet-cli-rpc-commands.md'
+    - 'Hx-cli Startup': 'wallets/hxwallet-cli.md'
+    - 'Hx-cli RPC Commands': 'wallets/hxwallet-cli-rpc-commands.md'
   - HyperExchange Middleware:
     - 'Startup': 'wallets/middleware-startup.md'
-- Advanced:      
-  - Random Pool Proof of Multi- properties:
-    - "Network Roles": 'advanced/rppop/network-role.md'
-    - "Asset Collateral": 'advanced/rppop/asset-collateral.md'
-    - "Consensus Protocol/Algorithm": 'advanced/rppop/consensus-protocol.md'
-    - "Security Features of a RPPOM Consensus Mechanism": 'advanced/rppop/RPPOM.md'
-  - Community Governance:
-    - 'Overview': 'advanced/community-governance/community-overview.md'
-    - 'Selecting a Senator': 'advanced/community-governance/select-senator.md'
-    - 'Senator Rights and Duties': 'advanced/community-governance/senator-right.md'
-    - 'Citizens Involvement in the Replacement of Senators': 'advanced/community-governance/senator-replace-rule.md'
-    - 'Penalties for Senators': 'advanced/community-governance/senator-penalties.md'
-    - 'Advantages of Community Governance': 'advanced/community-governance/community-advantages.md'
-  - Smart Contract:
-    - 'About Smart Contract': 'advanced/smart-contract/about-smart-contract.md'
-    - 'Pending purchase order functionality rules': 'advanced/smart-contract/purchase-rule.md'
-    - 'Smart Contract Template': 'advanced/smart-contract/smart-contract-template.md'
-    - 'Fee structure': 'advanced/smart-contract/smart-contract-fee.md'
-    - 'Types of Fees': 'advanced/smart-contract/smart-contract-feetype.md'
+- Advanced:
   - Cross Chain:
     - Cross-chain Technology Implementation:
       - 'Blockchain Multi Tunnel (BMT) Protocol': 'advanced/cross-chain/bmp-protocol.md'
@@ -92,6 +77,24 @@ pages:
     - Sidechain Asset Security:
       - 'Financial Balance Strategy': 'advanced/cross-chain/financial-balance.md'
       - 'Dynamic Fund Rebalancing': 'advanced/cross-chain/fund-rebalance.md'
+  - Smart Contract:
+    - 'About Smart Contract': 'advanced/smart-contract/about-smart-contract.md'
+    - 'Pending purchase order functionality rules': 'advanced/smart-contract/purchase-rule.md'
+    - 'Smart Contract Template': 'advanced/smart-contract/smart-contract-template.md'
+    - 'Fee structure': 'advanced/smart-contract/smart-contract-fee.md'
+    - 'Types of Fees': 'advanced/smart-contract/smart-contract-feetype.md'      
+  - Random Pool Proof of Multi- properties:
+    - "Network Roles": 'advanced/rppop/network-role.md'
+    - "Asset Collateral": 'advanced/rppop/asset-collateral.md'
+    - "Consensus Protocol/Algorithm": 'advanced/rppop/consensus-protocol.md'
+    - "Security Features of a RPPOM Consensus Mechanism": 'advanced/rppop/RPPOM.md'
+  - Community Governance:
+    - 'Overview': 'advanced/community-governance/community-overview.md'
+    - 'Selecting a Senator': 'advanced/community-governance/select-senator.md'
+    - 'Senator Rights and Duties': 'advanced/community-governance/senator-right.md'
+    - 'Citizens Involvement in the Replacement of Senators': 'advanced/community-governance/senator-replace-rule.md'
+    - 'Penalties for Senators': 'advanced/community-governance/senator-penalties.md'
+    - 'Advantages of Community Governance': 'advanced/community-governance/community-advantages.md'
 - Research:
   - Smart Contract IDE:
     - 'IDE Introduce': 'research/ide/ide-introduce.md'

@@ -1,4 +1,4 @@
-# <img class="hx-icon" src="/img/hx-icons/Wallet.svg" /> HyperExchange Building Guide
+# HyperExchange Building Guide
 
 Last updated for v1.0.7.
 
@@ -6,19 +6,15 @@ Last updated for v1.0.7.
 
 **HX-Node** requires a 64-bit operating system to build
 
-**HX-Node** requires a Boost version in the range [1.57, 1.65.1]. Versions earlier than 1.57 or newer than 1.65.1 are NOT supported. If your system Boost version is newer, then you will need to manually build an older version of Boost and specify it to CMake using` -DBOOST_ROOT`:
+**HX-Node** requires a Boost version 1.64.0 or newer than it. Versions earlier than 1.64 are NOT supported. 
 
-
-    cmake -DBOOST_ROOT=~/boost160 .
-
-
-* Ubuntu (64-bit) Linux
-* OS X
-* Windows
+* [Ubuntu (64-bit) Linux](hx-building/#1)
+* [OS X](hx-building/#2)
+* [Windows](hx-building/#3)
 
 ---
 
-## BUILD_UBUNTU
+<h2 id="1">BUILD_UBUNTU</h2>
 
 ---
 
@@ -41,17 +37,16 @@ The following dependencies were necessary for a clean install on Ubuntu 16.04 LT
 
 > **Build Support Boost Version**
 
-NOTE: HyperExchange Node requires a Boost version in the range [1.57 - 1.65.1]. Versions earlier than 1.57 or newer than 1.65.1 are NOT supported. If your system's Boost version is newer, then you will need to manually build an older version of Boost and specify it to CMake using DBOOST_ROOT.
+NOTE: HyperExchange Node requires a Boost version 1.64.0 or newer than it. Versions earlier than 1.64 is NOT supported. 
 
-The Boost which ships with Ubuntu 14.04 LTS (64-bit) is too old. You need to download the Boost tarball for Boost 1.57.0 (Note, 1.58.0 requires C++14 and will not build on Ubuntu 14.04 LTS (64-bit); this requirement was an accident, see this [mailing list post](http://boost.2283326.n4.nabble.com/1-58-1-bugfix-release-necessary-td4674686.html)).
+The Boost which ships with Ubuntu 14.04 LTS (64-bit) is too old. You need to download the Boost tarball for Boost 1.64.0 ; this requirement was an accident, see this [mailing list post](http://boost.2283326.n4.nabble.com/1-58-1-bugfix-release-necessary-td4674686.html)).
 
-    BOOST_ROOT=$HOME/opt/boost_1_57_0
+    BOOST_ROOT=$HOME/opt/boost_1_64_0
     sudo apt-get update
     sudo apt-get install autotools-dev build-essential libbz2-dev libicu-dev python-dev
-    wget -c 'http://sourceforge.net/projects/boost/files/boost/1.57.0/boost_1_57_0.tar.bz2/download' -O boost_1_57_0.tar.bz2
-    [ $( sha256sum boost_1_57_0.tar.bz2 | cut -d ' ' -f 1 ) == "910c8c022a33ccec7f088bd65d4f14b466588dda94ba2124e78b8c57db264967" ] || ( echo 'Corrupt download' ; exit 1 )
-    tar xjf boost_1_57_0.tar.bz2
-    cd boost_1_57_0/
+    wget -c 'http://sourceforge.net/projects/boost/files/boost/1.64.0/boost_1_64_0.tar.bz2/download' -O boost_1_64_0.tar.bz2
+    tar xjf boost_1_64_0.tar.bz2
+    cd boost_1_64_0/
     ./bootstrap.sh "--prefix=$BOOST_ROOT"
     ./b2 install
 
@@ -75,13 +70,13 @@ And then build HyperExchange Node.
 
 ---
 
-## Building on OS X
+<h2 id="2">Building on OS X</h2>
 
 > **HyperExchange Node OS X Build Instructions**
 
-1.Install XCode and its command line tools by following the instructions here:[https://guide.macports.org/#installing.xcode](https://guide.macports.org/#installing.xcode). In OS X 10.11 (El Capitan) and newer, you will be prompted to install developer tools when running a devloper command in the terminal. This step may not be needed.
+1.Install XCode and its command line tools by following the instructions here:<https://guide.macports.org/#installing.xcode>. In OS X 10.11 (El Capitan) and newer, you will be prompted to install developer tools when running a devloper command in the terminal. This step may not be needed.
 
-2.Install Homebrew by following the instructions here: [http://brew.sh/](https://brew.sh/)
+2.Install Homebrew by following the instructions here: <http://brew.sh/>
 
 3.Initialize Homebrew:
 
@@ -112,7 +107,7 @@ And then build HyperExchange Node.
     cmake .
     make
 
-Notes: As mentioned elsewhere, HyperExchange depends on the third-party libraries "Boost" and "OpenSSL". These libraries need to be in certain version ranges. At the moment, Boost needs to be between 1.57 and 1.65. OpenSSL needs to be in the 1.0.x range.
+Notes: As mentioned elsewhere, HyperExchange depends on the third-party libraries "Boost" and "OpenSSL". These libraries need to be in certain version ranges. At the moment, Boost needs to be between 1.64 and 1.65. OpenSSL needs to be in the 1.0.x range.
 
 Boost: You can check which version(s) of boost you have by asking brew:
 
@@ -132,7 +127,7 @@ and then proceed with the normal
 
 ---
 
-## Building on Windows - Visual Studio 2017
+<h2 id="3">Building on Windows - Visual Studio 2017</h2>
 
 > Prerequisites
 
@@ -157,91 +152,109 @@ and then proceed with the normal
 
 3.Download CMake
 
-Download the latest Win32 Zip build CMake from [http://cmake.org/cmake/resources/software.html](https://cmake.org/download/) (version 2.8.12.2 as of this writing). Unzip it to your base directory, which will create a directory that looks something like `D:\hyperexchange\cmake-2.8.12.2-win32-x86`. Rename this directory to `D:\hyperexchange\CMake`.
+Download the latest Win32 Zip build CMake from [http://cmake.org/cmake/resources/software.html](https://cmake.org/download/) (version 3.12.2 as of this writing). Unzip it to your base directory, which will create a directory that looks something like `D:\hyperexchange\cmake-3.12.2-win64-x64`. Rename this directory to `D:\hyperexchange\CMake`.
 
 If you already have CMake installed elsewhere on your system you can use it, but hyperexchange Core has a few batch files that expect it to be in the base directory's `CMake` subdirectory, so those scripts would need tweaking.
 
 4.Boost
 
-hyperexchange depends on the Boost libraries version 1.57 ~ 1.65. You can build them from source.
+hyperexchange depends on the Boost libraries version 1.64.0 or newer than it. You can build them from source.
 
 - download boost source from [http://www.boost.org/users/download/](http://www.boost.org/users/download/)
 
 - unzip it to the base directory `D:\hyperexchange`.
 
-- This will create a directory like `D:\hyperexchange\boost_1_57_0`.
+- This will create a directory like `D:\hyperexchange\boost_1_64_0`.
 
 5.OpenSSL
 
-HyperExchange depends on OpenSSL version 1.0.1 or 1.0.2, and you must build this from source.
+HyperExchange depends on OpenSSL version 1.0.2, and you must build this from source.
 
 - download OpenSSL source from [http://www.openssl.org/source/](http://www.openssl.org/source/)
 - Untar it to the base directory `D:\hyperexchange`
-- this will create a directory like `D:\hyperexchange\openssl-1.0.1g`.
+- this will create a directory like `D:\hyperexchange\openssl-1.0.2o`.
+
+6.Crosschain Privatekey
+
+HyperExchange depends on libboost, you must build this from source.
+
+- download Crosschain Privatekey source from <https://github.com/BlockLink/blocklink_crosschain_privatekey>
+- Untar it to the base directory `D:\hyperexchange`
+- this will create a directory like `D:\hyperexchange\blocklink_crosschain_privatekey`.
 
 At the end of this, your base directory should look like this (directory names will be slightly different for the 64bit versions):
 
     D:\hyperexchange
-    +- hyperexchange
-    +- boost_1_57_0
+    +- HyperExchange
+    +- boost_1_64_0
     +- CMake
-    +- openssl-1.0.1g
+    +- openssl-1.0.2o
+    +- blocklink_crosschain_privatekey
+
 
 > Build the library dependencies
 
-1.Set up environment for building:
+1.Build OpenSSL DLLs
 
     D:
-    cd D:\hyperexchange
-    notepad setenv_x64.bat
-
-Put this into the notepad window, then save and quit.
-
-    @echo off
-    set GRA_ROOT=d:\hyperexchange
-    set OPENSSL_ROOT=%GRA_ROOT%\openssl-1.0.1g
-    set OPENSSL_ROOT_DIR=%OPENSSL_ROOT%
-    set OPENSSL_INCLUDE_DIR=%OPENSSL_ROOT%\include
-    set BOOST_ROOT=%GRA_ROOT%\boost_1_57_0
-    
-    set PATH=%GRA_ROOT%\CMake\bin;%BOOST_ROOT%\lib;%PATH%
-    
-    echo Setting up VS2013 environment...
-    call "%VS120COMNTOOLS%\..\..\VC\vcvarsall.bat" x86_amd64
-Then run
-
-    setenv_x64.bat
-
-2.Build OpenSSL DLLs
-
-    D:
-    cd D:\hyperexchange\openssl-1.0.1g
+    cd D:\hyperexchange\openssl-1.0.2o
     perl Configure VC-WIN64A --prefix=D:\hyperexchange\OpenSSL
     ms\do_win64a
     nmake -f ms\ntdll.mak
     nmake -f ms\ntdll.mak install
 
-3.Build Boost
+If occur error like "NMAKE : fatal error U1077" when you excute command `nmake -f ms\ntdll.mak`, please try to use `VS2013 x64 native tool command prompt` tool to excute nmake command.
+
+2.Build Boost
 
     D:
-    cd D:\hyperexchange\boost_1_57_0
-    bootstrap
+    cd D:\hyperexchange\boost_1_64_0
+    bootstrap.bat
     .\b2.exe address-model=64
 
-> Build project files for hyperexchange
+3.Build Crosschain Privatekey
 
-1.Run CMake:
+Set up environment for building:
 
     D:
-    cd D:\hyperexchange\hyperexchange
+    cd D:\hyperexchange\blocklink_crosschain_privatekey
+    notepad setenv_x64.bat
+
+Put this into the notepad window, then save and quit.
+
+    @echo off
+    set GRA_ROOT=d:/hyperexchange
+    set OPENSSL_ROOT=%GRA_ROOT%\OpenSSL
+    set OPENSSL_ROOT_DIR=%OPENSSL_ROOT%
+    set OPENSSL_INCLUDE_DIR=%OPENSSL_ROOT%\include
+    set BOOST_ROOT=%GRA_ROOT%\boost_1_64_0
+    set CROSSCHAIN_PRIVATEKEY_PROJECT=%GRA_ROOT%/blocklink_crosschain_privatekey
+    
+    set PATH=%GRA_ROOT%\CMake\bin;%BOOST_ROOT%\stage\lib;%OPENSSL_ROOT%\lib\;%CROSSCHAIN_PRIVATEKEY_PROJECT%;%PATH%
+    
+    echo Setting up VS2017 environment...
+    call "%VS150COMNTOOLS%\..\..\VC\vcvarsall.bat" x86_amd64
+
+In my PC,VS150COMNTOOLS:"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\", please set a correct path of file vcvarsall.bat by your PC.
+
+Note keep slash and backslash are consistency with the example
+
+Then run
+
+    setenv_x64.bat
+
+Build
+    
+    D:
+    cd D:\hyperexchange\blocklink_crosschain_privatekey
     notepad run_cmake_x64.bat
 
 Put this into the notepad window, then save and quit.
 
     setlocal
-    call "d:\hyperexchange\setenv_x64.bat"
-    cd %GRA_ROOT%
-    cmake-gui -G "Visual Studio 12"
+    call "d:\hyperexchange\blocklink_crosschain_privatekey\setenv_x64.bat"
+    cd %GRA_ROOT%\blocklink_crosschain_privatekey
+    cmake-gui -G "Visual Studio 15"
 
 Then run
 
@@ -249,15 +262,79 @@ Then run
 
 This pops up the cmake gui, but if you've used CMake before it will probably be showing the wrong data, so fix that:
 
-- Where is the source code: `D:\hyperexchange\hyperexchange`
-- Where to build the binaries: `D:\hyperexchange\x64`
+- Where is the source code: `D:/hyperexchange/blocklink_crosschain_privatekey`
+- Where to build the binaries: `D:/hyperexchange/blocklink_crosschain_privatekey/x64`
+    
+Then hit Configure. It may ask you to specify a generator for this project; if it does, choose Visual Studio 15 2017 Win64 for 64 bit builds and select Use default native compilers. Look through the output and fix any errors. Then hit Generate.
 
-Then hit Configure. It may ask you to specify a generator for this project; if it does, choose Visual Studio 12 2017 Win64 for 64 bit builds and select Use default native compilers. Look through the output and fix any errors. Then hit Generate.
+Launch Visual Studio and load D:\hyperexchange\blocklink_crosschain_privatekey\x64\blocklink_crosschain_privatekey.sln
 
-2.Launch Visual Studio and load D:\hyperexchange\x64\hyperexchange.sln
-3.Set Active Configuration to `RelWithDebInfo`, ensure Active Solution platform is `x64` for 64 bit builds
-4.Build Solution
+Set Active Configuration to `RelWithDebInfo`, ensure Active Solution platform is `x64` for 64 bit builds
 
-Or you can build the `INSTALL` target in Visual Studio which will copy all of the necessary files into your `D:\hyperexchange\install` directory, then copy all of those files to the `bin` directory.
+Build Solution
+
+After build successfully,build `INSTALL` target, then will create a directory `third_libs` under blocklink_crosschain_privatekey, include `blocklink_libbitcoin.lib` and `blocklink_libbitcoin_secp256k1.lib`.
+
+> Build project files for hyperexchange
+
+1.Set up environment for building:
+
+    D:
+    cd D:\hyperexchange\HyperExchange
+    notepad setenv_x64.bat
+
+Put this into the notepad window, then save and quit.
+
+    @echo off
+    set GRA_ROOT=d:/hyperexchange
+    set OPENSSL_ROOT=%GRA_ROOT%\OpenSSL
+    set OPENSSL_ROOT_DIR=%OPENSSL_ROOT%
+    set OPENSSL_INCLUDE_DIR=%OPENSSL_ROOT%\include
+    set BOOST_ROOT=%GRA_ROOT%\boost_1_64_0
+    set CROSSCHAIN_PRIVATEKEY_PROJECT=%GRA_ROOT%/blocklink_crosschain_privatekey
+    
+    set PATH=%GRA_ROOT%\CMake\bin;%BOOST_ROOT%\stage\lib;%OPENSSL_ROOT%\lib\;%CROSSCHAIN_PRIVATEKEY_PROJECT%;%PATH%
+    
+    echo Setting up VS2017 environment...
+    call "%VS150COMNTOOLS%\..\..\VC\vcvarsall.bat" x86_amd64
+
+In my PC,VS150COMNTOOLS:"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\", please set a correct path of file vcvarsall.bat by your PC.
+
+Note keep slash and backslash are consistency with the example
+
+Then run
+
+    setenv_x64.bat
+
+
+2.Run CMake:
+
+    D:
+    cd D:\hyperexchange\HyperExchange
+    notepad run_cmake_x64.bat
+
+Put this into the notepad window, then save and quit.
+
+    setlocal
+    call "d:\hyperexchange\HyperExchange\setenv_x64.bat"
+    cd %GRA_ROOT%\HyperExchange
+    cmake-gui -G "Visual Studio 15"
+
+Then run
+
+    run_cmake_x64.bat
+
+This pops up the cmake gui, but if you've used CMake before it will probably be showing the wrong data, so fix that:
+
+- Where is the source code: `D:/hyperexchange/HyperExchange`
+- Where to build the binaries: `D:/hyperexchange/HyperExchange/x64`
+
+Then hit Configure. It may ask you to specify a generator for this project; if it does, choose Visual Studio 15 2017 Win64 for 64 bit builds and select Use default native compilers. Look through the output and fix any errors. Then hit Generate.
+
+3.Launch Visual Studio and load D:\hyperexchange\x64\hyperexchange.sln
+4.Set Active Configuration to `RelWithDebInfo`, ensure Active Solution platform is `x64` for 64 bit builds
+5.Build Solution
+
+Or you can build the `INSTALL` target in Visual Studio which will copy all of the necessary files into your `D:\hyperexchange\HyperExchange\install` directory, then copy all of those files to the `bin` directory.
 
 ---

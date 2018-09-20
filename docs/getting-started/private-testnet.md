@@ -2,11 +2,11 @@
 
 Last updated for v1.0.7
 
-We will talk about `testnets` in this page. We mainly talk about  **private testnets** that every developer could easily deploy .
+In this page. We mainly talk about  **private testnet** that every developer could easily deploy .
 
 ## PREREQUISITES
 
-We assume that you have both `witness_node` and `cli_wallet` already compliled (or downloaded from the offical respository).
+We assume that you have both `witness_node` and `cli_wallet` already compliled (or downloaded from the offical respository).you have deployed hx middleware successfully.if not yet,please refer [Middleware Startup](/wallets/middleware-startup.md) to deploy.
 
 ## FOLDER STRUCTURE
 

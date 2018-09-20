@@ -1,4 +1,4 @@
-# <img class="hx-icon" src="/img/hx-icons/Wallet.svg" /> HyperExchange Witness-node Startup Guide
+# HyperExchange Witness-node Startup Guide
 
 Last updated for v1.0.7
 

@@ -31,8 +31,24 @@ Below you'll find a list of currently available applications, with a chart showi
 | Windows   | Y    | Y         | Y      | Y      |
 | macOS     | Y    | Y         | Y      | Y      |
 | Linux     | Y    | Y         | N      | Y      |
-| Other UNIX| Y    | Y         | Y      | Y      |
 
+
+---
+
+## User Guides
+
+> General User
+
+* Download HXIndicator of your operating system in HX official website.Refer to [Download and Install](hxindicator-setup/#1)
+* If you have got hx of mainnet,you can refer [Using HXIndicator](/wallets/hxindicator-using-account.md)  to use HXIndicator. 
+* If you are interested in testing of public testnet, refer to [Using Public Testnet](/getting-started/public-testnet.md)
+
+> Developer User
+
+* Download HyperExchange soure code from github:<https://github.com/HcashOrg/HyperExchange.git>
+* [Building](/wallets/hx-building.md)
+* [Deploy private testnet](/getting-started/private-testnet.md)
+* If you want to test deposit/withdraw/crosschain transfer and other functions in command console, please refer to [Hx-cli RPC Commands](wallets/hxwallet-cli-rpc-commands.md).
 
 ---
 
@@ -46,8 +62,8 @@ To get started, choose an option for installations available for your operating 
 
 > Ubuntu
 
-* [Witness-node Setup](/wallets/hxnode-setup.md)
-* [Cli-wallet Startup](/wallets/hxwallet-cli.md)
+* [hx-node Setup](/wallets/hxnode-setup.md)
+* [hx-client Startup](/wallets/hxwallet-cli.md)
 
 > Mac OS
 
