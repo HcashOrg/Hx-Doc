@@ -27,46 +27,25 @@ The following dependencies were necessary for a clean install on Ubuntu 16.04 LT
     sudo apt-get update
     sudo apt-get install autoconf cmake make automake libtool git libboost-all-dev libssl-dev g++ libcurl4-openssl-dev
 
+> **Build Crosschain Privatekey**
+
+    git clone https://github.com/BlockLink/blocklink_crosschain_privatekey
+    cd blocklink_crosschain_privatekey
+    cmake -DCMAKE_BUILD_TYPE=Release .
+    make
+
 > **Build HyperExchange Node**
+
+Add path of crosschain privatekey, please use the path of blocklink_crosschain_privatekey in your environment.  
+
+    `export CROSSCHAIN_PRIVATEKEY_PROJECT=~/blocklink_crosschain_privatekey`
+
 
     git clone https://github.com/HcashOrg/HyperExchange.git
     cd HyperExchange
     git submodule update --init --recursive
-    cmake -DCMAKE_BUILD_TYPE=Release .
+    cmake .
     make
-
-> **Build Support Boost Version**
-
-NOTE: HyperExchange Node requires a Boost version 1.64.0 or newer than it. Versions earlier than 1.64 is NOT supported. 
-
-The Boost which ships with Ubuntu 14.04 LTS (64-bit) is too old. You need to download the Boost tarball for Boost 1.64.0 ; this requirement was an accident, see this [mailing list post](http://boost.2283326.n4.nabble.com/1-58-1-bugfix-release-necessary-td4674686.html)).
-
-    BOOST_ROOT=$HOME/opt/boost_1_64_0
-    sudo apt-get update
-    sudo apt-get install autotools-dev build-essential libbz2-dev libicu-dev python-dev
-    wget -c 'http://sourceforge.net/projects/boost/files/boost/1.64.0/boost_1_64_0.tar.bz2/download' -O boost_1_64_0.tar.bz2
-    tar xjf boost_1_64_0.tar.bz2
-    cd boost_1_64_0/
-    ./bootstrap.sh "--prefix=$BOOST_ROOT"
-    ./b2 install
-
-Build with specific Boost version:
-
-    cmake -DBOOST_ROOT="$BOOST_ROOT" -DCMAKE_BUILD_TYPE=Release .
-    make
-
-If error `{"message":"Timer Expired"}` dropped then it could be issue with websocketpp in linux kernel > 4.4.
-
-Details here.
-
-Steps to fix:
-
-    cd ~/hx-node/libraries/fc/vendor/websocketpp
-    git remote set-url origin https://github.com/DECENTfoundation/websocketpp.git
-    git fetch
-    git checkout 
-
-And then build HyperExchange Node.
 
 ---
 
