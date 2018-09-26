@@ -75,31 +75,42 @@ Add path of crosschain privatekey, please use the path of blocklink_crosschain_p
 
     brew install google-perftools
 
-7.Clone the HyperExchange repository:
+7.Build Crosschain Privatekey
+
+    git clone https://github.com/BlockLink/blocklink_crosschain_privatekey
+    cd blocklink_crosschain_privatekey
+    cmake .
+    make
+
+8.Clone the HyperExchange repository:
 
     git clone https://github.com/HcashOrg/HyperExchange.git
     cd HyperExchange
 
-8.Build HyperExchange:
+9.Build HyperExchange:
+
+Add path of crosschain privatekey, please use the path of blocklink_crosschain_privatekey in your environment.  
+
+    `export CROSSCHAIN_PRIVATEKEY_PROJECT=~/blocklink_crosschain_privatekey`
 
     git submodule update --init --recursive
     cmake .
     make
 
-Notes: As mentioned elsewhere, HyperExchange depends on the third-party libraries "Boost" and "OpenSSL". These libraries need to be in certain version ranges. At the moment, Boost needs to be between 1.64 and 1.65. OpenSSL needs to be in the 1.0.x range.
+Notes: As mentioned elsewhere, HyperExchange depends on the third-party libraries "Boost" and "OpenSSL". These libraries need to be in certain version ranges. At the moment, Boost needs to be 1.64 or newer than it. OpenSSL needs to be in the 1.0.x range.
 
 Boost: You can check which version(s) of boost you have by asking brew:
 
     brew search boost
-To install another version of Boost (such as 1.60):
+To install another version of Boost (such as 1.64):
 
-    brew install boost@1.60
+    brew install boost@1.64
 OpenSSL: You may have an older version of OpenSSL than is required. If so, have brew get the latest:
 
     brew upgrade openssl
 Compiling with these new versions: We must now tell cmake where these libraries are. Instead of the "cmake ." mentioned above, we use:
 
-    cmake -DBOOST_ROOT=/usr/local/opt/boost@1.60 -DOPENSSL_ROOT_DIR=/usr/local/opt/openssl .
+    cmake -DBOOST_ROOT=/usr/local/opt/boost@1.64 -DOPENSSL_ROOT_DIR=/usr/local/opt/openssl .
 and then proceed with the normal
 
     make

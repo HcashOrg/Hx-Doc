@@ -16,8 +16,8 @@ extra:
     - type: 'youtube'
       link: ''
 site_url: https://docs.hx.org
-repo_url: https://github.com/HcashOrg/HyperExchange/hxdocs
-repo_name: HyperExchange/hxdocs
+repo_url: https://github.com/HcashOrg/Hx-Doc
+repo_name: HcashOrg/Hx-Doc
 markdown_extensions:
   - markdown.extensions.footnotes
   - markdown.extensions.smarty
@@ -38,8 +38,8 @@ pages:
 - Getting Started:
   - "Beginner's Guide": 'getting-started/beginner-guide.md'
   - 'HyperExchange Features': 'getting-started/hx-features.md'
-  - Obtaining HX:
-    - 'Obtaining HX in mainnet': 'getting-started/obtaining-hx.md'
+  - HX Distribute:
+    - 'HX distribute in public testnet': 'getting-started/obtaining-hx-test.md'
   - 'Using the Block Explorer': 'getting-started/using-the-block-explorer.md'
   - 'Using Testnet':
     - 'Using Public Testnet': 'getting-started/public-testnet.md'

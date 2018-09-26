@@ -2,23 +2,20 @@
 
 Last updated for v1.0.7
 
-In this page. We mainly talk about  **public testnets** that every general user could easy to use HXIndicator.
+We will mainly talk about public testnets in this page so that every user can easily use HXIndicator.
 
-In order to improve the stability of the main chain, testnet is available for free trial by Hcash and interested community users.After testnet runs steadily for a while, the main chain will go live.Due to the complexity of the project and the diversity of roles on the chain, we need to engage users to have some basic understanding of the Hyper Exchange project.At first please read `Cross Chain` and `Smart Contract` parts in `Advanced`. 
+In order to improve the stability of main chain, testnet is available for free trial by Hcash and community users who have interests. After testnet runs steadily for a while, the main chain will be officially released. Due to the complexity of the project and diversity of roles on the chain, we need to engage users to have some basic understanding of the Hyper Exchange project. Please read `Cross Chain` and `Smart Contract` parts in `Advanced`.
 
 Testnet will now offer the following features:
 
-1.Basic user registration and transfer function;
+1. Basic user registration and transfer function;
 
-2.Test the coin mining function;
+2. Pledge mining function testing;
+3. Citizen mining function;
+4. Fee acceptance function;
+5. Asset exchange function on the chain (currently supporting HC, BTC and LTC);
+6. Smart contract function (there are asset exchange contracts on the chain, and IDE development tools will be introduced later).
 
-3.Citizen mining function;
-
-4.Fee acceptance function;
-
-5.Asset exchange function on the chain (currently supporting HC, BTC and LTC);
-
-6.Contract function (there are asset exchange contracts on the chain, and IDE development tools will be introduced later).
 
 ## Download and startup HXIndicator
 

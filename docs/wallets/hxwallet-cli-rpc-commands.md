@@ -118,258 +118,10 @@ The following will introduce how to use rpc commands to call functions:transfer 
     "bind_account": "LPFnwvJFXziSzk35fXn3tj2JYQe4iHLLY8"
       }
     ]
-5.Import private of BTC and LTC addresses to each other' main blockchain.
 
-## Deposit
+## Senator Create hot-cold multisign address
 
-> Deposit BTC to account `hxtest001`
-
-1.Make sure created BTC address' balance is not 0 on bitcoin chain.
-
-2.Create BTC asset on hx blockchain,if you want to create asset by senator,please import private key of senator.
-
-    unlocked >>> import_key guard0 5JZe9Hv7twngWSEZzvvvDXP5RG1LJGixSz6WJ4D8te9x45kvDuG
-    import_key guard0 5JZe9Hv7twngWSEZzvvvDXP5RG1LJGixSz6WJ4D8te9x45kvDuG
-    297029ms th_a   wallet.cpp:532copy_wallet_file ] backing up wallet wallet.json to before-import-key-2856e806.wallet
-    297035ms th_a   wallet.cpp:1082   save_wallet_file ] saving wallet to file wallet.json
-    297040ms th_a   wallet.cpp:532copy_wallet_file ] backing up wallet wallet.json to after-import-key-2856e806.wallet
-    true
-    unlocked >>> wallet_create_asset  guard0 BTC 8 210000000 100000  true
-    wallet_create_asset  guard0 BTC 8 210000000 100000  true
-    {
-      "ref_block_num": 1010,
-      "ref_block_prefix": 370048593,
-      "expiration": "2018-09-05T07:17:00",
-      "operations": [[
-      75,{
-    "fee": {
-      "amount": 0,
-      "asset_id": "1.3.0"
-    },
-    "issuer": "1.2.31",
-    "symbol": "BTC",
-    "issuer_addr": "HXdXPBLRsiUCY1VxcDd4gGrkDcgCV3Jegb",
-    "precision": 8,
-    "max_supply": 210000000,
-    "core_fee_paid": 100000,
-    "extensions": []
-      }
-    ]
-      ],
-      "extensions": [],
-      "signatures": [
-    "1f3a0a45c790ea62faa785e94c62cd4c7df2b4eaea51b6762cceb09c5b47c23a6e644af6447ba293e023290f40ec90eede0e4fbd723e05526456fcbb18695e3d87"],
-      "block_num": 0,
-      "trxid": "6c618b152d4ce1f707e9d07ab834fd19e90bf2ad"
-    }
-    
-
-2.Update all senators on hx blockchain,after update,system wil create a new BTC hot-cold multisign address.
-
-    unlocked >>> update_asset_private_keys  guard0 BTC true
-    unlocked >>> update_asset_private_keys  guard1 BTC true
-    unlocked >>> update_asset_private_keys  guard2 BTC true
-    unlocked >>> update_asset_private_keys  guard3 BTC true
-    unlocked >>> update_asset_private_keys  guard4 BTC true
-    unlocked >>> update_asset_private_keys  guard5 BTC true
-    unlocked >>> update_asset_private_keys  guard6 BTC true
-
-3.Query hot-cold multisign address.
-
-    unlocked >>> get_multisig_account_pair BTC
-    get_multisig_account_pair BTC
-    [{
-    "id": "2.7.1",
-    "chain_type": "BTC",
-    "bind_account_hot": "35ymUk9NfK4izhgp55Nphqd6dcgsvQYNfd",
-    "redeemScript_hot": "552103e995f361c3267fc3ef15f6c7bbe358d001e92b5768bad416c3ab468e468fe81f210340b554f366427ae07c6ab183da60b8b1cfa90ebc9bf359dfd3e4ea27cced1ac621026d6d3b26619db0c10b36a7261050e4837a9f11955b96628a6178d33c6f1b7018210397551 6fea5a5ca3f9e22d391418013b59e8c4656c62f848b5ad5fdcc50d3a223210283889e1a8391d1459d654f95b8ab3911495045b5afbe2d53ad3ffd9447317bbd2103987d03bb424201a2aee083d5880d53042e47df25419dad0fe2e5b4acd6b181362103a0e353866a3e079479fd7e23f3e70965c5da2b7f740ffb9f6f32968c8f58655157ae",
-    "bind_account_cold": "3LDA7iK8N1er3SZRNb5qKxK8WksVVtwCnf",
-    "redeemScript_cold": "55210306a1c20bb3e6cfcf1c5dacb2395eac062108f62112ba6e1aa77f569012b08a252102c4c281dd603685082cfc3f7b1ea7d27da941465dcb4d655d664c7d9d4a56d57d21023e1bebbd52c2e54f8b1d1fa5f37f01c9c6698679dacf1c21d068340fab41dc7c210366f8574f741ff635b179e25a403820d0bc629724a4dcc31cb6bea40d0396336e2103728d3228395e284a1eb90e4a0d20ffde72ca8793f9c7e9abf5f978707686251e21022e7fc9b4f34cae2b3e4f2a237d18be0694d509893ac31b88a1a8bd33e0404e7721024a70a72d3d02385b267cd08eeac732a6337df883ae132161aeafbe4be1c56c0f57ae",
-    "effective_block_num": 0,
-    "end_block": 4294967295
-      }
-    ]
-
-4.Initiate a proposal to enable multiple signature addresses to take effect.
-
-    unlocked >>> account_change_for_crosschain guard0 BTC 35ymUk9NfK4izhgp55Nphqd6dcgsvQYNfd 3LDA7iK8N1er3SZRNb5qKxK8WksVVtwCnf 10000 true
-
-    account_change_for_crosschain guard0 BTC 35ymUk9NfK4izhgp55Nphqd6dcgsvQYNfd 3LDA7iK8N1er3SZRNb5qKxK8WksVVtwCnf 10000 true
-    {
-      "ref_block_num": 1163,
-      "ref_block_prefix": 3100123180,
-      "expiration": "2018-09-05T07:30:15",
-      "operations": [[
-      28,{
-    "type": 0,
-    "fee": {
-      "amount": 0,
-      "asset_id": "1.3.0"
-    },
-    "proposer": "1.2.31",
-    "fee_paying_account": "HXdXPBLRsiUCY1VxcDd4gGrkDcgCV3Jegb",
-    "expiration_time": "2018-09-05T10:06:55",
-    "proposed_ops": [{
-    "op": [
-      74,{
-    "chain_type": "BTC",
-    "fee": {
-      "amount": 0,
-      "asset_id": "1.3.0"
-    },
-    "cold": "3LDA7iK8N1er3SZRNb5qKxK8WksVVtwCnf",
-    "hot": "35ymUk9NfK4izhgp55Nphqd6dcgsvQYNfd"
-      }
-    ]
-      }
-    ],
-    "extensions": []
-      }
-    ]
-      ],
-      "extensions": [],
-      "signatures": [
-    "1f093250ceada0f52fa5cc1cbeb1831860779b7efa1915d36e37bb6ea7778ae9021da3c355c056ea455a99127a0d5da60ef22c6990b7b254e51d3a01147bedcb8f"
-      ],
-      "block_num": 0,
-      "trxid": "67e0d0e4eafd8905f49e7e040a70da0550d28933"
-    }
-
-5.Get proposal id.
-
-    unlocked >>> get_proposal_for_voter guard0
-    get_proposal_for_voter guard0
-    [{
-    "id": "1.10.0",
-    "proposer": "1.2.31",
-    "expiration_time": "2018-09-05T10:06:55",
-    "proposed_transaction": {
-      "ref_block_num": 0,
-      "ref_block_prefix": 0,
-      "expiration": "2018-09-05T10:06:55",
-      "operations": [[
-      74,{
-    "chain_type": "BTC",
-    "fee": {
-      "amount": 0,
-      "asset_id": "1.3.0"
-    },
-    "cold": "3LDA7iK8N1er3SZRNb5qKxK8WksVVtwCnf",
-    "hot": "35ymUk9NfK4izhgp55Nphqd6dcgsvQYNfd"
-      }
-    ]
-      ],
-      "extensions": []
-    },
-    "required_active_approvals": [],
-    "available_active_approvals": [],
-    "required_owner_approvals": [],
-    "available_owner_approvals": [],
-    "available_key_approvals": [],
-    "approved_key_approvals": [],
-    "disapproved_key_approvals": [],
-    "required_account_approvals": [
-      "HXdXPBLRsiUCY1VxcDd4gGrkDcgCV3Jegb",
-      "HX3HmP3gqcDqYvHvVq2Hn44nuUDfSSBMU55",
-      "HXC3X3WoKyqNQZDyPN3Pq55gX5sLhVJxZNh",
-      "HXGu1qvt9pG55W3CfAETgwDFi2NwvWQGV4y",
-      "HXHd49CtDZZW7ySYZNQYaUurZNWW76HBnhU",
-      "HXMGFZwHXyiFj1MUwCVMoyzqBJ4CuTC7xpX",
-      "HXMkBpQ9nj1hHXwEGQvyZdFiRgRK78ixKPA"
-    ],
-    "type": "committee"
-      }
-    ]
-
-6.Approve proposal，more than two-thirds of the senators agreed with the proposal, multiple addresses will to take effect.
-
-    unlocked >>approve_proposal guard0 1.10.0 {"key_approvals_to_add": ["HXC3X3WoKyqNQZDyPN3Pq55gX5sLhVJxZNh", "HXGu1qvt9pG55W3CfAETgwDFi2NwvWQGV4y", "HXMkBpQ9nj1hHXwEGQvyZdFiRgRK78ixKPA", "HXdXPBLRsiUCY1VxcDd4gGrkDcgCV3Jegb", "HXMGFZwHXyiFj1MUwCVMoyzqBJ4CuTC7xpX"]}  true
-
-    approve_proposal guard0 1.10.0 {"key_approvals_to_add": ["HXC3X3WoKyqNQZDyPN3Pq55gX5sLhVJxZNh", "HXGu1qvt9pG55W3CfAETgwDFi2NwvWQGV4y", "HXMkBpQ9nj1hHXwEGQvyZdFi
-    RgRK78ixKPA", "HXdXPBLRsiUCY1VxcDd4gGrkDcgCV3Jegb", "HXMGFZwHXyiFj1MUwCVMoyzqBJ4CuTC7xpX"]}  true
-    {
-      "ref_block_num": 1257,
-      "ref_block_prefix": 4294124370,
-      "expiration": "2018-09-05T07:38:20",
-      "operations": [[
-      29,{
-    "fee": {
-      "amount": 0,
-      "asset_id": "1.3.0"
-    },
-    "fee_paying_account": "HXdXPBLRsiUCY1VxcDd4gGrkDcgCV3Jegb",
-    "proposal": "1.10.0",
-    "active_approvals_to_add": [],
-    "active_approvals_to_remove": [],
-    "owner_approvals_to_add": [],
-    "owner_approvals_to_remove": [],
-    "key_approvals_to_add": [
-      "HXdXPBLRsiUCY1VxcDd4gGrkDcgCV3Jegb",
-      "HXC3X3WoKyqNQZDyPN3Pq55gX5sLhVJxZNh",
-      "HXGu1qvt9pG55W3CfAETgwDFi2NwvWQGV4y",
-      "HXMGFZwHXyiFj1MUwCVMoyzqBJ4CuTC7xpX",
-      "HXMkBpQ9nj1hHXwEGQvyZdFiRgRK78ixKPA"
-    ],
-    "key_approvals_to_remove": [],
-    "extensions": []
-      }
-    ]
-      ],
-      "extensions": [],
-      "signatures": [
-    "1f3d876dd861648d7ab8f267ccfe6205c7f87b4976658d5bd96b4054493ab99cd6075017b9eef618471d3f17b4c515244cbf06fd9cafb72d56b700a8efb8d1b103",
-    "1f3472cd668850ed8b6c2767ac718109bd3287679573070668ef8b95601e1c15cb7afe3be1b8307c864dad369867bd752c72da99f23d16e0e9ba3bb1df58831d7f",
-    "1f65613ac4e54416910dfb04a98b88b6a74eeb2f4d9ecac2066b3f15a9741553854f59fd8d6ee899178a08d319944a8bfe90dde125a85f11e1d4544d8f63df460b",
-    "2044b1c7933df43f1fcd887c3c845b2f2edd8fdde1d1bfaceb8615ed984989e4af22966fe4d553f478da1b0f7fe6435531cd509a1f6030f4b4361a7892e2fe004b",
-    "1f0b5604c4d32a216da8f631734ea56096ed6d9d164c4d8eb462827d2ae7b2772a747808e6eabd951d4bc9eb5aa589f71972398e96dfea80607d12bc6b466ee1ee"
-      ],
-      "block_num": 0,
-      "trxid": "2e5caf913b77cd0416311fe2a35c8f029619d76e"
-    }
-
-7.Query multi-sign address,if "effective_block_num" is not 0,means this addres has take effect.
-
-    unlocked >>> get_multisig_account_pair BTC
-    get_multisig_account_pair BTC
-    [{
-    "id": "2.7.1",
-    "chain_type": "BTC",
-    "bind_account_hot": "35ymUk9NfK4izhgp55Nphqd6dcgsvQYNfd",
-    "redeemScript_hot": "552103e995f361c3267fc3ef15f6c7bbe358d001e92b5768bad416c
-    3ab468e468fe81f210340b554f366427ae07c6ab183da60b8b1cfa90ebc9bf359dfd3e4ea27cced1
-    ac621026d6d3b26619db0c10b36a7261050e4837a9f11955b96628a6178d33c6f1b7018210397551
-    6fea5a5ca3f9e22d391418013b59e8c4656c62f848b5ad5fdcc50d3a223210283889e1a8391d1459
-    d654f95b8ab3911495045b5afbe2d53ad3ffd9447317bbd2103987d03bb424201a2aee083d5880d5
-    3042e47df25419dad0fe2e5b4acd6b181362103a0e353866a3e079479fd7e23f3e70965c5da2b7f7
-    40ffb9f6f32968c8f58655157ae",
-    "bind_account_cold": "3LDA7iK8N1er3SZRNb5qKxK8WksVVtwCnf",
-    "redeemScript_cold": "55210306a1c20bb3e6cfcf1c5dacb2395eac062108f62112ba6e1a
-    a77f569012b08a252102c4c281dd603685082cfc3f7b1ea7d27da941465dcb4d655d664c7d9d4a56
-    d57d21023e1bebbd52c2e54f8b1d1fa5f37f01c9c6698679dacf1c21d068340fab41dc7c210366f8
-    574f741ff635b179e25a403820d0bc629724a4dcc31cb6bea40d0396336e2103728d3228395e284a
-    1eb90e4a0d20ffde72ca8793f9c7e9abf5f978707686251e21022e7fc9b4f34cae2b3e4f2a237d18
-    be0694d509893ac31b88a1a8bd33e0404e7721024a70a72d3d02385b267cd08eeac732a6337df883
-    ae132161aeafbe4be1c56c0f57ae",
-    "effective_block_num": 1267,
-    "end_block": 4294967295
-      }
-    ] 
-
-8.In bitcoin chain,transfer BTC to `hot address` : `"35ymUk9NfK4izhgp55Nphqd6dcgsvQYNfd"`.Wait about 25S,account hxtest001 will receive BTC.Query balance of account hxtest001.
-    
-    unlocked >>> get_account_balances hxtest001
-    get_account_balances hxtest001
-    [{
-    "amount": 1000000000,
-    "asset_id": "1.3.1"
-      }
-    ]
-
-> Deposit LTC to account `hxtest002`
-
-1.Make sure created LTC address' balance is not 0 on litecoin chain.
-
-2.Create LTC asset on hx blockchain,if you want to create asset by senator,please import private key of senator.
+1.Create LTC asset on hx blockchain,if you want to create asset by senator,please import private key of senator.
 
     unlocked >>> import_key guard0 5JZe9Hv7twngWSEZzvvvDXP5RG1LJGixSz6WJ4D8te9x45kvDuG
     import_key guard0 5JZe9Hv7twngWSEZzvvvDXP5RG1LJGixSz6WJ4D8te9x45kvDuG
@@ -577,7 +329,28 @@ The following will introduce how to use rpc commands to call functions:transfer 
       }
     ]
 
-8.In litcoin chain,transfer LTC to `hot address` : `MErU8FfsLhXPvkzgE2BRKTyeJQExTMiZMD`.Wait about 25S,account hxtest002 will receive LTC.Query balance of account hxtest002.
+
+## Deposit
+
+Make sure created BTC/LTC address' balance is not 0 on bitcoin chain/litecoin chain.Has two methods to deposit BTC/LTC to hx blockchain.
+
+1.Import private key of BTC and LTC addresses to each other' mainnet blockchain. 
+
+> Deposit BTC to account `hxtest001`
+
+In bitcoin chain,transfer BTC to `hot address` : `"35ymUk9NfK4izhgp55Nphqd6dcgsvQYNfd"`.Wait about 40 minutes,account hxtest001 will receive BTC.Query balance of account hxtest001.
+    
+    unlocked >>> get_account_balances hxtest001
+    get_account_balances hxtest001
+    [{
+    "amount": 1000000000,
+    "asset_id": "1.3.1"
+      }
+    ]
+
+> Deposit LTC to account `hxtest002`
+
+In litcoin chain,transfer LTC to `hot address` : `MErU8FfsLhXPvkzgE2BRKTyeJQExTMiZMD`.Wait about 10 minutes,account hxtest002 will receive LTC.Query balance of account hxtest002.
     
     unlocked >>> get_account_balances hxtest002
     get_account_balances hxtest002
@@ -587,6 +360,157 @@ The following will introduce how to use rpc commands to call functions:transfer 
       }
     ]
    
+2.Use cli-wallet rpc command of hx blockchain
+
+> Deposit BTC to account `hxtest001`
+
+(1)createrawtransaction:sender address/receiver address/transfer amount/transfer coin symbol
+    
+    unlocked >>> createrawtransaction 19QmVye31e2QfYXZShBD2VXissoM6QeppM  35ymUk9NfK4izhgp55Nphqd6dcgsvQYNfd 10 BTC
+    createrawtransaction 19QmVye31e2QfYXZShBD2VXissoM6QeppM  35ymUk9NfK4izhgp55Nphqd6dcgsvQYNfd 10 BTC
+    { "jsonrpc": "2.0", "id" : "45","method" : "Zchain.Trans.createTrx" , "params" : {"chainId":"btc" ,"from_addr": "19QmVye31e2QfYXZShBD2VXissoM6QeppM","dest_info":{"35ymUk9NfK4izhgp55Nphqd6dcgsvQYNfd":1}}}
+    {
+      "hex": "02000000010b2b180e1aa5bfc150fea349e1090ccc1721b01e2887c4c25ff9ca96afe6d1ef0000000000ffffffff02c038c023000000001976a91409babeff4dd30c4e3227b5e0c091080dfc08538a88ac00e1f5050000000017a91431d9622f9e40a979433b7026a760dce5bdacef8e8700000000",
+      "scriptPubKey": [
+    "76a91409babeff4dd30c4e3227b5e0c091080dfc08538a88ac"
+      ],
+      "trx": {
+    "hash": "8332e34ef216c792bcc03750defbd8f2298a939c8d5eaf35448dbfdc8b21d252",
+    "locktime": 0,
+    "size": 117,
+    "txid": "8332e34ef216c792bcc03750defbd8f2298a939c8d5eaf35448dbfdc8b21d252",
+    "version": 2,
+    "vin": [{
+        "scriptSig": {
+          "asm": "",
+          "hex": ""
+        },
+        "sequence": 4294967295,
+        "txid": "efd1e6af96caf95fc2c487281eb02117cc0c09e149a3fe50c1bfa51a0e182b0b",
+        "vout": 0
+      }
+    ],
+    "vout": [{
+        "n": 0,
+        "scriptPubKey": {
+          "addresses": [
+            "19QmVye31e2QfYXZShBD2VXissoM6QeppM"
+          ],
+          "asm": "OP_DUP OP_HASH160 09babeff4dd30c4e3227b5e0c091080dfc08538a OP_EQUALVERIFY OP_CHECKSIG",
+          "hex": "76a91409babeff4dd30c4e3227b5e0c091080dfc08538a88ac",
+          "reqSigs": 1,
+          "type": "pubkeyhash"
+        },
+        "value": "5.99800000000000022"
+      },{
+        "n": 1,
+        "scriptPubKey": {
+          "addresses": [
+            "35ymUk9NfK4izhgp55Nphqd6dcgsvQYNfd"
+          ],
+          "asm": "OP_HASH160 31d9622f9e40a979433b7026a760dce5bdacef8e OP_EQUAL",
+          "hex": "a91431d9622f9e40a979433b7026a760dce5bdacef8e87",
+          "reqSigs": 1,
+          "type": "scripthash"
+        },
+        "value": "10.00000000"
+      }
+    ],
+    "vsize": 117
+      }
+    }
+
+(2)signrawtransaction:sender address/transfer coin symbol/return value of command createrawtransaction/if broadcast
+
+    unlocked >>> signrawtransaction 19QmVye31e2QfYXZShBD2VXissoM6QeppM BTC {"hex":"020000000163542ba515dbde7ceafba3bf3c6567beef0b2bb378a5a25d8ed871c93c04b5940000000000ffffffff0260a0b729000000001976a91409babeff4dd30c4e3227b5e0c091080dfc08538a88ac00e1f5050000000017a91431d9622f9e40a979433b7026a760dce5bdacef8e8700000000","scriptPubKey":["76a91409babeff4dd30c4e3227b5e0c091080dfc08538a88ac"],"trx":{"hash":"0fed58465fc05311c032f9e76898f05d663823f5d339911f81bd5af3e3d30033","locktime":0,"size":117,"txid":"0fed58465fc05311c032f9e76898f05d663823f5d339911f81bd5af3e3d30033","version":2,"vin":[{"scriptSig":{"asm":"","hex":""},"sequence":4294967295,"txid":"94b5043cc971d88e5da2a578b32b0befbe67653cbfa3fbea7cdedb15a52b5463","vout":0}],"vout":[{"n":0,"scriptPubKey":{"addresses":["19QmVye31e2QfYXZShBD2VXissoM6QeppM"],"asm":"OP_DUP OP_HASH160 09babeff4dd30c4e3227b5e0c091080dfc08538a OP_EQUALVERIFY OP_CHECKSIG","hex":"76a91409babeff4dd30c4e3227b5e0c091080dfc08538a88ac","reqSigs":1,"type":"pubkeyhash"},"value":"6.99899999999999967"},{"n":1,"scriptPubKey":{"addresses":["QR9Zdmi94TkX4tvuQBCgZxXHTpCFTU358v"],"asm":"OP_HASH160 31d9622f9e40a979433b7026a760dce5bdacef8e OP_EQUAL","hex":"a91431d9622f9e40a979433b7026a760dce5bdacef8e87","reqSigs":1,"type":"scripthash"},"value":"10.00000000"}],"vsize":117}} true
+    signrawtransaction 19QmVye31e2QfYXZShBD2VXissoM6QeppM BTC {"hex":"020000000163542ba515dbde7ceafba3bf3c6567beef0b2bb378a5a25d8ed871c93c04b5940000000000ffffffff0260a0b729000000001976a91409babeff4dd30c4e3227b5e0c091080dfc08538a88ac00e1f5050000000017a91431d9622f9e40a979433b7026a760dce5bdacef8e8700000000","scriptPubKey":["76a91409babeff4dd30c4e3227b5e0c091080dfc08538a88ac"],"trx":{"hash":"0fed58465fc05311c032f9e76898f05d663823f5d339911f81bd5af3e3d30033","locktime":0,"size":117,"txid":"0fed58465fc05311c032f9e76898f05d663823f5d339911f81bd5af3e3d30033","version":2,"vin":[{"scriptSig":{"asm":"","hex":""},"sequence":4294967295,"txid":"94b5043cc971d88e5da2a578b32b0befbe67653cbfa3fbea7cdedb15a52b5463","vout":0}],"vout":[{"n":0,"scriptPubKey":{"addresses":["19QmVye31e2QfYXZShBD2VXissoM6QeppM"],"asm":"OP_DUP OP_HASH160 09babeff4dd30c4e3227b5e0c091080dfc08538a OP_EQUALVERIFY OP_CHECKSIG","hex":"76a91409babeff4dd30c4e3227b5e0c091080dfc08538a88ac","reqSigs":1,"type":"pubkeyhash"},"value":"6.99899999999999967"},{"n":1,"scriptPubKey":{"addresses":["35ymUk9NfK4izhgp55Nphqd6dcgsvQYNfd"],"asm":"OP_HASH160 31d9622f9e40a979433b7026a760dce5bdacef8e OP_EQUAL","hex":"a91431d9622f9e40a979433b7026a760dce5bdacef8e87","reqSigs":1,"type":"scripthash"},"value":"10.00000000"}],"vsize":117}} true
+    "020000000163542ba515dbde7ceafba3bf3c6567beef0b2bb378a5a25d8ed871c93c04b594000000006b483045022100f19d516c64d7d4acbda6af9b7b3cc4dbacc5cc8e98e669d032740a612d6f2977022044487e5e0b68ab7fdda74d3d0d8d5ac3ee10c55162cb9894329e60270fe270ac012103556af2f0ca77d324abfb49ad3d78ddb9cb3fbc4da3c53af933d6b567527b9022ffffffff0260a0b729000000001976a91409babeff4dd30c4e3227b5e0c091080dfc08538a88ac00e1f5050000000017a91431d9622f9e40a979433b7026a760dce5bdacef8e8700000000"
+
+(3)Query balance of account hxtest001.
+    
+    unlocked >>> get_account_balances hxtest001
+    get_account_balances hxtest001
+    [{
+    "amount": 1000000000,
+    "asset_id": "1.3.1"
+      }
+    ]
+
+> Deposit LTC to account `hxtest002`
+
+(1)createrawtransaction:sender address/receiver address/transfer amount/transfer coin symbol
+    
+    unlocked >>> createrawtransaction LPFnwvJFXziSzk35fXn3tj2JYQe4iHLLY8  MErU8FfsLhXPvkzgE2BRKTyeJQExTMiZMD 849 LTC
+    createrawtransaction LPFnwvJFXziSzk35fXn3tj2JYQe4iHLLY8  MErU8FfsLhXPvkzgE2BRKTyeJQExTMiZMD 849 LTC
+    { "jsonrpc": "2.0", "id" : "45","method" : "Zchain.Trans.createTrx" , "params" : {"chainId":"ltc" ,"from_addr": "LPFnwvJFXziSzk35fXn3tj2JYQe4iHLLY8","dest_info":{"MErU8FfsLhXPvkzgE2BRKTyeJQExTMiZMD":1}}}
+    {
+      "hex": "02000000010b2b180e1aa5bfc150fea349e1090ccc1721b01e2887c4c25ff9ca96afe6d1ef0000000000ffffffff02c038c023000000001976a91409babeff4dd30c4e3227b5e0c091080dfc08538a88ac00e1f5050000000017a91431d9622f9e40a979433b7026a760dce5bdacef8e8700000000",
+      "scriptPubKey": [
+    "76a91409babeff4dd30c4e3227b5e0c091080dfc08538a88ac"
+      ],
+      "trx": {
+    "hash": "8332e34ef216c792bcc03750defbd8f2298a939c8d5eaf35448dbfdc8b21d252",
+    "locktime": 0,
+    "size": 117,
+    "txid": "8332e34ef216c792bcc03750defbd8f2298a939c8d5eaf35448dbfdc8b21d252",
+    "version": 2,
+    "vin": [{
+        "scriptSig": {
+          "asm": "",
+          "hex": ""
+        },
+        "sequence": 4294967295,
+        "txid": "efd1e6af96caf95fc2c487281eb02117cc0c09e149a3fe50c1bfa51a0e182b0b",
+        "vout": 0
+      }
+    ],
+    "vout": [{
+        "n": 0,
+        "scriptPubKey": {
+          "addresses": [
+            "LPFnwvJFXziSzk35fXn3tj2JYQe4iHLLY8"
+          ],
+          "asm": "OP_DUP OP_HASH160 09babeff4dd30c4e3227b5e0c091080dfc08538a OP_EQUALVERIFY OP_CHECKSIG",
+          "hex": "76a91409babeff4dd30c4e3227b5e0c091080dfc08538a88ac",
+          "reqSigs": 1,
+          "type": "pubkeyhash"
+        },
+        "value": "5.99800000000000022"
+      },{
+        "n": 1,
+        "scriptPubKey": {
+          "addresses": [
+            "MErU8FfsLhXPvkzgE2BRKTyeJQExTMiZMD"
+          ],
+          "asm": "OP_HASH160 31d9622f9e40a979433b7026a760dce5bdacef8e OP_EQUAL",
+          "hex": "a91431d9622f9e40a979433b7026a760dce5bdacef8e87",
+          "reqSigs": 1,
+          "type": "scripthash"
+        },
+        "value": "848.99552000"
+      }
+    ],
+    "vsize": 117
+      }
+    }
+
+(2)signrawtransaction:sender address/transfer coin symbol/return value of command createrawtransaction/if broadcast
+
+    unlocked >>> signrawtransaction LPFnwvJFXziSzk35fXn3tj2JYQe4iHLLY8 LTC {"hex":"020000000163542ba515dbde7ceafba3bf3c6567beef0b2bb378a5a25d8ed871c93c04b5940000000000ffffffff0260a0b729000000001976a91409babeff4dd30c4e3227b5e0c091080dfc08538a88ac00e1f5050000000017a91431d9622f9e40a979433b7026a760dce5bdacef8e8700000000","scriptPubKey":["76a91409babeff4dd30c4e3227b5e0c091080dfc08538a88ac"],"trx":{"hash":"0fed58465fc05311c032f9e76898f05d663823f5d339911f81bd5af3e3d30033","locktime":0,"size":117,"txid":"0fed58465fc05311c032f9e76898f05d663823f5d339911f81bd5af3e3d30033","version":2,"vin":[{"scriptSig":{"asm":"","hex":""},"sequence":4294967295,"txid":"94b5043cc971d88e5da2a578b32b0befbe67653cbfa3fbea7cdedb15a52b5463","vout":0}],"vout":[{"n":0,"scriptPubKey":{"addresses":["LPFnwvJFXziSzk35fXn3tj2JYQe4iHLLY8"],"asm":"OP_DUP OP_HASH160 09babeff4dd30c4e3227b5e0c091080dfc08538a OP_EQUALVERIFY OP_CHECKSIG","hex":"76a91409babeff4dd30c4e3227b5e0c091080dfc08538a88ac","reqSigs":1,"type":"pubkeyhash"},"value":"6.99899999999999967"},{"n":1,"scriptPubKey":{"addresses":["QR9Zdmi94TkX4tvuQBCgZxXHTpCFTU358v"],"asm":"OP_HASH160 31d9622f9e40a979433b7026a760dce5bdacef8e OP_EQUAL","hex":"a91431d9622f9e40a979433b7026a760dce5bdacef8e87","reqSigs":1,"type":"scripthash"},"value":"10.00000000"}],"vsize":117}} true
+    signrawtransaction LPFnwvJFXziSzk35fXn3tj2JYQe4iHLLY8 BTC {"hex":"020000000163542ba515dbde7ceafba3bf3c6567beef0b2bb378a5a25d8ed871c93c04b5940000000000ffffffff0260a0b729000000001976a91409babeff4dd30c4e3227b5e0c091080dfc08538a88ac00e1f5050000000017a91431d9622f9e40a979433b7026a760dce5bdacef8e8700000000","scriptPubKey":["76a91409babeff4dd30c4e3227b5e0c091080dfc08538a88ac"],"trx":{"hash":"0fed58465fc05311c032f9e76898f05d663823f5d339911f81bd5af3e3d30033","locktime":0,"size":117,"txid":"0fed58465fc05311c032f9e76898f05d663823f5d339911f81bd5af3e3d30033","version":2,"vin":[{"scriptSig":{"asm":"","hex":""},"sequence":4294967295,"txid":"94b5043cc971d88e5da2a578b32b0befbe67653cbfa3fbea7cdedb15a52b5463","vout":0}],"vout":[{"n":0,"scriptPubKey":{"addresses":["LPFnwvJFXziSzk35fXn3tj2JYQe4iHLLY8"],"asm":"OP_DUP OP_HASH160 09babeff4dd30c4e3227b5e0c091080dfc08538a OP_EQUALVERIFY OP_CHECKSIG","hex":"76a91409babeff4dd30c4e3227b5e0c091080dfc08538a88ac","reqSigs":1,"type":"pubkeyhash"},"value":"6.99899999999999967"},{"n":1,"scriptPubKey":{"addresses":["MErU8FfsLhXPvkzgE2BRKTyeJQExTMiZMD"],"asm":"OP_HASH160 31d9622f9e40a979433b7026a760dce5bdacef8e OP_EQUAL","hex":"a91431d9622f9e40a979433b7026a760dce5bdacef8e87","reqSigs":1,"type":"scripthash"},"value":"10.00000000"}],"vsize":117}} true
+    "020000000163542ba515dbde7ceafba3bf3c6567beef0b2bb378a5a25d8ed871c93c04b594000000006b483045022100f19d516c64d7d4acbda6af9b7b3cc4dbacc5cc8e98e669d032740a612d6f2977022044487e5e0b68ab7fdda74d3d0d8d5ac3ee10c55162cb9894329e60270fe270ac012103556af2f0ca77d324abfb49ad3d78ddb9cb3fbc4da3c53af933d6b567527b9022ffffffff0260a0b729000000001976a91409babeff4dd30c4e3227b5e0c091080dfc08538a88ac00e1f5050000000017a91431d9622f9e40a979433b7026a760dce5bdacef8e8700000000"
+
+(3)Query balance of account hxtest002.
+    
+    unlocked >>> get_account_balances hxtest002
+    get_account_balances hxtest002
+    [{
+    "amount": "84899552000",
+    "asset_id": "1.3.2"
+      }
+    ]
+
+
 ## Exchange Flow
 
 > Exchange Contract

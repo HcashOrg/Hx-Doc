@@ -11,7 +11,7 @@ Together, HC and HX will help HCASH build an interlinked, bifocal, dual-chain ec
 
 ## What is HIOU
 
-All the crosschain assets will correspond to the assets on the HX chain after being deposited to the HX chain.We call that HIOU.On the HX chain, all transactions are done using HIOU and HX.
+All the cross-chain assets will correspond to the assets on the HX chain after being deposited to the HX chain.We call that HIOU.On the HX chain, all transactions are done using HIOU and HX.
 
 ---
 
@@ -25,7 +25,7 @@ In this case, for example, if A user wants to transfer HXBTC, and he does not ha
 
 ---
 
-## What is a Hshare chain?
+## What is a HyperCash chain?
 As one of its dual chains, HyperCash functions as an upgraded Hshare chain, focusing on non-interoperable blockchain features, such as advanced post-quantum and Zero Knowledge Proof technologies. This document aims to introduce HyperExchange. All subsequent information relating to HyperCash can be found in the [HCASH technical official website](https://h.cash/).
 
 ---

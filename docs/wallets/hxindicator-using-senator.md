@@ -8,7 +8,7 @@ Select "CURRENT SENATOR",will show information about it.
 
 > My Income
 
-Citizen will distribute partial income to senator.It's not ready yet.
+Citizen will distribute partial income to senator.
 
 ## Proposal
 

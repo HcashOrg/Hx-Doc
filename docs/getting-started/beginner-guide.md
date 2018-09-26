@@ -8,9 +8,9 @@ Last updated for v1.0.7
 
 Welcome to HyperExchange! We are very glad to have you. As you may or may not already know, HyperExchange is different. There's a lot of new things to learn to fully grasp how things work. This documentation will attempt to make things a bit easier to understand.
 
-This beginner's guide is a path to getting the HyperExchange software up and running. You can choose from multiple clients to get a node on the network and HyperExchange in your wallet. Specifically, you'll learn how to install, setup, and use the HyperExchange applications; how to obtain HX; and how to create crosschain transaction.
+This beginner's guide is a path to getting the HyperExchange software up and running. You can choose from multiple clients to get a node on the network and HyperExchange in your wallet. Specifically, you'll learn how to install, setup, and use the HyperExchange applications; how to obtain HX; and how to create cross-chain transaction.
 
-**NOTE: Using Testnet is highly recommended for learning how to use the HyperExchange software without the fear of making a mistake and losing real money. After following the guides to setup your choice of software, please visit the [Using Testnet guide](/getting-started/private-testnet.md) to learn how to launch your application onto hyperexchange's testnet.**
+**NOTE: Using Testnet is highly recommended for learning how to use HyperExchange software without worrying about making mistakes or losing money. After setup your software with following guides, please visit Using Testnet Guide to learn how to launch your application onto hyperexchange’s testnet.**
 
 ---
     
@@ -18,13 +18,13 @@ This beginner's guide is a path to getting the HyperExchange software up and run
 
 Below you'll find a list of currently available applications, with a chart showing their compatibility with different operating systems.
 
-* **hx_node**: hx_node Connect to the HX network via P2P, receive the latest blocks from the network, broadcast locally signed transaction packets to the network, and provide API for other programs to call through websocket + HTTP RPC (hereinafter referred to as node API),work with middleware to handle cross-chain deposit and withdrawal operations.manage the wallet file, which contains the encrypted user's private key. A wallet file can contain multiple private keys,
+* **hx_node**: hx_node Connect to the HX network via P2P, receive blocks from the network, broadcast locally signed transaction packets to network, hx_node provide API to other programs to call through websocket + HTTP RPC, work with middleware to handle cross-chain deposit and withdrawal operations. HX_node manage wallet file, which contains the encrypted user’s private key. A wallet file can contain multiple private keys.
 
-* **middleware **: Regularly collect data from the btc/ltc/eth... main chain and store it to the database.
+* **middleware**: Regularly collect data from BTC/LTC/ETH and other main chains,  and store it in database.
 
-* **HXIndicator **: HXIndicator is a graphical user interface for hx wallet.
+* **HXIndicator**: HXIndicator is a graphical user interface for hx wallet.
 
-* **hx_client **: Connect through rpc to hx_node,hx_client provided  transaction signature function, and the signature is then broadcast to the hx_node,hx_client provides an API for other programs to call through HTTP RPC (hereinafter referred to as the wallet API).
+* **hx_client**: Connect through rpc to hx_node,hx_client provided  transaction signature function, and the signature is then broadcast to the hx_node,hx_client provides an API for other programs to call through HTTP RPC (hereinafter referred to as the wallet API).
 
 |           | hx_node | middleware | HXIndicator | hx_client |
 | ---------:|:----:|:---------:|:------:|:------:|
@@ -39,16 +39,16 @@ Below you'll find a list of currently available applications, with a chart showi
 
 > General User
 
-* Download HXIndicator of your operating system in HX official website.Refer to [Download and Install](hxindicator-setup/#1)
-* If you have got hx of mainnet,you can refer [Using HXIndicator](/wallets/hxindicator-using-account.md)  to use HXIndicator. 
-* If you are interested in testing of public testnet, refer to [Using Public Testnet](/getting-started/public-testnet.md)
+* Download HXIndicator for your operating system from HX official website.Refer to [Download and Install](hxindicator-setup/#1)
+* If you have got hx of mainnet, you can refer [Using HXIndicator](/wallets/hxindicator-using-account.md)  to use HXIndicator. 
+* If you are interested in testing public testnet, refer to [Using Public Testnet](/getting-started/public-testnet.md)
 
 > Developer User
 
 * Download HyperExchange soure code from github:<https://github.com/HcashOrg/HyperExchange.git>
 * [Building](/wallets/hx-building.md)
 * [Deploy private testnet](/getting-started/private-testnet.md)
-* If you want to test deposit/withdraw/crosschain transfer and other functions in command console, please refer to [Hx-cli RPC Commands](wallets/hxwallet-cli-rpc-commands.md).
+* If you want to test deposit/withdraw/crosschain transfer and other functions in command console, please refer to [Hx-cli RPC Commands](/wallets/hxwallet-cli-rpc-commands.md).
 
 ---
 
