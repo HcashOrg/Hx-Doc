@@ -80,5 +80,5 @@ The following guides are independent of the different applications:
 
 * [HyperExchange Features](/getting-started/hx-features.md)
 * [Using Testnet](/getting-started/private-testnet.md)
-* [Obtaining HX](/getting-started/obtaining-hx.md)
+* [Obtaining HX](/getting-started/obtaining-hx-test.md)
 * [Using the Block Explorer](/getting-started/using-the-block-explorer.md)
