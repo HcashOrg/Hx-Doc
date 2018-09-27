@@ -1,4 +1,4 @@
-# <img class="hx-icon" src="/img/hx-icons/Wallet.svg" /> HyperExchange Cli-wallet Startup Guide
+# HyperExchange Cli-wallet Startup Guide
 
 Last updated for v1.0.7.
 
