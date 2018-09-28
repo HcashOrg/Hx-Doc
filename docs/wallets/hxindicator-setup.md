@@ -14,7 +14,7 @@ Last updated for v1.0.7.
 
 ---
 
-<h2 id="1">Download and Install</h2>
+## Download and Install
 
 The latest version of HXIndicator can be downloaded official website <www.hx.cash>.
 
@@ -40,8 +40,7 @@ Not support now.
 
 ---
 
-<h2 id="2">Open and Set Up HXIndicator on Windows/MAC OS</h2>
-
+## Open and Set Up HXIndicator on Windows/MAC OS
 Opening HXIndicator for the first time will display the following screen:
 
 ![HXIndicator open screen](/img/wallets/hxindicator/indicator-open.png)

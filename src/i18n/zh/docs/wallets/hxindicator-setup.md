@@ -14,7 +14,7 @@
 
 ---
 
-<h2 id="1">下载和安装</h2>
+## 下载和安装
 
 最新版本的HXIndicator可以从官网<http://www.hx.cash/>下载，也可以在github上下载<https://github.com/HcashOrg/HyperExchange/releases/tag/v0.1>.
 
@@ -40,7 +40,7 @@
 
 ---
 
-<h2 id="2">Windows/MAC OS上打开并设置HXIndicator</h2>
+## Windows/MAC OS上打开并设置HXIndicator
 
 首次打开HXIndicator将显示以下屏幕：
 
