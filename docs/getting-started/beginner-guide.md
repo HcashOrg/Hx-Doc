@@ -39,7 +39,7 @@ Below you'll find a list of currently available applications, with a chart showi
 
 > General User
 
-* Download HXIndicator for your operating system from HX official website.Refer to part `Download and Install` in [HXIndicator](/wallets/hxindicator-setup.md)
+* Download HXIndicator for your operating system from HX official website.Refer to part `Download and Install` in [HXIndicator Setup](/wallets/hxindicator-setup.md)
 * If you have got hx of mainnet, you can refer [Using HXIndicator](/wallets/hxindicator-using-account.md)  to use HXIndicator. 
 * If you are interested in testing public testnet, refer to [Using Public Testnet](/getting-started/public-testnet.md)
 
