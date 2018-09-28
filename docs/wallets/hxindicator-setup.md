@@ -16,7 +16,7 @@ Last updated for v1.0.7.
 
 <h2 id="1">Download and Install</h2>
 
-The latest version of HXIndicator can be downloaded from [https://github.com/HcashOrg/HyperExchange/releases/tag/v0.1).
+The latest version of HXIndicator can be downloaded official website <www.hx.cash>.
 
 > Windows
 
