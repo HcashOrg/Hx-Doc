@@ -16,7 +16,7 @@ Last updated for v1.0.7.
 
 ## Download and Install
 
-The latest version of HXIndicator can be downloaded official website <www.hx.cash>.
+The latest version of HXIndicator can be downloaded from official website<http://www.hx.cash/>.
 
 > Windows
 
