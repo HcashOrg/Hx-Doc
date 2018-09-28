@@ -39,7 +39,7 @@
 
 > 普通用户
 
-* 从HX官方网站下载适用于您的操作系统的HXIndicator。请参考 [下载和安装](hxindicator-setup/#1)
+* 从HX官方网站下载适用于您的操作系统的HXIndicator。请参考 [HXIndicator设置](/wallets/hxindicator-setup.md)中的`下载和安装`。
 * 如果你已经获得了hx在mainnet中，你可以参考 [使用HXIndicator](/wallets/hxindicator-using-account.md) 去使用 HXIndicator. 
 * 如果您对测试公共testnet感兴趣，请参阅 [公测链使用](/getting-started/public-testnet.md)
 

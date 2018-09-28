@@ -1,26 +1,26 @@
 # IDE Using
 
-We will introduce how to use HX IDE in this page.
+本页将介绍如何使用HX IDE
 
-## Download HX IDE
+## 下载HX IDE
 
-You can visit official website to download HX IDE,now just support for Win7 above platform. Select the 64-bit and 32-bit versions of your system to download.
+可以通过访问官网<http://www.hx.cash/>下载最新版本的IDE，目前支持win7以及更高的平台，请根据需要选择32位或者64位版本。
 
-## Start IDE
+## 启动IDE
 
-Once you've downloaded it, you'll get a zip file, unpack it into any directory on your computer, and then open the directory with an ChainIDE.exe file inside.double-click on the file to launch your HX IDE.
+下载成功后，会获得一个压缩文件，将压缩文件解压到电脑的某个路径下，进入该路径，找到 ChainIDE.exe文件并双击启动HX IDE。
 
 ![Start IDE](/img/research/start.png)
 
-First start IDE need to setup a store path:
+第一启动的时候需要设置存储路径:
 
 ![Start IDE](/img/research/storepath.png)
 
-## Main Window
+## 主窗口
 
 ![Start IDE](/img/research/main-window.png)
 
-Menu Bar Description:
+菜单栏描述:
 
 1.In `File` menu, include
 

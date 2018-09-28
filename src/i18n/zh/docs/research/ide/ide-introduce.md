@@ -1,12 +1,16 @@
-## HX Smart Conctract IDE
+## HX智能合约IDE
 
-IDE is mostly used for writing and translating contract and on-chain registration, debug functionality will be added in the future. 
+IDE主要用于合约的编写、编译、注册上链。未来会实现调试功能；
 
-The main functions are briefly described below:
+1、	智能合约的编写支持uvlua、java、c#、kotlin四种语言，提供对应的代码补全功能，提供部分便捷模板（如 newtoken合约模板）；
 
-* uvlua/java/c#/kotlin can be used when writing contract on IDE, it provides functionalities such as code association, templates and etc.（For example, newtoken contract template）
-* IDE helps user to write and translate languages within a finger tap, which makes it much more convenient to generate contract into bytecode. 
-* IDE uses file system to manage contracts, you can easily manage many original files there and displayed as file system form in IDE. 
-* Backstage offers official chains and corresponding testing chains of CTC, UB, HX and etc, which can realizes part of functionalities of the wallet of each chain, such as account management, registration and transaction.  
-* IDE support contract release. User can release smart contract onto the chain after successfully testing it in a test environment. 
-* It manages registered contracts and allows users to review registered contacts. 
+2、	提供这四种语言的一键编译功能，方便生成合约字节码；
+
+3、	提供合约工程的管理功能，在IDE中可以很方便的管理多个源文件，以工程的形式在ide中展现；
+
+4、	后台提供CTC、UB、HX的链，提供对应的测试以及正式链，实现了对应链的部分钱包功能，如账户管理、注册、转账等；
+
+5、	提供合约上链功能，用户可以先在测试链中测试自己编译的合约，确认完成后可以切换到正式链进行上链；
+
+6、	提供已注册合约的管理功能，展示用户注册的合约。
+ 
