@@ -1023,7 +1023,7 @@ Senator in charge of cross-chain assets, most operations are voting related.
     delta: see voting content as below{"key_approvals_to_add":[addr]，“key_approvals_to_remove”：[addr]}    
 10.get_crosschain_transaction type
 
-    type：状态 0,1,2,3,4Status 
+    type：0,1,2,3,4Status 
       0： withdrawal request status 
       1,2： waiting for signature or in the process of signing 
       3： transaction signed and broadcast 
