@@ -22,35 +22,36 @@
 
 菜单栏描述:
 
-1.In `File` menu, include
+1. `文件` 栏包含：
 
-* `New File` :create new uvlua/java/c#/kotlin contract file.
+* `新建文件` :新建uvlua/java/c#/kotlin合约；
 
-* `Import File` :import local uvlua/java/c#/kotlin contract file.
+* `导入文件` :导入本地的uvlua/java/c#/kotlin合约文件；
 
-* `Save/Save All/Close/Close All` :save opened file/save all opened files/close opened file/close all opened file.
+* `保存/保存全部/关闭/关闭全部` :保存打开的一个文件/保存打开的所有文件/关闭一个打开的文件/关闭所有打开的文件；
 
-* `Configure` :change language/theme/chaintype/startchain.
+* `配置` :配置语言/主题/链类型/启动类型；
+* `退出` :退出IDE。
 
 ![Start IDE](/img/research/configure.png)
 
-2.In `Edit` menu, include `Redo` and `Undo`.
+2.`编辑`栏包括 `撤销` and `恢复`.
 
-3.In `Contract` menu, include `Register Contract/UpgradeCcontract/CallContract`.
+3.`合约`栏包括`注册合约/升级合约/调用合约`.
 
-4.In `Debug` menu, include `Compile/Debug/Step/Stop/TabBreak/CleanBreak`.
+4.`调试`栏包括`编译/开始调试/逐步/停止调试/切换断点/清空断点`.
 
-5.In `Tool` menu include:
+5.`工具`栏包括:
 
-* `Console` :you can excute rpc command here.
+* `控制台` :可以执行当前连接的链的rpc命令；
 
-* `AccountManager` :you can create a new account or import an account.
+* `账户管理` :可以新建账户或者导入账户；
 
-* `Transfer` :you can send a transfer transaction.
+* `转账` :在当前链上发送交易。
 
-6.In `Help` menu include:
+6.`帮助` 栏包括：
 
-* `Help F1`: Jump to the web site of the contract programming document.
+* `查看帮助F1`: 跳转到如何编写合约的文档；
 
-* `About`: about us.
+* `关于`: 介绍IDE，还可以检查更新。
 
