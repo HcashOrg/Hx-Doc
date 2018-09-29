@@ -322,9 +322,12 @@ This pops up the cmake gui, but if you've used CMake before it will probably be 
 Then hit Configure. It may ask you to specify a generator for this project; if it does, choose Visual Studio 15 2017 Win64 for 64 bit builds and select Use default native compilers. Look through the output and fix any errors. Then hit Generate.
 
 3.Launch Visual Studio and load D:\hyperexchange\x64\hyperexchange.sln
+
 4.Set Active Configuration to `RelWithDebInfo`, ensure Active Solution platform is `x64` for 64 bit builds
+
 5.Build Solution
 
-Or you can build the `INSTALL` target in Visual Studio which will copy all of the necessary files into your `D:\hyperexchange\HyperExchange\install` directory, then copy all of those files to the `bin` directory.
+
+6.Or you can build the `INSTALL` target in Visual Studio which will copy all of the necessary files into your `D:\hyperexchange\HyperExchange\install` directory, then copy all of those files to the `bin` directory.
 
 ---

@@ -321,8 +321,11 @@ HyperExchange依赖于libboost，您必须从源代码构建它。
 然后点击Configure.它可能会要求您为此项目指定生成器; 如果是，请选择Visual Studio 15 2017 Win64进行64位构建，然后选择Use default native compilers。查看输出并修复任何错误。然后点击Generate。
 
 3.启动Visual Studio并加载D:\hyperexchange\x64\hyperexchange.sln
+
 4.将Active Configuration设置为 `RelWithDebInfo`, 确保Active Solution platform 是 `x64` 。
+
 5.生成解决方案
 
-编译`INSTALL`，该目标将所有必需的文件复制到您的D:\hyperexchange\HyperExchange\install目录中，然后将所有这些文件复制到该bin目录中。
+6.编译`INSTALL`，该目标将所有必需的文件复制到您的D:\hyperexchange\HyperExchange\install目录中，然后将所有这些文件复制到该bin目录中。
+
 ---
