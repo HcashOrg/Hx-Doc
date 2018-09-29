@@ -865,177 +865,183 @@
 
 1.info
 
-    Return current information, block number and etc. to HX chain
+    返回HX 链当前信息，块号等
 2.wallet_create_account  name
 
-    create wallet account, return account address 
+    在钱包创建账户，返回账户地址
 3.dump_private_key name
 
-    obtain private keys of wallet account, return address+private keys. 
+    获取钱包内账户的私钥，会返回地址+私钥
 4.import_key name private_key
 
-    import private keys of account `name`
+    导入私钥，账户名为name
 5.register_account name true
     
-    This account name is registered on-chain
+    注册该账户名至链上
 6.transfer_to_address from to amount symbol memo true
 
-    transfer to certain address: 
-    from:sent from address 
-    to：receive address 
-    amount： total transfer amount 
-    symbol: currency type 
-    memo: other information
+    转账到某地址: 
+    from:发起地址
+    to：目的地址
+    amount： 转账总量 
+    symbol:资产类型 
+    memo: 信息
 
 7.get_transaction trxid
 
-trxid:transaction id
+trxid:交易id
 
-    acquire all information of this transaction according to transaction ID, only on-chain transaction can be traced. 
+    根据交易id，获取本次交易全部信息，只有上链交易才能被查询到
 
 8.get_block blocknum
 
-    detail information of one block can be returned according to block number.
-    blocknum: block number
+    根据块号，返回该块详细信息
+    blocknum: 块号
 9.get_miner name
 
-    return citizen detail information according to user name, if this account is not citizen, return empty/blank/void 
+    根据用户名返回citizen详细信息，如果该账户不是citizen，返回空
 
 10.get_guard_member name
 
 
-    return senator detail information according to user name, if this account is not senator, return empty/blank/void
+    根据用户名返回senator详细信息，如果账户不是senator，返回空
 11.create_miner name url true
 
-    register to become a citizen, which can join mining 
-    name:account name 
-    url: website address 
+    注册为citizen，有机会参与出块
+    name:账户名 
+    url: 网页地址 
 12.create_crosschain_symbol symbol
 
-    create specific assets addresses, return address 
-    symbol: currency type
+    创建特定资产地址，返回地址
+    symbol: 资产类型
 13.bind_tunnel_account account tunnel_account symbol true
 
-    bind tunnel account, the address on other chain is binding with current actual account, tunnel_account private key is needed.
-    account: account name 
-    tunnel_account: an appointed assets address 
-    symbol：currency type
+    绑定tunnel账户，其他链上地址与当前账户建立绑定关系，tunnel_account私钥需要存在
+    account: 账户名
+    tunnel_account: 特定资产地址
+    symbol：资产类型
 14.unbind_tunnel_account account tunnel_account symbol true
     
-    unbind tunnel account, the address on other chain is bound with current actual account, tunnel_account private key is needed.
+    去绑定tunnel账户，其他链上地址与当前账户建立绑定关系，tunnel_account私钥需要存在
 15.get_binding_account account symbol 
 
-    inquire tunnel account of specific assets 
-    account: current account name
-    symbol: currency type
+    查询特定资产的tunnel账户
+    account: 当前账户名
+    symbol: 资产类型
 16.get_multisig_account_pair symbol 
     
-    acquire current on-chain multi-signature address of specific currency, which includes multi-signature address history
+    获取当前链上特定资产多签地址，包含历史多签
+    symbol: 资产类型
 17.get_current_multi_address symbol
 
-    acquire current on-chain multi-signature address of specific currency
+    获取当前链上特定资产当前实际多签地址
+    symbol: 资产类型
 18.withdraw_cross_chain_transaction account amount symbol crosschain_addr memo true
 
-    initiate withdrawal request
-    account: withdrawal request initiator
-    amount:  withdrawal amount 
-    symbol： currency type of withdrawal 
-    crosschain_addr: specific assets receive address 
-    memo: additional information
+    发起提现请求
+    account: 提现请求发起方
+    amount:  提现数量
+    symbol： 提现资产类型
+    crosschain_addr: 特定资产目的地址
+    memo: 附加信息
 19.refund_request refund_acount txid true
     
-    apply for a cancellation of cross-chain withdrawal 
-    runfund_account: account name
-    txid: would like to cancel withdrawal transaction ID
+    发起取消跨链提现申请
+    runfund_account: 账户名
+    txid: 希望取消提现的交易id
 
 > 承兑单相关的rpc命令
 
 1.create_guarantee_order account asset_orign asset_target symbol true
 
-    create acceptance fee,this operation is used for those accounts have HX and would like to exchange to other currencies, such as BTC. 
-    account:creator of acceptance fee form 
-    asset_orign : means the HX can not be used for acceptance fee in this account
-    asset_target : the amount of tokens that you would like to exchange to
-    symbol:  currency type
+    创建承兑单，该操作用于账户下有HX，但是想要把HX利用承兑来换为其他代币，例如btc
+
+    account:为承兑单创建者
+    asset_orign : 为该账户下用于承兑的HX数量
+    asset_target : 想要承兑目的代币的数量
+    symbol:目的代币数字资产类型
 2.list_guarantee_order symbol all
 
-    return qualified acceptance order queue
-    symbol: assets type/ currency type 
-    all true/false,if all acceptance order are listed, including completed orders. HX is need as fees during any transaction, however if there is no HX in the account, use other currencies in the account to pay for fees. 
+    返回符合条件的承兑单队列
+    symbol: 资产类型
+    all true/false,是否列出所有承兑单，包含已经结束的账户做交易时，需要消耗HX作为手续费，但是如果账户没有HX，就需要使用本账户内实际拥有的代币来支付手续费
+
 3.get_my_guarantee_order account all
 
-    return to the acceptance order which was created by this address
-    account: account address 
-    all： whether includes completed acceptance orders
+    返回该地址创建的承兑单
+    account: 账户地址
+    all：是否包含已经结束的承兑单
 4.set_guarantee_id guarantee_id
     
-    choose an acceptance order before transaction, this operation is valid once only is operated locally.
-    guarantee_id : Acceptance ID 
+    设置需要的承兑单，该设置不会上链，只是用于当前即将执行的交易，该交易执行之后不论是否成功，本次设置都会失效
+    guarantee_id : 承兑单id
  
 
 > Senator相关的rpc命令:
 
-Senator in charge of cross-chain assets, most operations are voting related. 
+senator 用于对跨链资产管理，大部分操作都是投票相关
 
 1.create_guard_member  proposer_account account url expiration_time true
 
-    create an proposal to upgrade specific account(s) to candidate senator(s)
-    proposer_account: proposer account 
-    account：senator candidate senator 
-    url : website address 
-    expiration_time: expiration time 
+    创建一个提案用于将特定账户变为候选senator
+    proposer_account: 提案账户名
+    account：待候选senator
+    url : 网址
+    expiration_time: 超时时间
 2.update_guard_formal proposer_account formal expiration_time  true
     
-    proposal initiator and official senator account 
-    formal :default set as true, make senator an official senator 
+    提案发起人以及成为正式senator账户名
+    formal :默认为true,将senator变为正式senator
 3.guard_appointed_publisher proposer publisher symbol expiration_time true
 
-    specify publisher for certain asset 
-    proposer: proposer
-    publisher: feed person (account)/publisher 
-    symbol: assets type for feed
+    对某一资产指明喂价人
+    proposer: 提案人
+    publisher: 喂价人accountid
+    symbol: 喂价资产类型
 4.miner_appointed_crosschain_fee proposer fee symbol expiration_time true
 
-    initiate a proposal, specify cross-chain withdrawel fee of certain specific assets. 
-    fee： fee for cross-chain withdrawal 
-    symbol： cross-chain assets type 
+    发起一个提案，指明特定资产类型跨链提现手续费
+    fee： 跨链提现手续费
+    symbol： 跨链资产类型
 5.miner_appointed_lockbalance_guard proposer lockbalance expiration_time true
 
-    initiate a proposal to modify the amount of pledged deposit and its currency type of an Senator. 
-    lockbalance: specify the amount of pledged deposit and its currency type of a Senator. 
+    发起一个提案，修改senator需要质押的保证金极其资产类型
+    lockbalance: 为map<string,asset>类型，指明senator需要质押的保证金极其资产类型
 6.update_asset_private_keys account symbol true
 
-    it is used to create a pair of private keys of specific assets, and broadcast corresponding public keys on the chain. HX will create a pair of new multi-signature addresses (cold and hot wallets) according to received public keys. 
-    account:transaction initiator 
-    symbol：assets type
+    用于生成一对特定资产的私钥，并将该私钥对所对应的公钥广播到链上HX链会根据收到的公钥生成一对新的多签地址，冷热钱包
+
+    account:交易发起账户
+    symbol：资产类型
 7.account_change_for_crosschain proposer symbol hot cold  expiration_time true
 
-    initiate a proposal，in order to validate hot address(wallet) and cold address(wallet) on chain 
-    symbol：asset type
-    hot：hot wallet address
-    cold:cold wallet address 
+    发起一个提案，使得hot和cold 在链上确认生效
+    symbol：资产类型
+    hot：热钱包地址
+    cold:冷钱包地址
 8.get_proposal_for_voter account
     
-    acquire all necessary proposals for the signature of this account 
-    account：current account name 
+    获取需要该账户签名的所有提案
+    account：当前账户名
 9.approve_proposal account proposal_id delta true
     
-    account: voter 
-    proposal_id: proposal ID 
-    delta: see voting content as below{"key_approvals_to_add":[addr]，“key_approvals_to_remove”：[addr]}    
+    account: 投票人
+    proposal_id: 提案id
+    delta: 投票内容,类似如下{"key_approvals_to_add":[addr]，“key_approvals_to_remove”：[addr]}
 10.get_crosschain_transaction type
 
-    type：状态 0,1,2,3,4Status 
-      0： withdrawal request status 
-      1,2： waiting for signature or in the process of signing 
-      3： transaction signed and broadcast 
-      4： package this transaction on corresponding chain  
+    返回对应状态下提现交易及状态
+    type：状态 0,1,2,3,4 
+      0： 提现请求状态
+      1,2： 交易等待签名或签名中状态 
+      3： 交易签名结束广播
+      4： 对应资产链已打包该交易
 
 11.guard_sign_crosschain_transaction trxid senator
 
-    sign withdrawal transaction 
-    trxid: under status 1, withdrawal transaction ID 
-    senator：Senator account name
+    对提现交易进行签名操作
+    trxid: 提现交易id，状态需要是1 
+    senator：senator账户名
 
 >  合约相关：
 
