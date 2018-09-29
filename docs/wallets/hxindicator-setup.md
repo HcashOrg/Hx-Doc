@@ -28,11 +28,11 @@ The latest version of HXIndicator can be downloaded from official website<http:/
 
 > macOS
 
-1. Download the `HXIndicator.dmg` file.
+1. Download the `HXIndicator.zip` file.
 
-1. Double click the `HXIndicator.dmg` file once downloaded to mount the disk image.
+1. Unzip `HXIndicator.zip` file to local path,will show a `HXIndicator` file.
 
-1. Drag the HXIndicator.app into the link to your Applications folder within the disk image.
+1. Double click `HXIndicator` file to startup hx QT wallt.
 
 > Linux
 
