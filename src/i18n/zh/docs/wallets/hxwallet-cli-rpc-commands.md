@@ -1037,6 +1037,150 @@ Senator in charge of cross-chain assets, most operations are voting related.
     trxid: under status 1, withdrawal transaction ID 
     senator：Senator account name
 
+>  合约相关：
 
+1.invoke_contract_testing caller_account_name contract_address_or_name contract_api contract_arg
+
+    caller_account_name: 调用者本地账户名
+    contract_address_or_name: 被调用合约地址/合约名称
+    contract_api: 被调用合约API名称
+    contract_arg: 被调用合约参数（字符串格式）
+
+2.transfer_to_contract_testing from to amount asset_symbol param
+
+    from: 出账地址
+    to: 目标合约地址
+    amount: 转账金额
+    asset_symbol: 转账的资产符号
+    param: 转账备注
+
+3.register_contract_testing  caller_account_name contract_filepath
+
+    caller_account_name: 调用者本地账户名
+    contract_filepath: 合约文件路径
+
+4.register_native_contract_testing caller_account_name native_contract_key
+
+    caller_account_name: 调用者本地账户名
+    native_contract_key: native合约模板标识
+
+5.upgrade_contract_testing caller_account_name contract_address contract_name contract_desc
+
+    caller_account_name: 调用者本地账户名
+    contract_address: 合约地址
+    contract_name: 新合约名称（需链上唯一）
+    contract_desc: 新合约文字描述
+
+6.get_contract_registered  block_num
+
+    block_num: 块高度
+
+7.get_contract_storage_changed block_num
+
+    block_num: 块高度
+
+8.create_contract_transfer_fee_proposal proposer fee_rate  expiration_time  broadcast
+
+    proposer: 提案标识字符串
+    fee_rate: 费率
+    expiration_time: 提案过期时间 
+    broadcast: 是否广播到链上
+
+9.register_contract caller_account_name  gas_price gas_limit contract_filepath
+
+    caller_account_name: 调用者本地账户名
+    gas_price: gas价格，单位HX
+    gas_limit: 本次交易gas数量限制 
+    contract_filepath: 合约文件路径
+
+10.register_native_contract caller_account_name gas_price gas_limit native_contract_key
+
+    caller_account_name: 调用者本地账户名
+    gas_price: gas价格，单位HX
+    gas_limit: 本次交易gas数量限制
+    native_contract_key: native合约模板标识
+
+11.register_contract_like caller_account_name gas_price gas_limit base
+
+    caller_account_name: 调用者本地账户名
+    gas_price: gas价格，单位HX
+    gas_limit: 本次交易gas数量限制
+    base: 模板合约地址
+
+12.invoke_contract caller_account_name gas_price gas_limit contract_address_or_name contract_api contract_arg
+
+    caller_account_name: 调用者本地账户名
+    gas_price: gas价格，单位HX
+    gas_limit: 本次交易gas数量限制
+    contract_address_or_name: 被调用合约地址或合约名称 
+    contract_api: 被调用合约API名称 
+    contract_arg: 调用参数字符串
+
+13.invoke_contract_offline caller_account_name  contract_address_or_name contract_api contract_arg
+
+    caller_account_name: 调用者本地账户名
+    contract_address_or_name: 被调用合约地址或合约名称 
+    contract_api: 被调用合约API名称 
+    contract_arg: 调用参数字符串
+
+14.upgrade_contract caller_account_name gas_price gas_limit contract_address contract_name contract_desc
+
+    caller_account_name: 调用者本地账户名
+    gas_price: gas价格，单位HX
+    gas_limit: 本次交易gas数量限制
+    contract_address: 合约地址
+    contract_name: 合约新名称
+    contract_desc: 合约文字描述
+
+15.get_contract_info contract_address_or_name
+
+    contract_address_or_name: 合约地址或合约名称
+
+16.get_simple_contract_info contract_address_or_name
+
+    contract_address_or_name: 合约地址或合约名称
+
+17.transfer_to_contract from to amount asset_symbol param gas_price gas_limit broadcast
+
+    from: 来源地址 
+    to: 目标合约地址 
+    amount: 转账金额 
+    asset_symbol: 转账资产标识 
+    param: 转账参数 
+    gas_price: gas价格，单位HX
+    gas_limit: 本次交易gas数量限制
+    broadcast: 是否广播到链上
+
+18.get_contract_balance contract_address
+
+    contract_address: 合约地址
+
+19.get_contract_addresses_by_owner addr
+
+    addr: 合约创建人用户地址
+
+20.get_contracts_by_owner addr
+
+    addr: 合约创建人用户地址
+
+21.get_contracts_hash_entry_by_owner addr
+
+    addr: 合约创建人用户地址
+
+22.get_contract_events addr
+
+    addr: 合约地址
+
+23.get_contract_events_in_range addr start range
+
+    addr: 合约地址
+    start: 开始块高度
+    range: 扫描块数量
+
+24.get_contract_history contract_id  start end
+
+    contract_id: 合约地址
+    start: 开始块高度
+    end: 结束块高度
 
 ---

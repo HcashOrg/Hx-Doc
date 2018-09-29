@@ -1035,6 +1035,150 @@ Senator in charge of cross-chain assets, most operations are voting related.
     trxid: under status 1, withdrawal transaction ID 
     senator：Senator account name
 
+>  Contract related：
 
+1.invoke_contract_testing caller_account_name contract_address_or_name contract_api contract_arg
+
+    caller_account_name: caller native account name
+    contract_address_or_name: The contract address or name is invoked
+    contract_api: contract API name
+    contract_arg: The contract parameter is invoked（string）
+
+2.transfer_to_contract_testing from to amount asset_symbol param
+
+    from: sender
+    to: destination contract address
+    amount: transfer amount
+    asset_symbol: asset symbol
+    param: memo
+
+3.register_contract_testing  caller_account_name contract_filepath
+
+    caller_account_name: caller native account name
+    contract_filepath: path of contract file
+
+4.register_native_contract_testing caller_account_name native_contract_key
+
+    caller_account_name: caller native account name
+    native_contract_key: native contract template symbol
+
+5.upgrade_contract_testing caller_account_name contract_address contract_name contract_desc
+
+    caller_account_name: caller native account name
+    contract_address: contract address
+    contract_name: new contract name（must be unique）
+    contract_desc: new contract description
+
+6.get_contract_registered  block_num
+
+    block_num: block height
+
+7.get_contract_storage_changed block_num
+
+    block_num: block height
+
+8.create_contract_transfer_fee_proposal proposer fee_rate  expiration_time  broadcast
+
+    proposer: proposal(string)
+    fee_rate: fee rate 
+    expiration_time: expiration time of proposal 
+    broadcast: whether broadcast
+
+9.register_contract caller_account_name  gas_price gas_limit contract_filepath
+
+    caller_account_name: caller native account name
+    gas_price: gas price(HX)
+    gas_limit: gas limit of this transaction
+    contract_filepath: path of contract file
+
+10.register_native_contract caller_account_name gas_price gas_limit native_contract_key
+
+    caller_account_name: caller native account name
+    gas_price: gas price(HX)
+    gas_limit: gas limit of this transaction
+    native_contract_key: native contract template symbol
+
+11.register_contract_like caller_account_name gas_price gas_limit base
+
+    caller_account_name: caller native account name
+    gas_price: gas price(HX)
+    gas_limit: gas limit of this transaction
+    base: contract template address
+
+12.invoke_contract caller_account_name gas_price gas_limit contract_address_or_name contract_api contract_arg
+
+    caller_account_name: caller native account name
+    gas_price: gas price(HX)
+    gas_limit: gas limit of this transaction
+    contract_address_or_name: The contract address or contract name is invoked 
+    contract_api: Called contract API name
+    contract_arg: parameter of called contract API
+
+13.invoke_contract_offline caller_account_name  contract_address_or_name contract_api contract_arg
+
+    caller_account_name: caller native account name
+    contract_address_or_name: The contract address or contract name is invoked 
+    contract_api: Called contract API name
+    contract_arg: parameter of called contract API
+
+14.upgrade_contract caller_account_name gas_price gas_limit contract_address contract_name contract_desc
+
+    caller_account_name: caller native account name
+    gas_price: gas price(HX)
+    gas_limit: gas limit of this transaction
+    contract_address: contract address
+    contract_name: contract new name
+    contract_desc: contract description
+
+15.get_contract_info contract_address_or_name
+
+    contract_address_or_name: contract address or name
+
+16.get_simple_contract_info contract_address_or_name
+
+    contract_address_or_name: contract address or name
+
+17.transfer_to_contract from to amount asset_symbol param gas_price gas_limit broadcast
+
+    from: sender
+    to: destination contract address 
+    amount: transfer amount 
+    asset_symbol: transfer asset symbol 
+    param: transfer parameter 
+    gas_price: gas price(HX)
+    gas_limit: gas limit of this transaction
+    broadcast: whether broadcast
+
+18.get_contract_balance contract_address
+
+    contract_address: contract address
+
+19.get_contract_addresses_by_owner addr
+
+    addr: Contract creator user address
+
+20.get_contracts_by_owner addr
+
+    addr: Contract creator user address
+
+21.get_contracts_hash_entry_by_owner addr
+
+    addr: Contract creator user address
+
+22.get_contract_events addr
+
+    addr: contract address
+
+23.get_contract_events_in_range addr start range
+
+    addr: contract address
+    start: start block height
+    range: scan block number
+
+24.get_contract_history contract_id  start end
+
+    contract_id: contract address
+    start: start block height
+    end: end block height
 
 ---
