@@ -16,7 +16,7 @@
 
 ## 下载和安装
 
-最新版本的HXIndicator请从官网<http://www.hx.cash/>下载。
+最新版本的HXIndicator可以从官网<http://www.hx.cash/>下载。
 
 > Windows系统
 
@@ -28,11 +28,11 @@
 
 > 苹果系统
 
-1. 下载 `HXIndicator.zip` 。
+1. 下载 `HXIndicator.dmg` 。
 
-1. 解压 `HXIndicator.zip` 文件到本地路径，会出现一个`HXIndicator`文件。
+1. 双击 `HXIndicator.dmg` 文件。
 
-1. 双击`HXIndicator`文件启动hx的qt钱包。
+1. 将HXIndicator拖到应用程序中。
 
 > Linux
 
