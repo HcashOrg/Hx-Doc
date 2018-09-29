@@ -8,7 +8,7 @@
 
 ## 启动IDE
 
-下载成功后，会获得一个压缩文件，将压缩文件解压到电脑的某个路径下，进入该路径，找到 ChainIDE.exe文件并双击启动HX IDE。
+下载成功后，会获得一个压缩文件，将压缩文件解压到电脑的某个路径下，进入该路径，找到 AnyChain.exe文件并双击启动HX IDE。
 
 ![Start IDE](/img/research/start.png)
 

@@ -8,7 +8,7 @@ You can visit official website to download HX IDE,now just support for Win7 abov
 
 ## Start IDE
 
-Once you've downloaded it, you'll get a zip file, unpack it into any directory on your computer, and then open the directory with an ChainIDE.exe file inside.double-click on the file to launch your HX IDE.
+Once you've downloaded it, you'll get a zip file, unpack it into any directory on your computer, and then open the directory with an AnyChain.exe file inside.double-click on the file to launch your HX IDE.
 
 ![Start IDE](/img/research/start.png)
 
