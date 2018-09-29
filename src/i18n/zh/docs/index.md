@@ -1,4 +1,6 @@
-# 概述
+# [English Document](http://docs.hx.cash/)
+
+# 概述           
 
 ---
 
