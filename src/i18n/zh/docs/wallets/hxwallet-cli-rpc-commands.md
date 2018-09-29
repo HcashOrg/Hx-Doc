@@ -897,15 +897,15 @@ trxid:交易id
 
     根据块号，返回该块详细信息
     blocknum: 块号
-9.get_miner name
+9.get_citizen name
 
     根据用户名返回citizen详细信息，如果该账户不是citizen，返回空
 
-10.get_guard_member name
+10.get_senator_member name
 
 
     根据用户名返回senator详细信息，如果账户不是senator，返回空
-11.create_miner name url true
+11.create_citizen name url true
 
     注册为citizen，有机会参与出块
     name:账户名 
@@ -981,29 +981,29 @@ trxid:交易id
 
 senator 用于对跨链资产管理，大部分操作都是投票相关
 
-1.create_guard_member  proposer_account account url expiration_time true
+1.create_senator_member  proposer_account account url expiration_time true
 
     创建一个提案用于将特定账户变为候选senator
     proposer_account: 提案账户名
     account：待候选senator
     url : 网址
     expiration_time: 超时时间
-2.update_guard_formal proposer_account formal expiration_time  true
+2.update_senator_formal proposer_account formal expiration_time  true
     
     提案发起人以及成为正式senator账户名
     formal :默认为true,将senator变为正式senator
-3.guard_appointed_publisher proposer publisher symbol expiration_time true
+3.senator_appointed_publisher proposer publisher symbol expiration_time true
 
     对某一资产指明喂价人
     proposer: 提案人
     publisher: 喂价人accountid
     symbol: 喂价资产类型
-4.miner_appointed_crosschain_fee proposer fee symbol expiration_time true
+4.citizen_appointed_crosschain_fee proposer fee symbol expiration_time true
 
     发起一个提案，指明特定资产类型跨链提现手续费
     fee： 跨链提现手续费
     symbol： 跨链资产类型
-5.miner_appointed_lockbalance_guard proposer lockbalance expiration_time true
+5.citizen_appointed_lockbalance_senator proposer lockbalance expiration_time true
 
     发起一个提案，修改senator需要质押的保证金极其资产类型
     lockbalance: 为map<string,asset>类型，指明senator需要质押的保证金极其资产类型
@@ -1037,7 +1037,7 @@ senator 用于对跨链资产管理，大部分操作都是投票相关
       3： 交易签名结束广播
       4： 对应资产链已打包该交易
 
-11.guard_sign_crosschain_transaction trxid senator
+11.senator_sign_crosschain_transaction trxid senator
 
     对提现交易进行签名操作
     trxid: 提现交易id，状态需要是1 

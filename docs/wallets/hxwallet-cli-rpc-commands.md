@@ -895,15 +895,15 @@ trxid:transaction id
 
     detail information of one block can be returned according to block number.
     blocknum: block number
-9.get_miner name
+9.get_citizen name
 
     return citizen detail information according to user name, if this account is not citizen, return empty/blank/void 
 
-10.get_guard_member name
+10.get_senator_member name
 
 
     return senator detail information according to user name, if this account is not senator, return empty/blank/void
-11.create_miner name url true
+11.create_citizen name url true
 
     register to become a citizen, which can join mining 
     name:account name 
@@ -975,29 +975,29 @@ trxid:transaction id
 
 Senator in charge of cross-chain assets, most operations are voting related. 
 
-1.create_guard_member  proposer_account account url expiration_time true
+1.create_senator_member  proposer_account account url expiration_time true
 
     create an proposal to upgrade specific account(s) to candidate senator(s)
     proposer_account: proposer account 
     account：senator candidate senator 
     url : website address 
     expiration_time: expiration time 
-2.update_guard_formal proposer_account formal expiration_time  true
+2.update_senator_formal proposer_account formal expiration_time  true
     
     proposal initiator and official senator account 
     formal :default set as true, make senator an official senator 
-3.guard_appointed_publisher proposer publisher symbol expiration_time true
+3.senator_appointed_publisher proposer publisher symbol expiration_time true
 
     specify publisher for certain asset 
     proposer: proposer
     publisher: feed person (account)/publisher 
     symbol: assets type for feed
-4.miner_appointed_crosschain_fee proposer fee symbol expiration_time true
+4.citizen_appointed_crosschain_fee proposer fee symbol expiration_time true
 
     initiate a proposal, specify cross-chain withdrawel fee of certain specific assets. 
     fee： fee for cross-chain withdrawal 
     symbol： cross-chain assets type 
-5.miner_appointed_lockbalance_guard proposer lockbalance expiration_time true
+5.citizen_appointed_lockbalance_senator proposer lockbalance expiration_time true
 
     initiate a proposal to modify the amount of pledged deposit and its currency type of an Senator. 
     lockbalance: specify the amount of pledged deposit and its currency type of a Senator. 
@@ -1030,7 +1030,7 @@ Senator in charge of cross-chain assets, most operations are voting related.
       3： transaction signed and broadcast 
       4： package this transaction on corresponding chain  
 
-11.guard_sign_crosschain_transaction trxid senator
+11.senator_sign_crosschain_transaction trxid senator
 
     sign withdrawal transaction 
     trxid: under status 1, withdrawal transaction ID 
