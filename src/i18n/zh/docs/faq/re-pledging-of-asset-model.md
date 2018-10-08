@@ -12,5 +12,7 @@ HyperExchange 上独创的资产质押再抵押模型，可以配合智能合约
 
 Citizen 质押资产再抵押的流程图如下：
 
-<img class="hx-icon" src="/img/re-pledging-of-asset-model.svg" /> Sources 
+<img class="hx-icon" src="/img/re-pledging-of-asset-model.svg" />
+
+ 
 

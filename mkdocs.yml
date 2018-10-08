@@ -55,6 +55,7 @@ pages:
       - 'Senator': 'wallets/hxindicator-using-senator.md'
       - 'Citizen': 'wallets/hxindicator-using-citizen.md'
   - 'Building': 'wallets/hx-building.md'
+  - 'docker deploy': 'wallets/hx-docker-deploy.md'
   - HyperExchange Node:
     - 'startup': 'wallets/hxnode-setup.md'
     - 'Using hx-node': 'wallets/hxnode-using.md'

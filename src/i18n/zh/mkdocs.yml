@@ -55,6 +55,7 @@ pages:
       - 'Senator': 'wallets/hxindicator-using-senator.md'
       - 'Citizen': 'wallets/hxindicator-using-citizen.md'
   - '编译': 'wallets/hx-building.md'
+  - 'docker部署': 'wallets/hx-docker-deploy.md'
   - HyperExchange Node:
     - '配置启动': 'wallets/hxnode-setup.md'
     - '使用hx-node': 'wallets/hxnode-using.md'

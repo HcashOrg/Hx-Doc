@@ -47,6 +47,7 @@ Below you'll find a list of currently available applications, with a chart showi
 
 * Download HyperExchange soure code from github:<https://github.com/HcashOrg/HyperExchange.git>
 * [Building](/wallets/hx-building.md)
+* If you want to deploy all hx' application by docker(hx-node/hx-cli/middleware...),please refer to [docker deploy](/wallets/hx-docker-deploy.md)
 * [Deploy private testnet](/getting-started/private-testnet.md)
 * If you want to test deposit/withdraw/crosschain transfer and other functions in command console, please refer to [Hx-cli RPC Commands](/wallets/hxwallet-cli-rpc-commands.md).
 

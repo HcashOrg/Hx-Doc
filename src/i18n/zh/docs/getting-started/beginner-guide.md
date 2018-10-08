@@ -48,6 +48,7 @@
 * 从github下载HyperExchange源代码:<https://github.com/HcashOrg/HyperExchange.git>
 * [编译](/wallets/hx-building.md)
 * [私有链使用](/getting-started/private-testnet.md)
+* 如果想使用docker部署hx的所有应用(hx-node/hx-cli/中间件等)，请参考[docker部署](/wallets/hx-docker-deploy.md)
 * 如果要使用命令行测试充值/提现/跨链转账和其他功能，请参阅 [Hx-cli RPC命令](/wallets/hxwallet-cli-rpc-commands.md).
 
 ---
