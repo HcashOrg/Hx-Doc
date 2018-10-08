@@ -4,7 +4,7 @@
 
 ## HX
 
-HX is a functional token on the HyperExchange chain. The total amount is 980000000, which is all obtained by the miners, and 20% of the mining reward is distributed to the developer team. The specific benefits of mining blocks are as follows:
+HX is a functional token on the HyperExchange chain, which is all obtained by the miners, and 20% of the mining reward is distributed to the developer team. The specific benefits of mining blocks are as follows:
 
 |block height| reward of one block | total amount of this period|
 | ---------:|:----:|:---------:|
