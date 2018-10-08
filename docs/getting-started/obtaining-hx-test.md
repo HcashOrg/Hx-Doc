@@ -4,9 +4,7 @@
 
 ## HX
 
-HX is a functional token on the HyperExchange chain. 
-
-The total circulating amount of HX is 0.98 billion, 20% distribute to developers.The remaining hx will be allocated for block generation rewards. (Which will be reduced once every one year, see the attached table).
+HX is a functional token on the HyperExchange chain. The total amount is 980000000, which is all obtained by the miners, and 20% of the mining reward is distributed to the developer team. The specific benefits of mining blocks are as follows:
 
 |block number| period block reward | amount for this period(hundred million) |
 | ---------:|:----:|:---------:|
@@ -17,7 +15,7 @@ The total circulating amount of HX is 0.98 billion, 20% distribute to developers
 | 31536000|21|1.3|
 | 37843200|19|1.2|
 | 44150400|17|1.1|
-||2||
+|rest blocks|2||
 
 ---
 
