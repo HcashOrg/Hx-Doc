@@ -2,42 +2,20 @@
 
 ---
 
-## Dual-token
-
-Tokens produced by HyperCash and HyperExchange are named HC and HX, respectively. To facilitate the creation of the HyperExchange network and to maintain a liquid environment, the Foundation will propose a one-time swap plan for HC and HX, where HX holders will receive a 1:100 exchange rate (1 HC for 100 HX).
- 
-(Please refer to the upcoming official announcement for further information regarding this.)
-
----
-
-## HC
-
-HC is the asset that will be distributed through the HC chain and a 1:1 conversion swap ratio from HSR will take place. HC is the value token that maintains the ecological stability of the HCASH network. HC can be used as an asset on the HC chain to participate in its governance, and can also be used as a pledged asset to participate in the production of HX tokens on the HyperExchange chain.
- 
-(Please refer to the upcoming official announcement regarding conversion details).
-
----
-
 ## HX
 
-HX is a functional token on the HyperExchange chain. HX will temporarily take the form of an ERC20 token before the launch of the HyperExchange. After the launch, the ERC20 token will be swapped into a network-based token (non-ERC20). 
+HX is a functional token on the HyperExchange chain. The total amount is 980000000, which is all obtained by the miners, and 20% of the mining reward is distributed to the developer team. The specific benefits of mining blocks are as follows:
 
-(Please refer to the upcoming official announcement for redemption details).
-
-The total circulating amount of HX is 8.4 billion, of which 4.2 billion will be reserved for the HSR/HC swap. When the swap period ends, un-swapped HX will be transferred and managed by all HX holders and will be used for HCASH ecosystem investments via consensus. All rewards will then be shared amongst HX holders according to their stake weight.
- 
-Of the total 8.4 billion tokens, 2.1 billion will be managed by the Foundation for follow-up technological development and community incentives.
- 
-The remaining 2.1 billion tokens will be allocated for block generation rewards. (Which will be reduced once every four years for 100 years, see the attached table).
-
-| period| proportion to total output | proportion to last output | total output each year | period block reward | token output for this period |
-| ---------:|:----:|:---------:|:------:|:------:|:------:|
-| 1      | 0.3031  | 0   | 159129485.8 | 25.58   | 10000   |
-| 2      | 0.21456 | 0.71| 112644862.8 | 18.11   | 10000   |
-| 3      | 0.16078 | 0.75| 84408550.45 | 13.57   | 10000   |
-| 4      | 0.16078 | 1   | 84408550.45 | 13.57   | 10000   |
-| 5      | 0.16078 | 1   | 84408550.45 | 13.57   | 10000   |
-||||                                   | Total  | 2100000000|
+|block height| reward of one block | total amount of this period|
+| ---------:|:----:|:---------:|
+| 6307200|27|170000000|
+| 12614400|25|160000000|
+| 18921600|24|150000000|
+| 25228800|22|140000000|
+| 31536000|21|130000000|
+| 37843200|19|120000000|
+| 44150400|17|110000000|
+|rest blocks|2||
 
 ---
 
