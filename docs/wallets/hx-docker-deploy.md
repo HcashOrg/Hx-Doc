@@ -2,149 +2,150 @@
 
 ## overview
 
-因为服务器一般都用的linux的服务器，下面以ubuntu16.04的服务器环境为例，说下如何编译生成hx项目的docker部署镜像以及启动相应容器。
+Because the server usually uses the linux server, the following ubuntu16.04 server environment serves only as an example about how to compile the docker deployment image of the hx project and start the corresponding container.
 
-## 下载部署所需资源
+## Download all resources needed for deployment
 
-1.从相应官方网站<http://www.hx.cash/>下载部署文件deploy_data.zip并解压到本地的路径。目录结构如下：
+1.Download the deployment file deploy_data.zip from official website <http://www.hx.cash/> and extract it to the local path. Directory structure as follows:
 
 ![docker deploy](/img/wallets/docker/docker.png)
 
-2.目录结构说明：
+2.Directory structure discription:
 
-* main_chain目录：该目录放的是hx主链所需的内容以及启动脚本；
-* third_chain目录：该目录放的是hx接入的第三方链的内容以及启动脚本；
-* volumes目录：该目录主要用于将启动后hx中的相关链数据以及log映射到外面；
-* docker-compose.yml文件：用于组织和配置hx中两个docker serveice hx-mainchain以及hx- thirdchain的；
-* Dockerfile_mainchain和Dockerfile_thirdchain文件：定义hx_mainchain以及hx_thirdchain的docker文件；
-* sources.list文件：Ubuntu系统中的配置文件，用于配置ubuntu源。
+* Main_chain directory: This directory includes the contents of the hx main chain and the startup script;
+* third_chain directory: This directory includes the content of the third-party chain accessed by hx and the startup script;
+* volumes directory: This directory is mainly used to map the relevant chain data and log in the hx after startup to outside;
+* docker-compose.yml file: used to organize and configure two docker serveice hx-mainchain and hx-thirdchain in hx;
+* Dockerfile_mainchain and Dockerfile_thirdchain files: define docker files for hx_mainchain and hx_thirdchain;
+* sources.list file: A configuration file in Ubuntu system for configuring ubuntu sources.
 
-## 配置文件详细说明
+
+## Configuration file details
 
 1.Dockerfile_mainchain
 
-(1)对于国内用户，docker中将sources.list做了修改，以便更好、够快的安装相关软件；
+(1) For domestic users, the resources.list has been modified in docker in order to faster and better related software installation;
 
 ![docker deploy](/img/wallets/docker/docker1.png)
 
-(2)配置hx_mainchain所需内容；
+(2)Configure required content of hx_mainchain;
 
 ![docker deploy](/img/wallets/docker/docker2.png)
 
-* 在docker镜像中创建/hx/crosschain_midware目录，用于存放中间件相关的数据；
+* Create a /hx/crosschain_midware directory in the docker image to store middleware related data;
 
-* 将hx_mainchain所需的内容从main_chain目录拷贝到docker镜像中；
+* Copy needed source of hx_mainchain from directory main_chain to docker image;
 
-* 将start.sh（docker启动后执行的脚本）以及witness_node（mainchain的节点）赋予执行权限；
+* Give start.sh (the script executed after docker starts) and duration_node (the node of mainchain) execute permission;
 
-* 将witness_node链接到/usr/bin下，方便start.sh脚本进行使用
+* Link the witness_node to /usr/bin for the start.sh script to use.
 
-(2)配置hx_mainchain启动执行脚本
+(2)Configure hx_mainchain to start the execution script.
 
 ![docker deploy](/img/wallets/docker/docker3.png)
 
-(3)hx_mainchain的执行脚本，位于main_chain目录下
+(3)Hx_mainchain execution script, located under the main_chain directory
 
 ![docker deploy](/img/wallets/docker/docker4.png)
 
 2.Dockerfile_thirdchain
 
-它的结构类似上述的Dockerfile_mainchain，这里不再赘述；
+Its structure is similar to the above Dockerfile_mainchain, which will not be described repeatly here;
 
 
 3.Docker-compose.yml
 
-(1)docker-compose 中定义了两个service（镜像），分别为hx_thirdchain以及hx_mainchain；
+(1) Two services (images) are defined in docker-compose, namely hx_thirdchain and hx_mainchain;
 
 ![docker deploy](/img/wallets/docker/docker5.png)
 
 (2)Service：hx_thirdchain
 
-* 以当前目录下的Dockerfile_thirdchain作为其docker file；
+* Dockerfile_thirdchain in the current directory as its docker file;
 
 ![docker deploy](/img/wallets/docker/docker6.png)
 
-* 定义service(镜像)的name以及tag
+* Define the name and tag of the service (image)
 
 ![docker deploy](/img/wallets/docker/docker7.png)
 
-* 设定thirdchain的端口映射这些端口对应于执行脚本中相关链的端口
+* Setup port map of thirdchain,These ports correspond to the ports of the relevant chains in the execution script.
 
 ![docker deploy](/img/wallets/docker/docker8.png)
 
-执行脚本start.sh中的端口情况
+Execute port status in script start.sh
 
 ![docker deploy](/img/wallets/docker/docker9.png)
 
-* 设定映射的目录
+* Set mapped directory
 
 ![docker deploy](/img/wallets/docker/docker10.png)
 
-* 设定service启动后运行docker的名称
+* Set up name of the docker after the service starts.
 
 ![docker deploy](/img/wallets/docker/docker11.png)
 
-* 设定service的ipv4地址
+* Set ipv4 address of the service
 
 ![docker deploy](/img/wallets/docker/docker12.png)
 
 (3)Service：hx_mainchain
 
-类似上面的hx_thirdchain service
+Similar to the above hx_thirdchain service
 
-* 设定该service的依赖项,hx_mainchain service依赖于hx_thirdchain service
+* Set the dependency of the service, hx_mainchain service depends on hx_thirdchain service
 
 ![docker deploy](/img/wallets/docker/docker13.png)
 
-* 设定该service的ipv4地址
+* Set ipv4 address of the service
 
 ![docker deploy](/img/wallets/docker/docker14.png)
 
-4.执行脚本(start.sh)
+4.Execute the script (start.sh)
 
-(1)main_chain中的执行脚本
+(1)Execution script in main_chain
 
 ![docker deploy](/img/wallets/docker/docker15.png)
 
-* 启动采集插件所需的mongo db
-* 启动采集插件
-* 启动mainchain的witness_node节点
+* Start the mongo db required to collect the plugin
+* Start acquisition plugin
+* Start the witness_node node of mainchain
 
-(2)third_chain中的执行脚本
+(2)Execution script in third_chain
 
 ![docker deploy](/img/wallets/docker/docker16.png)
 
-* 启动bitcoin节点
-* 启动hc节点
-* 启动litecoin节点
+* start bitcoin node
+* start hc node
+* start litecoin node
 
-## 编译镜像
+## Compile the image
 
-进入到deploy_data目录，执行下面的命令：
+Go to deploy_data directory and execute the following command:
 
     sudo docker-compose build [hx_mainchain/hx_thirdchain]
 
-说明：
-* [hx_mainchain/hx_thirdchain]为可选参数，表示编译哪个镜像(service)，若为空，则编译所有的镜像(service)。
-* docker compose中有两个镜像(service), 分别为hx_mainchain,  hx_thirdchain, 其中hx_mainchain依赖于hx_thirdchain. 所以你也可以编译单独的镜像。
+Description：
+* [hx_mainchain/hx_thirdchain] is an optional parameter indicating which image should be compiled (service). If it is empty, all images need to be compiled.
+* There are two images in docker compose, hx_mainchain and hx_thirdchain, where hx_mainchain depends on hx_thirdchain. So you can also compile a separate image. 
 
-## 启动容器
+## Starting the container
 
-在deploy_data目录下执行下面的命令：
+Execute the following command in the deploy_data directory:
 	
     sudo docker-compose up –d  [hx_mainchain/hx_thirdchain]
 	
-说明：
-* [hx_mainchain/hx_thirdchain]为可选参数，表示以哪个镜像为基础启动container，若为空，则启动所有container。
-* 因为hx_mainchain依赖于hx_thirdchain, 所以先要启动hx_thirdchain让里面的第三方链同步数据；过一段时间后(最好是数据同步好后)，启动hx_mainchain，里面的采集程序采集相关数据。
+Description:
+* [hx_mainchain/hx_thirdchain] is an optional parameter indicating which mirror can be used as base to start container. If it is empty, start all containers.
+* Because hx_mainchain depends on hx_thirdchain, you must first start hx_thirdchain to synchronize the data on the third-party chain. After a period of time (preferably after data synchronization), start hx_mainchain, and the collection program inside start to collect relevant data.
 
-## 确认容器状态
+## Confirm container status
 
-在deploy_data目录下使用cli_wallet(如果其没有执行权限，加上相应执行权限)，连接上hx链查看其状态。
+Use cli_wallet under deploy_data directory (if it does not have execute permission, add the corresponding execute permission), connect to hx chain to check its status.
 	
     ./cli_wallet -s ws://192.168.18.8:8090
 	
-说明：上面命令的的ip以及port的说明具体见上面配置文件的说明。
+Note: The description of above mentioned ip and port of the above command is detailed in the description of the above configuration file.
 
 
 

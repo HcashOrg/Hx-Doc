@@ -1,0 +1,68 @@
+/* Override header and footer with hx dark blue*/
+.md-header,
+.md-footer-nav,
+.md-footer-meta {
+    background-color: #0C1E3E
+}
+
+/* Highlight current page in nav menu */
+.md-nav__link--active {
+    color      : #536dfe;
+    font-weight: bold;
+}
+
+/* Increase size of social media links in page footer */
+.md-footer-social {
+    font-size: 20px;
+}
+
+h1 img.dcr-icon {
+    height: 28px;
+    width : 28px;
+    vertical-align: middle;
+}
+
+h2 img.dcr-icon, h3 img.dcr-icon {
+    height: 26px;
+    width : 26px;
+    vertical-align: middle;
+}
+
+p img.dcr-icon {
+    height: 24px;
+    width : 24px;
+    vertical-align: middle;
+}
+
+@media only screen and (max-width: 76.1875em){
+    html .md-nav--primary .md-nav__title--site {
+    	background-color: #0C1E3E;
+    }
+    .md-nav__source {
+    	background-color: #122c5c;
+    }
+}
+
+/* Increase font-size for info/warning/danger boxes. 1.6rem matches the rest of the text. */
+.md-typeset .admonition {
+    font-size: 1.6rem;
+}
+
+/* Disable min-width for headers in tables with at least 7 columns */
+.md-typeset table:not([class]) th:first-child:nth-last-child(n+7),
+.md-typeset table:not([class]) th:first-child:nth-last-child(n+7) ~ th {
+	min-width: 0;
+}
+
+/* Improve appearance of tables inside pymdownx.details panels.
+   Details panel will have an unnecessary horizontal scroller without this.
+   Used in dcrd-and-dcrwallet-cli-arguments.md  */
+details .md-typeset__scrollwrap {
+    margin: 0 !important;
+}
+details .md-typeset__table {
+    padding: 1.6em 0 !important;
+}
+details .md-typeset__table code{
+    white-space: nowrap;
+}

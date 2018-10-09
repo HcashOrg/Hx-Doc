@@ -1,0 +1,1813 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+        <link rel="canonical" href="https://docs.hx.org/getting-started/public-testnet/">
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../img/hx-icons/hx-logo.ico">
+      <meta name="generator" content="mkdocs-0.17.3, mkdocs-material-2.7.2">
+    
+    
+      
+        <title>Using Public Testnet - HyperExchange Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.78aab2dc.css">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+      <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../css/fonts.css">
+    
+      <link rel="stylesheet" href="../../css/style.css">
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <a href="#public-testnet-using-guide" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://docs.hx.org" title="HyperExchange Documentation" class="md-header-nav__button md-logo">
+          
+            <img src="../../img/hx-icons/hx-logo.svg" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                HyperExchange Documentation
+              </span>
+              <span class="md-header-nav__topic">
+                Using Public Testnet
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/HcashOrg/Hx-Doc/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      HcashOrg/Hx-Doc
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <img src="../../img/hx-icons/hx-logo.svg" width="48" height="48">
+      
+    </span>
+    HyperExchange Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/HcashOrg/Hx-Doc/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      HcashOrg/Hx-Doc
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Getting Started
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Getting Started
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../beginner-guide/" title="Beginner's Guide" class="md-nav__link">
+      Beginner's Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../hx-features/" title="HyperExchange Features" class="md-nav__link">
+      HyperExchange Features
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3">
+    
+    <label class="md-nav__link" for="nav-2-3">
+      HX Distribute
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-3">
+        HX Distribute
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../obtaining-hx-test/" title="HX distribute in public testnet" class="md-nav__link">
+      HX distribute in public testnet
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../using-the-block-explorer/" title="Using the Block Explorer" class="md-nav__link">
+      Using the Block Explorer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-5" type="checkbox" id="nav-2-5" checked>
+    
+    <label class="md-nav__link" for="nav-2-5">
+      Using Testnet
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-5">
+        Using Testnet
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Using Public Testnet
+      </label>
+    
+    <a href="./" title="Using Public Testnet" class="md-nav__link md-nav__link--active">
+      Using Public Testnet
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#download-and-startup-hxindicator" title="Download and startup HXIndicator" class="md-nav__link">
+    Download and startup HXIndicator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#startup-and-setup" title="Startup and setup" class="md-nav__link">
+    Startup and setup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-new-account" title="Create a new account" class="md-nav__link">
+    Create a new account
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#obtaining-test-hx-coin" title="Obtaining test HX coin" class="md-nav__link">
+    Obtaining test HX coin
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#obtaining-other-asset-test-coin" title="Obtaining other asset test coin" class="md-nav__link">
+    Obtaining other asset test coin
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deposit" title="Deposit" class="md-nav__link">
+    Deposit
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transfer" title="Transfer" class="md-nav__link">
+    Transfer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transaction-records" title="Transaction Records" class="md-nav__link">
+    Transaction Records
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#asset-exchange" title="Asset Exchange" class="md-nav__link">
+    Asset Exchange
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mining" title="Mining" class="md-nav__link">
+    Mining
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../private-testnet/" title="Using Private Testnet" class="md-nav__link">
+      Using Private Testnet
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Wallets
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Wallets
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1">
+    
+    <label class="md-nav__link" for="nav-3-1">
+      HyperExchange Indicator
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-1">
+        HyperExchange Indicator
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wallets/hxindicator-setup/" title="HXIndicator Setup" class="md-nav__link">
+      HXIndicator Setup
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1-2" type="checkbox" id="nav-3-1-2">
+    
+    <label class="md-nav__link" for="nav-3-1-2">
+      Using HXIndicator
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-1-2">
+        Using HXIndicator
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wallets/hxindicator-using-account/" title="Account" class="md-nav__link">
+      Account
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wallets/hxindicator-using-contract/" title="Contract" class="md-nav__link">
+      Contract
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wallets/hxindicator-using-advance/" title="Advance" class="md-nav__link">
+      Advance
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wallets/hxindicator-using-contacts/" title="Contacts" class="md-nav__link">
+      Contacts
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wallets/hxindicator-using-senator/" title="Senator" class="md-nav__link">
+      Senator
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wallets/hxindicator-using-citizen/" title="Citizen" class="md-nav__link">
+      Citizen
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wallets/hx-building/" title="Building" class="md-nav__link">
+      Building
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wallets/hx-docker-deploy/" title="docker deploy" class="md-nav__link">
+      docker deploy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
+    
+    <label class="md-nav__link" for="nav-3-4">
+      HyperExchange Node
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-4">
+        HyperExchange Node
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wallets/hxnode-setup/" title="startup" class="md-nav__link">
+      startup
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wallets/hxnode-using/" title="Using hx-node" class="md-nav__link">
+      Using hx-node
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5" type="checkbox" id="nav-3-5">
+    
+    <label class="md-nav__link" for="nav-3-5">
+      HyperExchange Cli-wallet
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-5">
+        HyperExchange Cli-wallet
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wallets/hxwallet-cli/" title="Hx-cli Startup" class="md-nav__link">
+      Hx-cli Startup
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wallets/hxwallet-cli-rpc-commands/" title="Hx-cli RPC Commands" class="md-nav__link">
+      Hx-cli RPC Commands
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-6" type="checkbox" id="nav-3-6">
+    
+    <label class="md-nav__link" for="nav-3-6">
+      HyperExchange Middleware
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-6">
+        HyperExchange Middleware
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wallets/middleware-startup/" title="Startup" class="md-nav__link">
+      Startup
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Advanced
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Advanced
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1">
+    
+    <label class="md-nav__link" for="nav-4-1">
+      Cross Chain
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-1">
+        Cross Chain
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-1-1" type="checkbox" id="nav-4-1-1">
+    
+    <label class="md-nav__link" for="nav-4-1-1">
+      Cross-chain Technology Implementation
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-1-1">
+        Cross-chain Technology Implementation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/cross-chain/bmp-protocol/" title="Blockchain Multi Tunnel (BMT) Protocol" class="md-nav__link">
+      Blockchain Multi Tunnel (BMT) Protocol
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/cross-chain/hx-axis/" title="HyperExchange Axis" class="md-nav__link">
+      HyperExchange Axis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/cross-chain/indicator/" title="Indicator" class="md-nav__link">
+      Indicator
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-1-2" type="checkbox" id="nav-4-1-2">
+    
+    <label class="md-nav__link" for="nav-4-1-2">
+      Cross-chain Process Flowchart
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-1-2">
+        Cross-chain Process Flowchart
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/cross-chain/init-process/" title="Initialisation Process" class="md-nav__link">
+      Initialisation Process
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/cross-chain/account-creation/" title="Account Creation" class="md-nav__link">
+      Account Creation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/cross-chain/cross-chain-deposit/" title="Cross-chain Deposit Process" class="md-nav__link">
+      Cross-chain Deposit Process
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/cross-chain/cross-chain-withdrawall/" title="Cross-chain Withdrawal Process" class="md-nav__link">
+      Cross-chain Withdrawal Process
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-1-3" type="checkbox" id="nav-4-1-3">
+    
+    <label class="md-nav__link" for="nav-4-1-3">
+      Sidechain Asset Security
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-1-3">
+        Sidechain Asset Security
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/cross-chain/financial-balance/" title="Financial Balance Strategy" class="md-nav__link">
+      Financial Balance Strategy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/cross-chain/fund-rebalance/" title="Dynamic Fund Rebalancing" class="md-nav__link">
+      Dynamic Fund Rebalancing
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
+    
+    <label class="md-nav__link" for="nav-4-2">
+      Smart Contract
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-2">
+        Smart Contract
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/smart-contract/about-smart-contract/" title="About Smart Contract" class="md-nav__link">
+      About Smart Contract
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/smart-contract/purchase-rule/" title="Pending purchase order functionality rules" class="md-nav__link">
+      Pending purchase order functionality rules
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/smart-contract/smart-contract-template/" title="Smart Contract Template" class="md-nav__link">
+      Smart Contract Template
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/smart-contract/smart-contract-fee/" title="Fee structure" class="md-nav__link">
+      Fee structure
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/smart-contract/smart-contract-feetype/" title="Types of Fees" class="md-nav__link">
+      Types of Fees
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3">
+    
+    <label class="md-nav__link" for="nav-4-3">
+      Random Pool Proof of Multi- properties
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-3">
+        Random Pool Proof of Multi- properties
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/rppop/network-role/" title="Network Roles" class="md-nav__link">
+      Network Roles
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/rppop/asset-collateral/" title="Asset Collateral" class="md-nav__link">
+      Asset Collateral
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/rppop/consensus-protocol/" title="Consensus Protocol/Algorithm" class="md-nav__link">
+      Consensus Protocol/Algorithm
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/rppop/RPPOM/" title="Security Features of a RPPOM Consensus Mechanism" class="md-nav__link">
+      Security Features of a RPPOM Consensus Mechanism
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4">
+    
+    <label class="md-nav__link" for="nav-4-4">
+      Community Governance
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-4">
+        Community Governance
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/community-governance/community-overview/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/community-governance/select-senator/" title="Selecting a Senator" class="md-nav__link">
+      Selecting a Senator
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/community-governance/senator-right/" title="Senator Rights and Duties" class="md-nav__link">
+      Senator Rights and Duties
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/community-governance/senator-replace-rule/" title="Citizens Involvement in the Replacement of Senators" class="md-nav__link">
+      Citizens Involvement in the Replacement of Senators
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/community-governance/senator-penalties/" title="Penalties for Senators" class="md-nav__link">
+      Penalties for Senators
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/community-governance/community-advantages/" title="Advantages of Community Governance" class="md-nav__link">
+      Advantages of Community Governance
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Research
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Research
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-1" type="checkbox" id="nav-5-1">
+    
+    <label class="md-nav__link" for="nav-5-1">
+      Smart Contract IDE
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-1">
+        Smart Contract IDE
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../research/ide/ide-introduce/" title="IDE Introduce" class="md-nav__link">
+      IDE Introduce
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../research/ide/ide-using/" title="IDE Using" class="md-nav__link">
+      IDE Using
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      FAQ
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        FAQ
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/re-pledging-of-asset-model/" title="The re-pledging of assets Model" class="md-nav__link">
+      The re-pledging of assets Model
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/contract-virtual-machine/" title="Smart Contracts and Virtual Machines" class="md-nav__link">
+      Smart Contracts and Virtual Machines
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/concurrency-model/" title="Concurrency Model" class="md-nav__link">
+      Concurrency Model
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/consensus/" title="Consensus-based, Random Number Generator" class="md-nav__link">
+      Consensus-based, Random Number Generator
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/event-rollback/" title="Events and Rollbacks" class="md-nav__link">
+      Events and Rollbacks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/local-query/" title="Local Query Interface" class="md-nav__link">
+      Local Query Interface
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/asset-block-import-model/" title="Asset Block Import Model" class="md-nav__link">
+      Asset Block Import Model
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#download-and-startup-hxindicator" title="Download and startup HXIndicator" class="md-nav__link">
+    Download and startup HXIndicator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#startup-and-setup" title="Startup and setup" class="md-nav__link">
+    Startup and setup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-new-account" title="Create a new account" class="md-nav__link">
+    Create a new account
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#obtaining-test-hx-coin" title="Obtaining test HX coin" class="md-nav__link">
+    Obtaining test HX coin
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#obtaining-other-asset-test-coin" title="Obtaining other asset test coin" class="md-nav__link">
+    Obtaining other asset test coin
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deposit" title="Deposit" class="md-nav__link">
+    Deposit
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transfer" title="Transfer" class="md-nav__link">
+    Transfer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transaction-records" title="Transaction Records" class="md-nav__link">
+    Transaction Records
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#asset-exchange" title="Asset Exchange" class="md-nav__link">
+    Asset Exchange
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mining" title="Mining" class="md-nav__link">
+    Mining
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/HcashOrg/Hx-Doc/edit/master/docs/getting-started/public-testnet.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="public-testnet-using-guide">Public Testnet Using Guide<a class="headerlink" href="#public-testnet-using-guide" title="Permanent link">&para;</a></h1>
+<p>Last updated for v1.0.7</p>
+<p>We will mainly talk about public testnets in this page so that every user can easily use HXIndicator.</p>
+<p>In order to improve the stability of main chain, testnet is available for free trial by Hcash and community users who have interests. After testnet runs steadily for a while, the main chain will be officially released. Due to the complexity of the project and diversity of roles on the chain, we need to engage users to have some basic understanding of the Hyper Exchange project. Please read <code>Cross Chain</code> and <code>Smart Contract</code> parts in <code>Advanced</code>.</p>
+<p>Testnet will now offer the following features:</p>
+<ol>
+<li>
+<p>Basic user registration and transfer function;</p>
+</li>
+<li>
+<p>Pledge mining function testing;</p>
+</li>
+<li>Citizen mining function;</li>
+<li>Fee acceptance function;</li>
+<li>Asset exchange function on the chain (currently supporting HC, BTC and LTC);</li>
+<li>Smart contract function (there are asset exchange contracts on the chain, and IDE development tools will be introduced later).</li>
+</ol>
+<h2 id="download-and-startup-hxindicator">Download and startup HXIndicator<a class="headerlink" href="#download-and-startup-hxindicator" title="Permanent link">&para;</a></h2>
+<p>The latest version of HXIndicator can be downloaded from official website.</p>
+<h2 id="startup-and-setup">Startup and setup<a class="headerlink" href="#startup-and-setup" title="Permanent link">&para;</a></h2>
+<p>Opening HXIndicator for the first time will display the following screen:</p>
+<p><img alt="HXIndicator open screen" src="../../img/wallets/hxindicator/indicator-open.png" /></p>
+<div class="admonition info">
+<p class="admonition-title">The default path is:%appdata%\HXIndicator_test\chaindata,you can select a path that you want to store the chaindata,make sure that path has enough disk space.</p>
+</div>
+<p>Then click <strong>Next</strong>.</p>
+<p>Select <strong>CreateWallet</strong>(If you are using a previously backed wallet file, select <strong>ImportWallet</strong>).</p>
+<p><img alt="HXIndicator create wallet screen" src="../../img/wallets/hxindicator/create-wallet.png" /></p>
+<p>If you select <strong>ImportWallet</strong>,select a <strong>wallet.json</strong> file from your local path,after loading,input the password of this wallet,will display as below:</p>
+<p><img alt="HXIndicator import wallet screen" src="../../img/wallets/hxindicator/import-wallet.png" /></p>
+<p>Then click <strong>Next</strong>,after <strong>LOADING</strong>&hellip;,Please setup the password.</p>
+<p><img alt="HXIndicator set password screen" src="../../img/wallets/hxindicator/set-password.png" /></p>
+<p>Then click <strong>New Wallet</strong>,will display the main interface.</p>
+<p><img alt="HXIndicator main interface screen" src="../../img/wallets/hxindicator/main-interface.png" /></p>
+<p>In the lower right corner of the interface,show the connection number and blcok number.</p>
+<p><img alt="HXIndicator connection status screen" src="../../img/wallets/hxindicator/conn-status.png" /></p>
+<p>In the lower left corner of the interface,after click <strong>&hellip;</strong>,list <strong>Setting</strong>/Lock/Console/Help</p>
+<ul>
+<li>Setting:set language and other parameter:</li>
+</ul>
+<p><img alt="HXIndicator setting screen" src="../../img/wallets/hxindicator/setting.png" /></p>
+<ul>
+<li>Setting:Change password:</li>
+</ul>
+<p><img alt="HXIndicator setting screen" src="../../img/wallets/hxindicator/setting-change-password.png" /></p>
+<ul>
+<li>Setting:Account &ldquo;delete&rdquo;/&rdquo;export&rdquo;,&rdquo;Backup wallet&rdquo;:</li>
+</ul>
+<p><img alt="HXIndicator setting screen" src="../../img/wallets/hxindicator/setting-account.png" /></p>
+<ul>
+<li>Lock:after click lock,the wallet will change to lock status:</li>
+</ul>
+<p><img alt="HXIndicator setting screen" src="../../img/wallets/hxindicator/lock-status.png" /></p>
+<ul>
+<li>Console:you can excute some commands here,such as,excute command <strong>help</strong> will show all commands that you can call:</li>
+</ul>
+<p><img alt="HXIndicator setting screen" src="../../img/wallets/hxindicator/console.png" /></p>
+<ul>
+<li>Help:include <strong><em>About Us</em><em>/</em>Update</strong></li>
+</ul>
+<h2 id="create-a-new-account">Create a new account<a class="headerlink" href="#create-a-new-account" title="Permanent link">&para;</a></h2>
+<p>Click &ldquo;NEW&rdquo; to create an account on asset page, enter your account name (it will check whether the registered account already existed on the blockchain).</p>
+<p><img alt="NEW Tab" src="../../img/getting-started/create-account.png" /></p>
+<p>Click &ldquo;OK&rdquo; to backup wallet data, select a safe path, and click &ldquo;Backup&rdquo;.</p>
+<p><img alt="backup Tab" src="../../img/getting-started/backup-wallet.png" /></p>
+<p><img alt="backup Tab1" src="../../img/getting-started/backup-wallet1.png" /></p>
+<p>Now you will get a HX address.</p>
+<p><img alt="backup" src="../../img/getting-started/test-account.png" /></p>
+<h2 id="obtaining-test-hx-coin">Obtaining test HX coin<a class="headerlink" href="#obtaining-test-hx-coin" title="Permanent link">&para;</a></h2>
+<p>Vist <a href="http://faucet.h.cash/">faucet website</a>, input your hx address.</p>
+<p><img alt="Faucet" src="../../img/getting-started/visit-faucet.png" /></p>
+<h2 id="obtaining-other-asset-test-coin">Obtaining other asset test coin<a class="headerlink" href="#obtaining-other-asset-test-coin" title="Permanent link">&para;</a></h2>
+<p>Click <code>deposit</code> botton to get address of this asset,then visit btc and ltc faucet website to obtain testcoin.</p>
+<ul>
+<li>BTC faucet:<a href="https://testnet.manu.backend.hamburg/faucet">https://testnet.manu.backend.hamburg/faucet</a></li>
+<li>LTC faucet:<a href="http://testnet.litecointools.com">http://testnet.litecointools.com</a></li>
+</ul>
+<h2 id="deposit">Deposit<a class="headerlink" href="#deposit" title="Permanent link">&para;</a></h2>
+<p>For HX assets, there is no need to top up.HX, which the user receives from the faucet or transfers via Indicator, can be used directly.</p>
+<p>For other HIOU assets, if they are in other wallets, or if they are collected from the faucet, they need to be deposited to get into the HX chain.</p>
+<ul>
+<li>First, you can click the deposit button of the &ldquo;Assets&rdquo; page to get the deposit address.</li>
+</ul>
+<p><img alt="Deposit" src="../../img/getting-started/deposit.png" /></p>
+<ul>
+<li>The user deposit other assets by transferring from other account or by getting from faucet.</li>
+</ul>
+<p><img alt="Deposit" src="../../img/getting-started/deposit1.png" /></p>
+<ul>
+<li>After deposit is completed, the asset can be seen in the Indicator after waiting for 6 confirmation blocks.</li>
+</ul>
+<h2 id="transfer">Transfer<a class="headerlink" href="#transfer" title="Permanent link">&para;</a></h2>
+<ul>
+<li>In the &ldquo;Assets&rdquo; page, you can click the &ldquo;transfer&rdquo; button on the right of each asset to transfer between the same asset.</li>
+</ul>
+<p><img alt="Transfer" src="../../img/getting-started/transfer.png" /></p>
+<ul>
+<li>Enter &ldquo;FromAccount&rdquo;,&rdquo;Coin&rdquo;,&rdquo;ToAddress&rdquo;,&rdquo;Amount&rdquo;,&rdquo;Fee&rdquo;,&rdquo;Memo&rdquo;. Then click &ldquo;Send&rdquo; to confirm the transaction and enter the wallet password.</li>
+</ul>
+<p><img alt="Transfer" src="../../img/getting-started/transfer1.png" /></p>
+<ul>
+<li>A certain amount of HX shall be charged for the transfer. If there is no HX in the account, you can choose to use the fee acceptance to pay the fee.</li>
+<li>As shown above, you can use HC to pay the fee, which shows the number of HC to be paid.</li>
+<li>if there are many fee acceptances on the chain, the wallet automatically picks the cheapest one.</li>
+</ul>
+<h2 id="transaction-records">Transaction Records<a class="headerlink" href="#transaction-records" title="Permanent link">&para;</a></h2>
+<p>The <code>Transaction Records</code> page can query all transactions related to the account and also provides some filter conditions for easy inquiry.</p>
+<p><img alt="Transactions" src="../../img/getting-started/transaction-records.png" /></p>
+<h2 id="asset-exchange">Asset Exchange<a class="headerlink" href="#asset-exchange" title="Permanent link">&para;</a></h2>
+<p>You can see other users&rsquo; orders in the <code>Order Center</code> page, and you can choose the right order to buy.If you want to create your own sales order, you need to create a pending contract, and the Indicator will automatically prompt you to register at about 0.02039HX.
+The exchange is similar to an exchange except that it is executed by smart contracts.Therefore, users need the following steps to exchange assets:
+* top up the assets to be exchanged to the contract (click &ldquo;MY CONTRACT&rdquo; in the &ldquo;My Orders&rdquo; page, and then click &ldquo;DEPOSIT&rdquo; button)</p>
+<p><img alt="Exchange" src="../../img/getting-started/exchange.png" /></p>
+<ul>
+<li>set the exchange rate (click the &ldquo;SELL&rdquo; button in the &ldquo;My Orders&rdquo; page).</li>
+</ul>
+<p><img alt="Exchange" src="../../img/getting-started/exchange1.png" /></p>
+<ul>
+<li>You can see the order in the <code>Order Center</code> page, and can choose the appropriate order to buy.</li>
+</ul>
+<p><img alt="Exchange" src="../../img/getting-started/exchange2.png" /></p>
+<ul>
+<li>withdrawal of assets after exchange (assets which are not used after deposit or withdrawal to contract are displayed in the <code>Contract Balance</code>, and users can withdraw at any time)</li>
+</ul>
+<p><img alt="Exchange" src="../../img/getting-started/exchange3.png" /></p>
+<h2 id="mining">Mining<a class="headerlink" href="#mining" title="Permanent link">&para;</a></h2>
+<p>HX&rsquo;s mining is different from existing mechanisms such as bitcoin or other POS.HX can use any asset to mine and gain HX benefits.It&rsquo;s easy to be an HX miner here, just two steps:
+* Become a registered user (click the &ldquo;Mining&rdquo; submenu under the &ldquo;Account&rdquo; menu, and click the &ldquo;REGISTER&rdquo; button on the interface, it will be successfully registered at the cost of 5HX)</p>
+<p><img alt="Mining" src="../../img/getting-started/mining.png" /></p>
+<ul>
+<li>Choose a mining method
+(1)mortgage asset mining (click the &ldquo;MORTGAGE&rdquo; button in the &ldquo;Mining&rdquo; interface and choose to pledge your asset to a citizen. At this time, the ownership of the asset is still your own and you can cancel it at any time.</li>
+</ul>
+<p><img alt="Mining" src="../../img/getting-started/mining1.png" /></p>
+<p><img alt="Mining" src="../../img/getting-started/mining2.png" /></p>
+<p>(2)pay 10000HX to be a citizen (currently the wallet is not supported, and the updated version will be support)</p>
+<p>The difference between pledged assets to existing Citizen and to become Citizen is that Citizen is like a mining pool and can extract a certain proportion of the profits.
+When the Citizen comes out, all the pledgee, including Citizen, will get the benefit.As shown in the following figure, the user needs to collect the income by himself, and only after receiving the income can it enter the user&rsquo;s account and be used.</p>
+<p><img alt="Mining" src="../../img/getting-started/mining3.png" /></p>
+<hr />
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../using-the-block-explorer/" title="Using the Block Explorer" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Using the Block Explorer
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../private-testnet/" title="Using Private Testnet" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Using Private Testnet
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            If you wish to improve this site, please <a href="https://github.com/HcashOrg/HyperExchange/issues/new"><i class="fa fa-github"></i> open an issue</a> or <a href="https://github.com/HcashOrg/Hx-Doc"><i class="fa fa-github"></i> send a pull request</a>.<br>hxdocs v0.0.1. HyperExchange Project 2018.
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="/assets/fonts/font-awesome.min.css">
+    
+      <a href="https://github.com/HcashOrg/HyperExchange" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="" class="md-footer-social__link fa fa-reddit"></a>
+    
+      <a href="" class="md-footer-social__link fa fa-youtube"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.8eb9be28.js"></script>
+      
+      <script>app.initialize({version:"0.17.3",url:{base:"../.."}})</script>
+      
+        <script src="../../js/MathJax-2.7.0/MathJax.js%3Fconfig%3DTeX-AMS-MML_HTMLorMML"></script>
+      
+    
+    
+      
+    
+  </body>
+</html>

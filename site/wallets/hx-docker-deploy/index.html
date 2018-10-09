@@ -1,0 +1,1730 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+        <link rel="canonical" href="https://docs.hx.org/wallets/hx-docker-deploy/">
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../img/hx-icons/hx-logo.ico">
+      <meta name="generator" content="mkdocs-0.17.3, mkdocs-material-2.7.2">
+    
+    
+      
+        <title>docker deploy - HyperExchange Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.78aab2dc.css">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+      <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../css/fonts.css">
+    
+      <link rel="stylesheet" href="../../css/style.css">
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <a href="#hx-docker-environment-deploy" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://docs.hx.org" title="HyperExchange Documentation" class="md-header-nav__button md-logo">
+          
+            <img src="../../img/hx-icons/hx-logo.svg" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                HyperExchange Documentation
+              </span>
+              <span class="md-header-nav__topic">
+                docker deploy
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/HcashOrg/Hx-Doc/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      HcashOrg/Hx-Doc
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <img src="../../img/hx-icons/hx-logo.svg" width="48" height="48">
+      
+    </span>
+    HyperExchange Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/HcashOrg/Hx-Doc/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      HcashOrg/Hx-Doc
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Getting Started
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Getting Started
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting-started/beginner-guide/" title="Beginner's Guide" class="md-nav__link">
+      Beginner's Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting-started/hx-features/" title="HyperExchange Features" class="md-nav__link">
+      HyperExchange Features
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3">
+    
+    <label class="md-nav__link" for="nav-2-3">
+      HX Distribute
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-3">
+        HX Distribute
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting-started/obtaining-hx-test/" title="HX distribute in public testnet" class="md-nav__link">
+      HX distribute in public testnet
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting-started/using-the-block-explorer/" title="Using the Block Explorer" class="md-nav__link">
+      Using the Block Explorer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-5" type="checkbox" id="nav-2-5">
+    
+    <label class="md-nav__link" for="nav-2-5">
+      Using Testnet
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-5">
+        Using Testnet
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting-started/public-testnet/" title="Using Public Testnet" class="md-nav__link">
+      Using Public Testnet
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting-started/private-testnet/" title="Using Private Testnet" class="md-nav__link">
+      Using Private Testnet
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Wallets
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Wallets
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1">
+    
+    <label class="md-nav__link" for="nav-3-1">
+      HyperExchange Indicator
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-1">
+        HyperExchange Indicator
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../hxindicator-setup/" title="HXIndicator Setup" class="md-nav__link">
+      HXIndicator Setup
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1-2" type="checkbox" id="nav-3-1-2">
+    
+    <label class="md-nav__link" for="nav-3-1-2">
+      Using HXIndicator
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-1-2">
+        Using HXIndicator
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../hxindicator-using-account/" title="Account" class="md-nav__link">
+      Account
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../hxindicator-using-contract/" title="Contract" class="md-nav__link">
+      Contract
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../hxindicator-using-advance/" title="Advance" class="md-nav__link">
+      Advance
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../hxindicator-using-contacts/" title="Contacts" class="md-nav__link">
+      Contacts
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../hxindicator-using-senator/" title="Senator" class="md-nav__link">
+      Senator
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../hxindicator-using-citizen/" title="Citizen" class="md-nav__link">
+      Citizen
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../hx-building/" title="Building" class="md-nav__link">
+      Building
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        docker deploy
+      </label>
+    
+    <a href="./" title="docker deploy" class="md-nav__link md-nav__link--active">
+      docker deploy
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" title="overview" class="md-nav__link">
+    overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#download-all-resources-needed-for-deployment" title="Download all resources needed for deployment" class="md-nav__link">
+    Download all resources needed for deployment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-file-details" title="Configuration file details" class="md-nav__link">
+    Configuration file details
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compile-the-image" title="Compile the image" class="md-nav__link">
+    Compile the image
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#starting-the-container" title="Starting the container" class="md-nav__link">
+    Starting the container
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#confirm-container-status" title="Confirm container status" class="md-nav__link">
+    Confirm container status
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
+    
+    <label class="md-nav__link" for="nav-3-4">
+      HyperExchange Node
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-4">
+        HyperExchange Node
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../hxnode-setup/" title="startup" class="md-nav__link">
+      startup
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../hxnode-using/" title="Using hx-node" class="md-nav__link">
+      Using hx-node
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5" type="checkbox" id="nav-3-5">
+    
+    <label class="md-nav__link" for="nav-3-5">
+      HyperExchange Cli-wallet
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-5">
+        HyperExchange Cli-wallet
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../hxwallet-cli/" title="Hx-cli Startup" class="md-nav__link">
+      Hx-cli Startup
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../hxwallet-cli-rpc-commands/" title="Hx-cli RPC Commands" class="md-nav__link">
+      Hx-cli RPC Commands
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-6" type="checkbox" id="nav-3-6">
+    
+    <label class="md-nav__link" for="nav-3-6">
+      HyperExchange Middleware
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-6">
+        HyperExchange Middleware
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../middleware-startup/" title="Startup" class="md-nav__link">
+      Startup
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Advanced
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Advanced
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1">
+    
+    <label class="md-nav__link" for="nav-4-1">
+      Cross Chain
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-1">
+        Cross Chain
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-1-1" type="checkbox" id="nav-4-1-1">
+    
+    <label class="md-nav__link" for="nav-4-1-1">
+      Cross-chain Technology Implementation
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-1-1">
+        Cross-chain Technology Implementation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/cross-chain/bmp-protocol/" title="Blockchain Multi Tunnel (BMT) Protocol" class="md-nav__link">
+      Blockchain Multi Tunnel (BMT) Protocol
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/cross-chain/hx-axis/" title="HyperExchange Axis" class="md-nav__link">
+      HyperExchange Axis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/cross-chain/indicator/" title="Indicator" class="md-nav__link">
+      Indicator
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-1-2" type="checkbox" id="nav-4-1-2">
+    
+    <label class="md-nav__link" for="nav-4-1-2">
+      Cross-chain Process Flowchart
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-1-2">
+        Cross-chain Process Flowchart
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/cross-chain/init-process/" title="Initialisation Process" class="md-nav__link">
+      Initialisation Process
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/cross-chain/account-creation/" title="Account Creation" class="md-nav__link">
+      Account Creation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/cross-chain/cross-chain-deposit/" title="Cross-chain Deposit Process" class="md-nav__link">
+      Cross-chain Deposit Process
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/cross-chain/cross-chain-withdrawall/" title="Cross-chain Withdrawal Process" class="md-nav__link">
+      Cross-chain Withdrawal Process
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-1-3" type="checkbox" id="nav-4-1-3">
+    
+    <label class="md-nav__link" for="nav-4-1-3">
+      Sidechain Asset Security
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-1-3">
+        Sidechain Asset Security
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/cross-chain/financial-balance/" title="Financial Balance Strategy" class="md-nav__link">
+      Financial Balance Strategy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/cross-chain/fund-rebalance/" title="Dynamic Fund Rebalancing" class="md-nav__link">
+      Dynamic Fund Rebalancing
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
+    
+    <label class="md-nav__link" for="nav-4-2">
+      Smart Contract
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-2">
+        Smart Contract
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/smart-contract/about-smart-contract/" title="About Smart Contract" class="md-nav__link">
+      About Smart Contract
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/smart-contract/purchase-rule/" title="Pending purchase order functionality rules" class="md-nav__link">
+      Pending purchase order functionality rules
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/smart-contract/smart-contract-template/" title="Smart Contract Template" class="md-nav__link">
+      Smart Contract Template
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/smart-contract/smart-contract-fee/" title="Fee structure" class="md-nav__link">
+      Fee structure
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/smart-contract/smart-contract-feetype/" title="Types of Fees" class="md-nav__link">
+      Types of Fees
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3">
+    
+    <label class="md-nav__link" for="nav-4-3">
+      Random Pool Proof of Multi- properties
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-3">
+        Random Pool Proof of Multi- properties
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/rppop/network-role/" title="Network Roles" class="md-nav__link">
+      Network Roles
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/rppop/asset-collateral/" title="Asset Collateral" class="md-nav__link">
+      Asset Collateral
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/rppop/consensus-protocol/" title="Consensus Protocol/Algorithm" class="md-nav__link">
+      Consensus Protocol/Algorithm
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/rppop/RPPOM/" title="Security Features of a RPPOM Consensus Mechanism" class="md-nav__link">
+      Security Features of a RPPOM Consensus Mechanism
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4">
+    
+    <label class="md-nav__link" for="nav-4-4">
+      Community Governance
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-4">
+        Community Governance
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/community-governance/community-overview/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/community-governance/select-senator/" title="Selecting a Senator" class="md-nav__link">
+      Selecting a Senator
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/community-governance/senator-right/" title="Senator Rights and Duties" class="md-nav__link">
+      Senator Rights and Duties
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/community-governance/senator-replace-rule/" title="Citizens Involvement in the Replacement of Senators" class="md-nav__link">
+      Citizens Involvement in the Replacement of Senators
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/community-governance/senator-penalties/" title="Penalties for Senators" class="md-nav__link">
+      Penalties for Senators
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/community-governance/community-advantages/" title="Advantages of Community Governance" class="md-nav__link">
+      Advantages of Community Governance
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Research
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Research
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-1" type="checkbox" id="nav-5-1">
+    
+    <label class="md-nav__link" for="nav-5-1">
+      Smart Contract IDE
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-1">
+        Smart Contract IDE
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../research/ide/ide-introduce/" title="IDE Introduce" class="md-nav__link">
+      IDE Introduce
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../research/ide/ide-using/" title="IDE Using" class="md-nav__link">
+      IDE Using
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      FAQ
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        FAQ
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/re-pledging-of-asset-model/" title="The re-pledging of assets Model" class="md-nav__link">
+      The re-pledging of assets Model
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/contract-virtual-machine/" title="Smart Contracts and Virtual Machines" class="md-nav__link">
+      Smart Contracts and Virtual Machines
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/concurrency-model/" title="Concurrency Model" class="md-nav__link">
+      Concurrency Model
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/consensus/" title="Consensus-based, Random Number Generator" class="md-nav__link">
+      Consensus-based, Random Number Generator
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/event-rollback/" title="Events and Rollbacks" class="md-nav__link">
+      Events and Rollbacks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/local-query/" title="Local Query Interface" class="md-nav__link">
+      Local Query Interface
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/asset-block-import-model/" title="Asset Block Import Model" class="md-nav__link">
+      Asset Block Import Model
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" title="overview" class="md-nav__link">
+    overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#download-all-resources-needed-for-deployment" title="Download all resources needed for deployment" class="md-nav__link">
+    Download all resources needed for deployment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-file-details" title="Configuration file details" class="md-nav__link">
+    Configuration file details
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compile-the-image" title="Compile the image" class="md-nav__link">
+    Compile the image
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#starting-the-container" title="Starting the container" class="md-nav__link">
+    Starting the container
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#confirm-container-status" title="Confirm container status" class="md-nav__link">
+    Confirm container status
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/HcashOrg/Hx-Doc/edit/master/docs/wallets/hx-docker-deploy.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="hx-docker-environment-deploy">hx docker environment deploy<a class="headerlink" href="#hx-docker-environment-deploy" title="Permanent link">&para;</a></h1>
+<h2 id="overview">overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>Because the server usually uses the linux server, the following ubuntu16.04 server environment serves only as an example about how to compile the docker deployment image of the hx project and start the corresponding container.</p>
+<h2 id="download-all-resources-needed-for-deployment">Download all resources needed for deployment<a class="headerlink" href="#download-all-resources-needed-for-deployment" title="Permanent link">&para;</a></h2>
+<p>1.Download the deployment file deploy_data.zip from official website <a href="http://www.hx.cash/">http://www.hx.cash/</a> and extract it to the local path. Directory structure as follows:</p>
+<p><img alt="docker deploy" src="../../img/wallets/docker/docker.png" /></p>
+<p>2.Directory structure discription:</p>
+<ul>
+<li>Main_chain directory: This directory includes the contents of the hx main chain and the startup script;</li>
+<li>third_chain directory: This directory includes the content of the third-party chain accessed by hx and the startup script;</li>
+<li>volumes directory: This directory is mainly used to map the relevant chain data and log in the hx after startup to outside;</li>
+<li>docker-compose.yml file: used to organize and configure two docker serveice hx-mainchain and hx-thirdchain in hx;</li>
+<li>Dockerfile_mainchain and Dockerfile_thirdchain files: define docker files for hx_mainchain and hx_thirdchain;</li>
+<li>sources.list file: A configuration file in Ubuntu system for configuring ubuntu sources.</li>
+</ul>
+<h2 id="configuration-file-details">Configuration file details<a class="headerlink" href="#configuration-file-details" title="Permanent link">&para;</a></h2>
+<p>1.Dockerfile_mainchain</p>
+<p>(1) For domestic users, the resources.list has been modified in docker in order to faster and better related software installation;</p>
+<p><img alt="docker deploy" src="../../img/wallets/docker/docker1.png" /></p>
+<p>(2)Configure required content of hx_mainchain;</p>
+<p><img alt="docker deploy" src="../../img/wallets/docker/docker2.png" /></p>
+<ul>
+<li>
+<p>Create a /hx/crosschain_midware directory in the docker image to store middleware related data;</p>
+</li>
+<li>
+<p>Copy needed source of hx_mainchain from directory main_chain to docker image;</p>
+</li>
+<li>
+<p>Give start.sh (the script executed after docker starts) and duration_node (the node of mainchain) execute permission;</p>
+</li>
+<li>
+<p>Link the witness_node to /usr/bin for the start.sh script to use.</p>
+</li>
+</ul>
+<p>(2)Configure hx_mainchain to start the execution script.</p>
+<p><img alt="docker deploy" src="../../img/wallets/docker/docker3.png" /></p>
+<p>(3)Hx_mainchain execution script, located under the main_chain directory</p>
+<p><img alt="docker deploy" src="../../img/wallets/docker/docker4.png" /></p>
+<p>2.Dockerfile_thirdchain</p>
+<p>Its structure is similar to the above Dockerfile_mainchain, which will not be described repeatly here;</p>
+<p>3.Docker-compose.yml</p>
+<p>(1) Two services (images) are defined in docker-compose, namely hx_thirdchain and hx_mainchain;</p>
+<p><img alt="docker deploy" src="../../img/wallets/docker/docker5.png" /></p>
+<p>(2)Service：hx_thirdchain</p>
+<ul>
+<li>Dockerfile_thirdchain in the current directory as its docker file;</li>
+</ul>
+<p><img alt="docker deploy" src="../../img/wallets/docker/docker6.png" /></p>
+<ul>
+<li>Define the name and tag of the service (image)</li>
+</ul>
+<p><img alt="docker deploy" src="../../img/wallets/docker/docker7.png" /></p>
+<ul>
+<li>Setup port map of thirdchain,These ports correspond to the ports of the relevant chains in the execution script.</li>
+</ul>
+<p><img alt="docker deploy" src="../../img/wallets/docker/docker8.png" /></p>
+<p>Execute port status in script start.sh</p>
+<p><img alt="docker deploy" src="../../img/wallets/docker/docker9.png" /></p>
+<ul>
+<li>Set mapped directory</li>
+</ul>
+<p><img alt="docker deploy" src="../../img/wallets/docker/docker10.png" /></p>
+<ul>
+<li>Set up name of the docker after the service starts.</li>
+</ul>
+<p><img alt="docker deploy" src="../../img/wallets/docker/docker11.png" /></p>
+<ul>
+<li>Set ipv4 address of the service</li>
+</ul>
+<p><img alt="docker deploy" src="../../img/wallets/docker/docker12.png" /></p>
+<p>(3)Service：hx_mainchain</p>
+<p>Similar to the above hx_thirdchain service</p>
+<ul>
+<li>Set the dependency of the service, hx_mainchain service depends on hx_thirdchain service</li>
+</ul>
+<p><img alt="docker deploy" src="../../img/wallets/docker/docker13.png" /></p>
+<ul>
+<li>Set ipv4 address of the service</li>
+</ul>
+<p><img alt="docker deploy" src="../../img/wallets/docker/docker14.png" /></p>
+<p>4.Execute the script (start.sh)</p>
+<p>(1)Execution script in main_chain</p>
+<p><img alt="docker deploy" src="../../img/wallets/docker/docker15.png" /></p>
+<ul>
+<li>Start the mongo db required to collect the plugin</li>
+<li>Start acquisition plugin</li>
+<li>Start the witness_node node of mainchain</li>
+</ul>
+<p>(2)Execution script in third_chain</p>
+<p><img alt="docker deploy" src="../../img/wallets/docker/docker16.png" /></p>
+<ul>
+<li>start bitcoin node</li>
+<li>start hc node</li>
+<li>start litecoin node</li>
+</ul>
+<h2 id="compile-the-image">Compile the image<a class="headerlink" href="#compile-the-image" title="Permanent link">&para;</a></h2>
+<p>Go to deploy_data directory and execute the following command:</p>
+<pre><code>sudo docker-compose build [hx_mainchain/hx_thirdchain]
+</code></pre>
+<p>Description：
+<em> [hx_mainchain/hx_thirdchain] is an optional parameter indicating which image should be compiled (service). If it is empty, all images need to be compiled.
+</em> There are two images in docker compose, hx_mainchain and hx_thirdchain, where hx_mainchain depends on hx_thirdchain. So you can also compile a separate image. </p>
+<h2 id="starting-the-container">Starting the container<a class="headerlink" href="#starting-the-container" title="Permanent link">&para;</a></h2>
+<p>Execute the following command in the deploy_data directory:</p>
+<pre><code>sudo docker-compose up –d  [hx_mainchain/hx_thirdchain]
+</code></pre>
+<p>Description:
+<em> [hx_mainchain/hx_thirdchain] is an optional parameter indicating which mirror can be used as base to start container. If it is empty, start all containers.
+</em> Because hx_mainchain depends on hx_thirdchain, you must first start hx_thirdchain to synchronize the data on the third-party chain. After a period of time (preferably after data synchronization), start hx_mainchain, and the collection program inside start to collect relevant data.</p>
+<h2 id="confirm-container-status">Confirm container status<a class="headerlink" href="#confirm-container-status" title="Permanent link">&para;</a></h2>
+<p>Use cli_wallet under deploy_data directory (if it does not have execute permission, add the corresponding execute permission), connect to hx chain to check its status.</p>
+<pre><code>./cli_wallet -s ws://192.168.18.8:8090
+</code></pre>
+<p>Note: The description of above mentioned ip and port of the above command is detailed in the description of the above configuration file.</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../hx-building/" title="Building" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Building
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../hxnode-setup/" title="startup" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                startup
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            If you wish to improve this site, please <a href="https://github.com/HcashOrg/HyperExchange/issues/new"><i class="fa fa-github"></i> open an issue</a> or <a href="https://github.com/HcashOrg/Hx-Doc"><i class="fa fa-github"></i> send a pull request</a>.<br>hxdocs v0.0.1. HyperExchange Project 2018.
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="/assets/fonts/font-awesome.min.css">
+    
+      <a href="https://github.com/HcashOrg/HyperExchange" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="" class="md-footer-social__link fa fa-reddit"></a>
+    
+      <a href="" class="md-footer-social__link fa fa-youtube"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.8eb9be28.js"></script>
+      
+      <script>app.initialize({version:"0.17.3",url:{base:"../.."}})</script>
+      
+        <script src="../../js/MathJax-2.7.0/MathJax.js%3Fconfig%3DTeX-AMS-MML_HTMLorMML"></script>
+      
+    
+    
+      
+    
+  </body>
+</html>

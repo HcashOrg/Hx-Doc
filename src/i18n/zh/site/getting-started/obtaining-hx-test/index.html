@@ -1,0 +1,1739 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+        <link rel="canonical" href="http://docs.hx.cash/getting-started/obtaining-hx-test/">
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../img/hx-icons/hx-logo.ico">
+      <meta name="generator" content="mkdocs-0.17.3, mkdocs-material-2.7.2">
+    
+    
+      
+        <title>公测网络中HX的分配 - HyperExchange文档</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.78aab2dc.css">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+      <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../css/fonts.css">
+    
+      <link rel="stylesheet" href="../../css/style.css">
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <a href="#hx" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="http://docs.hx.cash/" title="HyperExchange文档" class="md-header-nav__button md-logo">
+          
+            <img src="../../img/hx-icons/hx-logo.svg" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                HyperExchange文档
+              </span>
+              <span class="md-header-nav__topic">
+                公测网络中HX的分配
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/HcashOrg/Hx-Doc/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      HcashOrg/Hx-Doc
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <img src="../../img/hx-icons/hx-logo.svg" width="48" height="48">
+      
+    </span>
+    HyperExchange文档
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/HcashOrg/Hx-Doc/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      HcashOrg/Hx-Doc
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="主页" class="md-nav__link">
+      主页
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      入门
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        入门
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../beginner-guide/" title="初学者指南" class="md-nav__link">
+      初学者指南
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../hx-features/" title="HyperExchange特性" class="md-nav__link">
+      HyperExchange特性
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3" checked>
+    
+    <label class="md-nav__link" for="nav-2-3">
+      HX分配
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-3">
+        HX分配
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        公测网络中HX的分配
+      </label>
+    
+    <a href="./" title="公测网络中HX的分配" class="md-nav__link md-nav__link--active">
+      公测网络中HX的分配
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#hx_1" title="HX" class="md-nav__link">
+    HX
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="激励机制" class="md-nav__link">
+    激励机制
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tourists" title="Tourists" class="md-nav__link">
+    Tourists
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#citizens" title="Citizens" class="md-nav__link">
+    Citizens
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#senators" title="Senators" class="md-nav__link">
+    Senators
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../using-the-block-explorer/" title="区块浏览器" class="md-nav__link">
+      区块浏览器
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-5" type="checkbox" id="nav-2-5">
+    
+    <label class="md-nav__link" for="nav-2-5">
+      测试网络
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-5">
+        测试网络
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../public-testnet/" title="公测链使用" class="md-nav__link">
+      公测链使用
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../private-testnet/" title="私有链使用" class="md-nav__link">
+      私有链使用
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      钱包
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        钱包
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1">
+    
+    <label class="md-nav__link" for="nav-3-1">
+      HyperExchange Indicator
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-1">
+        HyperExchange Indicator
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wallets/hxindicator-setup/" title="HXIndicator 设置" class="md-nav__link">
+      HXIndicator 设置
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1-2" type="checkbox" id="nav-3-1-2">
+    
+    <label class="md-nav__link" for="nav-3-1-2">
+      使用HXIndicator
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-1-2">
+        使用HXIndicator
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wallets/hxindicator-using-account/" title="账户" class="md-nav__link">
+      账户
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wallets/hxindicator-using-contract/" title="合约" class="md-nav__link">
+      合约
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wallets/hxindicator-using-advance/" title="高级" class="md-nav__link">
+      高级
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wallets/hxindicator-using-contacts/" title="联系人" class="md-nav__link">
+      联系人
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wallets/hxindicator-using-senator/" title="Senator" class="md-nav__link">
+      Senator
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wallets/hxindicator-using-citizen/" title="Citizen" class="md-nav__link">
+      Citizen
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wallets/hx-building/" title="编译" class="md-nav__link">
+      编译
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wallets/hx-docker-deploy/" title="docker部署" class="md-nav__link">
+      docker部署
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
+    
+    <label class="md-nav__link" for="nav-3-4">
+      HyperExchange Node
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-4">
+        HyperExchange Node
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wallets/hxnode-setup/" title="配置启动" class="md-nav__link">
+      配置启动
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wallets/hxnode-using/" title="使用hx-node" class="md-nav__link">
+      使用hx-node
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5" type="checkbox" id="nav-3-5">
+    
+    <label class="md-nav__link" for="nav-3-5">
+      HyperExchange Cli-wallet
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-5">
+        HyperExchange Cli-wallet
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wallets/hxwallet-cli/" title="Hx-cli启动" class="md-nav__link">
+      Hx-cli启动
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wallets/hxwallet-cli-rpc-commands/" title="Hx-cli RPC命令" class="md-nav__link">
+      Hx-cli RPC命令
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-6" type="checkbox" id="nav-3-6">
+    
+    <label class="md-nav__link" for="nav-3-6">
+      HyperExchange 中间件
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-6">
+        HyperExchange 中间件
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wallets/middleware-startup/" title="启动" class="md-nav__link">
+      启动
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      高级
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        高级
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1">
+    
+    <label class="md-nav__link" for="nav-4-1">
+      跨链
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-1">
+        跨链
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-1-1" type="checkbox" id="nav-4-1-1">
+    
+    <label class="md-nav__link" for="nav-4-1-1">
+      跨链技术的实现
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-1-1">
+        跨链技术的实现
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/cross-chain/bmp-protocol/" title="Blockchain Multi Tunnel (BMT) Protocol" class="md-nav__link">
+      Blockchain Multi Tunnel (BMT) Protocol
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/cross-chain/hx-axis/" title="HyperExchange Axis" class="md-nav__link">
+      HyperExchange Axis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/cross-chain/indicator/" title="Indicator" class="md-nav__link">
+      Indicator
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-1-2" type="checkbox" id="nav-4-1-2">
+    
+    <label class="md-nav__link" for="nav-4-1-2">
+      跨链的操作流程
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-1-2">
+        跨链的操作流程
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/cross-chain/init-process/" title="初始化流程" class="md-nav__link">
+      初始化流程
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/cross-chain/account-creation/" title="账户的创建" class="md-nav__link">
+      账户的创建
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/cross-chain/cross-chain-deposit/" title="跨链充值流程" class="md-nav__link">
+      跨链充值流程
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/cross-chain/cross-chain-withdrawall/" title="跨链提现流程" class="md-nav__link">
+      跨链提现流程
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-1-3" type="checkbox" id="nav-4-1-3">
+    
+    <label class="md-nav__link" for="nav-4-1-3">
+      侧链资产的安全性
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-1-3">
+        侧链资产的安全性
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/cross-chain/financial-balance/" title="资金动态平衡策略" class="md-nav__link">
+      资金动态平衡策略
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/cross-chain/fund-rebalance/" title="资金动态平衡期限" class="md-nav__link">
+      资金动态平衡期限
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
+    
+    <label class="md-nav__link" for="nav-4-2">
+      智能合约
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-2">
+        智能合约
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/smart-contract/about-smart-contract/" title="智能合约简介" class="md-nav__link">
+      智能合约简介
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/smart-contract/purchase-rule/" title="挂单求购规则" class="md-nav__link">
+      挂单求购规则
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/smart-contract/smart-contract-template/" title="智能合约模板" class="md-nav__link">
+      智能合约模板
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/smart-contract/smart-contract-fee/" title="手续费规则" class="md-nav__link">
+      手续费规则
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/smart-contract/smart-contract-feetype/" title="手续费种类" class="md-nav__link">
+      手续费种类
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3">
+    
+    <label class="md-nav__link" for="nav-4-3">
+      随机多资产权益质押共识机制
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-3">
+        随机多资产权益质押共识机制
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/rppop/network-role/" title="角色" class="md-nav__link">
+      角色
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/rppop/asset-collateral/" title="质押" class="md-nav__link">
+      质押
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/rppop/consensus-protocol/" title="竞争算法" class="md-nav__link">
+      竞争算法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/rppop/RPPOM/" title="RPPOM共识机制的安全性" class="md-nav__link">
+      RPPOM共识机制的安全性
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4">
+    
+    <label class="md-nav__link" for="nav-4-4">
+      社区治理
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-4">
+        社区治理
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/community-governance/community-overview/" title="简介" class="md-nav__link">
+      简介
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/community-governance/select-senator/" title="Senator的选出和退出" class="md-nav__link">
+      Senator的选出和退出
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/community-governance/senator-right/" title="Senator的权利和义务" class="md-nav__link">
+      Senator的权利和义务
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/community-governance/senator-replace-rule/" title="Senators的更替流程和规则" class="md-nav__link">
+      Senators的更替流程和规则
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/community-governance/senator-penalties/" title="Senators的惩罚机制" class="md-nav__link">
+      Senators的惩罚机制
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/community-governance/community-advantages/" title="社区治理方式的优势" class="md-nav__link">
+      社区治理方式的优势
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      研究
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        研究
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-1" type="checkbox" id="nav-5-1">
+    
+    <label class="md-nav__link" for="nav-5-1">
+      智能合约IDE
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-1">
+        智能合约IDE
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../research/ide/ide-introduce/" title="IDE简介" class="md-nav__link">
+      IDE简介
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../research/ide/ide-using/" title="IDE使用" class="md-nav__link">
+      IDE使用
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      问题
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        问题
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/re-pledging-of-asset-model/" title="资产质押再抵押模型" class="md-nav__link">
+      资产质押再抵押模型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/contract-virtual-machine/" title="合约和虚拟机" class="md-nav__link">
+      合约和虚拟机
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/concurrency-model/" title="并发模型" class="md-nav__link">
+      并发模型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/consensus/" title="可共识的随机数发生器" class="md-nav__link">
+      可共识的随机数发生器
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/event-rollback/" title="事件和回滚" class="md-nav__link">
+      事件和回滚
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/local-query/" title="本地查询接口" class="md-nav__link">
+      本地查询接口
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/asset-block-import-model/" title="资产区块链接入模型" class="md-nav__link">
+      资产区块链接入模型
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#hx_1" title="HX" class="md-nav__link">
+    HX
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="激励机制" class="md-nav__link">
+    激励机制
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tourists" title="Tourists" class="md-nav__link">
+    Tourists
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#citizens" title="Citizens" class="md-nav__link">
+    Citizens
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#senators" title="Senators" class="md-nav__link">
+    Senators
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/HcashOrg/Hx-Doc/edit/master/docs/getting-started/obtaining-hx-test.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="hx">HX 公测链上的分配<a class="headerlink" href="#hx" title="Permanent link">&para;</a></h1>
+<hr />
+<h2 id="hx_1">HX<a class="headerlink" href="#hx_1" title="Permanent link">&para;</a></h2>
+<p>HX是HyperExchange链上的功能代币，全部由挖矿出块者获得，挖矿奖励分配：20%开发团队，30%Senator， 50% Citizen及其支持者，其中Citizen可以抽取不超过（产块奖励50%中）10%的分成，具体的挖矿产块收益如下：</p>
+<table>
+<thead>
+<tr>
+<th align="right">块高</th>
+<th align="center">每块奖励</th>
+<th align="center">总量(亿)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">6307200</td>
+<td align="center">27</td>
+<td align="center">1.7</td>
+</tr>
+<tr>
+<td align="right">12614400</td>
+<td align="center">25</td>
+<td align="center">1.6</td>
+</tr>
+<tr>
+<td align="right">18921600</td>
+<td align="center">24</td>
+<td align="center">1.5</td>
+</tr>
+<tr>
+<td align="right">25228800</td>
+<td align="center">22</td>
+<td align="center">1.4</td>
+</tr>
+<tr>
+<td align="right">31536000</td>
+<td align="center">21</td>
+<td align="center">1.3</td>
+</tr>
+<tr>
+<td align="right">37843200</td>
+<td align="center">19</td>
+<td align="center">1.2</td>
+</tr>
+<tr>
+<td align="right">44150400</td>
+<td align="center">17</td>
+<td align="center">1.1</td>
+</tr>
+<tr>
+<td align="right">剩余的块</td>
+<td align="center">2</td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_1">激励机制<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>HyperExchange上的激励有三种：</p>
+<ul>
+<li>区块奖励;</li>
+<li>区块交易手续费（包括普通交易手续费和合约交易手续费），种类为HX;</li>
+<li>区块中合约提现手续费，种类为多种资产，包括HIOU和HX，手续费为万分之一（由Senator共识决定和修改）。Senator获得合约提现手续费总额的20%，剩余部分由所有用户根据HX持币量进行平分。</li>
+</ul>
+<p>表: 用户权益对比表</p>
+<table>
+<thead>
+<tr>
+<th align="right"></th>
+<th align="center">Tourist</th>
+<th align="center">Citizen支持者</th>
+<th align="center">Citizen用户</th>
+<th align="center">Senator</th>
+<th align="center">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">Citizen用户注册费</td>
+<td align="center">无</td>
+<td align="center">无</td>
+<td align="center">无</td>
+<td align="center">无</td>
+<td align="center">链上直接销毁</td>
+</tr>
+<tr>
+<td align="right">普通交易手续费</td>
+<td align="center">无</td>
+<td align="center">有</td>
+<td align="center">有</td>
+<td align="center">无</td>
+<td align="center">手续费奖励为HX</td>
+</tr>
+<tr>
+<td align="right">区块奖励</td>
+<td align="center">无</td>
+<td align="center">有</td>
+<td align="center">有</td>
+<td align="center">YES</td>
+<td align="center">区块奖励为HX</td>
+</tr>
+<tr>
+<td align="right">合约交易手续费</td>
+<td align="center">无</td>
+<td align="center">有</td>
+<td align="center">有</td>
+<td align="center">无</td>
+<td align="center">手续费奖励为HX</td>
+</tr>
+<tr>
+<td align="right">合约提现交易手续费</td>
+<td align="center">有</td>
+<td align="center">有</td>
+<td align="center">有</td>
+<td align="center">有</td>
+<td align="center">手续费奖励为HX或HIOU</td>
+</tr>
+</tbody>
+</table>
+<h2 id="tourists">Tourists<a class="headerlink" href="#tourists" title="Permanent link">&para;</a></h2>
+<p>作为HyperExchange基本用户，Tourist可以获得合约提现手续费奖励。通常情况下，每10万个区块链上进行一次分配。奖励依据持有的HX数量进行分配，具体公式如下：</p>
+<p><img alt="Tourists" src="../../img/getting-started/calc1.png" /></p>
+<p>用户还可以通过成为Citizen或者通过质押资产获得区块奖励。</p>
+<h2 id="citizens">Citizens<a class="headerlink" href="#citizens" title="Permanent link">&para;</a></h2>
+<p>在HyperExchange生态里Tourist通过成为Citizen或者通过质押资产给Citizen获得区块奖励。
+用户交纳1万HX注册成为候选Citizen，投入资产进行质押，并在社区内吸引其他用户参与质押，最终依靠RPPOM共识竞争记账权，成为Citizen，参与出块，获得区块奖励。
+Citizen发起用户及支持用户的收益为：矿池区块奖励和合约提现交易手续费中的相应比例奖励。</p>
+<p><img alt="Citizens" src="../../img/getting-started/calc2.png" /></p>
+<p>Citizen发起用户及其支持用户的区块奖励计算公式分别为：</p>
+<p><img alt="Citizens" src="../../img/getting-started/calc3.png" /></p>
+<p><strong>*为了激励Citizen发起用户， Citizen发起用户可以获得矿池奖励的0~20%(比例自行设定，系统默认为10%)作为矿池管理费。
+资产质押奖励按质押资产的权重平分。具体公式为：</strong></p>
+<p><img alt="Citizens" src="../../img/getting-started/calc4.png" /></p>
+<p>Citizen的支持用户可以获得资产质押奖励。
+为保证Citizen能长期在线打包，不仅需要激励也需要引入惩罚措施，当一个Citizen连续miss超过5块时，链上共识降低此Citizen的参与率,从而降低该节点被选举为出块节点的概率。</p>
+<h2 id="senators">Senators<a class="headerlink" href="#senators" title="Permanent link">&para;</a></h2>
+<p>Senator平分30%区块固定奖励以及获得合约提现交易手续费中的20%奖励。</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../hx-features/" title="HyperExchange特性" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                HyperExchange特性
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../using-the-block-explorer/" title="区块浏览器" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                区块浏览器
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            如果你有任何问题，请打开 <a href="https://github.com/HcashOrg/HyperExchange/issues/new"><i class="fa fa-github"></i> 新建一个问题</a> or <a href="https://github.com/HcashOrg/Hx-Doc"><i class="fa fa-github"></i> 发送pull请求</a>.<br>hxdocs v0.0.1. HyperExchange Project 2018.
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="/assets/fonts/font-awesome.min.css">
+    
+      <a href="https://github.com/HcashOrg/HyperExchange" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="" class="md-footer-social__link fa fa-reddit"></a>
+    
+      <a href="" class="md-footer-social__link fa fa-youtube"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.8eb9be28.js"></script>
+      
+      <script>app.initialize({version:"0.17.3",url:{base:"../.."}})</script>
+      
+        <script src="../../js/MathJax-2.7.0/MathJax.js%3Fconfig%3DTeX-AMS-MML_HTMLorMML"></script>
+      
+    
+    
+      
+    
+  </body>
+</html>
