@@ -4,7 +4,7 @@
 
 ## HX
 
-HX is a functional token on the HyperExchange chain, which is all obtained by the miners, Mineral award allocation: 20% development team, 30% Senator, 50% Citizen and its supporters, citizen could get no more than 10% bonus (50% of block award). The specific benefits of mining blocks are as follows:
+HX is a functional token on the HyperExchange chain, which is all obtained by the miners, Mineral award allocation: 20% development team, 30% Senator, 50% Citizen and its supporters, citizen could get no more than 20% bonus (50% of block award). The specific benefits of mining blocks are as follows:
 
 |block number| period block reward | amount for this period(hundred million) |
 | ---------:|:----:|:---------:|
