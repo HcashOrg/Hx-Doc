@@ -706,6 +706,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#_5" title="多签地址" class="md-nav__link">
+    多签地址
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#rpc" title="RPC命令列表" class="md-nav__link">
     RPC命令列表
   </a>
@@ -1478,6 +1485,13 @@
         <li class="md-nav__item">
   <a href="#_4" title="提现流程" class="md-nav__link">
     提现流程
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" title="多签地址" class="md-nav__link">
+    多签地址
   </a>
   
 </li>
@@ -2330,6 +2344,61 @@ get_account_balances hxtest001
 ]
 </code></pre>
 <p>5.在litecoin的主链钱包里查询提现地址&rdquo;LhamrSpU9E55VEfgmKNxuX7VnWNZLdw8uA&rdquo;的余额,是2.49900000(手续费0.001).</p>
+<h2 id="_5">多签地址<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>实现</p>
+</blockquote>
+<p>利用HX 公钥可以无限衍生的特点，对一系列HX 公钥组合成一个有序的队列之后，生成一个公钥，该公钥对应的地址即为多签地址（与普通地址暂时无法肉眼区分），最多支持15个公钥组成多签地址</p>
+<blockquote>
+<p>创建多签地址</p>
+</blockquote>
+<pre><code>create_multisignature_address(const string&amp; account, const fc::flat_set&lt;public_key_type&gt;&amp; pubs, int required, bool broadcast)
+</code></pre>
+<p>该操作为上链操作，如果链上已经有该多签地址详细信息，使用相同的地址+公钥重复创建将会失败。</p>
+<p><img alt="multi-sig address" src="../../img/wallets/create-multisig-addr.png" /></p>
+<blockquote>
+<p>通过私钥获取公钥</p>
+</blockquote>
+<pre><code>public_key_type wallet_api::get_pubkey_from_priv(const string&amp; privkey)
+</code></pre>
+<blockquote>
+<p>通过钱包内账户名获取公钥，账户需要在本钱包中存在</p>
+</blockquote>
+<pre><code>public_key_type wallet_api:: get_pubkey_from_account (const string&amp; acc_name)
+</code></pre>
+<blockquote>
+<p>查询多签地址的详细信息，返回多签地址详细信息，地址组成以及最少签名个数</p>
+</blockquote>
+<pre><code>variant_object wallet_api::get_multisig_address(const address&amp; addr)
+</code></pre>
+<blockquote>
+<p>多签地址转账操作</p>
+</blockquote>
+<ul>
+<li>首先创建一个离线交易，该交易超时时间大概为一天；</li>
+</ul>
+<p>转账接口：</p>
+<pre><code>signed_transaction transfer_from_to_address(string from, string to, string amount, string asset_symbol, string memo)
+</code></pre>
+<p><img alt="multi-sig address" src="../../img/wallets/multisig-transfer.png" /></p>
+<ul>
+<li>生成该多签地址的地址用户分别对该交易单进行签名；</li>
+</ul>
+<p>签名接口：</p>
+<pre><code>signed_transaction wallet_api::sign_multisig_trx(const address&amp; addr, const signed_transaction&amp; trx)
+</code></pre>
+<p><img alt="multi-sig address" src="../../img/wallets/multisig-sign.png" /></p>
+<ul>
+<li>采集签名，combine之后进行广播，只有达到required广播才会成功。</li>
+</ul>
+<p>合并广播接口：</p>
+<pre><code>full_transaction wallet_api::combine_transaction(const vector&lt;signed_transaction&gt;&amp; trxs, bool broadcast)
+</code></pre>
+<p><img alt="multi-sig address" src="../../img/wallets/multisig-combine.png" /></p>
+<blockquote>
+<p>base58字符串解析，可以用来解析一个生成交易的base58字符串，看到交易体中详细信息，包括签名数量。</p>
+</blockquote>
+<p><img alt="multi-sig address" src="../../img/wallets/decode-multisig-trx.png" /></p>
 <h2 id="rpc">RPC命令列表<a class="headerlink" href="#rpc" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p>基本的RPC命令</p>

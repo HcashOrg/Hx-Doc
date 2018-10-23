@@ -859,6 +859,62 @@
 
 5.在litecoin的主链钱包里查询提现地址"LhamrSpU9E55VEfgmKNxuX7VnWNZLdw8uA"的余额,是2.49900000(手续费0.001).
 
+## 多签地址
+
+> 实现
+
+利用HX 公钥可以无限衍生的特点，对一系列HX 公钥组合成一个有序的队列之后，生成一个公钥，该公钥对应的地址即为多签地址（与普通地址暂时无法肉眼区分），最多支持15个公钥组成多签地址
+
+> 创建多签地址
+
+    create_multisignature_address(const string& account, const fc::flat_set<public_key_type>& pubs, int required, bool broadcast)
+
+该操作为上链操作，如果链上已经有该多签地址详细信息，使用相同的地址+公钥重复创建将会失败。
+
+![multi-sig address](/img/wallets/create-multisig-addr.png)
+
+> 通过私钥获取公钥
+
+    public_key_type wallet_api::get_pubkey_from_priv(const string& privkey)
+
+> 通过钱包内账户名获取公钥，账户需要在本钱包中存在
+
+    public_key_type wallet_api:: get_pubkey_from_account (const string& acc_name)
+
+> 查询多签地址的详细信息，返回多签地址详细信息，地址组成以及最少签名个数
+
+    variant_object wallet_api::get_multisig_address(const address& addr)
+
+> 多签地址转账操作
+
+* 首先创建一个离线交易，该交易超时时间大概为一天；
+
+转账接口：
+
+    signed_transaction transfer_from_to_address(string from, string to, string amount, string asset_symbol, string memo)
+
+![multi-sig address](/img/wallets/multisig-transfer.png)
+
+* 生成该多签地址的地址用户分别对该交易单进行签名；
+
+签名接口：
+
+    signed_transaction wallet_api::sign_multisig_trx(const address& addr, const signed_transaction& trx)
+
+![multi-sig address](/img/wallets/multisig-sign.png)
+
+* 采集签名，combine之后进行广播，只有达到required广播才会成功。
+
+合并广播接口：
+
+    full_transaction wallet_api::combine_transaction(const vector<signed_transaction>& trxs, bool broadcast)
+
+![multi-sig address](/img/wallets/multisig-combine.png)
+
+> base58字符串解析，可以用来解析一个生成交易的base58字符串，看到交易体中详细信息，包括签名数量。
+
+![multi-sig address](/img/wallets/decode-multisig-trx.png)
+
 ## RPC命令列表
 
 > 基本的RPC命令
