@@ -857,6 +857,10 @@ Write a exchange contract,compile to gpc file, then register contract to hyperex
 
 5.On litecoin chain,after create some blocks,you can get balance of address "LhamrSpU9E55VEfgmKNxuX7VnWNZLdw8uA",will be 2.49900000(minus fee 0.001).
 
+## Multi-sig addres
+
+
+
 ## RPC command list
 
 > Basic RPC Interface

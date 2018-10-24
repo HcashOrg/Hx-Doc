@@ -1473,10 +1473,21 @@ cmake -DCMAKE_BUILD_TYPE=Release .
 make
 </code></pre>
 <blockquote>
+<p><strong>Build Eth Crosschain Privatekey</strong></p>
+</blockquote>
+<pre><code>git clone https://github.com/BlockLink/eth_crosschain_privatekey.git
+cd eth_crosschain_privatekey/eth_sign/cryptopp/
+make
+cd ..
+cmake .
+make
+</code></pre>
+<blockquote>
 <p><strong>Build HyperExchange Node</strong></p>
 </blockquote>
-<p>Add path of crosschain privatekey, please use the path of blocklink_crosschain_privatekey in your environment.  </p>
+<p>Add path of crosschain privatekey and eth crosschain privatekey, please use the path of blocklink_crosschain_privatekey and eth_crosschain_privatekey in your environment.  </p>
 <pre><code>`export CROSSCHAIN_PRIVATEKEY_PROJECT=~/blocklink_crosschain_privatekey`
+`export ETH_CROSSCHAIN_PROJECT=~/eth_crosschain_privatekey`
 
 
 git clone https://github.com/HcashOrg/HyperExchange.git
@@ -1513,13 +1524,22 @@ cd blocklink_crosschain_privatekey
 cmake .
 make
 </code></pre>
-<p>8.Clone the HyperExchange repository:</p>
+<p>8.Build Eth Crosschain Privatekey</p>
+<pre><code>git clone https://github.com/BlockLink/eth_crosschain_privatekey.git
+cd eth_crosschain_privatekey/eth_sign/cryptopp/
+make
+cd ..
+cmake .
+make
+</code></pre>
+<p>9.Clone the HyperExchange repository:</p>
 <pre><code>git clone https://github.com/HcashOrg/HyperExchange.git
 cd HyperExchange
 </code></pre>
-<p>9.Build HyperExchange:</p>
-<p>Add path of crosschain privatekey, please use the path of blocklink_crosschain_privatekey in your environment.  </p>
+<p>10.Build HyperExchange:</p>
+<p>Add path of crosschain privatekey and eth crosschain privatekey, please use the path of blocklink_crosschain_privatekey and eth_crosschain_privatekey in your environment.  </p>
 <pre><code>`export CROSSCHAIN_PRIVATEKEY_PROJECT=~/blocklink_crosschain_privatekey`
+`export ETH_CROSSCHAIN_PROJECT=~/eth_crosschain_privatekey`
 
 git submodule update --init --recursive
 cmake .
@@ -1595,6 +1615,13 @@ git submodule update --init --recursive
 <li>Untar it to the base directory <code>D:\hyperexchange</code></li>
 <li>this will create a directory like <code>D:\hyperexchange\blocklink_crosschain_privatekey</code>.</li>
 </ul>
+<p>7.Eth Crosschain Privatekey</p>
+<p>HyperExchange depends on libboost, you must build this from source.</p>
+<ul>
+<li>download Crosschain Privatekey source from <a href="https://github.com/BlockLink/eth_crosschain_privatekey.git">https://github.com/BlockLink/eth_crosschain_privatekey.git</a></li>
+<li>Untar it to the base directory <code>D:\hyperexchange</code>,Untar leveldb.rar to the base directory <code>D:\hyperexchange</code> too;</li>
+<li>this will create a directory like <code>D:\hyperexchange\eth_crosschain_privatekey</code> and <code>D:\hyperexchange\leveldb</code>.</li>
+</ul>
 <p>At the end of this, your base directory should look like this (directory names will be slightly different for the 64bit versions):</p>
 <pre><code>D:\hyperexchange
 +- HyperExchange
@@ -1602,6 +1629,8 @@ git submodule update --init --recursive
 +- CMake
 +- openssl-1.0.2o
 +- blocklink_crosschain_privatekey
++- eth_crosschain_privatekey
++- leveldb
 </code></pre>
 <blockquote>
 <p>Build the library dependencies</p>
@@ -1670,6 +1699,64 @@ cmake-gui -G "Visual Studio 15"
 <p>Set Active Configuration to <code>RelWithDebInfo</code>, ensure Active Solution platform is <code>x64</code> for 64 bit builds</p>
 <p>Build Solution</p>
 <p>After build successfully,build <code>INSTALL</code> target, then will create a directory <code>third_libs</code> under blocklink_crosschain_privatekey, include <code>blocklink_libbitcoin.lib</code> and <code>blocklink_libbitcoin_secp256k1.lib</code>.</p>
+<p>4.Build Eth Crosschain Privatekey</p>
+<p>Build cryptlib.lib</p>
+<pre><code>D:
+cd D:\hyperexchange\eth_crosschain_privatekey\eth_sign\cryptopp
+find file cryptest.sln and double click it,will open this project in vs2017;
+Set Active Configuration to"Release",ensure Active Solution platform is `x64` for 64 bit builds;
+Select project cryptlib,right botton click and click Building;
+copy D:\hyperexchange\eth_crosschain_privatekey\eth_sign\cryptopp\x64\Output\Release\cryptlib.lib to D:\hyperexchange\eth_crosschain_privatekey\libs,if have no directory libs,to create it please.
+</code></pre>
+<p>Set up environment for building:</p>
+<pre><code>D:
+cd D:\hyperexchange\eth_crosschain_privatekey\eth_sign
+notepad setenv_x64.bat
+</code></pre>
+<p>Put this into the notepad window, then save and quit.</p>
+<pre><code>@echo off
+set GRA_ROOT=d:/hyperexchange
+set OPENSSL_ROOT=%GRA_ROOT%\OpenSSL
+set OPENSSL_ROOT_DIR=%OPENSSL_ROOT%
+set OPENSSL_INCLUDE_DIR=%OPENSSL_ROOT%\include
+set BOOST_ROOT=%GRA_ROOT%\boost_1_64_0
+set ETH_CROSSCHAIN_PROJECT=%GRA_ROOT%/eth_crosschain_privatekey/eth_sign
+
+set PATH=%GRA_ROOT%\CMake\bin;%BOOST_ROOT%\stage\lib;%OPENSSL_ROOT%\lib\;%ETH_CROSSCHAIN_PROJECT%;%PATH%
+
+echo Setting up VS2017 environment...
+call "%VS150COMNTOOLS%\..\..\VC\vcvarsall.bat" x86_amd64
+</code></pre>
+<p>In my PC,VS150COMNTOOLS:&rdquo;C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build", please set a correct path of file vcvarsall.bat by your PC.</p>
+<p>Note keep slash and backslash are consistency with the example</p>
+<p>Then run</p>
+<pre><code>setenv_x64.bat
+</code></pre>
+<p>Build</p>
+<pre><code>D:
+cd D:\hyperexchange\eth_crosschain_privatekey\eth_sign
+notepad run_cmake_x64.bat
+</code></pre>
+<p>Put this into the notepad window, then save and quit.</p>
+<pre><code>setlocal
+call "d:\hyperexchange\eth_crosschain_privatekey\eth_sign\setenv_x64.bat"
+cd %GRA_ROOT%\eth_crosschain_privatekey\eth_sign
+cmake-gui -G "Visual Studio 15"
+</code></pre>
+<p>Then run</p>
+<pre><code>run_cmake_x64.bat
+</code></pre>
+<p>This pops up the cmake gui, but if you&rsquo;ve used CMake before it will probably be showing the wrong data, so fix that:</p>
+<ul>
+<li>Where is the source code: <code>D:/hyperexchange/eth_crosschain_privatekey/eth_sign</code></li>
+<li>Where to build the binaries: <code>D:/hyperexchange/eth_crosschain_privatekey/eth_sign/x64</code></li>
+</ul>
+<p>Then hit Configure. It may ask you to specify a generator for this project; if it does, choose Visual Studio 15 2017 Win64 for 64 bit builds and select Use default native compilers. Look through the output and fix any errors. Then hit Generate.</p>
+<p>Launch Visual Studio and load D:\hyperexchange\eth_crosschain_privatekey\x64\eth_crosschain_privatekey.sln</p>
+<p>Set Active Configuration to <code>RelWithDebInfo</code>, ensure Active Solution platform is <code>x64</code> for 64 bit builds</p>
+<p>Select project <code>eth_sign</code>,right botton click,choose <code>properties</code>,in <code>C/C++-&gt;Gneral-&gt;Additional Include Directories</code> add boost directory：<code>D:\hyperexchange\boost_1_64_0</code>; add include file directory of leveldb：<code>D:\hyperexchange\leveldb\include</code>; in <code>Librarian-&gt;General-&gt;Additional Dependencies</code>, add <code>leveldb.lib</code>, in <code>Additional Library Directories</code>, add <code>D:\hyperexchange\leveldb\x64\Release</code>, click <code>Apply-&gt;Confirm</code>； in project <code>eth_sign</code> find out file <code>levelDB.cpp</code>, right botton click, select <code>Properties</code>,in <code>General</code>,set value of <code>Exincluded From Build</code> to <code>Yes</code>.</p>
+<p>Build Solution</p>
+<p>After build,copy D:\hyperexchange\eth_crosschain_privatekey\eth_sign\x64\Release\eth_sign.lib to D:\hyperexchange\eth_crosschain_privatekey\libs,if have no directory libs,to create it please.</p>
 <blockquote>
 <p>Build project files for hyperexchange</p>
 </blockquote>
@@ -1686,8 +1773,9 @@ set OPENSSL_ROOT_DIR=%OPENSSL_ROOT%
 set OPENSSL_INCLUDE_DIR=%OPENSSL_ROOT%\include
 set BOOST_ROOT=%GRA_ROOT%\boost_1_64_0
 set CROSSCHAIN_PRIVATEKEY_PROJECT=%GRA_ROOT%/blocklink_crosschain_privatekey
+set ETH_CROSSCHAIN_PROJECT=%GRA_ROOT%/eth_crosschain_privatekey/libs
 
-set PATH=%GRA_ROOT%\CMake\bin;%BOOST_ROOT%\stage\lib;%OPENSSL_ROOT%\lib\;%CROSSCHAIN_PRIVATEKEY_PROJECT%;%PATH%
+set PATH=%GRA_ROOT%\CMake\bin;%BOOST_ROOT%\stage\lib;%OPENSSL_ROOT%\lib\;%CROSSCHAIN_PRIVATEKEY_PROJECT%;%ETH_CROSSCHAIN_PROJECT%;%PATH%
 
 echo Setting up VS2017 environment...
 call "%VS150COMNTOOLS%\..\..\VC\vcvarsall.bat" x86_amd64

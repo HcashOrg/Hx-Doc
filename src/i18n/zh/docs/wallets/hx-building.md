@@ -33,11 +33,22 @@
     cmake -DCMAKE_BUILD_TYPE=Release .
     make
 
+> **构建 Eth Crosschain Privatekey项目**
+
+    git clone https://github.com/BlockLink/eth_crosschain_privatekey.git
+    cd eth_crosschain_privatekey/eth_sign/cryptopp/
+    make
+    cd ..
+    cmake .
+    make
+
+
 > **构建 HyperExchange Node项目**
 
-将crosschain privatekey项目生成的lib库路径添加到环境变量里，请使用您环境中blocklink_crosschain_privatekey的路径替换下面命令中的路径。
+将crosschain privatekey项目和Eth Crosschain Privatekey项目生成的lib库路径添加到环境变量里，请使用您环境中blocklink_crosschain_privatekey和eth_crosschain_privatekey的路径替换下面命令中的路径。
 
     `export CROSSCHAIN_PRIVATEKEY_PROJECT=~/blocklink_crosschain_privatekey`
+    `export ETH_CROSSCHAIN_PROJECT=~/eth_crosschain_privatekey`
 
 
     git clone https://github.com/HcashOrg/HyperExchange.git
@@ -81,16 +92,26 @@
     cmake .
     make
 
-8.下载HyperExchange源码:
+8.构建 Eth Crosschain Privatekey项目
+
+    git clone https://github.com/BlockLink/eth_crosschain_privatekey.git
+    cd eth_crosschain_privatekey/eth_sign/cryptopp/
+    make
+    cd ..
+    cmake .
+    make
+
+9.下载HyperExchange源码:
 
     git clone https://github.com/HcashOrg/HyperExchange.git
     cd HyperExchange
 
-9.编译HyperExchange:
+10.编译HyperExchange:
 
-将crosschain privatekey项目生成的lib库路径添加到环境变量里，请使用您环境中blocklink_crosschain_privatekey的路径替换下面命令中的路径。
+将crosschain privatekey项目和Eth Crosschain Privatekey项目生成的lib库路径添加到环境变量里，请使用您环境中blocklink_crosschain_privatekey和eth_crosschain_privatekey的路径替换下面命令中的路径。
 
     `export CROSSCHAIN_PRIVATEKEY_PROJECT=~/blocklink_crosschain_privatekey`
+    `export ETH_CROSSCHAIN_PROJECT=~/eth_crosschain_privatekey`
 
     git submodule update --init --recursive
     cmake .
@@ -171,6 +192,14 @@ HyperExchange依赖于libboost，您必须从源代码构建它。
 - 解压缩到基目录 `D:\hyperexchange`
 - 这将创建一个类似的目录 `D:\hyperexchange\blocklink_crosschain_privatekey`.
 
+7.Eth Crosschain Privatekey项目构建
+
+HyperExchange依赖于libboost，您必须从源代码构建它。
+
+- 从<https://github.com/BlockLink/eth_crosschain_privatekey.git>下载Eth Crosschain Privatekey源码
+- 解压缩到基目录 `D:\hyperexchange`，将leveldb.rar也解压到基目录 `D:\hyperexchange`
+- 这将创建一个类似的目录 `D:\hyperexchange\eth_crosschain_privatekey`和`D:\hyperexchange\leveldb`.
+
 最后，您的基本目录应如下所示（64位版本的目录名称略有不同）：
 
     D:\hyperexchange
@@ -179,6 +208,8 @@ HyperExchange依赖于libboost，您必须从源代码构建它。
     +- CMake
     +- openssl-1.0.2o
     +- blocklink_crosschain_privatekey
+    +- eth_crosschain_privatekey
+    +- leveldb
 
 
 > 构建依赖库项
@@ -264,6 +295,80 @@ HyperExchange依赖于libboost，您必须从源代码构建它。
 
 编译成功后，选择编译`INSTALL` ，在blocklink_crosschain_privatekey下将会生成目录 `third_libs`，里面有 `blocklink_libbitcoin.lib` 和 `blocklink_libbitcoin_secp256k1.lib`。
 
+4.构建Eth Crosschain Privatekey
+
+编译cryptlib.lib
+    
+    D:
+    cd D:\hyperexchange\eth_crosschain_privatekey\eth_sign\cryptopp
+    找到cryptest.sln文件并双击，会在vs2017中打开该工程；
+    解决方案配置选择“Release”，解决方案平台选择“X64”；
+    选择项目cryptlib项目，右键点击生成；
+    将D:\hyperexchange\eth_crosschain_privatekey\eth_sign\cryptopp\x64\Output\Release下生成的cryptlib.lib拷贝到D:\hyperexchange\eth_crosschain_privatekey\libs，如果没有libs路径请创建该路径。
+
+设置环境变量：
+
+    D:
+    cd D:\hyperexchange\eth_crosschain_privatekey\eth_sign
+    notepad setenv_x64.bat
+
+在打开的notepad输入以下内容，保存并退出。
+
+    @echo off
+    set GRA_ROOT=d:/hyperexchange
+    set OPENSSL_ROOT=%GRA_ROOT%\OpenSSL
+    set OPENSSL_ROOT_DIR=%OPENSSL_ROOT%
+    set OPENSSL_INCLUDE_DIR=%OPENSSL_ROOT%\include
+    set BOOST_ROOT=%GRA_ROOT%\boost_1_64_0
+    set ETH_CROSSCHAIN_PROJECT=%GRA_ROOT%/eth_crosschain_privatekey/eth_sign
+    
+    set PATH=%GRA_ROOT%\CMake\bin;%BOOST_ROOT%\stage\lib;%OPENSSL_ROOT%\lib\;%ETH_CROSSCHAIN_PROJECT%;%PATH%
+    
+    echo Setting up VS2017 environment...
+    call "%VS150COMNTOOLS%\..\..\VC\vcvarsall.bat" x86_amd64
+
+在我的电脑上，VS150COMNTOOLS变量指:"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\"，请在PC上设置文件vcvarsall.bat的正确路径。
+
+注意保持斜杠和反斜杠与示例一致
+
+然后执行下面的bat文件
+
+    setenv_x64.bat
+
+编译
+    
+    D:
+    cd D:\hyperexchange\eth_crosschain_privatekey\eth_sign
+    notepad run_cmake_x64.bat
+
+在打开的notepad输入以下内容，保存并退出。
+
+    setlocal
+    call "d:\hyperexchange\eth_crosschain_privatekey\eth_sign\setenv_x64.bat"
+    cd %GRA_ROOT%\eth_crosschain_privatekey\eth_sign
+    cmake-gui -G "Visual Studio 15"
+
+然后执行下面的bat文件
+
+    run_cmake_x64.bat
+
+这会弹出cmake gui，但是如果你之前使用过CMake可能会显示错误的数据，那么修复：
+
+- Where is the source code: `D:/hyperexchange/eth_crosschain_privatekey/eth_sign`
+- Where to build the binaries: `D:/hyperexchange/eth_crosschain_privatekey/eth_sign/x64`
+    
+然后点击Configure.它可能会要求您为此项目指定生成器; 如果是，请选择Visual Studio 15 2017 Win64进行64位构建，然后选择Use default native compilers。查看输出并修复任何错误。然后点击Generate。
+
+启动Visual Studio并加载 D:\hyperexchange\eth_crosschain_privatekey\x64\eth_crosschain_privatekey.sln
+
+将Active Configuration设置为 `Release`, 确保Active Solution platform 是 `x64` 。
+
+点击项目eth_sign，右键选择属性，在C/C++->目录->附加包含目录里添加boost路径：D:\hyperexchange\boost_1_64_0；添加leveldb的头文件路径：D:\hyperexchange\leveldb\include；在库管理器->常规->附加依赖项里添加：leveldb.lib，在附加库目录里添加：D:\hyperexchange\leveldb\x64\Release；点击应用确定；在eth_sign项目下找到levelDB.cpp文件，右键点击属性，将从生成中排除选择为是；
+
+生成解决方案
+
+编译成功后，将D:\hyperexchange\eth_crosschain_privatekey\eth_sign\x64\Release路径下的eth_sign.lib文件拷贝到D:\hyperexchange\eth_crosschain_privatekey\libs，如果没有libs路径请创建该路径。
+
 > 构建hyperexchange
 
 1.设置环境变量：
@@ -281,8 +386,9 @@ HyperExchange依赖于libboost，您必须从源代码构建它。
     set OPENSSL_INCLUDE_DIR=%OPENSSL_ROOT%\include
     set BOOST_ROOT=%GRA_ROOT%\boost_1_64_0
     set CROSSCHAIN_PRIVATEKEY_PROJECT=%GRA_ROOT%/blocklink_crosschain_privatekey
+    set ETH_CROSSCHAIN_PROJECT=%GRA_ROOT%/eth_crosschain_privatekey/libs
     
-    set PATH=%GRA_ROOT%\CMake\bin;%BOOST_ROOT%\stage\lib;%OPENSSL_ROOT%\lib\;%CROSSCHAIN_PRIVATEKEY_PROJECT%;%PATH%
+    set PATH=%GRA_ROOT%\CMake\bin;%BOOST_ROOT%\stage\lib;%OPENSSL_ROOT%\lib\;%CROSSCHAIN_PRIVATEKEY_PROJECT%;%ETH_CROSSCHAIN_PROJECT;%PATH%
     
     echo Setting up VS2017 environment...
     call "%VS150COMNTOOLS%\..\..\VC\vcvarsall.bat" x86_amd64
