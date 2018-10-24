@@ -386,7 +386,7 @@ HyperExchange依赖于libboost，您必须从源代码构建它。
     set OPENSSL_INCLUDE_DIR=%OPENSSL_ROOT%\include
     set BOOST_ROOT=%GRA_ROOT%\boost_1_64_0
     set CROSSCHAIN_PRIVATEKEY_PROJECT=%GRA_ROOT%/blocklink_crosschain_privatekey
-    set ETH_CROSSCHAIN_PROJECT=%GRA_ROOT%/eth_crosschain_privatekey/libs
+    set ETH_CROSSCHAIN_PROJECT=%GRA_ROOT%/eth_crosschain_privatekey
     
     set PATH=%GRA_ROOT%\CMake\bin;%BOOST_ROOT%\stage\lib;%OPENSSL_ROOT%\lib\;%CROSSCHAIN_PRIVATEKEY_PROJECT%;%ETH_CROSSCHAIN_PROJECT;%PATH%
     
