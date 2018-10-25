@@ -857,7 +857,61 @@ Write a exchange contract,compile to gpc file, then register contract to hyperex
 
 5.On litecoin chain,after create some blocks,you can get balance of address "LhamrSpU9E55VEfgmKNxuX7VnWNZLdw8uA",will be 2.49900000(minus fee 0.001).
 
-## Multi-sig addres
+## Multi-sign address
+
+> How to realize
+
+Using the feature that HX public key can be unlimited derived, we combine a series of HX public keys into an ordered queue to generate a public key, whose corresponding address is a multi-signature address. (It can not be distinguished from ordinary address). It supports maximum 15 public keys to form a multi-signature address.
+
+> Create multi-sign address
+
+    create_multisignature_address(const string& account, const fc::flat_set<public_key_type>& pubs, int required, bool broadcast)
+
+This is on-chain operation. If multi-signature address information already exists on chain, creation will fail for repeated using the same address & public keys.
+
+![multi-sig address](/img/wallets/create-multisig-addr.png)
+
+> acquire public key through private keys
+
+    public_key_type wallet_api::get_pubkey_from_priv(const string& privkey)
+
+> acquire public key via wallet account, which must exist in the wallet.
+
+    public_key_type wallet_api:: get_pubkey_from_account (const string& acc_name)
+
+> check detail information of address,Return multi-address detail information, which includes address composition and minimum number of signatures.
+
+    variant_object wallet_api::get_multisig_address(const address& addr)
+
+> Multi-sign address Transaction
+
+* Create an offline transaction which its timeout period is about one day
+
+Transaction interface：
+
+    signed_transaction transfer_from_to_address(string from, string to, string amount, string asset_symbol, string memo)
+
+![multi-sig address](/img/wallets/multisig-transfer.png)
+
+* Sign transaction order respectively by account who created this multi-sign address.
+
+Signature interface：
+
+    signed_transaction wallet_api::sign_multisig_trx(const address& addr, const signed_transaction& trx)
+
+![multi-sig address](/img/wallets/multisig-sign.png)
+
+* Collect signatures, broadcast after combine. Broadcast will be successful only signatures reaches required number. 
+
+combine and broadcast interface：
+
+    full_transaction wallet_api::combine_transaction(const vector<signed_transaction>& trxs, bool broadcast)
+
+![multi-sig address](/img/wallets/multisig-combine.png)
+
+> decode base58 string,you can parse a base58 string of a generated transaction and see the details of the transaction body, including the number of signatures.
+
+![multi-sig address](/img/wallets/decode-multisig-trx.png)
 
 
 

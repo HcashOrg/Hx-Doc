@@ -706,8 +706,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#multi-sig-addres" title="Multi-sig addres" class="md-nav__link">
-    Multi-sig addres
+  <a href="#multi-sign-address" title="Multi-sign address" class="md-nav__link">
+    Multi-sign address
   </a>
   
 </li>
@@ -1490,8 +1490,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#multi-sig-addres" title="Multi-sig addres" class="md-nav__link">
-    Multi-sig addres
+  <a href="#multi-sign-address" title="Multi-sign address" class="md-nav__link">
+    Multi-sign address
   </a>
   
 </li>
@@ -2343,7 +2343,61 @@ get_account_balances hxtest001
 ]
 </code></pre>
 <p>5.On litecoin chain,after create some blocks,you can get balance of address &ldquo;LhamrSpU9E55VEfgmKNxuX7VnWNZLdw8uA&rdquo;,will be 2.49900000(minus fee 0.001).</p>
-<h2 id="multi-sig-addres">Multi-sig addres<a class="headerlink" href="#multi-sig-addres" title="Permanent link">&para;</a></h2>
+<h2 id="multi-sign-address">Multi-sign address<a class="headerlink" href="#multi-sign-address" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>How to realize</p>
+</blockquote>
+<p>Using the feature that HX public key can be unlimited derived, we combine a series of HX public keys into an ordered queue to generate a public key, whose corresponding address is a multi-signature address. (It can not be distinguished from ordinary address). It supports maximum 15 public keys to form a multi-signature address.</p>
+<blockquote>
+<p>Create multi-sign address</p>
+</blockquote>
+<pre><code>create_multisignature_address(const string&amp; account, const fc::flat_set&lt;public_key_type&gt;&amp; pubs, int required, bool broadcast)
+</code></pre>
+<p>This is on-chain operation. If multi-signature address information already exists on chain, creation will fail for repeated using the same address &amp; public keys.</p>
+<p><img alt="multi-sig address" src="../../img/wallets/create-multisig-addr.png" /></p>
+<blockquote>
+<p>acquire public key through private keys</p>
+</blockquote>
+<pre><code>public_key_type wallet_api::get_pubkey_from_priv(const string&amp; privkey)
+</code></pre>
+<blockquote>
+<p>acquire public key via wallet account, which must exist in the wallet.</p>
+</blockquote>
+<pre><code>public_key_type wallet_api:: get_pubkey_from_account (const string&amp; acc_name)
+</code></pre>
+<blockquote>
+<p>check detail information of address,Return multi-address detail information, which includes address composition and minimum number of signatures.</p>
+</blockquote>
+<pre><code>variant_object wallet_api::get_multisig_address(const address&amp; addr)
+</code></pre>
+<blockquote>
+<p>Multi-sign address Transaction</p>
+</blockquote>
+<ul>
+<li>Create an offline transaction which its timeout period is about one day</li>
+</ul>
+<p>Transaction interface：</p>
+<pre><code>signed_transaction transfer_from_to_address(string from, string to, string amount, string asset_symbol, string memo)
+</code></pre>
+<p><img alt="multi-sig address" src="../../img/wallets/multisig-transfer.png" /></p>
+<ul>
+<li>Sign transaction order respectively by account who created this multi-sign address.</li>
+</ul>
+<p>Signature interface：</p>
+<pre><code>signed_transaction wallet_api::sign_multisig_trx(const address&amp; addr, const signed_transaction&amp; trx)
+</code></pre>
+<p><img alt="multi-sig address" src="../../img/wallets/multisig-sign.png" /></p>
+<ul>
+<li>Collect signatures, broadcast after combine. Broadcast will be successful only signatures reaches required number. </li>
+</ul>
+<p>combine and broadcast interface：</p>
+<pre><code>full_transaction wallet_api::combine_transaction(const vector&lt;signed_transaction&gt;&amp; trxs, bool broadcast)
+</code></pre>
+<p><img alt="multi-sig address" src="../../img/wallets/multisig-combine.png" /></p>
+<blockquote>
+<p>decode base58 string,you can parse a base58 string of a generated transaction and see the details of the transaction body, including the number of signatures.</p>
+</blockquote>
+<p><img alt="multi-sig address" src="../../img/wallets/decode-multisig-trx.png" /></p>
 <h2 id="rpc-command-list">RPC command list<a class="headerlink" href="#rpc-command-list" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p>Basic RPC Interface</p>
