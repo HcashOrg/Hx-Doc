@@ -713,6 +713,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#eth-and-erc20" title="ETH and ERC20" class="md-nav__link">
+    ETH and ERC20
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#rpc-command-list" title="RPC command list" class="md-nav__link">
     RPC command list
   </a>
@@ -1492,6 +1499,13 @@
         <li class="md-nav__item">
   <a href="#multi-sign-address" title="Multi-sign address" class="md-nav__link">
     Multi-sign address
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eth-and-erc20" title="ETH and ERC20" class="md-nav__link">
+    ETH and ERC20
   </a>
   
 </li>
@@ -2398,6 +2412,59 @@ get_account_balances hxtest001
 <p>decode base58 string,you can parse a base58 string of a generated transaction and see the details of the transaction body, including the number of signatures.</p>
 </blockquote>
 <p><img alt="multi-sig address" src="../../img/wallets/decode-multisig-trx.png" /></p>
+<h2 id="eth-and-erc20">ETH and ERC20<a class="headerlink" href="#eth-and-erc20" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>creating ETH assets is the same than creating other assets, the interface of creating ERC20 is as below:</p>
+</blockquote>
+<pre><code>full_transaction wallet_create_erc_asset(
+string issuer,//creator
+string symbol,//symbol(must be startwith ERC)
+uint8_t precision,//precision
+share_type max_supply,//max_supply
+share_type core_fee_paid,//fee
+std::string erc_address,//(erc20 contract address and erc20 contract precision,split with '|')
+bool broadcast = false);
+For example：
+wallet_create_erc_asset guard0 ERCEOS 8 210000000 100000 "0x1fb22d0eb45d1bc4ef6a9cb9a8db6972ce886f65|18" true
+</code></pre>
+<blockquote>
+<p>eth and erc20 multi-sign account creation process:</p>
+</blockquote>
+<p>Ordinary asset process (please refer to the process of creating LTC asset on hx chain as above):
+Update_asset_private_keys –&gt; check multi-sign address has been created-&gt; Create Proposal -&gt; check Proposal -&gt; Confirm Proposal -&gt; Multi-Sign Account become Effective</p>
+<p>ETH and ERC20 asset process:
+Update_asset_private_keys-&gt; check multi-sign contract has been created -&gt; Sign &amp; broadcast multi-sign contract to Ethernet chain -&gt; heck multi-sign address has been created -&gt; Create proposal -&gt; check proposal -&gt; Pass proposal -&gt; Multi-signed account become effective
+relevant interface:
+check multi-sign contract transaction:</p>
+<pre><code>get_eth_multi_account_trx(const int &amp; mul_acc_tx_state);
+</code></pre>
+<p>added query status as below,The cold and hot wallet addresses created by the query require a certain amount of eth for the transaction fee of eth and erc20:</p>
+<p><img alt="eth and erc20" src="../../img/wallets/eth-state.png" /></p>
+<p>Sign unsigned contract and multi-sign contract：</p>
+<pre><code>senator_sign_eths_multi_account_create_trx(const string&amp; tx_id, const string&amp; senator);
+</code></pre>
+<p>Two parameters are the transaction ID of unsigned transaction respectively, obtained by checking previous interface 0 status, and the senator who signed).</p>
+<blockquote>
+<p>Withdraw process for ETH and ERC20</p>
+</blockquote>
+<p>ordinary assets process (refer to withdraw process as above):</p>
+<pre><code>User initiates cross-chain transfer (status becomes 0)-&gt;citizen creates unsigned multi-sign transaction (1)-&gt;senator signature status 1 transaction (2)-&gt; citizen sign jointly and broadcast (3)-&gt;chain confirms transaction and tells the HX chain by collecting (4)
+</code></pre>
+<p>Eth and erc20 asset process:：</p>
+<pre><code>User initiates cross-chain transfer (status becomes 0) -&gt; citizen creates unsigned Ethereum call parameter transaction (1) -&gt; senator signature status 1 transaction (2) -&gt; citizen call parameters jointly and creates unsigned ETH transaction (7)-&gt;designated senator signature status 7 transaction (8)-&gt;chain confirms transaction and tells HX chain by acquisition (4)
+</code></pre>
+<p>related interface：
+designated senator signs transaction:
+    senator_sign_eths_final_trx(const string&amp; tx_id, const string&amp; senator);</p>
+<blockquote>
+<p>ETH and ERC20 cold &amp; hot wallet switch process</p>
+</blockquote>
+<p>Same withdraw process as ETH and ERC20, different signature interface for designated senator, see it as below:</p>
+<pre><code>senator_sign_eths_coldhot_final_trx(const string&amp; trx_id, const string &amp; senator)
+</code></pre>
+<p><strong>&gt; Notice:</strong>If you want to do transaction of eth or erc20, need to config ETH and ERC20 token symbol in config.ini of middle-ware：</p>
+<p><img alt="eth and erc20" src="../../img/wallets/eth-conf.png" /></p>
+<blockquote></blockquote>
 <h2 id="rpc-command-list">RPC command list<a class="headerlink" href="#rpc-command-list" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p>Basic RPC Interface</p>

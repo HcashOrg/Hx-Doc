@@ -12,12 +12,12 @@
 2.	测试币领取功能
 3.	Citizen 挖矿功能
 4.	手续费承兑单功能
-5.	链上资产兑换功能（目前支持HC、BTC、LTC）
+5.	链上资产兑换功能（目前支持HC、BTC、LTC、ETH、ERC20代币）
 6.	合约功能（链上已有资产兑换合约，IDE开发工具将在稍晚推出）
 
 
 
-## 下载并启动HXIndicator
+## 下载HXIndicator
 
 最新版本的HXIndicator可以从官方网站<explorer.hx.cash>下载。
 

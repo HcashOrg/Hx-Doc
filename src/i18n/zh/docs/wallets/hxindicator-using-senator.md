@@ -30,11 +30,23 @@ Citizen会分配部分收益给senator.
 
 ![Cold-Hot Trx](/img/wallets/hxindicator/create-cold-hot-tx1.png)
 
+如果是eth或者erc20资产，在"CONFIRMING"里操作之后，还需要签名，点击"ETH-SIGN"，然后点击"sign"
+
+![Cold-Hot Trx](/img/wallets/hxindicator/create-cold-hot-tx2.png)
+
+![Cold-Hot Trx](/img/wallets/hxindicator/create-cold-hot-tx3.png)
+
 > 提现授权
 
 选择"CURRENT SENATOR"将显示该senator所有的提现记录，点击"check"/"sign"。
 
 ![Withdraw](/img/wallets/hxindicator/authorized-withdraw.png)
+
+如果是eth或者erc20资产，在"CONFIRMING"里操作之后，还需要签名，点击"ETH-SIGN"，，然后点击"sign"
+
+![Withdraw](/img/wallets/hxindicator/authorized-withdraw1.png)
+
+![Withdraw](/img/wallets/hxindicator/authorized-withdraw2.png)
 
 > 市场喂价
 

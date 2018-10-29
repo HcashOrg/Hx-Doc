@@ -915,6 +915,61 @@
 
 ![multi-sig address](/img/wallets/decode-multisig-trx.png)
 
+## ETH 和 ERC20资产
+
+> 创建eth资产和创建其他的资产方式相同，创建erc20资产接口如下：
+
+    full_transaction wallet_create_erc_asset(string issuer,发行者
+		  string symbol,标识(必须带有ERC开头)
+	uint8_t precision,精度
+	share_type max_supply,最大供应量
+	share_type core_fee_paid,使用手续费
+	std::string erc_address,(erc20的合约地址和erc20合约实际精度，用’|’进行分割)
+	bool broadcast = false);
+    例子：
+    wallet_create_erc_asset guard0 ERCEOS 8 210000000 100000 "0x1fb22d0eb45d1bc4ef6a9cb9a8db6972ce886f65|18" true
+
+> 以太(eth和ERC)senator多签账户创建流程；
+
+普通资产流程(请参考上面hx链上创建LTC资产部分的流程)：
+update_asset_private_keys –>查询创建出的多签地址->创建提案->查询提案->确认提案->多签账户生效
+ETH资产流程：
+update_asset_private_keys->查询创建出的多签合约->对未签名的多签合约进行签名并广播到以太链上->查询创建出的多签地址->创建提案->查询提案->通过提案->多签账户生效
+相关接口：
+查询多签合约交易:
+
+    get_eth_multi_account_trx(const int & mul_acc_tx_state);
+添加的查询类型，查询创建出的多签地址的冷热钱包地址都需要有一定的eth用于eth和erc20相关交易的手续费：
+
+![eth and erc20](/img/wallets/eth-state.png)
+
+对未签名的多签合约进行签名：
+
+    senator_sign_eths_multi_account_create_trx(const string& tx_id, const string& senator);
+两个参数分别是未签名的交易的交易id，通过上个接口查询0状态获得，和签名的senator(在钱包中有该senator的私钥)。
+
+> eth和erc20提现流程
+
+普通资产流程(具体流程请参考上面的提现流程)：
+
+	用户发起跨链转账(状态变为0)->citizen创建未签名的多签交易(1)->senator签名状态1的交易(2)-> citizen合并签名并广播(3)->链确认交易并通过采集告诉HX链(4)
+Eth资产流程：
+
+    用户发起跨链转账(状态变为0)-> citizen创建未签名的以太坊调用参数交易(1)-> senator签名状态1的交易(2)-> citizen合并调用参数并创建未签名的ETH交易(7)->指定senator签名状态7的交易(8)->链确认交易通过采集告诉HX链(4)
+相关接口：
+指定senator签名交易:
+    senator_sign_eths_final_trx(const string& tx_id, const string& senator);
+
+> eth和erc20冷热钱包互转流程
+
+流程和eth和erc20提现流程相同，指定senator签名交易的接口不同，如下：
+
+    senator_sign_eths_coldhot_final_trx(const string& trx_id, const string & senator)
+
+**> 注意:**如果要做eth和erc20的相关操作，需要在中间件的config.ini中添加ETH和erc20的代币名称：
+
+![eth and erc20](/img/wallets/eth-conf.png)
+
 ## RPC命令列表
 
 > 基本的RPC命令

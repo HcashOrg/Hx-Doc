@@ -13,13 +13,13 @@ Testnet will now offer the following features:
 2. Pledge mining function testing;
 3. Citizen mining function;
 4. Fee acceptance function;
-5. Asset exchange function on the chain (currently supporting HC, BTC and LTC);
+5. Asset exchange function on the chain (currently supporting HC, BTC, eth ,erc20 token and LTC);
 6. Smart contract function (there are asset exchange contracts on the chain, and IDE development tools will be introduced later).
 
 
 ## Download and startup HXIndicator
 
-The latest version of HXIndicator can be downloaded from official website.
+The latest version of HXIndicator can be downloaded from official website:<explorer.hx.cash>.
 
 ## Startup and setup
 

@@ -30,11 +30,23 @@ Click "CREATE",then select "Coin"/"Choose Account"/"hot address to cold",input "
 
 ![Cold-Hot Trx](/img/wallets/hxindicator/create-cold-hot-tx1.png)
 
+If are eth or erc20 assets,after "CONFIRMING", need do sign operator,please click "ETH-SIGN",,then click "sign"
+
+![Cold-Hot Trx](/img/wallets/hxindicator/create-cold-hot-tx2.png)
+
+![Cold-Hot Trx](/img/wallets/hxindicator/create-cold-hot-tx3.png)
+
 > Withdraw
 
 Select "CURRENT SENATOR",will show all withdraw record of this account.then click "check"/"sign".
 
 ![Withdraw](/img/wallets/hxindicator/authorized-withdraw.png)
+
+If are eth or erc20 assets,after "CONFIRMING", need do sign operator,please click "ETH-SIGN",then click "sign"
+
+![Withdraw](/img/wallets/hxindicator/authorized-withdraw1.png)
+
+![Withdraw](/img/wallets/hxindicator/authorized-withdraw2.png)
 
 > Market Price
 
