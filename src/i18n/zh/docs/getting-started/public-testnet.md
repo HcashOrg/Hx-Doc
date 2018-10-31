@@ -93,7 +93,7 @@
 
 ## 获取测试HX
 
-访问水头龙地址:<http://facucet.hx.cash>, 输入你的hx地址/e-mainl/name。
+访问水头龙地址:<http://facucet.hx.cash>, 输入你的hx地址/e-mail/name。
 
 ![Faucet](/img/getting-started/visit-faucet.png)
  
