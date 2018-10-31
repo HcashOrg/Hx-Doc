@@ -93,7 +93,7 @@ Now you will get a HX address.
 
 ## Obtaining test HX coin
 
-Vist [faucet website](http://faucet.h.cash/), input your hx address.
+Vist [faucet website](http://facucet.hx.cash), input your hx address/e-mail/name.
 
 ![Faucet](/img/getting-started/visit-faucet.png)
  
@@ -103,6 +103,7 @@ Click `deposit` botton to get address of this asset,then visit btc and ltc fauce
 
 * BTC faucet:<https://testnet.manu.backend.hamburg/faucet>
 * LTC faucet:<http://testnet.litecointools.com>
+* Hyper Cash faucet：<http://faucet.h.cash/>
 
 ## Deposit
 
