@@ -34,4 +34,4 @@ HyperCash作为升级的Hshare链，专注于不可互操作的区块链功能�
 ---
 
 ## 跨链
-HyperExchange 率先通过创新的 Blockchain Multi Blockchain Multi Tunnel (BMT) 协议、 HyperExchange Axis 、Indicator 、智能合约等区块链技术成果和创新，实现了区块链间的价值互通联，为实现打复杂分布式商业应用下基础。
+HyperExchange 率先通过创新的 Blockchain Multi Blockchain Multi Tunnel (BMT) 协议、 HyperExchange Axis 、Indicator 、智能合约等区块链技术成果和创新，实现了区块链间的价值互通联，为实现复杂分布式商业应用打下基础。
