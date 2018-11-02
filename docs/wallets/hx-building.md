@@ -25,7 +25,7 @@ Last updated for v1.0.7.
 The following dependencies were necessary for a clean install on Ubuntu 16.04 LTS (64-bit):
 
     sudo apt-get update
-    sudo apt-get install autoconf cmake make automake libtool git libboost-all-dev libssl-dev g++ libcurl4-openssl-dev
+    sudo apt-get install autoconf cmake make automake libtool git libboost-all-dev libssl-dev g++ libcurl4-openssl-dev libleveldb-dev
 
 > **Build Crosschain Privatekey**
 

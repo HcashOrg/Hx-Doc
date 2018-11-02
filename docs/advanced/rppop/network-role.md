@@ -10,7 +10,7 @@ Includes all users on the HyperExchange chain and all users on other chains that
 
 ## Candidate Citizen
 
-Candidate Citizens can accept asset pledges from other users on the chain. Ordinary users can pay 10,000 HX to become a Candidate Citizen (this fee will be destroyed).
+Candidate Citizens can accept asset pledges from other users on the chain. Ordinary users can pay 1,000 HX to become a Candidate Citizen (this fee will be destroyed).
 
 ---
 
@@ -22,7 +22,7 @@ A Citizen is a block generator and community governor of the HyperExchange chain
 
 ## Senator
 
-A Senator is an asset manager and community administrator in the HyperExchange ecosystem. By consensus, a Senator is responsible for managing assets on hot and cold multi- signature addresses on different chains and for cross-chain interconnection. To become a Senator, a user must pay 500,000 HSR/HC, ensuring that the individual has placed a significant financial stake in the system, ultimately working to safeguard network integrity and stability by aligning the Senators interests with that of the network. If users on the network dislike a Senator, Citizens are able to democratically vote to remove them.
+A Senator is an asset manager and community administrator in the HyperExchange ecosystem. By consensus, a Senator is responsible for managing assets on hot and cold multi- signature addresses on different chains and for cross-chain interconnection. The total number of Senator is fixed to 15, which can be replaced and cannot be increased or decreased, divided into 5 safe Senator and 10 campaign Senator, safe Senator is determined only by the votes of these 5 Senator, and the campaign Senator is determined by the votes of Citizen.
 
 ---
 
