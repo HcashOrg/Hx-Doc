@@ -24,7 +24,7 @@
 在Ubuntu 16.04 LTS（64位）上进行全新安装需要以下依赖项：
 
     sudo apt-get update
-    sudo apt-get install autoconf cmake make automake libtool git libboost-all-dev libssl-dev g++ libcurl4-openssl-dev
+    sudo apt-get install autoconf cmake make automake libtool git libboost-all-dev libssl-dev g++ libcurl4-openssl-dev libleveldb-dev
 
 > **构建 Crosschain Privatekey项目**
 

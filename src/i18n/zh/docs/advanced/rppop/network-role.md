@@ -23,7 +23,7 @@ Citizen 是 HyperExchange 的生产者和社区治理者，负责记账和产块
 
 ## Senator
 
-Senator是HyperExchange生态中的资产管理者和社区治理者。Senator 负责共识管理其他资产链上的多重签名冷热地址里的资产，并且各资产链之间的资产流通必须通过 Senator 的共识来达成。成为 Senator 必须交纳 50 万 HSR/HC 作为责任保证金，Senator 的更替要通过 Citizen 的投票来确定。
+Senator是HyperExchange生态中的资产管理者和社区治理者。Senator 负责共识管理其他资产链上的多重签名冷热地址里的资产，并且各资产链之间的资产流通必须通过 Senator 的共识来达成。Senator总数固定为15个，可以更替，不可增减，分为5个安全Senator和10个竞选Senator，安全Senator更替只由这5个Senator投票来确定，竞选Senator的更替要通过Citizen的投票来确定。
 
 ---
 
