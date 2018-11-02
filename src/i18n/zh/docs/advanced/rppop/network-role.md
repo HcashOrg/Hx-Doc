@@ -10,7 +10,7 @@
 
 ## Candidate Citizen
 
-普通用户可以交纳 1 万个 HX 成为 Candidateof Citizen（此笔费用将会销毁） 。Candidate of Citizen 可以接受链上其他用户的资产质押。
+普通用户可以交纳 1000个 HX 成为 Candidateof Citizen（此笔费用将会销毁） 。Candidate of Citizen 可以接受链上其他用户的资产质押。
 
 ---
 
