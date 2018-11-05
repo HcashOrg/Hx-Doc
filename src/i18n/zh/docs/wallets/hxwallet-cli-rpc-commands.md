@@ -366,7 +366,7 @@
 
 > 充值BTC到账户`hxtest001`
 
-(1)createrawtransaction:发送地址/接受地址/充值金额/充值资产符合
+(1)createrawtransaction:发送地址/接收地址/充值金额/充值资产符号
     
     unlocked >>> createrawtransaction 19QmVye31e2QfYXZShBD2VXissoM6QeppM  35ymUk9NfK4izhgp55Nphqd6dcgsvQYNfd 10 BTC
     createrawtransaction 19QmVye31e2QfYXZShBD2VXissoM6QeppM  35ymUk9NfK4izhgp55Nphqd6dcgsvQYNfd 10 BTC
