@@ -1,5 +1,7 @@
-To become a Senator, one must place a collateral deposit to ensure compliance and to act as a sign of good faith. At all times within the network, there must be a minimum of 7 Senators and a maximum of 15. 
+1.Total amount of Senators is 15 fixed, not less, not more, but replaceable. 
+2.15 Senators are divided into two parts with entirely same rights, however, replacement methods are different. 
 
-Candidates participate in an election, according to the plan announced by the HCASH Foundation. Candidates who are selected become genesis Senators. 
+- 5 permanent Senators, which are entitled to initiate replacement.
+- 10 campaign senators on selection board, any random citizen can initiate a proposal of replacement, and proceed replacement after all Citizens voting. 
 
-(Campaign specifics are subject to announcements by the HCASH Foundation).
+3.It remains 15 senators to governance the community after replacement. 
