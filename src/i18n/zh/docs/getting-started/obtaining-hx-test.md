@@ -38,18 +38,20 @@ HyperExchange上的激励有三种：
 | 合约提现交易手续费| 有     | 有| 有      | 有         |手续费奖励为HX或HIOU|
 
 
-## Tourists
+## 所有HX持有者
 
-作为HyperExchange基本用户，Tourist可以获得合约提现手续费奖励。通常情况下，每10万个区块链上进行一次分配。奖励依据持有的HX数量进行分配，具体公式如下：
+作为HyperExchange持有者(至少持有10000个HX)，可以获得合约提现手续费奖励。通常情况下，每10万个区块链上进行一次分配。奖励依据持有的HX数量进行分配，具体公式如下：
 
 ![Tourists](/img/getting-started/calc1.png)
 
-用户还可以通过成为Citizen或者通过质押资产获得区块奖励。
+## Tourists
+
+Tourists用户可以通过质押资产获得区块奖励。
 
 ## Citizens
 
 在HyperExchange生态里Tourist通过成为Citizen或者通过质押资产给Citizen获得区块奖励。
-用户交纳1万HX注册成为候选Citizen，投入资产进行质押，并在社区内吸引其他用户参与质押，最终依靠RPPOM共识竞争记账权，成为Citizen，参与出块，获得区块奖励。
+用户交纳1000HX注册成为候选Citizen，投入资产进行质押，并在社区内吸引其他用户参与质押，最终依靠RPPOM共识竞争记账权，成为Citizen，参与出块，获得区块奖励。
 Citizen发起用户及支持用户的收益为：矿池区块奖励和合约提现交易手续费中的相应比例奖励。
 
 ![Citizens](/img/getting-started/calc2.png)

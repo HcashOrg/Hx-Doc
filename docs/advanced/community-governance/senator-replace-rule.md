@@ -6,13 +6,14 @@ As a part of the governance and operation of the HyperExchange chain, Citizens a
 
 The 5 Senators are replaced by the process as following:
 
-1.	new Senator registers as an on-chain user
-2.	Any random existing Senator initiates a proposal to nominate the new Senator and the Senator to be replaced. 
-3.	the rest 4 Senators confirm such a proposal
-4.	Senator  the new Senator becomes candidate Senator after 2/3 signatures confirmation
-5.	the new 15 Senators launch cross-chain wallet replacement process
-6.	New Senator officially becomes a Senator after wallet replacement process finished. The Senator who just has been replaced loses its identity. 
-7.	New Senator begins to get mining reward and other reword, the Senator who just has been replaced becomes ordinary registered user. 
+1.	new Senator registers as an on-chain user(need spend 5HX)
+2.	register to be a senator(need spend 10000HX)
+3.	Any random existing Senator initiates a proposal to nominate the new Senator and the Senator to be replaced. 
+4.	the rest 4 Senators confirm such a proposal
+5.	Senator  the new Senator becomes candidate Senator after 2/3 signatures confirmation
+6.	the new 15 Senators launch cross-chain wallet replacement process
+7.	New Senator officially becomes a Senator after wallet replacement process finished. The Senator who just has been replaced loses its identity. 
+8.	New Senator begins to get mining reward and other reword, the Senator who just has been replaced becomes ordinary registered user. 
 
 ---
 

@@ -6,13 +6,14 @@
 
 这5个Senator通过以下流程进行更替：
 
-1.	新Senator注册为链上用户
-2.	任一现有Senator发起提案，提名新Senator以及要被更替的Senator
-3.	其他4个Senator确认提案
-4.	2/3个签名确认提案后新Senator变为候选Senator
-5.	新的全体15个Senator发起跨链钱包更替流程
-6.	钱包更替完成，新Senator变为正式Senator，被更替的Senator失去身份
-7.	新Senator开始获取挖矿及其他收益，被更替者成为普通注册用户
+1.	新Senator注册为链上用户(需要花费5HX)
+2.	注册成为senator(需要花费10000HX)
+3.	任一现有Senator发起提案，提名新Senator以及要被更替的Senator
+4.	其他4个Senator确认提案
+5.	2/3个签名确认提案后新Senator变为候选Senator
+6.	新的全体15个Senator发起跨链钱包更替流程
+7.	钱包更替完成，新Senator变为正式Senator，被更替的Senator失去身份
+8.	新Senator开始获取挖矿及其他收益，被更替者成为普通注册用户
 
 ---
 

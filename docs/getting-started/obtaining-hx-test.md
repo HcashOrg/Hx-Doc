@@ -41,13 +41,17 @@ Table: User Comparison Incentive Table
 
 ## Tourists
 
-As a basic user of the HyperExchange, Tourists can obtain rewards from contract withdrawal fees. Typically, rewards are made every 100,000 blocks. Rewards are allocated based on the amount of HX held. The formula is as follows:
+As a owner of the HyperExchange(at least have 10000hx), Tourists can obtain rewards from contract withdrawal fees. Typically, rewards are made every 100,000 blocks. Rewards are allocated based on the amount of HX held. The formula is as follows:
 
 Sigma((The total amount of a single type of asset transaction fee-Citizen Rewards-SenatorRewards)/(Total amount of HX))
 
+## Tourists
+
+Tourists can receive block rewards through pledged assets.
+
 ## Citizens
 
-In the HyperExchange ecosystem, Tourists earn block rewards by becoming a Citizen or through pledging assets. A Tourist can pay 10,000 HX to register as a candidate Citizen. From here, the user can pledge their own assets or encourage other users to pledge their assets on the Candidate Citizens behalf. The user then has the ability to compete for the right to become a Citizen, which will enable them to participate in block production and to obtain block rewards.
+In the HyperExchange ecosystem, Tourists earn block rewards by becoming a Citizen or through pledging assets. A Tourist can pay 1,000 HX to register as a candidate Citizen. From here, the user can pledge their own assets or encourage other users to pledge their assets on the Candidate Citizens behalf. The user then has the ability to compete for the right to become a Citizen, which will enable them to participate in block production and to obtain block rewards.
 
 The rewards for Citizens and Citizen Supporters are the corresponding percentage of rewards that come from the mining pool, block rewards, and contract withdrawal transaction fees.
 
