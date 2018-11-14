@@ -46,6 +46,8 @@ Click "ADD M-S", enter multiple signature address, and click ok
 
 ![MS sign](/img/wallets/hxindicator/ms-sign1.png)
 
+![MS sign](/img/wallets/hxindicator/ms-sign2.png)
+
 ## Fee Acceptance
 
 For non-HX assets, All fee payments can be done by selecting fee acceptance.click "FeeAcceptance"->"ALL",will display all fee acceptances on current blockchain.

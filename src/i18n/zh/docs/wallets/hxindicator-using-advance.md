@@ -46,6 +46,8 @@
 
 ![MS sign](/img/wallets/hxindicator/ms-sign1.png)
 
+![MS sign](/img/wallets/hxindicator/ms-sign2.png)
+
 ## 手续费承兑单
 
 所有手续费支付都可以选择手续费承兑单来使用非HX资产支付。点击"FeeAcceptance"->"ALL"可以看到当前链上的所有承兑单。
