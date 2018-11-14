@@ -12,7 +12,7 @@ After login asset page, you can view all assets of the Wallet accounts.
 
 ![Account Tab](/img/wallets/hxindicator/asset-page.png)
 
-> Create New Account
+> Create New Normal Account
 
 Click "NEW" to create an account on asset page, enter your account name (it will check whether the registered account already existed on the blockchain).
 
@@ -23,6 +23,14 @@ Click "OK" to backup wallet data, select a safe path, and click "Backup".
 ![backup Tab](/img/wallets/hxindicator/backup-wallet.png)
 
 ![backup Tab1](/img/wallets/hxindicator/backup-wallet1.png)
+
+> To be a registered account, if the user wants to mine, or to be senator or citizen, it must register, click "REGISTER" on the asset page.
+
+![Mining Register](/img/wallets/hxindicator/mining-register.png)
+
+Click "OK",enter the wallet password.You will see screen as below.
+
+![Mining Register](/img/wallets/hxindicator/mining-register1.png)
 
 > Import Account
 
@@ -108,6 +116,12 @@ After pledge assets to citizen, partial reward will be sent to you after blocks 
 After reaching the minimum amount.Click "get income" to receive reward.
 
 ![Mining Mortgage](/img/wallets/hxindicator/mining-get-income.png)
+
+> CITIZEN INFO
+
+Show detail information of all citizens on hx blockchain.
+
+![Mining citizen](/img/wallets/hxindicator/mining-citizen.png)
 
 ## Bonus
 

@@ -2,7 +2,7 @@
 
 最新版本 v1.0.7.
 
-本指南假设您已使用[HyperExchange Indicator设置](hxindicator-setup.md)设置了HyperExchange钱包。下面将详细介绍一下功能：`Account/Contract/Advance/Contacts/Senator/Citizen`.
+本指南假设您已使用[HyperExchange Indicator设置](hxindicator-setup.md)设置了HyperExchange钱包。下面将详细介绍以下功能：`Account/Contract/Advance/Contacts/Senator/Citizen`.
 
 ---
 
@@ -12,7 +12,7 @@
 
 ![Account Tab](/img/wallets/hxindicator/asset-page.png)
 
-> 
+> 新建普通账户
 
 资产页面点击创建账户，输入账户名（会校验本钱包是否有重名以及区块链上注册账户是否重名），
 
@@ -24,6 +24,14 @@
 ![backup Tab](/img/wallets/hxindicator/backup-wallet.png)
 
 ![backup Tab1](/img/wallets/hxindicator/backup-wallet1.png)
+
+> 成为注册账户，如果用户想挖矿，或者想成为senator、citizen，则必须要注册，在asset页面点击‘注册’；
+
+![Mining Register](/img/wallets/hxindicator/mining-register.png)
+
+点击 "OK"，输入钱包密码，会出现下面的界面：
+
+![Mining Register](/img/wallets/hxindicator/mining-register1.png)
 
 > 导入账户
 
@@ -110,6 +118,12 @@
 达到最低领取数量后可以点击"get income"进行领取。
 
 ![Mining Mortgage](/img/wallets/hxindicator/mining-get-income.png)
+
+> CITIZEN信息
+
+可以看到当前链上所有citizen的相关信息
+
+![Mining citizen](/img/wallets/hxindicator/mining-citizen.png)
 
 ## 分红
 
