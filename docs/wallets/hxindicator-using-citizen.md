@@ -4,7 +4,7 @@
 
 Select a citizen account, will show detail information of this citizen.
 
-![Citizen Account Info](/img/wallets/hxindicator/citizen-create.png)
+![Citizen Account Info](/img/wallets/hxindicator/citizen-account-info.png)
 
 > Create New Citizen
 
