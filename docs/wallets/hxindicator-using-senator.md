@@ -4,7 +4,15 @@
 
 Select "CURRENT SENATOR",will show information about it.
 
-![Contacts](/img/wallets/hxindicator/senator-account-info.png)
+![Senator](/img/wallets/hxindicator/senator-account-info.png)
+
+Click "NEW SENATOR" to create a new senator(it spent 10000hx)，input account password.
+
+![Senator new](/img/wallets/hxindicator/senator-new.png)
+
+![Senator new](/img/wallets/hxindicator/senator-new1.png)
+
+![Senator new](/img/wallets/hxindicator/senator-new2.png)
 
 > My Income
 

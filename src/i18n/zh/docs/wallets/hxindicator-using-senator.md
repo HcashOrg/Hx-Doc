@@ -4,7 +4,15 @@
 
 选择"CURRENT SENATOR"，将显示该senator的详细信息。
 
-![Contacts](/img/wallets/hxindicator/senator-account-info.png)
+![Senator account info](/img/wallets/hxindicator/senator-account-info.png)
+
+点击"NEW SENATOR"，新建一个senator(需要消耗10000hx)，输入账户密码。
+
+![Senator new](/img/wallets/hxindicator/senator-new.png)
+
+![Senator new](/img/wallets/hxindicator/senator-new1.png)
+
+![Senator new](/img/wallets/hxindicator/senator-new2.png)
 
 > 我的收益
 
