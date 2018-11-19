@@ -4,7 +4,7 @@
 
 选择一个citizen账户，显示该citizen的详细信息。
 
-![Citizen Account Info](/img/wallets/hxindicator/citizen-create.png)
+![Citizen Account Info](/img/wallets/hxindicator/citizen-account-info.png)
 
 > 创建新Citizen
 
