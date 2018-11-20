@@ -1,4 +1,4 @@
-# HX distribute in public testnet
+# HX distribute
 
 ---
 
