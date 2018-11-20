@@ -38,8 +38,7 @@ pages:
 - 入门:
   - "初学者指南": 'getting-started/beginner-guide.md'
   - 'HyperExchange特性': 'getting-started/hx-features.md'
-  - HX分配:
-    - '公测网络中HX的分配': 'getting-started/obtaining-hx-test.md'
+  - 'HX分配': 'getting-started/obtaining-hx-test.md'
   - '区块浏览器': 'getting-started/using-the-block-explorer.md'
   - '测试网络':
     - '公测链使用': 'getting-started/public-testnet.md'
