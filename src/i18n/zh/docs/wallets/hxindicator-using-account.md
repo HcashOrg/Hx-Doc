@@ -25,7 +25,9 @@
 
 ![backup Tab1](/img/wallets/hxindicator/backup-wallet1.png)
 
-> 成为注册账户，如果用户想挖矿，或者想成为senator、citizen，则必须要注册，在asset页面点击‘注册’，选择需要注册的账户，填写注册的名字，注册一个账户会花费5HX，第一次注册的时候，由于没有HX，需要选择“Use acceptance”，选择对应的币种，系统会自动选择最便宜的手续费承兑单；
+> 成为注册账户
+
+如果用户想挖矿，或者想成为senator、citizen，则必须要注册，在asset页面点击‘注册’，选择需要注册的账户，填写注册的名字，注册一个账户会花费5HX，第一次注册的时候，由于没有HX，需要选择“Use acceptance”，选择对应的币种，系统会自动选择最便宜的手续费承兑单；
 
 ![Mining Register](/img/wallets/hxindicator/mining-register.png)
 
