@@ -6,8 +6,8 @@
 
 All blocks/transactions/contracts on the hyperexchange blockchain are visible through the use of this block explorer.
 
-* The explorer of public testnet:<https://explorer.hx>.
-* The explorer of mainnet:<https://explorer.hx>.
+* The explorer of public testnet:<http://explorer.hx.cash>.
+* The explorer of mainnet:<http://explorer.hx.cash>.
 
 You can enter Address/TxHash/Contract Address/Height in the search box to find more detailed information about them.
 

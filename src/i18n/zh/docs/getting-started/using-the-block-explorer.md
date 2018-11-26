@@ -6,8 +6,8 @@
 
 通过使用此块浏览器，可以看到hyperexchange区块链上的所有块/交易/合约。
 
-* The explorer of public testnet:<https://explorer.hx.cash>.
-* The explorer of mainnet:<https://explorer.hx.cash>.
+* The explorer of public testnet:<http://explorer.hx.cash>.
+* The explorer of mainnet:<http://explorer.hx.cash>.
 
 您可以在搜索框中输入地址/ TxHash /合同地址/高度，以查找有关它们的更多详细信息。
 

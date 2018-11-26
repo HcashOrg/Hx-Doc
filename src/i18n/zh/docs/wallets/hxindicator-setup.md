@@ -46,7 +46,7 @@
 
 ![HXIndicator open screen](/img/wallets/hxindicator/indicator-open.png)
 
-!!! info "默认路径为：％appdata％\ HXIndicator_test \ chaindata，您可以选择要存储chaindata的路径，确保路径有足够的磁盘空间。"
+!!! info "默认路径为：%AppData%\HXIndicator_1.1.0\chaindata，您可以选择要存储chaindata的路径，确保路径有足够的磁盘空间。"
 
 然后单击 **Next**.
 
@@ -76,7 +76,7 @@
 
 ![HXIndicator setting screen](/img/wallets/hxindicator/setting.png)
 
-* Setting:更改密码
+* Setting:更改密码，查看默认的数据路径以及配置文件路径：
 
 ![HXIndicator setting screen](/img/wallets/hxindicator/setting-change-password.png)
 
@@ -92,7 +92,9 @@
 
 ![HXIndicator setting screen](/img/wallets/hxindicator/console.png)
 
-* Help:include ***About Us**/*Update**
+* Help:include ***About Us**/*Update**，可以查看是否是最新版本并自动升级：
+
+![HXIndicator setting screen](/img/wallets/hxindicator/setting-update.png)
 
 ## 故障排除
 
@@ -109,6 +111,5 @@ HyperExchange将区块链，钱包，日志文件和自己的配置文件存储�
 
 | OS      | HyperExchange data directory                   |
 | -------:|:-------------------------------------------:|
-| Windows | `%appdata%\HXIndicator_test\chaindata`                |
-| macOS   | `~\Library\Application Support\HXIndicator_test\chaindata/` |
-| Linux   | `~/HXIndicator_test/chaindata/`                     |
+| Windows | `%AppData%\HXIndicator_1.1.0\chaindata`                |
+| macOS   | `~\Library\Application Support\HXIndicator_1.1.0\chaindata/` |

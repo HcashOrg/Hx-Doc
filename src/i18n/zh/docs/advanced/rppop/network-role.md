@@ -8,12 +8,6 @@
 
 ---
 
-## Candidate Citizen
-
-普通用户可以交纳 1000个 HX 成为 Candidateof Citizen（此笔费用将会销毁） 。Candidate of Citizen 可以接受链上其他用户的资产质押。
-
----
-
 ## Citizen
 
 Citizen 是 HyperExchange 的生产者和社区治理者，负责记账和产块，它是链上的去中心化矿池。Candidate of Citizen 成为 Citizen 需

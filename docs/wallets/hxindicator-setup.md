@@ -45,7 +45,7 @@ Opening HXIndicator for the first time will display the following screen:
 
 ![HXIndicator open screen](/img/wallets/hxindicator/indicator-open.png)
 
-!!! info "The default path is:%appdata%\HXIndicator_test\chaindata,you can select a path that you want to store the chaindata,make sure that path has enough disk space."
+!!! info "The default path is:%AppData%\HXIndicator_1.1.0\chaindata,you can select a path that you want to store the chaindata,make sure that path has enough disk space."
 
 Then click **Next**.
 
@@ -75,7 +75,7 @@ In the lower left corner of the interface,after click **...**,list **Setting**/L
 
 ![HXIndicator setting screen](/img/wallets/hxindicator/setting.png)
 
-* Setting:Change password:
+* Setting:Change password, View the default data path and configuration file path:
 
 ![HXIndicator setting screen](/img/wallets/hxindicator/setting-change-password.png)
 
@@ -91,7 +91,9 @@ In the lower left corner of the interface,after click **...**,list **Setting**/L
 
 ![HXIndicator setting screen](/img/wallets/hxindicator/console.png)
 
-* Help:include ***About Us**/*Update**
+* Help:include ***About Us**/*Update**, You can see if it's the latest version and automatically upgrade：
+
+![HXIndicator setting screen](/img/wallets/hxindicator/setting-update.png)
 
 ## Troubleshooting
 
@@ -108,6 +110,5 @@ HyperExchange stores the blockchain, your wallet, log files and its own configur
 
 | OS      | HyperExchange data directory                   |
 | -------:|:-------------------------------------------:|
-| Windows | `%appdata%\HXIndicator_test\chaindata`                |
-| macOS   | `~\Library\Application Support\HXIndicator_test\chaindata/` |
-| Linux   | `~/HXIndicator_test/chaindata/`                     |
+| Windows | `%appdata%\HXIndicator_1.1.0\chaindata`                |
+| macOS   | `~\Library\Application Support\HXIndicator_1.1.0\chaindata/` |
