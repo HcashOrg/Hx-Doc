@@ -24,7 +24,9 @@ Click "OK" to backup wallet data, select a safe path, and click "Backup".
 
 ![backup Tab1](/img/wallets/hxindicator/backup-wallet1.png)
 
-> To be a registered account, if the user wants to mine, or to be senator or citizen, it must register, click "REGISTER" on the asset page, Select the account to be registered, fill in the name to be registered, registration of an account will cost 5HX, the first registration, because there is no HX, need to select "Use acceptance", select one currency, the system will automatically select the cheapest handling fee acceptance;
+> To be a registered account
+
+If the user wants to mine, or to be senator or citizen, it must register, click "REGISTER" on the asset page, Select the account to be registered, fill in the name to be registered, registration of an account will cost 5HX, the first registration, because there is no HX, need to select "Use acceptance", select one currency, the system will automatically select the cheapest handling fee acceptance;
 
 ![Mining Register](/img/wallets/hxindicator/mining-register.png)
 
