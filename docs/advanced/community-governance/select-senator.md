@@ -1,4 +1,5 @@
 1.Total amount of Senators is 15 fixed, not less, not more, but replaceable. 
+
 2.15 Senators are divided into two parts with entirely same rights, however, replacement methods are different. 
 
 - 5 permanent Senators, which are entitled to initiate replacement.

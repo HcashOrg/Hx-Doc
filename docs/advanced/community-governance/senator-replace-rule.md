@@ -21,9 +21,11 @@ The 5 Senators are replaced by the process as following:
 
 These 10 Senator replacement processes is more complicated, please find it as following:
 
-1.new Senator registers and becomes on-chain user
+1.A certain amount of hc is required as a security deposit before the election
 
-2.Any Citizen initiates a replacement proposal, the process is as follows:
+2.new Senator registers and becomes on-chain user
+
+3.Any Citizen initiates a replacement proposal, the process is as follows:
 
 - during the period of such a proposal, there should be a normal state of Senator without any campaign 
 - maximum nomination amount for Senators replacement is 3, in order to keep a secure system
@@ -39,21 +41,21 @@ These 10 Senator replacement processes is more complicated, please find it as fo
        Iv. Earlier Packing within the same block is given priority
 
 
-3.After the end of the proposal collection period, the sole proposal should be selected and voting period started.
+4.After the end of the proposal collection period, the sole proposal should be selected and voting period started.
 
 - This cycle lasts for 80,000 blocks (approximately 5 days)
 - All Citizen can initiate voting during this period
 - Take all Citizens pledged assets as total weight, proposal is passed when more than 2/3 weight of citizens confirm.
 - If the voting period does not meet the conditions of proposal, the proposal becomes invalid
 
-4.When the proposal for voting period is passed, it will enter replacement period.
+5.When the proposal for voting period is passed, it will enter replacement period.
 
 - During this period, the new Senator is required to submit cross-chain asset management information (ie public key, all cross-chain assets, and initiate asset transfer transactions)
 - This cycle lasts for 80,000 blocks (approximately 5 days)
 - If asset is  successfully transferred during this period, replacement of old Senator by new Senator is completed. 
 - if unable to provide till the end of this period, proposal becomes invalid. 
 
-5.the entire chain finishes election cycle after voting period, which means new replacement nomination can be initiated.
+6.the entire chain finishes election cycle after voting period, which means new replacement nomination can be initiated.
 
 ---
 
