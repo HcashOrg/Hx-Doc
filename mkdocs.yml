@@ -99,11 +99,13 @@ pages:
     - 'IDE Introduce': 'research/ide/ide-introduce.md'
     - 'IDE Using': 'research/ide/ide-using.md'
 - FAQ:
-  - 'The re-pledging of assets Model': 'faq/re-pledging-of-asset-model.md'
-  - 'Smart Contracts and Virtual Machines': 'faq/contract-virtual-machine.md'
-  - 'Concurrency Model': 'faq/concurrency-model.md'
-  - 'Consensus-based, Random Number Generator': 'faq/consensus.md'
-  - 'Events and Rollbacks': 'faq/event-rollback.md'
-  - 'Local Query Interface': 'faq/local-query.md'
-  - 'Asset Block Import Model': 'faq/asset-block-import-model.md'
+  - 'Hx-indicator usage Questions': 'faq/wallet-usage/wallet-usage.md'
+  - 'Orientation Questions':
+    - 'The re-pledging of assets Model': 'faq/re-pledging-of-asset-model.md'
+    - 'Smart Contracts and Virtual Machines': 'faq/contract-virtual-machine.md'
+    - 'Concurrency Model': 'faq/concurrency-model.md'
+    - 'Consensus-based, Random Number Generator': 'faq/consensus.md'
+    - 'Events and Rollbacks': 'faq/event-rollback.md'
+    - 'Local Query Interface': 'faq/local-query.md'
+    - 'Asset Block Import Model': 'faq/asset-block-import-model.md'
 copyright: If you wish to improve this site, please <a href="https://github.com/HcashOrg/HyperExchange/issues/new"><i class="fa fa-github"></i> open an issue</a> or <a href="https://github.com/HcashOrg/Hx-Doc"><i class="fa fa-github"></i> send a pull request</a>.<br>hxdocs v0.0.1. HyperExchange Project 2018.

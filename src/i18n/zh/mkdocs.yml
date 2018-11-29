@@ -99,11 +99,13 @@ pages:
     - 'IDE简介': 'research/ide/ide-introduce.md'
     - 'IDE使用': 'research/ide/ide-using.md'
 - 问题:
-  - '资产质押再抵押模型': 'faq/re-pledging-of-asset-model.md'
-  - '合约和虚拟机': 'faq/contract-virtual-machine.md'
-  - '并发模型': 'faq/concurrency-model.md'
-  - '可共识的随机数发生器': 'faq/consensus.md'
-  - '事件和回滚': 'faq/event-rollback.md'
-  - '本地查询接口': 'faq/local-query.md'
-  - '资产区块链接入模型': 'faq/asset-block-import-model.md'
+  - 'Hx-indicator使用问题': 'faq/wallet-usage/wallet-usage.md'
+  - '概念问题':
+    - '资产质押再抵押模型': 'faq/re-pledging-of-asset-model.md'
+    - '合约和虚拟机': 'faq/contract-virtual-machine.md'
+    - '并发模型': 'faq/concurrency-model.md'
+    - '可共识的随机数发生器': 'faq/consensus.md'
+    - '事件和回滚': 'faq/event-rollback.md'
+    - '本地查询接口': 'faq/local-query.md'
+    - '资产区块链接入模型': 'faq/asset-block-import-model.md'
 copyright: 如果你有任何问题，请打开 <a href="https://github.com/HcashOrg/HyperExchange/issues/new"><i class="fa fa-github"></i> 新建一个问题</a> or <a href="https://github.com/HcashOrg/Hx-Doc"><i class="fa fa-github"></i> 发送pull请求</a>.<br>hxdocs v0.0.1. HyperExchange Project 2018.
