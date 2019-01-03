@@ -60,7 +60,7 @@ pages:
     - 'Using hx-node': 'wallets/hxnode-using.md'
   - HyperExchange Cli-wallet:
     - 'Hx-cli Startup': 'wallets/hxwallet-cli.md'
-    - 'Hx-cli RPC Commands': 'wallets/hxwallet-cli-rpc-commands.md'
+    - 'Hx-cli Commands': 'wallets/hxwallet-cli-rpc-commands.md'
   - HyperExchange Middleware:
     - 'Startup': 'wallets/middleware-startup.md'
 - Advanced:

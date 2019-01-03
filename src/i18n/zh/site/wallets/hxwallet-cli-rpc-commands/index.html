@@ -38,7 +38,7 @@
     
     
       
-        <title>Hx-cli RPC命令 - HyperExchange文档</title>
+        <title>Hx-cli命令 - HyperExchange文档</title>
       
     
     
@@ -117,7 +117,7 @@
                 HyperExchange文档
               </span>
               <span class="md-header-nav__topic">
-                Hx-cli RPC命令
+                Hx-cli命令
               </span>
             
           
@@ -631,11 +631,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="toc">
-        Hx-cli RPC命令
+        Hx-cli命令
       </label>
     
-    <a href="./" title="Hx-cli RPC命令" class="md-nav__link md-nav__link--active">
-      Hx-cli RPC命令
+    <a href="./" title="Hx-cli命令" class="md-nav__link md-nav__link--active">
+      Hx-cli命令
     </a>
     
       
@@ -696,8 +696,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#rpc" title="RPC命令列表" class="md-nav__link">
-    RPC命令列表
+  <a href="#_6" title="命令列表" class="md-nav__link">
+    命令列表
   </a>
   
 </li>
@@ -1511,8 +1511,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#rpc" title="RPC命令列表" class="md-nav__link">
-    RPC命令列表
+  <a href="#_6" title="命令列表" class="md-nav__link">
+    命令列表
   </a>
   
 </li>
@@ -1536,11 +1536,11 @@
                   <a href="https://github.com/HcashOrg/Hx-Doc/edit/master/docs/wallets/hxwallet-cli-rpc-commands.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>Hx-cli RPC命令</h1>
+                  <h1>Hx-cli命令</h1>
                 
                 <p>本指导假设你已经成功启动了hx-node，如果没有请参考： <a href="../hxnode-setup/">HyperExchange node配置和启动</a> ，成功启动了hx-cli，如果没有请参考：<a href="../hxwallet-cli/">hx-cli启动</a>.</p>
 <p>如果是中间件是自己部署的，请检查是否已经成功启动，请参考<a href="../middleware-startup/">HyperExchange中间件启动</a>.</p>
-<p>下面将介绍如果使用rpc命令实现下列功能：/充值/提现/货币兑换.(用BTC 兑换 LTC)</p>
+<p>下面将介绍如果使用命令实现下列功能：/充值/提现/货币兑换.(用BTC 兑换 LTC)</p>
 <hr />
 <h2 id="_1">准备工作<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>1.创建两个hx账户，一个和BTC绑定，一个和LTC绑定，操作之前请确保钱包是unlock状态。</p>
@@ -1879,7 +1879,7 @@ get_account_balances hxtest002
   }
 ]
 </code></pre>
-<p>2.在hx-cli中使用rpc命令充值</p>
+<p>2.在hx-cli中使用命令充值</p>
 <blockquote>
 <p>充值BTC到账户<code>hxtest001</code></p>
 </blockquote>
@@ -2464,9 +2464,9 @@ update_asset_private_keys-&gt;查询创建出的多签合约-&gt;对未签名的
 </code></pre>
 <p><strong>&gt; 注意:</strong>如果要做eth和erc20的相关操作，需要在中间件的config.ini中添加ETH和erc20的代币名称：</p>
 <p><img alt="eth and erc20" src="../../img/wallets/eth-conf.png" /></p>
-<h2 id="rpc">RPC命令列表<a class="headerlink" href="#rpc" title="Permanent link">&para;</a></h2>
+<h2 id="_6">命令列表<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <blockquote>
-<p>基本的RPC命令</p>
+<p>基本命令</p>
 </blockquote>
 <p>1.info</p>
 <pre><code>返回HX 链当前信息，块号等
@@ -2550,7 +2550,7 @@ runfund_account: 账户名
 txid: 希望取消提现的交易id
 </code></pre>
 <blockquote>
-<p>承兑单相关的rpc命令</p>
+<p>承兑单相关的命令</p>
 </blockquote>
 <p>1.create_guarantee_order account asset_orign asset_target symbol true</p>
 <pre><code>创建承兑单，该操作用于账户下有HX，但是想要把HX利用承兑来换为其他代币，例如btc
@@ -2575,7 +2575,7 @@ all：是否包含已经结束的承兑单
 guarantee_id : 承兑单id
 </code></pre>
 <blockquote>
-<p>Senator相关的rpc命令:</p>
+<p>Senator相关的命令:</p>
 </blockquote>
 <p>senator 用于对跨链资产管理，大部分操作都是投票相关</p>
 <p>1.create_senator_member  proposer_account account url expiration_time true</p>

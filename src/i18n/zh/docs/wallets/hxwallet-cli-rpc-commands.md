@@ -2,7 +2,7 @@
 
 如果是中间件是自己部署的，请检查是否已经成功启动，请参考[HyperExchange中间件启动](/wallets/middleware-startup.md).
 
-下面将介绍如果使用rpc命令实现下列功能：/充值/提现/货币兑换.(用BTC 兑换 LTC)
+下面将介绍如果使用命令实现下列功能：/充值/提现/货币兑换.(用BTC 兑换 LTC)
 
 ---
 
@@ -362,7 +362,7 @@
       }
     ]
    
-2.在hx-cli中使用rpc命令充值
+2.在hx-cli中使用命令充值
 
 > 充值BTC到账户`hxtest001`
 
@@ -970,9 +970,9 @@ Eth资产流程：
 
 ![eth and erc20](/img/wallets/eth-conf.png)
 
-## RPC命令列表
+## 命令列表
 
-> 基本的RPC命令
+> 基本命令
 
 1.info
 
@@ -1061,7 +1061,7 @@ trxid:交易id
     runfund_account: 账户名
     txid: 希望取消提现的交易id
 
-> 承兑单相关的rpc命令
+> 承兑单相关的命令
 
 1.create_guarantee_order account asset_orign asset_target symbol true
 
@@ -1088,7 +1088,7 @@ trxid:交易id
     guarantee_id : 承兑单id
  
 
-> Senator相关的rpc命令:
+> Senator相关的命令:
 
 senator 用于对跨链资产管理，大部分操作都是投票相关
 

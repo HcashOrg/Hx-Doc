@@ -2,7 +2,7 @@ Last updated for v1.2.0.
 
 This guide assumes you have already Startup a hyperexchange witness-node using [HyperExchange Witness-node Setup](/wallets/hxnode-setup.md) and a cli-wallet using [Cli-wallet Startup](/wallets/hxwallet-cli.md).
 
-The following will introduce how to use rpc commands to call functions:transfer accounts/deposit/withdrawal/Funds transfer.(Use BTC transfer to LTC as a sample)
+The following will introduce how to use commands to call functions:transfer accounts/deposit/withdrawal/Funds transfer.(Use BTC transfer to LTC as a sample)
 
 ---
 
@@ -360,7 +360,7 @@ In litcoin chain,transfer LTC to `hot address` : `MErU8FfsLhXPvkzgE2BRKTyeJQExTM
       }
     ]
    
-2.Use cli-wallet rpc command of hx blockchain
+2.Use cli-wallet command of hx blockchain
 
 > Deposit BTC to account `hxtest001`
 
@@ -972,9 +972,9 @@ Same withdraw process as ETH and ERC20, different signature interface for design
 
 > 
 
-## RPC command list
+## command list
 
-> Basic RPC Interface
+> Basic Interface
 
 1.info
 
