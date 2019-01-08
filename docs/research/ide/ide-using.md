@@ -4,7 +4,7 @@ We will introduce how to use HX IDE in this page.
 
 ## Download HX IDE
 
-You can visit website<http://www.anychain.org/> to download HX IDE,now just support for Win7 above platform. Select the 64-bit and 32-bit versions of your system to download.
+You can visit website:<http://www.anychain.org/> to download HX IDE,now just support for Win7 above platform. Select the 64-bit and 32-bit versions of your system to download.
 
 ## Start IDE
 
