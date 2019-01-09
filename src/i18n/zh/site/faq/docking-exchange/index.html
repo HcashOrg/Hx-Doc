@@ -1,0 +1,2584 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+        <link rel="canonical" href="http://docs.hx.cash/faq/docking-exchange/">
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../img/hx-icons/hx-logo.ico">
+      <meta name="generator" content="mkdocs-0.17.3, mkdocs-material-2.7.2">
+    
+    
+      
+        <title>HX交易所钱包适配指南 - HyperExchange文档</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.78aab2dc.css">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+      <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../css/fonts.css">
+    
+      <link rel="stylesheet" href="../../css/style.css">
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <a href="#hx" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="http://docs.hx.cash/" title="HyperExchange文档" class="md-header-nav__button md-logo">
+          
+            <img src="../../img/hx-icons/hx-logo.svg" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                HyperExchange文档
+              </span>
+              <span class="md-header-nav__topic">
+                HX交易所钱包适配指南
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/HcashOrg/Hx-Doc/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      HcashOrg/Hx-Doc
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <img src="../../img/hx-icons/hx-logo.svg" width="48" height="48">
+      
+    </span>
+    HyperExchange文档
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/HcashOrg/Hx-Doc/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      HcashOrg/Hx-Doc
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="主页" class="md-nav__link">
+      主页
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      入门
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        入门
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting-started/beginner-guide/" title="初学者指南" class="md-nav__link">
+      初学者指南
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting-started/hx-features/" title="HyperExchange特性" class="md-nav__link">
+      HyperExchange特性
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting-started/obtaining-hx-test/" title="HX分配" class="md-nav__link">
+      HX分配
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting-started/using-the-block-explorer/" title="区块浏览器" class="md-nav__link">
+      区块浏览器
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-5" type="checkbox" id="nav-2-5">
+    
+    <label class="md-nav__link" for="nav-2-5">
+      测试网络
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-5">
+        测试网络
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting-started/public-testnet/" title="公测链使用" class="md-nav__link">
+      公测链使用
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting-started/private-testnet/" title="私有链使用" class="md-nav__link">
+      私有链使用
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      钱包
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        钱包
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1">
+    
+    <label class="md-nav__link" for="nav-3-1">
+      HyperExchange Indicator
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-1">
+        HyperExchange Indicator
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wallets/hxindicator-setup/" title="HXIndicator 设置" class="md-nav__link">
+      HXIndicator 设置
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1-2" type="checkbox" id="nav-3-1-2">
+    
+    <label class="md-nav__link" for="nav-3-1-2">
+      使用HXIndicator
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-1-2">
+        使用HXIndicator
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wallets/hxindicator-using-account/" title="账户" class="md-nav__link">
+      账户
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wallets/hxindicator-using-contract/" title="合约" class="md-nav__link">
+      合约
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wallets/hxindicator-using-advance/" title="高级" class="md-nav__link">
+      高级
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wallets/hxindicator-using-contacts/" title="联系人" class="md-nav__link">
+      联系人
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wallets/hxindicator-using-senator/" title="Senator" class="md-nav__link">
+      Senator
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wallets/hxindicator-using-citizen/" title="Citizen" class="md-nav__link">
+      Citizen
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wallets/hx-building/" title="编译" class="md-nav__link">
+      编译
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wallets/hx-docker-deploy/" title="docker部署" class="md-nav__link">
+      docker部署
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
+    
+    <label class="md-nav__link" for="nav-3-4">
+      HyperExchange Node
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-4">
+        HyperExchange Node
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wallets/hxnode-setup/" title="配置启动" class="md-nav__link">
+      配置启动
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wallets/hxnode-using/" title="使用hx-node" class="md-nav__link">
+      使用hx-node
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5" type="checkbox" id="nav-3-5">
+    
+    <label class="md-nav__link" for="nav-3-5">
+      HyperExchange Cli-wallet
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-5">
+        HyperExchange Cli-wallet
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wallets/hxwallet-cli/" title="Hx-cli启动" class="md-nav__link">
+      Hx-cli启动
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wallets/hxwallet-cli-rpc-commands/" title="Hx-cli命令" class="md-nav__link">
+      Hx-cli命令
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-6" type="checkbox" id="nav-3-6">
+    
+    <label class="md-nav__link" for="nav-3-6">
+      HyperExchange 中间件
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-6">
+        HyperExchange 中间件
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wallets/middleware-startup/" title="启动" class="md-nav__link">
+      启动
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      高级
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        高级
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1">
+    
+    <label class="md-nav__link" for="nav-4-1">
+      跨链
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-1">
+        跨链
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-1-1" type="checkbox" id="nav-4-1-1">
+    
+    <label class="md-nav__link" for="nav-4-1-1">
+      跨链技术的实现
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-1-1">
+        跨链技术的实现
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/cross-chain/bmp-protocol/" title="Blockchain Multi Tunnel (BMT) Protocol" class="md-nav__link">
+      Blockchain Multi Tunnel (BMT) Protocol
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/cross-chain/hx-axis/" title="HyperExchange Axis" class="md-nav__link">
+      HyperExchange Axis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/cross-chain/indicator/" title="Indicator" class="md-nav__link">
+      Indicator
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-1-2" type="checkbox" id="nav-4-1-2">
+    
+    <label class="md-nav__link" for="nav-4-1-2">
+      跨链的操作流程
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-1-2">
+        跨链的操作流程
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/cross-chain/init-process/" title="初始化流程" class="md-nav__link">
+      初始化流程
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/cross-chain/account-creation/" title="账户的创建" class="md-nav__link">
+      账户的创建
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/cross-chain/cross-chain-deposit/" title="跨链充值流程" class="md-nav__link">
+      跨链充值流程
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/cross-chain/cross-chain-withdrawall/" title="跨链提现流程" class="md-nav__link">
+      跨链提现流程
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-1-3" type="checkbox" id="nav-4-1-3">
+    
+    <label class="md-nav__link" for="nav-4-1-3">
+      侧链资产的安全性
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-1-3">
+        侧链资产的安全性
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/cross-chain/financial-balance/" title="资金动态平衡策略" class="md-nav__link">
+      资金动态平衡策略
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/cross-chain/fund-rebalance/" title="资金动态平衡期限" class="md-nav__link">
+      资金动态平衡期限
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
+    
+    <label class="md-nav__link" for="nav-4-2">
+      智能合约
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-2">
+        智能合约
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/smart-contract/about-smart-contract/" title="智能合约简介" class="md-nav__link">
+      智能合约简介
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/smart-contract/purchase-rule/" title="挂单求购规则" class="md-nav__link">
+      挂单求购规则
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/smart-contract/smart-contract-template/" title="智能合约模板" class="md-nav__link">
+      智能合约模板
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/smart-contract/smart-contract-fee/" title="手续费规则" class="md-nav__link">
+      手续费规则
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/smart-contract/smart-contract-feetype/" title="手续费种类" class="md-nav__link">
+      手续费种类
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3">
+    
+    <label class="md-nav__link" for="nav-4-3">
+      随机多资产权益质押共识机制
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-3">
+        随机多资产权益质押共识机制
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/rppop/network-role/" title="角色" class="md-nav__link">
+      角色
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/rppop/asset-collateral/" title="质押" class="md-nav__link">
+      质押
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/rppop/consensus-protocol/" title="竞争算法" class="md-nav__link">
+      竞争算法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/rppop/RPPOM/" title="RPPOM共识机制的安全性" class="md-nav__link">
+      RPPOM共识机制的安全性
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4">
+    
+    <label class="md-nav__link" for="nav-4-4">
+      社区治理
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-4">
+        社区治理
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/community-governance/community-overview/" title="简介" class="md-nav__link">
+      简介
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/community-governance/select-senator/" title="Senator的选出和退出" class="md-nav__link">
+      Senator的选出和退出
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/community-governance/senator-right/" title="Senator的权利和义务" class="md-nav__link">
+      Senator的权利和义务
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/community-governance/senator-replace-rule/" title="Senators的更替流程和规则" class="md-nav__link">
+      Senators的更替流程和规则
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/community-governance/community-advantages/" title="社区治理方式的优势" class="md-nav__link">
+      社区治理方式的优势
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      研究
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        研究
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-1" type="checkbox" id="nav-5-1">
+    
+    <label class="md-nav__link" for="nav-5-1">
+      智能合约IDE
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-1">
+        智能合约IDE
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../research/ide/ide-introduce/" title="IDE简介" class="md-nav__link">
+      IDE简介
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../research/ide/ide-using/" title="IDE使用" class="md-nav__link">
+      IDE使用
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
+    
+    <label class="md-nav__link" for="nav-6">
+      问题
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        问题
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../wallet-usage/wallet-usage/" title="Hx-indicator使用问题" class="md-nav__link">
+      Hx-indicator使用问题
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-2" type="checkbox" id="nav-6-2">
+    
+    <label class="md-nav__link" for="nav-6-2">
+      概念问题
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-2">
+        概念问题
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../re-pledging-of-asset-model/" title="资产质押再抵押模型" class="md-nav__link">
+      资产质押再抵押模型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../contract-virtual-machine/" title="合约和虚拟机" class="md-nav__link">
+      合约和虚拟机
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../concurrency-model/" title="并发模型" class="md-nav__link">
+      并发模型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../consensus/" title="可共识的随机数发生器" class="md-nav__link">
+      可共识的随机数发生器
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../event-rollback/" title="事件和回滚" class="md-nav__link">
+      事件和回滚
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../local-query/" title="本地查询接口" class="md-nav__link">
+      本地查询接口
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../asset-block-import-model/" title="资产区块链接入模型" class="md-nav__link">
+      资产区块链接入模型
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        HX交易所钱包适配指南
+      </label>
+    
+    <a href="./" title="HX交易所钱包适配指南" class="md-nav__link md-nav__link--active">
+      HX交易所钱包适配指南
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="系统环境软硬件需求" class="md-nav__link">
+    系统环境软硬件需求
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rpc" title="如何启动RPC服务端监听" class="md-nav__link">
+    如何启动RPC服务端监听
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rpc_1" title="RPC使用规范" class="md-nav__link">
+    RPC使用规范
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="基本操作指令" class="md-nav__link">
+    基本操作指令
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rpc_2" title="轻钱包rpc接口" class="md-nav__link">
+    轻钱包rpc接口
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="注意事项" class="md-nav__link">
+    注意事项
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" title="附：终端命令行模式下常用指令" class="md-nav__link">
+    附：终端命令行模式下常用指令
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="系统环境软硬件需求" class="md-nav__link">
+    系统环境软硬件需求
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rpc" title="如何启动RPC服务端监听" class="md-nav__link">
+    如何启动RPC服务端监听
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rpc_1" title="RPC使用规范" class="md-nav__link">
+    RPC使用规范
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="基本操作指令" class="md-nav__link">
+    基本操作指令
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rpc_2" title="轻钱包rpc接口" class="md-nav__link">
+    轻钱包rpc接口
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="注意事项" class="md-nav__link">
+    注意事项
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" title="附：终端命令行模式下常用指令" class="md-nav__link">
+    附：终端命令行模式下常用指令
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/HcashOrg/Hx-Doc/edit/master/docs/faq/docking-exchange.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="hx">HX交易所钱包适配指南<a class="headerlink" href="#hx" title="Permanent link">&para;</a></h1>
+<p>本页将介绍交易所如何适配HX</p>
+<h2 id="_1">系统环境软硬件需求<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li>操作系统：Ubuntu 16.04 LTS64位系统</li>
+<li>硬件：内存16GB+  硬盘可用空间10GB+</li>
+</ul>
+<p>交易所及其他中心化应用系统通过rpc方式访问底层钱包</p>
+<h2 id="rpc">如何启动RPC服务端监听<a class="headerlink" href="#rpc" title="Permanent link">&para;</a></h2>
+<p>启动Rpc模式</p>
+<pre><code>启动hx_node --data-dir=$data-dir --rpc-enpoint=$server_ip 
+启动hx_client --wallet-file=$walletname --server-rpc-endpoint=$server_ip --rpc-endpoint=$client_ip
+</code></pre>
+<table>
+<thead>
+<tr>
+<th align="right">参数</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">&ndash;data-dir</td>
+<td align="center">指定hx启动需要的数据目录</td>
+</tr>
+<tr>
+<td align="right">&ndash;rpc-endpoint</td>
+<td align="center">指定hx_node和hx_client rpc监听ip端口</td>
+</tr>
+<tr>
+<td align="right">&ndash;server-rpc-endpoint</td>
+<td align="center">指定hx_client 需要链接的服务器ip（格式为 “ws://127.0.0.1:8090”）</td>
+</tr>
+<tr>
+<td align="right">&ndash;wallet-file</td>
+<td align="center">指定的钱包文件，不指定则钱包会自动生成</td>
+</tr>
+</tbody>
+</table>
+<p>示例：</p>
+<pre><code>hx_node --data-dir =./data --rpc-endpoint=127.0.0.1:9991
+hx_client --wallet-file=a.json --server-rpc-endpoint=”ws://127.0.0.1:9991” --rpc-endpoint=”127.0.0.1:9992”
+其中--rpc-endpoint 参数127.0.0.1:9992 为用户访问hx节点的rpc入口
+</code></pre>
+<h2 id="rpc_1">RPC使用规范<a class="headerlink" href="#rpc_1" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>基本规范</p>
+</blockquote>
+<p>所有RPC接口均遵循jsonrpc规范2.0，具体参考文档：<a href="https://www.jsonrpc.org/specification">https://www.jsonrpc.org/specification</a></p>
+<blockquote>
+<p>使用方式</p>
+</blockquote>
+<p>所有jsonrpc数据均通过HTTP POST方法传递，结果在HTTP响应中获取。
+HTTP请求的URL为hx_client的rpc监听服务：<a href="http://127.0.0.1:9992/">http://127.0.0.1:9992/</a>。</p>
+<p>注意，请不要直接使用hx_node提供的rpc服务，该服务目前仅对hx_client内部开放。</p>
+<blockquote>
+<p>消息结构</p>
+</blockquote>
+<p>Jsonrpc的消息由请求和响应分别构成，一一对应。</p>
+<ul>
+<li>请求</li>
+</ul>
+<p>Jsonrpc请求包括如下结构：</p>
+<pre><code>{ 
+“jsonrpc” : ”2.0”,
+"method" : "info", 
+"params" : [], 
+"id" : 1
+}
+</code></pre>
+<p>“<strong>jsonrpc</strong>” - 协议版本，目前固定为”2.0”</p>
+<p>“<strong>method</strong>” – 调用的方法名称，具体参考下面的接口列表</p>
+<p>“<strong>params</strong>” – 方法所需要的参数，参考具体接口描述</p>
+<p>“<strong>id</strong>” – 请求消息的唯一id，如客户端需要同时并发多个消息，此字段会由服务端原封不动返回，客户端以此来辨别是哪个请求对应的消息响应.</p>
+<ul>
+<li>响应</li>
+</ul>
+<p>响应包括如下结构：</p>
+<pre><code>{
+"id": 1,
+"jsonrpc": "2.0",
+"result": {
+"head_block_num": 786742,
+"head_block_id": "000c013669c0391fdd12eeacc8d2eafdd56fdd75",
+"head_block_age": "5 seconds old",
+"next_maintenance_time": "18 hours in the future",
+"chain_id": "2e13ba07b457f2e284dcfcbd3d4a3e4d78a6ed89a61006cdb7fdad6d67ef0b12",
+"participation": "100.00000000000000000",
+"round_participation": "68.00000000000000000",
+"scheduled_citizens": ["1.6.168","1.6.146","1.6.31","1.6.42","1.6.15","1.6.86","1.6.44","1.6.4","1.6.27","1.6.160","1.6.65","1.6.84",
+"1.6.118","1.6.39","1.6.77","1.6.73","1.6.119","1.6.131","1.6.147","1.6.16","1.6.2","1.6.106","1.6.53","1.6.145",
+"1.6.154"]
+}
+}
+</code></pre>
+<p>“<strong>id</strong>” – 请求消息的唯一id，如客户端需要同时并发多个消息，此字段会由服务端原封不动返回，客户端以此来辨别是哪个请求对应的消息响应</p>
+<p>“<strong>jsonrpc</strong>” - 协议版本，目前固定为”2.0”</p>
+<p>“<strong>result</strong>” – 调用方法返回的结果，具体参考下面的接口列表</p>
+<p>“<strong>error</strong>” – 如果调用方法出错，则会有此字段，正常返回无此字段</p>
+<blockquote>
+<p>HTTP样例</p>
+</blockquote>
+<ul>
+<li>请求</li>
+</ul>
+<p>请求结构如下：</p>
+<pre><code>POST / HTTP/1.1
+Host: 127.0.0.1:9992
+Cache-Control: no-cache
+{
+"id":1,
+“jsonrpc":"2.0",
+"method":"info",
+"params":[]
+}
+</code></pre>
+<ul>
+<li>响应</li>
+</ul>
+<p>注意，此处省略HTTP头部。</p>
+<pre><code>{
+"id": 1,
+"jsonrpc": "2.0",
+"result": {
+"head_block_num": 786742,
+"head_block_id": "000c013669c0391fdd12eeacc8d2eafdd56fdd75",
+"head_block_age": "5 seconds old",
+"next_maintenance_time": "18 hours in the future",
+"chain_id": "2e13ba07b457f2e284dcfcbd3d4a3e4d78a6ed89a61006cdb7fdad6d67ef0b12",
+"participation": "100.00000000000000000",
+"round_participation": "68.00000000000000000",
+"scheduled_citizens": [
+"1.6.168",
+"1.6.146",
+"1.6.31",
+"1.6.42",
+"1.6.15",
+"1.6.86",
+"1.6.44",
+"1.6.4",
+"1.6.27",
+"1.6.160",
+"1.6.65",
+"1.6.84",
+"1.6.118",
+"1.6.39",
+"1.6.77",
+"1.6.73",
+"1.6.119",
+"1.6.131",
+"1.6.147",
+"1.6.16",
+"1.6.2",
+"1.6.106",
+"1.6.53",
+"1.6.145",
+"1.6.154"
+]
+}
+}
+</code></pre>
+<blockquote>
+<p>curl样例</p>
+</blockquote>
+<ul>
+<li>请求</li>
+</ul>
+<p>请求命令如下：</p>
+<pre><code>curl -X POST   http://127.0.0.1:9992/   -H 'cache-control: no-cache'   -H 'postman-token: a79b33f6-31a3-ec23-d114-d468f3d71c7c'   -d '{
+  "jsonrpc": "2.0",
+  "id": 61,
+  "method": "info",
+  "params": []
+}'
+</code></pre>
+<ul>
+<li>响应</li>
+</ul>
+<p>响应如下：</p>
+<pre><code>{"id":61,
+"jsonrpc":"2.0",
+"result":
+{"head_block_num":787040,
+"head_block_id":"000c0260fb7dc04a7a6a1781ec54753cc9d536f4",
+"head_block_age":"3 seconds old",
+"next_maintenance_time":"18 hours in the future",
+"chain_id":"2e13ba07b457f2e284dcfcbd3d4a3e4d78a6ed89a61006cdb7fdad6d67ef0b12",
+"participation":"100.00000000000000000",
+"round_participation":"64.00000000000000000",
+"scheduled_citizens":["1.6.42","1.6.39","1.6.143","1.6.150","1.6.156","1.6.30","1.6.65","1.6.125","1.6.131","1.6.34","1.6.33","1.6.4","1.6.47","1.6.94","1.6.165","1.6.109","1.6.107","1.6.12","1.6.104","1.6.115","1.6.86","1.6.36","1.6.161","1.6.106","1.6.53"]}}
+</code></pre>
+<h2 id="_2">基本操作指令<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>获取客户端信息</p>
+</blockquote>
+<p>Request</p>
+<pre><code>{"method":"info","id":20180523092052345,"jsonrpc":"2.0","params":[]}
+</code></pre>
+<p>response成功</p>
+<pre><code>{
+    "id": "20180523092052345",
+    "result": {
+    "head_block_num": 634505,
+    "head_block_id": "0009ae8941db944c1d2ec63cf64be2bd6b79b695",
+    "head_block_age": "1 second old",
+    "next_maintenance_time": "21 hours in the future",
+    "chain_id": "2e13ba07b457f2e284dcfcbd3d4a3e4d78a6ed89a61006cdb7fdad6d67ef0b12",
+    "participation": "98.43750000000000000",
+    "round_participation": "24.00000000000000000",
+    "scheduled_citizens": ["1.6.63", "1.6.33", "1.6.66", "1.6.95", "1.6.86", "1.6.112", "1.6.42", "1.6.54", "1.6.8", "1.6.52", "1.6.97", "1.6.123", "1.6.38", "1.6.139", "1.6.124", "1.6.31", "1.6.146", "1.6.115", "1.6.93", "1.6.4", "1.6.137", "1.6.53", "1.6.84", "1.6.27", "1.6.109"]
+}
+}
+</code></pre>
+<p>返回参数：</p>
+<p>&rdquo; head_block_num &ldquo;: 区块号,</p>
+<p>&rdquo; head_block_age &ldquo;: 当前最大块的产生的时长,</p>
+<p>&rdquo; next_maintenance_time &ldquo;: &ldquo;下一次链上maintenance时间&rdquo;,</p>
+<p>&rdquo; head_block_id &ldquo;: &ldquo;当前块ID&rdquo;,</p>
+<p>&rdquo; chain_id &ldquo;: &ldquo;链ID&rdquo;,</p>
+<p>&rdquo; participation &ldquo;: 当前链上参与率,</p>
+<p>&rdquo; round_participation &ldquo;: &ldquo;当前轮参与率&rdquo;,</p>
+<p>&rdquo; scheduled_citizens &ldquo;:当前出块的citizen</p>
+<blockquote>
+<p>查询链上参数（手续费等）</p>
+</blockquote>
+<p>request</p>
+<pre><code>{"method":"get_global_properties","id":20180523092052345,"jsonrpc":"2.0","params":[]}
+</code></pre>
+<p>response</p>
+<pre><code>{
+    "id": "2.0.0",
+    "parameters": {
+        "current_fees": {
+            "parameters": [
+                [0, {
+                    "fee": 100,
+                    "price_per_kbyte": 100
+                }],
+                [1, {
+                    "fee": 50
+                }],
+                [2, {
+                    "fee": 0
+                }],
+                [3, {
+                    "fee": 100
+                }],
+                [4, {
+                    "fee": 0
+                }],
+                [5, {
+                    "basic_fee": 500000,
+                    "premium_fee": 20000,
+                    "price_per_kbyte": 10
+                }],
+                [6, {
+                    "fee": 100,
+                    "price_per_kbyte": 10
+                }],
+                [7, {
+                    "fee": 300000
+                }],
+                [8, {
+                    "membership_annual_fee": 20000,
+                    "membership_lifetime_fee": 100000
+                }],
+                [9, {
+                    "fee": 5000
+                }],
+                [10, {
+                    "fee": 5000
+                }],
+                [11, {
+                    "fee": 100
+                }],
+                [12, {
+                    "fee": 5000
+                }],
+                [13, {
+                    "symbol3": 5000000,
+                    "symbol4": 3000000,
+                    "long_symbol": 50000,
+                    "price_per_kbyte": 10
+                }],
+                [14, {
+                    "fee": 5000,
+                    "price_per_kbyte": 10
+                }],
+                [15, {
+                    "fee": 5000
+                }],
+                [16, {
+                    "fee": 5000
+                }],
+                [17, {
+                    "fee": 100,
+                    "price_per_kbyte": 10
+                }],
+                [18, {
+                    "fee": 100
+                }],
+                [19, {
+                    "fee": 10
+                }],
+                [20, {
+                    "fee": 1000
+                }],
+                [21, {
+                    "fee": 5000
+                }],
+                [22, {
+                    "fee": 10
+                }],
+                [23, {
+                    "fee": 10
+                }],
+                [24, {
+                    "fee": 100000000
+                }],
+                [25, {
+                    "fee": 100
+                }],
+                [26, {
+                    "fee": 0
+                }],
+                [27, {
+                    "fee": 0
+                }],
+                [28, {
+                    "fee": 100,
+                    "price_per_kbyte": 10
+                }],
+                [29, {
+                    "fee": 100,
+                    "price_per_kbyte": 10
+                }],
+                [30, {
+                    "fee": 10
+                }],
+                [31, {
+                    "fee": 10
+                }],
+                [32, {
+                    "fee": 10
+                }],
+                [33, {
+                    "fee": 200,
+                    "price_per_kbyte": 10
+                }],
+                [34, {
+                    "fee": 0
+                }],
+                [35, {
+                    "fee": 1000000000
+                }],
+                [36, {
+                    "fee": 100
+                }],
+                [37, {
+                    "fee": 10
+                }],
+                [38, {
+                    "fee": 35000
+                }],
+                [39, {
+                    "fee": 10
+                }],
+                [40, {
+                    "fee": 200
+                }],
+                [41, {
+                    "fee": 45000
+                }],
+                [42, {
+                    "fee": 10,
+                    "price_per_kbyte": 10
+                }],
+                [43, {
+                    "fee": 10
+                }],
+                [44, {}],
+                [45, {
+                    "fee": 100,
+                    "price_per_kbyte": 10
+                }],
+                [46, {
+                    "fee": 100
+                }],
+                [47, {
+                    "fee": 100
+                }],
+                [48, {
+                    "fee": 50,
+                    "price_per_output": 50
+                }],
+                [49, {
+                    "fee": 50,
+                    "price_per_output": 50
+                }],
+                [50, {
+                    "fee": 50
+                }],
+                [51, {}],
+                [52, {
+                    "fee": 100
+                }],
+                [53, {}],
+                [54, {
+                    "fee": 10
+                }],
+                [55, {
+                    "fee": 100
+                }],
+                [56, {
+                    "fee": 100
+                }],
+                [57, {
+                    "fee": 100
+                }],
+                [58, {
+                    "fee": 100
+                }],
+                [59, {
+                    "fee": 100
+                }],
+                [60, {
+                    "fee": 100
+                }],
+                [61, {
+                    "fee": 100
+                }],
+                [62, {
+                    "fee": 100
+                }],
+                [63, {
+                    "fee": 100
+                }],
+                [64, {
+                    "fee": 100
+                }],
+                [65, {
+                    "fee": 100
+                }],
+                [66, {
+                    "fee": 100
+                }],
+                [67, {
+                    "fee": 100
+                }],
+                [68, {
+                    "fee": 100
+                }],
+                [69, {
+                    "fee": 100
+                }],
+                [70, {
+                    "fee": 100
+                }],
+                [71, {
+                    "fee": 100
+                }],
+                [72, {
+                    "fee": 100
+                }],
+                [73, {
+                    "fee": 100
+                }],
+                [74, {
+                    "fee": 100
+                }],
+                [75, {
+                    "fee": 100
+                }],
+                [76, {
+                    "fee": 100,
+                    "price_per_kbyte": 100
+                }],
+                [77, {
+                    "fee": 100,
+                    "price_per_kbyte": 100
+                }],
+                [78, {
+                    "fee": 100,
+                    "price_per_kbyte": 100
+                }],
+                [79, {
+                    "fee": 100,
+                    "price_per_kbyte": 100
+                }],
+                [80, {
+                    "fee": 100,
+                    "price_per_kbyte": 100
+                }],
+                [81, {
+                    "fee": 100,
+                    "price_per_kbyte": 100
+                }],
+                [82, {
+                    "fee": 100
+                }],
+                [83, {
+                    "fee": 100
+                }],
+                [84, {
+                    "fee": 100
+                }],
+                [85, {
+                    "fee": 100
+                }],
+                [86, {
+                    "fee": 100
+                }],
+                [87, {
+                    "fee": 100
+                }],
+                [88, {
+                    "fee": 100
+                }],
+                [89, {
+                    "fee": 100
+                }],
+                [90, {
+                    "fee": 100
+                }],
+                [91, {
+                    "fee": 100
+                }],
+                [92, {
+                    "fee": 5000
+                }],
+                [93, {
+                    "fee": 100
+                }],
+                [94, {
+                    "fee": 100
+                }],
+                [95, {
+                    "fee": 100
+                }],
+                [96, {
+                    "fee": 100
+                }],
+                [97, {
+                    "fee": 100
+                }],
+                [98, {
+                    "fee": 100
+                }],
+                [99, {
+                    "fee": 100
+                }],
+                [100, {
+                    "fee": 100
+                }],
+                [101, {
+                    "fee": 100000000
+                }],
+                [102, {
+                    "fee": 100
+                }],
+                [103, {
+                    "fee": 100
+                }],
+                [104, {
+                    "fee": 100
+                }],
+                [105, {
+                    "fee": 100
+                }],
+                [106, {
+                    "fee": 100
+                }],
+                [107, {
+                    "fee": 100
+                }],
+                [108, {
+                    "fee": 100
+                }],
+                [109, {
+                    "fee": 100
+                }],
+                [110, {
+                    "fee": 100
+                }],
+                [111, {
+                    "fee": 100
+                }],
+                [112, {
+                    "fee": 100
+                }]
+            ],
+            "scale": 10000
+        },
+        "block_interval": 5,
+        "maintenance_interval": 86400,
+        "maintenance_skip_slots": 3,
+        "committee_proposal_review_period": 1209600,
+        "maximum_transaction_size": 2048,
+        "maximum_block_size": 2048000000,
+        "maximum_time_until_expiration": 86400,
+        "maximum_proposal_lifetime": 2419200,
+        "maximum_asset_whitelist_authorities": 10,
+        "maximum_asset_feed_publishers": 10,
+        "maximum_miner_count": 1001,
+        "maximum_guard_count": 15,
+        "minimum_guard_count": 7,
+        "maximum_authority_membership": 10,
+        "reserve_percent_of_fee": 2000,
+        "network_percent_of_fee": 2000,
+        "lifetime_referrer_percent_of_fee": 3000,
+        "cashback_vesting_period_seconds": 31536000,
+        "cashback_vesting_threshold": 10000,
+        "count_non_member_votes": true,
+        "allow_non_member_whitelists": false,
+        "miner_pay_per_block": 1000,
+        "worker_budget_per_day": 50000000,
+        "max_predicate_opcode": 1,
+        "fee_liquidation_threshold": 10000,
+        "accounts_per_fee_scale": 1000,
+        "account_fee_scale_bitshifts": 4,
+        "max_authority_depth": 2,
+        "min_pay_back_balance": 100,
+        "min_pay_back_balance_other_asset": [],
+        "extensions": []
+    },
+    "next_available_vote_id": 217,
+    "active_committee_members": ["1.5.0", "1.5.1", "1.5.2", "1.5.3", "1.5.4", "1.5.5", "1.5.6", "1.5.7", "1.5.8", "1.5.9", "1.5.10", "1.5.11", "1.5.12", "1.5.13", "1.5.14"],
+    "active_witnesses": ["1.6.1", "1.6.2", "1.6.3", "1.6.4", "1.6.5", "1.6.6", "1.6.7", "1.6.8", "1.6.9", "1.6.10", "1.6.11", "1.6.12", "1.6.13", "1.6.14", "1.6.15", "1.6.16", "1.6.17", "1.6.18", "1.6.19", "1.6.20", "1.6.21", "1.6.22", "1.6.23", "1.6.24", "1.6.25", "1.6.26", "1.6.27", "1.6.28", "1.6.29", "1.6.30", "1.6.31", "1.6.32", "1.6.33", "1.6.34", "1.6.35", "1.6.36", "1.6.37", "1.6.38", "1.6.39", "1.6.40", "1.6.41", "1.6.42", "1.6.43", "1.6.44", "1.6.45", "1.6.46", "1.6.47", "1.6.48", "1.6.49", "1.6.50", "1.6.51", "1.6.52", "1.6.53", "1.6.54", "1.6.55", "1.6.56", "1.6.57", "1.6.58", "1.6.59", "1.6.60", "1.6.61", "1.6.62", "1.6.63", "1.6.64", "1.6.65", "1.6.66", "1.6.67", "1.6.68", "1.6.69", "1.6.70", "1.6.71", "1.6.72", "1.6.73", "1.6.74", "1.6.75", "1.6.76", "1.6.77", "1.6.78", "1.6.79", "1.6.80", "1.6.81", "1.6.82", "1.6.83", "1.6.84", "1.6.85", "1.6.86", "1.6.87", "1.6.88", "1.6.89", "1.6.90", "1.6.91", "1.6.92", "1.6.93", "1.6.94", "1.6.95", "1.6.96", "1.6.97", "1.6.98", "1.6.99", "1.6.100", "1.6.101", "1.6.102", "1.6.103", "1.6.104", "1.6.105", "1.6.106", "1.6.107", "1.6.108", "1.6.109", "1.6.110", "1.6.111", "1.6.112", "1.6.113", "1.6.114", "1.6.115", "1.6.116", "1.6.117", "1.6.118", "1.6.119", "1.6.120", "1.6.121", "1.6.122", "1.6.123", "1.6.124", "1.6.125", "1.6.126", "1.6.127", "1.6.128", "1.6.129", "1.6.130", "1.6.131", "1.6.132", "1.6.133", "1.6.134", "1.6.135", "1.6.136", "1.6.137", "1.6.138", "1.6.139", "1.6.140", "1.6.141", "1.6.142", "1.6.143", "1.6.144", "1.6.145", "1.6.146", "1.6.147", "1.6.148", "1.6.149", "1.6.150", "1.6.151", "1.6.152", "1.6.153", "1.6.154", "1.6.155", "1.6.156", "1.6.157", "1.6.158", "1.6.159", "1.6.160", "1.6.161", "1.6.162", "1.6.163", "1.6.164", "1.6.165", "1.6.166", "1.6.167", "1.6.168", "1.6.169", "1.6.170", "1.6.171", "1.6.172", "1.6.173", "1.6.174", "1.6.175", "1.6.176", "1.6.177", "1.6.178", "1.6.179", "1.6.180", "1.6.181", "1.6.182", "1.6.183", "1.6.184", "1.6.185", "1.6.186", "1.6.187", "1.6.188", "1.6.189", "1.6.190", "1.6.191", "1.6.192", "1.6.193", "1.6.194", "1.6.195", "1.6.196", "1.6.197", "1.6.198", "1.6.199"],
+    "unorder_blocks_match": [
+        [6307200, 2700000],
+        [12614400, 2500000],
+        [18921600, 2400000],
+        [25228800, 2200000],
+        [31536000, 2100000],
+        [37843200, 1900000],
+        [44150400, 1700000],
+        [4294967295, 200000]
+    ]
+}
+</code></pre>
+<p>参数解释：</p>
+<p>“current_fees”对象下的手续费按照类型不同分别计算，其中比较常用的是类型为60的转账交易。其中转账备注是按照长度收费，每1KB收0.001HX。</p>
+<blockquote>
+<p>创建钱包</p>
+</blockquote>
+<p>调用前提:钱包不存在
+注：成功创建钱包后，钱包默认是关闭的，。
+请求方法：set_password 请求参数：创建密码（长度不低于8位）</p>
+<p>request</p>
+<pre><code>{"method":"set_password","id":20180517140651383,"jsonrpc":"2.0","params":["12345678"]}
+</code></pre>
+<p>response</p>
+<pre><code>{"id":"20180517140651383","result":null}
+</code></pre>
+<blockquote>
+<p>解锁钱包</p>
+</blockquote>
+<p>调用前提:钱包存在
+请求方法：unlock 请求参数：密码</p>
+<p>request</p>
+<pre><code>{"method":"unlock","id":20180517142746758,"jsonrpc":"2.0","params":["12345678"]}
+</code></pre>
+<p>response</p>
+<pre><code>{"id":"20180517142746758","result":null}
+</code></pre>
+<blockquote>
+<p>创建账户</p>
+</blockquote>
+<p>调用前提：钱包解锁</p>
+<p>请求方法：wallet _create_account请求参数：待创建的用户名（小写英文字符开头、只能是小写英文字符、数字或中划线）</p>
+<p>request</p>
+<pre><code>{"method":"wallet _create_account","id":20180517144818773,"jsonrpc":"2.0","params":["test"]}
+</code></pre>
+<p>response</p>
+<pre><code>{"id":"20180517144818773","result":"HXNgycDeX4xna8w6cchoudZanQ8ssT9mriXh"}
+</code></pre>
+<p>result: 创建账户地址</p>
+<blockquote>
+<p>查询账户信息</p>
+</blockquote>
+<p>请求方法： get_account  请求参数： 账户名</p>
+<p>request</p>
+<pre><code>{"method":"get_account","id":20180517144818773,"jsonrpc":"2.0","params":["hyper-exchange"]}
+</code></pre>
+<p>response</p>
+<pre><code>{"id":"20180517144818773","result": {
+    "id": "1.2.229",
+    "membership_expiration_date": "1970-01-01T00:00:00",
+    "registrar": "1.2.0",
+    "referrer": "1.2.0",
+    "lifetime_referrer": "1.2.0",
+    "network_fee_percentage": 2000,
+    "lifetime_referrer_fee_percentage": 3000,
+    "referrer_rewards_percentage": 0,
+    "name": "hyper-exchange",
+    "addr": "HXNRGtrNXR5RD9rUxFQGr6o8D6Q6zm2zGvGJ",
+    "owner": {
+        "weight_threshold": 1,
+        "account_auths": [],
+        "key_auths": [
+            ["HX6L9qtB2hMFVAmc9NowwHYiwkTSeemqK1RbytTG7uSP96uZd35t", 1]
+        ],
+        "address_auths": []
+    },
+    "active": {
+        "weight_threshold": 1,
+        "account_auths": [],
+        "key_auths": [
+            ["HX6L9qtB2hMFVAmc9NowwHYiwkTSeemqK1RbytTG7uSP96uZd35t", 1]
+        ],
+        "address_auths": []
+    },
+    "options": {
+        "memo_key": "HX6L9qtB2hMFVAmc9NowwHYiwkTSeemqK1RbytTG7uSP96uZd35t",
+        "voting_account": "1.2.5",
+        "num_witness": 0,
+        "num_committee": 0,
+        "votes": [],
+        "miner_pledge_pay_back": 10,
+        "extensions": []
+    },
+    "statistics": "2.9.229",
+    "whitelisting_accounts": [],
+    "blacklisting_accounts": [],
+    "whitelisted_accounts": [],
+    "blacklisted_accounts": [],
+    "owner_special_authority": [0, {}],
+    "active_special_authority": [0, {}],
+    "top_n_control_flags": 0,
+    "online": "true"
+} }
+</code></pre>
+<p>result: 账户详细信息</p>
+<blockquote>
+<p>4.7   查询钱包内账户的地址</p>
+</blockquote>
+<p>请求方法：get_account_balances 请求参数：账户名</p>
+<p>request</p>
+<pre><code>{"method":"get_account_balances","id":20180517150216550,"jsonrpc":"2.0","params":["test"]}
+</code></pre>
+<p>reponse</p>
+<pre><code>{"id":"20180517150216550", "result": [{
+    "amount": 16452,
+    "asset_id": "1.3.0"
+}, {
+    "amount": 0,
+    "asset_id": "1.3.3"
+}] }
+</code></pre>
+<p>返回结果中，amount 为不带精度的余额 asset_id 为资产id</p>
+<blockquote>
+<p>根据地址查询余额</p>
+</blockquote>
+<p>请求方法：get_addr_balances 请求参数：hx地址</p>
+<p>request</p>
+<pre><code>{"method":"get_addr_balances","id":20180517150216550,"jsonrpc":"2.0","params":[" HXNQoBQ6xLLRY5NvhjFX2UbessNAbP4E1LXm"]}
+</code></pre>
+<p>response</p>
+<pre><code>{"id":"20180517150216550", "result": [{
+    "amount": 16452,
+    "asset_id": "1.3.0"
+}, {
+    "amount": 0,
+    "asset_id": "1.3.3"
+}] }
+</code></pre>
+<blockquote>
+<p>账户转账</p>
+</blockquote>
+<p>调用前提：钱包解锁，钱包内有账户
+请求方法： transfer_to_address
+请求参数：取钱账户、 转账到账户的地址、转账金额、 转账资产类型（HX）、备注信息,是否广播</p>
+<p>request</p>
+<pre><code>{"method":"transfer_to_address","id":20180517150833029,"jsonrpc":"2.0",
+"params":["test","HXNQoBQ6xLLRY5NvhjFX2UbessNAbP4E1LXm","23",HX,”hello world”,true]
+}
+</code></pre>
+<p>response</p>
+<pre><code>{
+    "id": "20180517150833029",
+    "result": {
+    "ref_block_num": 47371,
+    "ref_block_prefix": 1886805367,
+    "expiration": "2018-12-25T07:05:20",
+    "operations": [
+        [0, {
+            "fee": {
+                "amount": 100,
+                "asset_id": "1.3.0"
+            },
+            "from": "1.2.0",
+            "to": "1.2.0",
+            "from_addr": "HXNQ3vUe95it1pXVqjuUhMBPMf9B5mSLjBzR",
+            "to_addr": "HXNRGtrNXR5RD9rUxFQGr6o8D6Q6zm2zGvGJ",
+            "amount": {
+                "amount": 40311,
+                "asset_id": "1.3.0"
+            },
+            "memo": {
+                "from": "HX1111111111111111111111111111111114T1Anm",
+                "to": "HX1111111111111111111111111111111114T1Anm",
+                "nonce": 0,
+                "message": "0000000068656c6c6f"
+            },
+            "extensions": []
+        }]
+    ],
+    "extensions": [],
+    "signatures": ["1f0a02c4cee5146a47ec3a9fedcbc30543bac531351d0c8acf66151c4da445f985167616005ef0c34dcade32ff3750ee3322516e71870ec870f56f9cc53b2415ff"],
+    "block_num": 0,
+    "trxid": "34f1bf431281f2f62abb54bb98a36dd954495ef0"
+}
+}
+</code></pre>
+<p>返回参数:</p>
+<p>trx_id: 交易单号(重要)</p>
+<p>block_num: 块号(交易打包后会正式写入)</p>
+<p>is_virtual: 保留字段</p>
+<p>operations: 结构体类型名</p>
+<blockquote>
+<p>交易记录查询</p>
+</blockquote>
+<p>调用前提：钱包打开
+请求方法：get_transaction
+请求参数 : 交易id</p>
+<p>request</p>
+<pre><code>{"method":"get_transaction","id":20180517153307898,"jsonrpc":"2.0",
+"params":[“94711706fd82c84f3961136ba44d5dc251b8abb1”]}
+</code></pre>
+<p>response</p>
+<pre><code>{
+    "id": "20180517150833029",
+    "result": {
+    "ref_block_num": 47371,
+    "ref_block_prefix": 1886805367,
+    "expiration": "2018-12-25T07:05:20",
+    "operations": [
+        [0, {
+            "fee": {
+                "amount": 100,
+                "asset_id": "1.3.0"
+            },
+            "from": "1.2.0",
+            "to": "1.2.0",
+            "from_addr": "HXNQ3vUe95it1pXVqjuUhMBPMf9B5mSLjBzR",
+            "to_addr": "HXNRGtrNXR5RD9rUxFQGr6o8D6Q6zm2zGvGJ",
+            "amount": {
+                "amount": 40311,
+                "asset_id": "1.3.0"
+            },
+            "memo": {
+                "from": "HX1111111111111111111111111111111114T1Anm",
+                "to": "HX1111111111111111111111111111111114T1Anm",
+                "nonce": 0,
+                "message": "hello"
+            },
+            "extensions": []
+        }]
+    ],
+    "extensions": [],
+    "signatures": ["1f0a02c4cee5146a47ec3a9fedcbc30543bac531351d0c8acf66151c4da445f985167616005ef0c34dcade32ff3750ee3322516e71870ec870f56f9cc53b2415ff"],
+    "block_num": 637196,
+    "trxid": "34f1bf431281f2f62abb54bb98a36dd954495ef0"
+}
+}
+</code></pre>
+<p>返回参数:</p>
+<p>id: 交易单号</p>
+<p>block_num: 块号（链上确认之后，块号将不为0）</p>
+<p>operations：交易op信息，其中红色数字为op类型</p>
+<p>fee：手续费信息</p>
+<p>若交易id没有被确认，则该命令无法查询到任何信息</p>
+<h2 id="rpc_2">轻钱包rpc接口<a class="headerlink" href="#rpc_2" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>获取链上refinfo信息</p>
+</blockquote>
+<p>请求方法：lightwallet_get_refblock_info 
+请求参数：无</p>
+<p>request</p>
+<pre><code>{
+  "jsonrpc":"2.0",
+  "id":1,
+  "method":"lightwallet_get_refblock_info",
+  "params":[]
+}
+</code></pre>
+<p>response</p>
+<pre><code>{
+"id": 1,
+"result": "11398,47706285"
+}
+</code></pre>
+<p>返回参数：</p>
+<p>result中返回的字符串即为refinfo</p>
+<blockquote>
+<p>广播交易</p>
+</blockquote>
+<p>请求方法：lightwallet_broadcast 
+请求参数：需广播的交易（格式化为一行的json字符串）</p>
+<p>request</p>
+<pre><code>{
+  "jsonrpc":"2.0",
+  "id":1,
+  "method":"lightwallet_broadcast",
+  "params":[{"ref_block_num":20295,"ref_block_prefix":1522980328,"expiration":"2018-12-26T06:04:55","operations":[[0,{"fee":{"amount":200,"asset_id":"1.3.0"},"from":"1.2.0","to":"1.2.0","from_addr":"HXNRhTbDKiw2ut91BJEc5zy49HKWQnRw9as7","to_addr":"HXNUFt3gViQn3iXLRL9eTMGsaJFhYQ6RT4gM","amount":{"amount":10000000,"asset_id":"1.3.3"},"extensions":[]}]],"extensions":[],"signatures":["20434f13d89a088a1f6c3d4978c961885ff193237dca6dbae0e48224afb318f57c28001dd9162984a4f970979ffaf9870359c3da722af6699336a8d53b27c0ae60"]}]
+}
+</code></pre>
+<p>response</p>
+<pre><code>{
+"id": 1,
+"result": "94711706fd82c84f3961136ba44d5dc251b8abb1"
+}
+</code></pre>
+<p>返回参数：</p>
+<p>result中返回的字符串即为交易的id</p>
+<h2 id="_3">注意事项<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<ul>
+<li>返回值中的时间都是标准格林尼治时间</li>
+<li>返回值中的金额是带精度的金额，需要缩小100000倍才是真正的金额，比如转账1个HX，那么在返回值中标示为100000</li>
+</ul>
+<h2 id="_4">附：终端命令行模式下常用指令<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>1.创建钱包</p>
+<pre><code>set_password 12345678
+</code></pre>
+<p>参数： 钱包密码</p>
+<p>该操作会生成一个钱包文件，默认为wallet.json, 如果该文件已经存在，则set_password将会变为修改密码操作</p>
+<p>2.解锁钱包</p>
+<pre><code>unlock 12345678
+</code></pre>
+<p>参数：钱包密码</p>
+<p>3.创建账号</p>
+<pre><code>wallet_create_account testaccount
+</code></pre>
+<p>参数：账户名称</p>
+<p>4.导入私钥</p>
+<pre><code>import_key testaccount1 私钥
+</code></pre>
+<p>参数：本地不存在的账户名称 私钥</p>
+<p>5.列出钱包下所有账号</p>
+<pre><code>list_my_accounts
+</code></pre>
+<p>6.列出账号地址</p>
+<pre><code>get_account_addr testaccount
+</code></pre>
+<p>参数：账户名称</p>
+<p>7.导出私钥</p>
+<pre><code>dump_private_key  testaccount1
+</code></pre>
+<p>参数：账户名</p>
+<p>8.查询余额</p>
+<pre><code>get_account_balances testaccount
+</code></pre>
+<p>参数：账户名</p>
+<p>9.查询链上参数</p>
+<pre><code>get_global_properties
+</code></pre>
+<p>参数：无</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../asset-block-import-model/" title="资产区块链接入模型" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                资产区块链接入模型
+              </span>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            如果你有任何问题，请打开 <a href="https://github.com/HcashOrg/HyperExchange/issues/new"><i class="fa fa-github"></i> 新建一个问题</a> or <a href="https://github.com/HcashOrg/Hx-Doc"><i class="fa fa-github"></i> 发送pull请求</a>.<br>hxdocs v0.0.1. HyperExchange Project 2018.
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="/assets/fonts/font-awesome.min.css">
+    
+      <a href="https://github.com/HcashOrg/HyperExchange" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="" class="md-footer-social__link fa fa-reddit"></a>
+    
+      <a href="" class="md-footer-social__link fa fa-youtube"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.8eb9be28.js"></script>
+      
+      <script>app.initialize({version:"0.17.3",url:{base:"../.."}})</script>
+      
+        <script src="../../js/MathJax-2.7.0/MathJax.js%3Fconfig%3DTeX-AMS-MML_HTMLorMML"></script>
+      
+    
+    
+      
+    
+  </body>
+</html>
