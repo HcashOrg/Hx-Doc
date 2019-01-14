@@ -1,26 +1,82 @@
 # HX-Indicator使用问题
 
-Q：HX-Indicator如何升级
+Q：HX-Indicator启动失败
 
-A：在左下角，点击“帮助”->“软件更新”，点击检查更新，如果有发布的新版本，会自动下载，点击立即更新，之后会自动重启钱包，成功后会显示钱包界面。
+![FAQ Tab](/img/faq/q1.png)
 
-Q：升级的时候，点击立即更新，一直提示钱包正在关闭或者一直提示钱包正在loading
+A：关闭钱包，重新下载新版HX Indicator并覆盖原路径。然后重启钱包。
 
-A：如果等待时间很久，打开任务管理器，结束进程hx_node.exe、hx_cli.exe、HXIndicator.exe，从官网下载最新版本，找到HXIndicator.exe文件双击，成功后会提示输入钱包密码。
+Q：缺少动态链接库
 
-Q：启动HXIndicator.exe的时候一直显示loading或者启动的时候提示启动hx_node.exe失败
+![FAQ Tab](/img/faq/q2.png)
 
-A：可以等待10多分钟，如果还是显示loading，则需要打开任务管理器，结束进程hx_node.exe、hx_cli.exe、HXIndicator.exe，找到hx的数据路径，将blockchain文件夹移到回收站，其他的文件不要删除，再次找到HXIndicator.exe文件双击，成功后会提示输入钱包密码。
+A：
+关闭钱包，根据以下链接修复，并重启钱包。
 
-Q：提示区块无法同步
+<https://blog.csdn.net/su749520/article/details/78984773>
 
-A：点击电脑右下角的时间，找到Internet时间->更改设置->立即更新，重新打开HXIndicator.exe，开始同步。
+VC redit.exe下载
 
-Q：充值HC多久到账
+<https://www.microsoft.com/zh-cn/download/details.aspx?id=48145>
+
+Q：钱包客户端数据同步问题及导致的一系列其他问题（1.1.1及之前版本）
+
+- 区块高度一直显示1 无法同步
+- HC资产不显示
+- 报启动hxnode.exe失败之后，就再也无法正常连接网络
+- 启动停止钱包慢的问题
+- 区块0链接0偶尔能连上，但没用，不能创建账号
+- 一直显示启动失败。
+- 桌面钱包不稳定闪退或者断网，点击刷新不了数据。
+- 重启后Loading时间长
+
+![FAQ Tab](/img/faq/q3-1.png)
+
+![FAQ Tab](/img/faq/q3-2.png)
+
+A：选择设置菜单
+
+![FAQ Tab](/img/faq/q3-3.png)
+
+选择“安全设置”页签，并点击“钱包数据路径”后面的 “打开”文字。
+
+![FAQ Tab](/img/faq/q3-4.png)
+
+找到“blockchain”目录，删除到回收站。
+
+![FAQ Tab](/img/faq/q3-5.png)
+
+重新下载新版HX Indicator并覆盖原路径。然后重启钱包。
+
+Q：提示区块不同步
+
+A：设置自动同步时间，确保本地时间正确
+
+Q：资产划转不顺，会有分批到账的情况
+
+A：暂未解决，尽量等资金到账后等一等再划转。
+
+Q：每天释放的token总量
+
+A：目前释放27HX/块，5秒一个块。可按此公式计算。
+
+Q：怎么质押收益高，是权重高的好，还是持续出块的好。
+
+A：这个目前没有统一的方法，需要具体模拟。最好不要质押极端值，比如权重最大的，或者最小的。同时结合出块率具体分析。
+
+Q：权重与hx出块的计算方法是什么
+
+A：请参考docs.hx.cash文档描述。权重跟出块概率线性一致。因为是概率，有可能在一小段时间内不符合权重。但长期看权重跟出块机会是一致的。同时Citizen本身的稳定性还会影响实际的出块数。
+
+Q：充值HC到账时间？
 
 A：正常需要8个区块确认时间到Tunnel账户，然后“划转”后等待4个区块到HX链上
 
-Q：合约注册提示失败
+Q：注册合约失败
 
-A：注意HXIndicator.exe所在路径不能包含中文。
+A：注意不要把钱包放在有中文的目录下
+
+Q：测试网络用户怎么使用
+
+A：需要删除测试数据
 
