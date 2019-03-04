@@ -109,4 +109,5 @@ pages:
     - '本地查询接口': 'faq/local-query.md'
     - '资产区块链接入模型': 'faq/asset-block-import-model.md'
   - 'HX交易所钱包适配指南': 'faq/docking-exchange.md' 
+  - 'HX DAPP开发指南': 'faq/dapp.md' 
 copyright: 如果你有任何问题，请打开 <a href="https://github.com/HcashOrg/HyperExchange/issues/new"><i class="fa fa-github"></i> 新建一个问题</a> or <a href="https://github.com/HcashOrg/Hx-Doc"><i class="fa fa-github"></i> 发送pull请求</a>.<br>hxdocs v0.0.1. HyperExchange Project 2018.
