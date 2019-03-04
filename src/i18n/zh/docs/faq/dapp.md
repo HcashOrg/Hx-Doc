@@ -82,6 +82,9 @@ HxPay的下载地址:<https://github.com/HcashOrg/hxPayment.js/releases>
 
 五色棋的Dapp前端源码:<https://github.com/HcashOrg/Dapp-5color/tree/master/Dapp>
 
+**五色棋试玩Demo：<http://www.block-block.tech>**
+
+
 
 
 
