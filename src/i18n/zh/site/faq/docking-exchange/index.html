@@ -1421,6 +1421,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#hrc12" title="HRC12代币接口" class="md-nav__link">
+    HRC12代币接口
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_3" title="注意事项" class="md-nav__link">
     注意事项
   </a>
@@ -1428,7 +1435,14 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" title="附：终端命令行模式下常用指令" class="md-nav__link">
+  <a href="#_4" title="参考文档" class="md-nav__link">
+    参考文档
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" title="附：终端命令行模式下常用指令" class="md-nav__link">
     附：终端命令行模式下常用指令
   </a>
   
@@ -1518,6 +1532,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#hrc12" title="HRC12代币接口" class="md-nav__link">
+    HRC12代币接口
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_3" title="注意事项" class="md-nav__link">
     注意事项
   </a>
@@ -1525,7 +1546,14 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" title="附：终端命令行模式下常用指令" class="md-nav__link">
+  <a href="#_4" title="参考文档" class="md-nav__link">
+    参考文档
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" title="附：终端命令行模式下常用指令" class="md-nav__link">
     附：终端命令行模式下常用指令
   </a>
   
@@ -2465,12 +2493,181 @@ Cache-Control: no-cache
 </code></pre>
 <p>返回参数：</p>
 <p>result中返回的字符串即为交易的id</p>
+<h2 id="hrc12">HRC12代币接口<a class="headerlink" href="#hrc12" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>合约调用通用接口
+[offline]获取HRC12代币符号</p>
+</blockquote>
+<p>请求方法：tokenSymbol</p>
+<p>请求参数：无</p>
+<p>request</p>
+<pre><code>{
+  "jsonrpc": "2.0", 
+  "method": "invoke_contract_offline", 
+  "params": ["test", "HXCWMNwuFzr3JSiDvGjZasDCm6dn2mVvxXKU", "tokenSymbol", ""], 
+  "id": 1
+}
+</code></pre>
+<p><strong>参数说明</strong>：</p>
+<p>method：根据HRC12规范，该接口是offline接口，因此method为”invoke_contract_offline”</p>
+<p>test：执行合约的账户名（可以是本地账户），应该根据实际情况自行修改</p>
+<p>HXCWMNwuFzr3JSiDvGjZasDCm6dn2mVvxXKU：合约地址，每一个智能合约都有一个唯一的地址，请根据实际情况修改</p>
+<p>tokenSymbol：合约方法，用于查询HRC12代币的符号</p>
+<p>其他参数：根据不同的智能合约接口，参数不同，请参考具体规范。在tokenSymbol这个方法里不需要额外参数，但是需要一个空字符串占位用。</p>
+<p>response</p>
+<pre><code>{
+"id": 1,
+"jsonrpc": "2.0",
+"result": "BTM"
+}
+</code></pre>
+<p>返回结果中BTM为HRC12代币的符号。</p>
+<blockquote>
+<p>[offline]获取token名称</p>
+</blockquote>
+<p>请求方法：tokenName</p>
+<p>请求参数：无</p>
+<p>request</p>
+<pre><code>{
+  "jsonrpc": "2.0", 
+  "method": "invoke_contract_offline", 
+  "params": ["a", "HXCWMNwuFzr3JSiDvGjZasDCm6dn2mVvxXKU", "tokenName", ""], 
+  "id": 1
+}
+</code></pre>
+<p>response</p>
+<pre><code>{
+"id": 1,
+"jsonrpc": "2.0",
+"result": "Bytom"
+}
+</code></pre>
+<p>返回参数：</p>
+<p>返回结果中BTM为HRC12代币的名称。</p>
+<blockquote>
+<p>[offline]获取token总量</p>
+</blockquote>
+<p>请求方法：totalSupply</p>
+<p>请求参数：无</p>
+<p>request</p>
+<pre><code>{
+  "jsonrpc": "2.0", 
+  "method": "invoke_contract_offline", 
+  "params": ["a", "HXCWMNwuFzr3JSiDvGjZasDCm6dn2mVvxXKU", "totalSupply", ""], 
+  "id": 1
+}
+</code></pre>
+<p>response</p>
+<pre><code>{
+"id": 1,
+"jsonrpc": "2.0",
+"result": "2100000000"
+}
+</code></pre>
+<p>返回参数：</p>
+<p>返回结果中2100000000为HRC12代币的总供应量。</p>
+<blockquote>
+<p>[offline]获取token精度</p>
+</blockquote>
+<p>请求方法：precision</p>
+<p>请求参数：无</p>
+<p>request</p>
+<pre><code>{
+  "jsonrpc": "2.0", 
+  "method": "invoke_contract_offline", 
+  "params": ["a", "HXCWMNwuFzr3JSiDvGjZasDCm6dn2mVvxXKU", " precision", ""], 
+  "id": 1
+}
+</code></pre>
+<p>response</p>
+<pre><code>{
+"id": 1,
+"jsonrpc": "2.0",
+"result": "100000000"
+}
+</code></pre>
+<p>返回参数：</p>
+<p>返回结果中100000000为HRC12代币的精度，表示该代币最小单位是100000000分之一。</p>
+<blockquote>
+<p>[offline]获取某个账户的余额</p>
+</blockquote>
+<p>请求方法：balanceOf</p>
+<p>请求参数：要查询的地址</p>
+<p>request</p>
+<pre><code>{
+  "jsonrpc": "2.0", 
+  "method": "invoke_contract_offline", 
+  "params": ["a", "HXCYDj67eqDChkrg1pmkm17LmWZCkVZdCSQd", "balanceOf", "HXNWgseVgYxqJrWq4v7QbXjDiT7FAGToTa2R"], 
+  "id": 1
+}
+</code></pre>
+<p>response</p>
+<pre><code>{
+"id": 1,
+"jsonrpc": "2.0",
+"result": "99699999800000000"
+}
+</code></pre>
+<p>返回参数：</p>
+<p>返回结果中99699999800000000为查询地址拥有HRC12代币的数量，显示的时候需要除以精度。</p>
+<blockquote>
+<p>转账</p>
+</blockquote>
+<p>请求方法：transfer</p>
+<p>请求参数：转入地址,金额,备注</p>
+<p>金额是不带精度的，需要以实际的金额乘以代币的精度。备注是可选的。</p>
+<p>request</p>
+<pre><code>{
+  "jsonrpc": "2.0", 
+  "method": "invoke_contract_offline", 
+  "params": ["a", "HXCYDj67eqDChkrg1pmkm17LmWZCkVZdCSQd", "transfer", "HXNWgseVgYxqJrWq4v7QbXjDiT7FAGToTa2R"], 
+  "id": 1
+}
+</code></pre>
+<p>response</p>
+<pre><code>{
+"id": 1,
+"jsonrpc": "2.0",
+"result": {
+"ref_block_num": 47218,
+"ref_block_prefix": 303117421,
+"expiration": "2019-03-06T05:39:30",
+"operations": [
+[
+79,
+{
+"fee": {
+"amount": 5100,
+"asset_id": "1.3.0"
+},
+"invoke_cost": 500000,
+"gas_price": 1,
+"caller_addr": "HXNWgseVgYxqJrWq4v7QbXjDiT7FAGToTa2R",
+"caller_pubkey": "0362e1605ebc5e85ae510a4f2c736a1a6f9b6ce2b4979ea62b6b872d169ac4ba56",
+"contract_id": "HXCYDj67eqDChkrg1pmkm17LmWZCkVZdCSQd",
+"contract_api": "transfer",
+"contract_arg": "HXNbtEpjh3GuSCSTAUtaC9vJUoKWjmEY8nnD,10,test"
+}
+]
+],
+"extensions": [],
+"signatures": ["1f5481cae439b77103daf1ade23de91d2274aab448f3065e985c5a4f6741c3fd8906ecc730043101bad1a376da69605671218703ed617e80791b0ab4eb7d1fee02"
+],
+"block_num": 0,
+"trxid": "29e16b8e00e3f9fd0714a7f469a0250ef179f76c"
+}
+}
+</code></pre>
+<p>返回参数：</p>
+<p>返回结果是上链的交易信息。</p>
 <h2 id="_3">注意事项<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <ul>
 <li>返回值中的时间都是标准格林尼治时间</li>
 <li>返回值中的金额是带精度的金额，需要缩小100000倍才是真正的金额，比如转账1个HX，那么在返回值中标示为100000</li>
 </ul>
-<h2 id="_4">附：终端命令行模式下常用指令<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h2 id="_4">参考文档<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>HRC12规范:<a href="https://github.com/HcashOrg/HyperExchange/wiki/HX-Token-contract-protocol(HRC12)">https://github.com/HcashOrg/HyperExchange/wiki/HX-Token-contract-protocol(HRC12)</a></p>
+<h2 id="_5">附：终端命令行模式下常用指令<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <p>1.创建钱包</p>
 <pre><code>set_password 12345678
 </code></pre>
