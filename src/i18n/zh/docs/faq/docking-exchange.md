@@ -1162,10 +1162,11 @@ request
 
     {
       "jsonrpc": "2.0", 
-      "method": "invoke_contract_offline", 
-      "params": ["a", "HXCYDj67eqDChkrg1pmkm17LmWZCkVZdCSQd", "transfer", "HXNWgseVgYxqJrWq4v7QbXjDiT7FAGToTa2R"], 
+      "method": "invoke_contract", 
+      "params": ["a", 0.00001, 500000, "HXCYDj67eqDChkrg1pmkm17LmWZCkVZdCSQd", "transfer", "HXNbtEpjh3GuSCSTAUtaC9vJUoKWjmEY8nnD,10,test"], 
       "id": 1
     }
+
 
 response
 
