@@ -2495,8 +2495,45 @@ Cache-Control: no-cache
 <p>result中返回的字符串即为交易的id</p>
 <h2 id="hrc12">HRC12代币接口<a class="headerlink" href="#hrc12" title="Permanent link">&para;</a></h2>
 <blockquote>
-<p>合约调用通用接口
-[offline]获取HRC12代币符号</p>
+<p>合约调用通用接口</p>
+</blockquote>
+<p>对于HRC12代币，所有的接口调用都是通过智能合约接口调用完成，因此有相对统一的格式。智能合约的调用接口分为三类，分别有三种不同的格式：</p>
+<ol>
+<li>
+<p>invoke_contract：该类型调用需要消耗一定量的HX作为GAS，结果会在区块链上记录。其格式为: </p>
+<pre><code>method - invoke_contract 
+参数1 – 账户名（可以是本地账户名）
+参数2 - Gas limit， 执行每一笔花费的gas，通常设置0.00001即可，如果网络拥堵可以提高该值优先打包
+参数3 - 总的gas费用， 该值是一个预计值，打包时会按照实际执行步数收取。如果实际的值小于该值，以实际的为准。否则该交易会失败，如果该失败交易未上链，则费用退回，否则费用不退。
+参数4 – 合约地址
+参数5 - 合约方法名， 根据实际合约的API文档填入即可
+参数6 - 合约API参数， 根据合约实际的API文档填入接口（通常是多个以“，”分割的字符串）
+</code></pre>
+</li>
+<li>
+<p>invoke_contract_testing： 该类型接口跟上一个执行同样的逻辑，但是不会广播到区块链上，只会返回运行中消耗的GAS，但不会实际消耗。主要用于在调用正式接口之前进行测试，对需要消耗的GAS做一个估算。
+其格式为: </p>
+<pre><code>method - invoke_contract_testing
+参数1 – 账户名（可以是本地账户名）
+参数2 – 合约地址
+参数3 - 合约方法名， 根据实际合约的API文档填入即可
+参数4 - 合约API参数， 根据合约实际的API文档填入接口（通常是多个以“，”分割的字符串）
+</code></pre>
+</li>
+<li>
+<p>invoke_contract_offline：该类型的接口只在本地进行计算，通常是进行一些查询的功能，不消耗GAS
+其格式为: </p>
+<pre><code>method - invoke_contract_testing
+参数1 – 账户名（可以是本地账户名）
+参数2 – 合约地址
+参数3 - 合约方法名， 根据实际合约的API文档填入即可
+参数4 - 合约API参数， 根据合约实际的API文档填入接口（通常是多个以“，”分割的字符串）
+</code></pre>
+</li>
+</ol>
+<p>invoke_contract_testing方法仅可对非offline类型的接口来执行，用于估算即使gas消耗。实际使用中会在testing接口返回的gas值上增加一点来传入实际的invoke_contract方法。</p>
+<blockquote>
+<p>[offline]获取HRC12代币符号</p>
 </blockquote>
 <p>请求方法：tokenSymbol</p>
 <p>请求参数：无</p>
