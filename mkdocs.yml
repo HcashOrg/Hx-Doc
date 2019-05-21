@@ -84,10 +84,10 @@ pages:
     - 'Fee structure': 'advanced/smart-contract/smart-contract-fee.md'
     - 'Types of Fees': 'advanced/smart-contract/smart-contract-feetype.md'      
   - Random Pool Proof of Multi- properties:
-    - "Network Roles": 'advanced/rppop/network-role.md'
-    - "Asset Collateral": 'advanced/rppop/asset-collateral.md'
-    - "Consensus Protocol/Algorithm": 'advanced/rppop/consensus-protocol.md'
-    - "Security Features of a RPPOM Consensus Mechanism": 'advanced/rppop/RPPOM.md'
+    - "Network Roles": 'advanced/pov/network-role.md'
+    - "Asset Collateral": 'advanced/pov/asset-collateral.md'
+    - "Consensus Protocol/Algorithm": 'advanced/pov/consensus-protocol.md'
+    - "Security Features of a POV Consensus Mechanism": 'advanced/pov/POV.md'
   - Community Governance:
     - 'Overview': 'advanced/community-governance/community-overview.md'
     - 'Selecting a Senator': 'advanced/community-governance/select-senator.md'

@@ -84,10 +84,10 @@ pages:
     - '手续费规则': 'advanced/smart-contract/smart-contract-fee.md'
     - '手续费种类': 'advanced/smart-contract/smart-contract-feetype.md'      
   - 随机多资产权益质押共识机制:
-    - "角色": 'advanced/rppop/network-role.md'
-    - "质押": 'advanced/rppop/asset-collateral.md'
-    - "竞争算法": 'advanced/rppop/consensus-protocol.md'
-    - "RPPOM共识机制的安全性": 'advanced/rppop/RPPOM.md'
+    - "角色": 'advanced/pov/network-role.md'
+    - "质押": 'advanced/pov/asset-collateral.md'
+    - "竞争算法": 'advanced/pov/consensus-protocol.md'
+    - "POV共识机制的安全性": 'advanced/pov/POV.md'
   - 社区治理:
     - '简介': 'advanced/community-governance/community-overview.md'
     - 'Senator的选出和退出': 'advanced/community-governance/select-senator.md'
