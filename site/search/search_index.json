@@ -678,7 +678,7 @@
         {
             "location": "/advanced/pov/POV/", 
             "text": "POV is an extremely secure protocol that has the ability to safeguard against various malicious attacks and unexpected situations, providing a highly secure network and ensuring extensive asset protection. The following are some extreme situations which are able to be mitigated when using a POV consensus mechanism:\n\n\n\n\n\n\nIn the HyperExchange network, Citizens play an important role in maintaining the stability of the system. Assuming that some randomly chosen Citizens fail to carry out their duties, and as long as not all 25 elected Citizens default on their obligations, the stability of the chain will not be affected. Only one Citizen needs to be online in order to generate the 25 allotted blocks. Therefore, even in this extremely unlikely situation, the network can still operate effectively until new Citizens are selected. Under normal circumstances, if a Citizen does not generate a block for 5 consecutive rounds, then their participation rate will be reduced, which in turn will reduce their chances of being re-elected as a block node in the future. The calculation of a Citizen pledged asset amount will be adjusted by their participation rate based on the formula: Citizen final pledge amount of HX = User pledge amount of HX multiply by participation rate (0-100%). Therefore, Citizens are extremely incentivised to remain acting as a high-quality node, further ensuring that the probability of all 25 Citizens going offline is extremely unlikely to occur.\n\n\n\n\n\n\n\n\n\n\nAnother extreme situation could be where a Citizen maliciously generates 2 different blocks at the same time and subsequent Citizens continue to generate blocks based on that malicious block. Here, when the current round of block generation ends, the network will automatically transfer to whichever chain is longer. In such a scenario, as long as the block receives more than 17 confirmations, a double spending [12] attack can be avoided.\n\n\nIn the case where a mining pool holds a large amount of assets on the blockchain, but less than 51%, and assuming that the pool\ns asset allocation is perfect, this still does not guarantee that in each block production round that pool will hold more than 50% of block generation nodes. Hence, receiving more than 17 confirmations for each block still allows the network to avoid double spending attacks. \n\n\n\n\n\n\n\n\n\n\n\n\nIn the case of mining pools jointly holding more than 51% of assets on the blockchain, problems such as transaction rollbacks can occur. However, HX and HIOU assets can be used to mine in a pool, and this risk can be mitigated further when considering that HIOUs are managed by Senator consensus. \n\n\nHowever, if the mining pools are jointly harming the system, they will face the following repercussions:\n\n\n1) The participation rate of all miners involved will be reduced to 0% according to the consensus model (i.e. no matter how many assets are pledged, their chances of being re-elected as a block node in the future will be reduced to 0)\n\n\n2) All HIOUs that have been pledged in mining pools by miners will be frozen and restricted until further notice. Whether or not these frozen assets will be released depends on the amount of harm caused by that pool. \n\n\nAll involved mining pools will face the loss of their registration fee and all HIOU assets pledged in the pool, while users who have pledged assets to miners in that pool will need to enter an appeal process. From here, a Senator consensus will decide whether or not to unfreeze their assets.", 
-            "title": "Security Features of a POV Consensus Mechanism"
+            "title": "Security Features of a RPPOM Consensus Mechanism"
         }, 
         {
             "location": "/advanced/community-governance/community-overview/", 
@@ -727,27 +727,27 @@
         }, 
         {
             "location": "/research/ide/ide-introduce/", 
-            "text": "HX Smart Conctract IDE\n\n\nIDE is mostly used for writing and translating contract and on-chain registration, debug functionality will be added in the future. \n\n\nThe main functions are briefly described below:\n\n\n\n\nuvlua/java/c#/kotlin can be used when writing contract on IDE, it provides functionalities such as code association, templates and etc.\uff08For example, newtoken contract template\uff09\n\n\nIDE helps user to write and translate languages within a finger tap, which makes it much more convenient to generate contract into bytecode. \n\n\nIDE uses file system to manage contracts, you can easily manage many original files there and displayed as file system form in IDE. \n\n\nBackstage offers official chains and corresponding testing chains of CTC, UB, HX and etc, which can realizes part of functionalities of the wallet of each chain, such as account management, registration and transaction.  \n\n\nIDE support contract release. User can release smart contract onto the chain after successfully testing it in a test environment. \n\n\nIt manages registered contracts and allows users to review registered contacts.", 
+            "text": "HX Smart Conctract IDE\n\n\nIDE is mostly used for writing and translating contract, debugging contract and on-chain registration. \n\n\nThe main functions are briefly described below:\n\n\n\n\nuvlua/java/c#/kotlin can be used when writing contract on IDE, it provides functionalities such as code association, templates and etc.\uff08For example, newtoken contract template\uff09\n\n\nIDE helps user to write and translate languages within a finger tap, which makes it much more convenient to generate contract into bytecode. \n\n\nIDE uses file system to manage contracts, you can easily manage many original files there and displayed as file system form in IDE. \n\n\nBackstage offers official chains and corresponding testing chains of CTC, UB, HX and etc, which can realizes part of functionalities of the wallet of each chain, such as account management, registration and transaction.\n\n\nDebug contract based on uvlua.  \n\n\nIDE support contract release. User can release smart contract onto the chain after successfully testing it in a test environment. \n\n\nIt manages registered contracts and allows users to review registered contacts.", 
             "title": "IDE Introduce"
         }, 
         {
             "location": "/research/ide/ide-introduce/#hx-smart-conctract-ide", 
-            "text": "IDE is mostly used for writing and translating contract and on-chain registration, debug functionality will be added in the future.   The main functions are briefly described below:   uvlua/java/c#/kotlin can be used when writing contract on IDE, it provides functionalities such as code association, templates and etc.\uff08For example, newtoken contract template\uff09  IDE helps user to write and translate languages within a finger tap, which makes it much more convenient to generate contract into bytecode.   IDE uses file system to manage contracts, you can easily manage many original files there and displayed as file system form in IDE.   Backstage offers official chains and corresponding testing chains of CTC, UB, HX and etc, which can realizes part of functionalities of the wallet of each chain, such as account management, registration and transaction.    IDE support contract release. User can release smart contract onto the chain after successfully testing it in a test environment.   It manages registered contracts and allows users to review registered contacts.", 
+            "text": "IDE is mostly used for writing and translating contract, debugging contract and on-chain registration.   The main functions are briefly described below:   uvlua/java/c#/kotlin can be used when writing contract on IDE, it provides functionalities such as code association, templates and etc.\uff08For example, newtoken contract template\uff09  IDE helps user to write and translate languages within a finger tap, which makes it much more convenient to generate contract into bytecode.   IDE uses file system to manage contracts, you can easily manage many original files there and displayed as file system form in IDE.   Backstage offers official chains and corresponding testing chains of CTC, UB, HX and etc, which can realizes part of functionalities of the wallet of each chain, such as account management, registration and transaction.  Debug contract based on uvlua.    IDE support contract release. User can release smart contract onto the chain after successfully testing it in a test environment.   It manages registered contracts and allows users to review registered contacts.", 
             "title": "HX Smart Conctract IDE"
         }, 
         {
             "location": "/research/ide/ide-using/", 
-            "text": "IDE Using\n\n\nWe will introduce how to use HX IDE in this page.\n\n\nDownload HX IDE\n\n\nYou can visit website:\nhttp://www.anychain.org/\n to download HX IDE,now just support for Win7 above platform. Select the 64-bit and 32-bit versions of your system to download.\n\n\nStart IDE\n\n\nOnce you\nve downloaded it, you\nll get a zip file, unpack it into any directory on your computer, and then open the directory with an AnyChain.exe file inside.double-click on the file to launch your HX IDE.\n\n\n\n\nFirst start IDE need to setup a store path:\n\n\n\n\nMain Window\n\n\n\n\nMenu Bar Description:\n\n\n1.In \nFile\n menu, include\n\n\n\n\n\n\nNew File\n :create new uvlua/java/c#/kotlin contract file.\n\n\n\n\n\n\nImport File\n :import local uvlua/java/c#/kotlin contract file.\n\n\n\n\n\n\nSave/Save All/Close/Close All\n :save opened file/save all opened files/close opened file/close all opened file.\n\n\n\n\n\n\nConfigure\n :change language/theme/chaintype/startchain.\n\n\n\n\n\n\n\n\n2.In \nEdit\n menu, include \nRedo\n and \nUndo\n.\n\n\n3.In \nContract\n menu, include \nRegister Contract/UpgradeCcontract/CallContract\n.\n\n\n4.In \nDebug\n menu, include \nCompile/Debug/Step/Stop/TabBreak/CleanBreak\n.\n\n\n5.In \nTool\n menu include:\n\n\n\n\n\n\nConsole\n :you can excute rpc command here.\n\n\n\n\n\n\nAccountManager\n :you can create a new account or import an account.\n\n\n\n\n\n\nTransfer\n :you can send a transfer transaction.\n\n\n\n\n\n\n6.In \nHelp\n menu include:\n\n\n\n\n\n\nHelp F1\n: Jump to the web site of the contract programming document.\n\n\n\n\n\n\nAbout\n: about us.", 
-            "title": "IDE Using"
+            "text": "IDE Initialize and Settings\n\n\nDownload HX IDE\n\n\nYou can visit website:\nhttp://www.anychain.org/\n to download HX IDE, support for Win7 x64 above platform or MacOS x64 platform.\n\n\nStart IDE\n\n\nOnce you\nve downloaded it, you\nll get a zip file, unpack it into any directory on your computer, and then open the directory with an AnyChain.exe file inside.double-click on the file to launch your HX IDE.\n\n\n\n\nFirst start IDE need to setup a store path:\n\n\n\n\nMain Window\n\n\n\n\nMenu Bar\n\n\nIn Menu Bar, most of functions are provied, including settings, new contract, import contract, edit based on file, contract compile, debugging, testing and deploy and so on.\n\n\nThe Tool Bar provides some shortcuts of frequently used function.\n\n\nResource Management\n\n\nResource Management privide the projects manager of contract, and show registered contract on-line with ide.\n\n\nCentral Area\n\n\nUse for contract Edit.\n\n\nDebug management\n\n\nUse for compile output and show debugging out put.\n\n\nStatus Bar\n\n\nShow the current state of chain.\n\n\nSettings\n\n\nclick \nFile\n-\nConfigure\n to open configure dialog.\n\n\n\n\nIn the dialog, you can choose the display language, English or Chinese;\n\n\nModify the theme of IDE, black or white;\n\n\nChoose the chain type from HX, UB and CTC;\n\n\nSet the start-up type from test-chain, formal-chain or both, by the way, we set none start-up as default;\n\n\nChange the block-chain data path, make sure the path is fully English.", 
+            "title": "Init & Settings"
         }, 
         {
-            "location": "/research/ide/ide-using/#ide-using", 
-            "text": "We will introduce how to use HX IDE in this page.", 
-            "title": "IDE Using"
+            "location": "/research/ide/ide-using/#ide-initialize-and-settings", 
+            "text": "", 
+            "title": "IDE Initialize and Settings"
         }, 
         {
             "location": "/research/ide/ide-using/#download-hx-ide", 
-            "text": "You can visit website: http://www.anychain.org/  to download HX IDE,now just support for Win7 above platform. Select the 64-bit and 32-bit versions of your system to download.", 
+            "text": "You can visit website: http://www.anychain.org/  to download HX IDE, support for Win7 x64 above platform or MacOS x64 platform.", 
             "title": "Download HX IDE"
         }, 
         {
@@ -757,8 +757,198 @@
         }, 
         {
             "location": "/research/ide/ide-using/#main-window", 
-            "text": "Menu Bar Description:  1.In  File  menu, include    New File  :create new uvlua/java/c#/kotlin contract file.    Import File  :import local uvlua/java/c#/kotlin contract file.    Save/Save All/Close/Close All  :save opened file/save all opened files/close opened file/close all opened file.    Configure  :change language/theme/chaintype/startchain.     2.In  Edit  menu, include  Redo  and  Undo .  3.In  Contract  menu, include  Register Contract/UpgradeCcontract/CallContract .  4.In  Debug  menu, include  Compile/Debug/Step/Stop/TabBreak/CleanBreak .  5.In  Tool  menu include:    Console  :you can excute rpc command here.    AccountManager  :you can create a new account or import an account.    Transfer  :you can send a transfer transaction.    6.In  Help  menu include:    Help F1 : Jump to the web site of the contract programming document.    About : about us.", 
+            "text": "", 
             "title": "Main Window"
+        }, 
+        {
+            "location": "/research/ide/ide-using/#menu-bar", 
+            "text": "In Menu Bar, most of functions are provied, including settings, new contract, import contract, edit based on file, contract compile, debugging, testing and deploy and so on.  The Tool Bar provides some shortcuts of frequently used function.", 
+            "title": "Menu Bar"
+        }, 
+        {
+            "location": "/research/ide/ide-using/#resource-management", 
+            "text": "Resource Management privide the projects manager of contract, and show registered contract on-line with ide.", 
+            "title": "Resource Management"
+        }, 
+        {
+            "location": "/research/ide/ide-using/#central-area", 
+            "text": "Use for contract Edit.", 
+            "title": "Central Area"
+        }, 
+        {
+            "location": "/research/ide/ide-using/#debug-management", 
+            "text": "Use for compile output and show debugging out put.", 
+            "title": "Debug management"
+        }, 
+        {
+            "location": "/research/ide/ide-using/#status-bar", 
+            "text": "Show the current state of chain.", 
+            "title": "Status Bar"
+        }, 
+        {
+            "location": "/research/ide/ide-using/#settings", 
+            "text": "click  File - Configure  to open configure dialog.   In the dialog, you can choose the display language, English or Chinese;  Modify the theme of IDE, black or white;  Choose the chain type from HX, UB and CTC;  Set the start-up type from test-chain, formal-chain or both, by the way, we set none start-up as default;  Change the block-chain data path, make sure the path is fully English.", 
+            "title": "Settings"
+        }, 
+        {
+            "location": "/research/ide/ide-edit/", 
+            "text": "IDE Contract Edit\n\n\nThe single contract in IDE exists as project. Top folders which are csharp, java, kotlin and uvlua are initial folder and not editable. Root folder in top folders is the actual contract project, anything in root folder belogs the project.\n\n\nIn this chapter, we introduce the base new, edit, delete, search and replace operations of contract. We use uvlua as example programming language while others are exactly same.\n\n\nNew Contract\n\n\nClick \nFile\n-\nNew Contract\n-\nNew uvlua Contract\n or right click \nuvlua\n-\nNew Contract\n in resource management to open the new file dialog.\n\n\n\n\nInput the contract name and select contract template provided by IDE if you needed and finally click \nConfirm\n to create a new contract.\n\n\n\n\nImprot Contract\n\n\nClick \nFile\n-\nImport Contract\n-\nImport uvlua Contract\n in menu bar or right click \nuvlua\n-\nImport Contract\n in resource management to open contract selection dialog.\n\n\n\n\n\n\nSelect the contract file with uvlua as suffix.\n\n\n\n\nDelete Contract\n\n\nRight click the contract file or folder in resource management, click \nDelete\n.\n\n\n\n\nCode Edit\n\n\nClick contract file to show the code in central area and start the edit. You can get some help from \nHelp\n in menu bar .\n\n\n\n\nCode Search\n\n\nThere are two methods to start the search, which both need the focus in central code area.\n\n\n\n\n\n\nCtrl+F to open temprary search dialog on the top of code area. Jump to the first position of search result after press Enter key and the dialog will hide immediately. Press Ctrl+G to jump to next or Shift+Ctrl+G to jump to previous one.\n\n\n\n\n\n\nAlt+F to open permanent search dialog on the top of code area. Press Enter to find next and Shif+Enter to jump to previous one.\n\n\n\n\n\n\n\n\nCode Relpace\n\n\nShift+Ctrl+R to open replace dialog, press Enter after input the source string and press angin after input the replacement string. Please surround your input with \n/\n if you want the string identitied as regexp(eg: /your_context/ )\n\n\n\n\nUndo \n Redo\n\n\nClick \nEdit\n-\nRedo\n in menu bar or press Ctrl+Z to redo the change. Click \nEdit\n-\nUndo\n in menu bar or press Ctrl+Y to undo the change. The title tab of code edit area is shown with red color if there exists unsave change in code file.\n\n\n\n\nFile Save\n\n\nClick \nFile\n-\nSave\n in menu bar or Press Ctrl+S to save the current focused file. Click \nFile\n-\nSave All\n in menu bar or Press Ctrl+Shift+S to save all opened file.", 
+            "title": "Contract Edit"
+        }, 
+        {
+            "location": "/research/ide/ide-edit/#ide-contract-edit", 
+            "text": "The single contract in IDE exists as project. Top folders which are csharp, java, kotlin and uvlua are initial folder and not editable. Root folder in top folders is the actual contract project, anything in root folder belogs the project.  In this chapter, we introduce the base new, edit, delete, search and replace operations of contract. We use uvlua as example programming language while others are exactly same.", 
+            "title": "IDE Contract Edit"
+        }, 
+        {
+            "location": "/research/ide/ide-edit/#new-contract", 
+            "text": "Click  File - New Contract - New uvlua Contract  or right click  uvlua - New Contract  in resource management to open the new file dialog.   Input the contract name and select contract template provided by IDE if you needed and finally click  Confirm  to create a new contract.", 
+            "title": "New Contract"
+        }, 
+        {
+            "location": "/research/ide/ide-edit/#improt-contract", 
+            "text": "Click  File - Import Contract - Import uvlua Contract  in menu bar or right click  uvlua - Import Contract  in resource management to open contract selection dialog.    Select the contract file with uvlua as suffix.", 
+            "title": "Improt Contract"
+        }, 
+        {
+            "location": "/research/ide/ide-edit/#delete-contract", 
+            "text": "Right click the contract file or folder in resource management, click  Delete .", 
+            "title": "Delete Contract"
+        }, 
+        {
+            "location": "/research/ide/ide-edit/#code-edit", 
+            "text": "Click contract file to show the code in central area and start the edit. You can get some help from  Help  in menu bar .", 
+            "title": "Code Edit"
+        }, 
+        {
+            "location": "/research/ide/ide-edit/#code-search", 
+            "text": "There are two methods to start the search, which both need the focus in central code area.    Ctrl+F to open temprary search dialog on the top of code area. Jump to the first position of search result after press Enter key and the dialog will hide immediately. Press Ctrl+G to jump to next or Shift+Ctrl+G to jump to previous one.    Alt+F to open permanent search dialog on the top of code area. Press Enter to find next and Shif+Enter to jump to previous one.", 
+            "title": "Code Search"
+        }, 
+        {
+            "location": "/research/ide/ide-edit/#code-relpace", 
+            "text": "Shift+Ctrl+R to open replace dialog, press Enter after input the source string and press angin after input the replacement string. Please surround your input with  /  if you want the string identitied as regexp(eg: /your_context/ )", 
+            "title": "Code Relpace"
+        }, 
+        {
+            "location": "/research/ide/ide-edit/#undo-redo", 
+            "text": "Click  Edit - Redo  in menu bar or press Ctrl+Z to redo the change. Click  Edit - Undo  in menu bar or press Ctrl+Y to undo the change. The title tab of code edit area is shown with red color if there exists unsave change in code file.", 
+            "title": "Undo &amp; Redo"
+        }, 
+        {
+            "location": "/research/ide/ide-edit/#file-save", 
+            "text": "Click  File - Save  in menu bar or Press Ctrl+S to save the current focused file. Click  File - Save All  in menu bar or Press Ctrl+Shift+S to save all opened file.", 
+            "title": "File Save"
+        }, 
+        {
+            "location": "/research/ide/ide-compile/", 
+            "text": "IDE Contract Compile\n\n\nThe single contract in IDE exists as project. Top folders which are csharp, java, kotlin and uvlua are initial folder and not editable. Root folder in top folders is the actual contract project, anything in root folder belogs the project.\n\n\nThe Compiler take one project as compiling unit while compiling, you can choose any contract file under project folder to comile the whole project.\n\n\nRight click the contract file and slect the \nCompile\n or click \nDebug\n-\nCompile\n in menu bar or press F7 to compile the current project.\n\n\n\n\n\n\nThe Compiler will generate the gpc file if the contract successfully compiled. You can browser the context of gpc by clicking it under the project folder. Functions and events of contract are shown at the left-bottom of main window and the out put during compiling.\n\n\n\n\nEnvrionment requirement\n\n\nThe compiling of uvlua contract is environment independent. JDK8 is needed and make sure command of java is ok if you want compile java and kotlin  contract. The compiling of c# contract need the install of .net framework4.5 or later and make sure the dotnet command can successfully run.", 
+            "title": "Contract Compile"
+        }, 
+        {
+            "location": "/research/ide/ide-compile/#ide-contract-compile", 
+            "text": "The single contract in IDE exists as project. Top folders which are csharp, java, kotlin and uvlua are initial folder and not editable. Root folder in top folders is the actual contract project, anything in root folder belogs the project.  The Compiler take one project as compiling unit while compiling, you can choose any contract file under project folder to comile the whole project.  Right click the contract file and slect the  Compile  or click  Debug - Compile  in menu bar or press F7 to compile the current project.    The Compiler will generate the gpc file if the contract successfully compiled. You can browser the context of gpc by clicking it under the project folder. Functions and events of contract are shown at the left-bottom of main window and the out put during compiling.", 
+            "title": "IDE Contract Compile"
+        }, 
+        {
+            "location": "/research/ide/ide-compile/#envrionment-requirement", 
+            "text": "The compiling of uvlua contract is environment independent. JDK8 is needed and make sure command of java is ok if you want compile java and kotlin  contract. The compiling of c# contract need the install of .net framework4.5 or later and make sure the dotnet command can successfully run.", 
+            "title": "Envrionment requirement"
+        }, 
+        {
+            "location": "/research/ide/ide-debug/", 
+            "text": "IDE Contract Debug\n\n\nUvlua is now the only supported language of debugger, please make sure the contract can be compiled successfully.It should be known that the debugging unit is the single function in contract.\n\n\nBefore debugging contract, open the contract and set at least one breakpoint by click beside the line clutter.\n\n\n\n\nClick \nDebug\n-\nDebug\n in menu bar or Press F5 to start the debugger.\n\n\n\n\nThe debugger confirm dialog will immediately pop up and you should choose the exact function and input the params of function, then click confirm to start it. Since the data of debugging is saved locally each time of debugging, we provide the \nRestTestData\n button to clear the old data.\n\n\n\n\nOnce enter the debugging state, the compiler will pause at the first breakpoint you set in the function, please press F5 or restart the compiler if that not happen. Right top of main window shows the local viariable and right bottom show the stack trace.\n\n\n\n\nDebug Command\n\n\nDebug Step\n\n\nClick \nDebug\n-\nStep\n in menu bar or press F10 to step the debugging.\n\n\n\n\nDebug StepInto\n\n\nClick \nDebug\n-\nStepInto\n in menu bar or press F11 to step into the function.\n\n\n\n\nBrekpoint\n\n\nClick \nDebug\n-\nTabBreak\n in menu bar or press F9 to add or delete a breakpoint an current line.\nTo clear all the breakpoint of current file, click \nDebug\n-\nClearBreak\n in menu bar or press Ctrl+Shift+F9.\n\n\n\n\nStop Debug\n\n\nClick \nDebug\n-\nStop\n in menu bar or press Shift+F5, the compiler will run like there is no breakpoint.", 
+            "title": "Contract Debug"
+        }, 
+        {
+            "location": "/research/ide/ide-debug/#ide-contract-debug", 
+            "text": "Uvlua is now the only supported language of debugger, please make sure the contract can be compiled successfully.It should be known that the debugging unit is the single function in contract.  Before debugging contract, open the contract and set at least one breakpoint by click beside the line clutter.   Click  Debug - Debug  in menu bar or Press F5 to start the debugger.   The debugger confirm dialog will immediately pop up and you should choose the exact function and input the params of function, then click confirm to start it. Since the data of debugging is saved locally each time of debugging, we provide the  RestTestData  button to clear the old data.   Once enter the debugging state, the compiler will pause at the first breakpoint you set in the function, please press F5 or restart the compiler if that not happen. Right top of main window shows the local viariable and right bottom show the stack trace.", 
+            "title": "IDE Contract Debug"
+        }, 
+        {
+            "location": "/research/ide/ide-debug/#debug-command", 
+            "text": "", 
+            "title": "Debug Command"
+        }, 
+        {
+            "location": "/research/ide/ide-debug/#debug-step", 
+            "text": "Click  Debug - Step  in menu bar or press F10 to step the debugging.", 
+            "title": "Debug Step"
+        }, 
+        {
+            "location": "/research/ide/ide-debug/#debug-stepinto", 
+            "text": "Click  Debug - StepInto  in menu bar or press F11 to step into the function.", 
+            "title": "Debug StepInto"
+        }, 
+        {
+            "location": "/research/ide/ide-debug/#brekpoint", 
+            "text": "Click  Debug - TabBreak  in menu bar or press F9 to add or delete a breakpoint an current line.\nTo clear all the breakpoint of current file, click  Debug - ClearBreak  in menu bar or press Ctrl+Shift+F9.", 
+            "title": "Brekpoint"
+        }, 
+        {
+            "location": "/research/ide/ide-debug/#stop-debug", 
+            "text": "Click  Debug - Stop  in menu bar or press Shift+F5, the compiler will run like there is no breakpoint.", 
+            "title": "Stop Debug"
+        }, 
+        {
+            "location": "/research/ide/ide-online/", 
+            "text": "IDE Contract Test \n Deploy online\n\n\nIDE provide the complete environment of testing and deploying online. The test and deploy method will introduced this chapter. We\nll make the HX as example and other chains\n operation is mostly similar with HX.\n\n\nStart Chain\n\n\nClick \nFile\n-\nConfigure\n in menu bar to open configure dialog, select the ChainType as HX, select StartChain as Test, click \nConfirm\n and restart the IDE whenever you want.\n\n\n\n\nThere may some information shown at the start up window  and once you successfully in main window, you can see the HX TEST CHAIN at the title bar and the status of hx-chain at the status bar. If error occures, please close the ide and the remain progress backyard and restart IDE, or get the latest chain software from the official web. \n\n\n\n\n\n\nBackstage of Chain\n\n\nClick \nTool\n-\nChain Output\n in menu bar to browser the output of chain.\n\n\n\n\nConsole\n\n\nClick \nTool\n-\nConsole\n in menu bar to get the console dialog, use it just like the normal console of wallet.\n\n\n\n\nAccount\n\n\nClick \nTool\n-\nAccountManager\n in menu bar to open the account. There may be already one pre-test account named nathan for user to test the contract. Also, you can create new account by clicking \nNewAccount\n and import account by clciking \nImportKey\n to choose priviate key file.\n\n\n\n\nTransfer\n\n\nClick \nTool\n-\nTransfer\n in menu bar to open transfer dialog, input asset number and the receiver address, then click \nConfirm\n to process transfer.\n\n\n\n\nContract Register\n\n\nClick \nContract\n-\nRegister Contract\n in menu bar to open contract register dialog, choose \nContractFile\n, input \nGasLimit\n and \nGasPrice\n to set the fee of register and there\ns recommand value which is pre-calculated. Press Confirm to register contract and you can see the result in the tip dialog.\n\n\n\n\nAfter register successfully, you can find your registered contract at the \nRegistered\n tab in resource management.\n\n\n\n\nContract Upgrade\n\n\nClick \nContract\n-\nUpgrade Contract\n in menu bar to open contract upgrade dialog, choose \nAccount\n and the \nContractAddress\n belog the account you choose, input the \nContractName\n, \nContractDes\n you want, and give the value of \nGasLimit\n,\nGasPrice\n, click \nConfirm\n to upgrade contract.\n\n\n\n\nAfter upgrade successfully, you can find your registered contract at the \nRegistered\n tab in resource management.\n\n\n\n\nCall Contract\n\n\nClick \nContract\n-\nCall Contract\n in menu bar to open contract caller dialog, choose \nCallerAccount\n and the \nContractAddress\n belog the account you choose, input the \nFunction\n, \nParam\n you want, and give the value of \nGasLimit\n,\nGasPrice\n, click \nConfirm\n to call contract api.\n\n\n\n\nContract Deposit\n\n\nClick \nContract\n-\nContractDeposit\n in menu bar to open contract deposit dialog, choose \nCallerAccount\n to decide the payler, select \nAsset\n and \nAmmount\n, input \nContratAddress\n as destination, and give the value of \nGasLimit\n,\nGasPrice\n, click \nConfirm\n to transfer to contract.\n\n\n\n\nDeploy on Formal Chain\n\n\nActually, there\ns no difference between test and formal chain, once you tested your contract well, you can repeate your operations on formal chain to deploy. Firstly, you should switch your current ide connection to formal chain, by change the start-up settings. Open \nSettings\n dialog, choose the \nStartType\n as \nFormal\n or \nALL\n and restart IDE, you\nll find \nFormal\n in title bar if you choose \nFormal\n. If you choose \nAll\n, the default chain is still \nTest\n, you can switch to formal chain by click \nTool\n-\nChange To Formal\n.\nSince there\ns no password peotection of formal chain, only a few asset should be transfer to formal to deploy your contract\n.", 
+            "title": "Contract Test & Deploy"
+        }, 
+        {
+            "location": "/research/ide/ide-online/#ide-contract-test-deploy-online", 
+            "text": "IDE provide the complete environment of testing and deploying online. The test and deploy method will introduced this chapter. We ll make the HX as example and other chains  operation is mostly similar with HX.", 
+            "title": "IDE Contract Test &amp; Deploy online"
+        }, 
+        {
+            "location": "/research/ide/ide-online/#start-chain", 
+            "text": "Click  File - Configure  in menu bar to open configure dialog, select the ChainType as HX, select StartChain as Test, click  Confirm  and restart the IDE whenever you want.   There may some information shown at the start up window  and once you successfully in main window, you can see the HX TEST CHAIN at the title bar and the status of hx-chain at the status bar. If error occures, please close the ide and the remain progress backyard and restart IDE, or get the latest chain software from the official web.", 
+            "title": "Start Chain"
+        }, 
+        {
+            "location": "/research/ide/ide-online/#backstage-of-chain", 
+            "text": "Click  Tool - Chain Output  in menu bar to browser the output of chain.", 
+            "title": "Backstage of Chain"
+        }, 
+        {
+            "location": "/research/ide/ide-online/#console", 
+            "text": "Click  Tool - Console  in menu bar to get the console dialog, use it just like the normal console of wallet.", 
+            "title": "Console"
+        }, 
+        {
+            "location": "/research/ide/ide-online/#account", 
+            "text": "Click  Tool - AccountManager  in menu bar to open the account. There may be already one pre-test account named nathan for user to test the contract. Also, you can create new account by clicking  NewAccount  and import account by clciking  ImportKey  to choose priviate key file.", 
+            "title": "Account"
+        }, 
+        {
+            "location": "/research/ide/ide-online/#transfer", 
+            "text": "Click  Tool - Transfer  in menu bar to open transfer dialog, input asset number and the receiver address, then click  Confirm  to process transfer.", 
+            "title": "Transfer"
+        }, 
+        {
+            "location": "/research/ide/ide-online/#contract-register", 
+            "text": "Click  Contract - Register Contract  in menu bar to open contract register dialog, choose  ContractFile , input  GasLimit  and  GasPrice  to set the fee of register and there s recommand value which is pre-calculated. Press Confirm to register contract and you can see the result in the tip dialog.   After register successfully, you can find your registered contract at the  Registered  tab in resource management.", 
+            "title": "Contract Register"
+        }, 
+        {
+            "location": "/research/ide/ide-online/#contract-upgrade", 
+            "text": "Click  Contract - Upgrade Contract  in menu bar to open contract upgrade dialog, choose  Account  and the  ContractAddress  belog the account you choose, input the  ContractName ,  ContractDes  you want, and give the value of  GasLimit , GasPrice , click  Confirm  to upgrade contract.   After upgrade successfully, you can find your registered contract at the  Registered  tab in resource management.", 
+            "title": "Contract Upgrade"
+        }, 
+        {
+            "location": "/research/ide/ide-online/#call-contract", 
+            "text": "Click  Contract - Call Contract  in menu bar to open contract caller dialog, choose  CallerAccount  and the  ContractAddress  belog the account you choose, input the  Function ,  Param  you want, and give the value of  GasLimit , GasPrice , click  Confirm  to call contract api.", 
+            "title": "Call Contract"
+        }, 
+        {
+            "location": "/research/ide/ide-online/#contract-deposit", 
+            "text": "Click  Contract - ContractDeposit  in menu bar to open contract deposit dialog, choose  CallerAccount  to decide the payler, select  Asset  and  Ammount , input  ContratAddress  as destination, and give the value of  GasLimit , GasPrice , click  Confirm  to transfer to contract.", 
+            "title": "Contract Deposit"
+        }, 
+        {
+            "location": "/research/ide/ide-online/#deploy-on-formal-chain", 
+            "text": "Actually, there s no difference between test and formal chain, once you tested your contract well, you can repeate your operations on formal chain to deploy. Firstly, you should switch your current ide connection to formal chain, by change the start-up settings. Open  Settings  dialog, choose the  StartType  as  Formal  or  ALL  and restart IDE, you ll find  Formal  in title bar if you choose  Formal . If you choose  All , the default chain is still  Test , you can switch to formal chain by click  Tool - Change To Formal . Since there s no password peotection of formal chain, only a few asset should be transfer to formal to deploy your contract .", 
+            "title": "Deploy on Formal Chain"
         }, 
         {
             "location": "/faq/wallet-usage/wallet-usage/", 

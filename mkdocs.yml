@@ -87,7 +87,7 @@ pages:
     - "Network Roles": 'advanced/pov/network-role.md'
     - "Asset Collateral": 'advanced/pov/asset-collateral.md'
     - "Consensus Protocol/Algorithm": 'advanced/pov/consensus-protocol.md'
-    - "Security Features of a POV Consensus Mechanism": 'advanced/pov/POV.md'
+    - "Security Features of a RPPOM Consensus Mechanism": 'advanced/pov/POV.md'
   - Community Governance:
     - 'Overview': 'advanced/community-governance/community-overview.md'
     - 'Selecting a Senator': 'advanced/community-governance/select-senator.md'
@@ -97,7 +97,12 @@ pages:
 - Research:
   - Smart Contract IDE:
     - 'IDE Introduce': 'research/ide/ide-introduce.md'
-    - 'IDE Using': 'research/ide/ide-using.md'
+    - IDE Usage: 
+      - 'Init & Settings': 'research/ide/ide-using.md'
+      - 'Contract Edit': 'research/ide/ide-edit.md'
+      - 'Contract Compile': 'research/ide/ide-compile.md'
+      - 'Contract Debug': 'research/ide/ide-debug.md'
+      - 'Contract Test & Deploy': 'research/ide/ide-online.md'
 - FAQ:
   - 'Hx-indicator usage Questions': 'faq/wallet-usage/wallet-usage.md'
   - 'Orientation Questions':

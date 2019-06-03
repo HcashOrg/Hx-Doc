@@ -87,7 +87,7 @@ pages:
     - "角色": 'advanced/pov/network-role.md'
     - "质押": 'advanced/pov/asset-collateral.md'
     - "竞争算法": 'advanced/pov/consensus-protocol.md'
-    - "POV共识机制的安全性": 'advanced/pov/POV.md'
+    - "RPPOM共识机制的安全性": 'advanced/pov/POV.md'
   - 社区治理:
     - '简介': 'advanced/community-governance/community-overview.md'
     - 'Senator的选出和退出': 'advanced/community-governance/select-senator.md'
@@ -97,7 +97,12 @@ pages:
 - 研究:
   - 智能合约IDE:
     - 'IDE简介': 'research/ide/ide-introduce.md'
-    - 'IDE使用': 'research/ide/ide-using.md'
+    - IDE使用: 
+      - '初始化及设置': 'research/ide/ide-using.md'
+      - '合约编辑': 'research/ide/ide-edit.md'
+      - '合约编译': 'research/ide/ide-compile.md'
+      - '合约调试': 'research/ide/ide-debug.md'
+      - '合约测试上链': 'research/ide/ide-online.md'
 - 问题:
   - 'Hx-indicator使用问题': 'faq/wallet-usage/wallet-usage.md'
   - '概念问题':

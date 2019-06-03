@@ -38,7 +38,7 @@
     
     
       
-        <title>POV共识机制的安全性 - HyperExchange文档</title>
+        <title>RPPOM共识机制的安全性 - HyperExchange文档</title>
       
     
     
@@ -113,7 +113,7 @@
                 HyperExchange文档
               </span>
               <span class="md-header-nav__topic">
-                POV共识机制的安全性
+                RPPOM共识机制的安全性
               </span>
             
           
@@ -1046,8 +1046,8 @@
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
     
-    <a href="./" title="POV共识机制的安全性" class="md-nav__link md-nav__link--active">
-      POV共识机制的安全性
+    <a href="./" title="RPPOM共识机制的安全性" class="md-nav__link md-nav__link--active">
+      RPPOM共识机制的安全性
     </a>
     
   </li>
@@ -1202,10 +1202,82 @@
           
 
 
-  <li class="md-nav__item">
-    <a href="../../../research/ide/ide-using/" title="IDE使用" class="md-nav__link">
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-1-2" type="checkbox" id="nav-5-1-2">
+    
+    <label class="md-nav__link" for="nav-5-1-2">
       IDE使用
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-5-1-2">
+        IDE使用
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../research/ide/ide-using/" title="初始化及设置" class="md-nav__link">
+      初始化及设置
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../research/ide/ide-edit/" title="合约编辑" class="md-nav__link">
+      合约编辑
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../research/ide/ide-compile/" title="合约编译" class="md-nav__link">
+      合约编译
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../research/ide/ide-debug/" title="合约调试" class="md-nav__link">
+      合约调试
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../research/ide/ide-online/" title="合约测试上链" class="md-nav__link">
+      合约测试上链
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
         
@@ -1402,7 +1474,7 @@
                   <a href="https://github.com/HcashOrg/Hx-Doc/edit/master/docs/advanced/pov/POV.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>POV共识机制的安全性</h1>
+                  <h1>RPPOM共识机制的安全性</h1>
                 
                 <p>POV 拥有极高的系统安全性，足以防范各种恶意攻击和突发情况，确保网络和资产安全。我们亦可以防范以下极端情况：</p>
 <p>1、Citizen 是维护系统稳定的重要角色，假设随机选出的一部分 Citizen不工作，那么只要不是选出的所有 25 个 Citizen 都不工作，并不会影响链的稳定性。只要选中的 25 个 Citizen 中有一位上线，它就能连续出 25 个块。在这种极端异常情况下，依靠链上的激励还是可以过渡到下一轮调整。在正常情况下如果有 Citizen 每连续 5 次不出块，那么将会降低该 Citizen 的参与率，参与率会以系数方式降低 Citizen 的质押资产数量，其计算公式为Citizen 最终质押 HX 金额 = 用户质押 HX 金额 X 参与率（0~100%）。因此，最终所有的 Citizen 都会是优质的节点，上述极端场景在实际环境中几乎不会出现。</p>

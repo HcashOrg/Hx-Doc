@@ -1,10 +1,7 @@
-# IDE Using
-
-We will introduce how to use HX IDE in this page.
-
+# IDE Initialize and Settings
 ## Download HX IDE
 
-You can visit website:<http://www.anychain.org/> to download HX IDE,now just support for Win7 above platform. Select the 64-bit and 32-bit versions of your system to download.
+You can visit website:<http://www.anychain.org/> to download HX IDE, support for Win7 x64 above platform or MacOS x64 platform.
 
 ## Start IDE
 
@@ -20,37 +17,39 @@ First start IDE need to setup a store path:
 
 ![Start IDE](/img/research/main-window.png)
 
-Menu Bar Description:
+###Menu Bar
 
-1.In `File` menu, include
+In Menu Bar, most of functions are provied, including settings, new contract, import contract, edit based on file, contract compile, debugging, testing and deploy and so on.
 
-* `New File` :create new uvlua/java/c#/kotlin contract file.
+The Tool Bar provides some shortcuts of frequently used function.
 
-* `Import File` :import local uvlua/java/c#/kotlin contract file.
+###Resource Management
+Resource Management privide the projects manager of contract, and show registered contract on-line with ide.
 
-* `Save/Save All/Close/Close All` :save opened file/save all opened files/close opened file/close all opened file.
+###Central Area
+Use for contract Edit.
 
-* `Configure` :change language/theme/chaintype/startchain.
+###Debug management
+Use for compile output and show debugging out put.
+
+###Status Bar
+Show the current state of chain.
+
+## Settings
+
+click `File`->`Configure` to open configure dialog.
+
+![Start IDE](/img/research/setting_in.png)
+
+In the dialog, you can choose the display language, English or Chinese;
+
+Modify the theme of IDE, black or white;
+
+Choose the chain type from HX, UB and CTC;
+
+Set the start-up type from test-chain, formal-chain or both, by the way, we set none start-up as default;
+
+Change the block-chain data path, make sure the path is fully English.
 
 ![Start IDE](/img/research/configure.png)
-
-2.In `Edit` menu, include `Redo` and `Undo`.
-
-3.In `Contract` menu, include `Register Contract/UpgradeCcontract/CallContract`.
-
-4.In `Debug` menu, include `Compile/Debug/Step/Stop/TabBreak/CleanBreak`.
-
-5.In `Tool` menu include:
-
-* `Console` :you can excute rpc command here.
-
-* `AccountManager` :you can create a new account or import an account.
-
-* `Transfer` :you can send a transfer transaction.
-
-6.In `Help` menu include:
-
-* `Help F1`: Jump to the web site of the contract programming document.
-
-* `About`: about us.
 
