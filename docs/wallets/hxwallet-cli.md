@@ -1,6 +1,6 @@
 # HyperExchange Cli-wallet Startup Guide
 
-Last updated for v1.0.7.
+[[toc]]
 
 The following will explain how to startup the console wallet (not GUI).
 

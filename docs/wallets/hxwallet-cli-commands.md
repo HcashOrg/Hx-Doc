@@ -1,6 +1,6 @@
 # hx_client Commands
 
-Last updated for v1.2.0.
+[[toc]]
 
 This guide assumes you have already Startup a hyperexchange witness-node using [HyperExchange Witness-node Setup](/wallets/hxnode-setup.md) and a cli-wallet using [Cli-wallet Startup](/wallets/hxwallet-cli.md).
 

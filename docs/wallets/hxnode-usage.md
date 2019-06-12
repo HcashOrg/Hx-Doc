@@ -1,6 +1,6 @@
 # hx_node Usage
 
-Last updated for v1.2.0.
+[[toc]]
 
 This guide assumes you have already set up a hyperexchange witness-node using [HyperExchange Witness-node Setup](/wallets/hxnode-setup.md),hx midware has startup and connect with oterh blockchain(BTC/LTC...),Following will introduce all arguments of witness-node.
 
