@@ -26,8 +26,7 @@ module.exports = {
                     children: [
                         '/getting-started/beginner-guide',
                         '/getting-started/hx-features',
-                        '/getting-started/obtaining-hx-test',
-                        '/getting-started/obtaining-hx',
+                        '/getting-started/hx-distribution',
                         '/getting-started/private-testnet',
                         '/getting-started/public-testnet',
                         '/getting-started/using-the-block-explorer'
@@ -153,8 +152,7 @@ module.exports = {
                     children: [
                         '/zh/getting-started/beginner-guide',
                         '/zh/getting-started/hx-features',
-                        '/zh/getting-started/obtaining-hx-test',
-                        '/zh/getting-started/obtaining-hx',
+                        '/zh/getting-started/hx-distribution',
                         '/zh/getting-started/private-testnet',
                         '/zh/getting-started/public-testnet',
                         '/zh/getting-started/using-the-block-explorer'
