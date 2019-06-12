@@ -1,8 +1,8 @@
 # install
 yarn global add vuepress # OR npm install -g vuepress
 
-# create a markdown file
-echo '# Hello VuePress' > README.md
+# enter 'docs' directory
+cd docs
 
 # start writing
 vuepress dev
