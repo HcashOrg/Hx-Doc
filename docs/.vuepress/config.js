@@ -14,6 +14,7 @@ module.exports = {
     themeConfig: {
         displayAllHeaders: true,
         locales: {
+            lastUpdated: 'Last Updated',
             '/': {
               selectText: 'Languages',
               label: 'English',
@@ -138,6 +139,7 @@ module.exports = {
               ]
             },
             '/zh/': {
+            lastUpdated: '最后更新',
               // 多语言下拉菜单的标题
               selectText: '选择语言',
               // 该语言在下拉菜单中的标签
