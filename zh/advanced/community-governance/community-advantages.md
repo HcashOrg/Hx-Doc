@@ -1,0 +1,8 @@
+# 优势
+
+Senator 通过共识对资产和社区进行管理，Citizen 通过共识来对Senator 的更替进行投票，二者利益一致又互相牵制，最大程度上保证了
+HyperExchange 的全网络的安全和稳定。
+
+整个 HyperExchange 网络由15个Senator优质节点通过共识进行治理，极大程度上保证了决策的效率。保留5个安全Senator的方案能确保Citizen无法通过投票的机制控制超过2/3个Senator，因此无法恶意提取跨链资产。
+
+Senator 的利益和社区的利益是息息相关，Senator 可以从HyperExchange 生态中获得持续稳定的收益。

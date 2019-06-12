@@ -1,0 +1,3 @@
+# HX Axis
+
+The HyperExchange Axis is an important component in achieving cross-chain communication. Acting as a multi-asset decentralised ledger, it is responsible for recording, verifying and broadcasting cross-chain data, generating and destroying corresponding HIOU tokens, and completing the transfer of cross-chain assets. In the HyperExchange Axis, network security is ensured by consensus through Senators. The binding relationship between a HyperExchange account, its corresponding tunnel account and the cross-chain transaction of each asset is verified by Senators on the chain. Consensus is reached to verify and ensure that each asset chain is consistent with assets listed on the HyperExchange Axis.

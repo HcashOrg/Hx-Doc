@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Private Testnet Using Guide | HyperExchange</title>
+    <meta name="description" content="Collection of HX documentations">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.b0fce880.css" as="style"><link rel="preload" href="/assets/js/app.edaa8358.js" as="script"><link rel="preload" href="/assets/js/2.dabf1d00.js" as="script"><link rel="preload" href="/assets/js/47.a36d1adf.js" as="script"><link rel="prefetch" href="/assets/js/10.06335952.js"><link rel="prefetch" href="/assets/js/100.ab1185ba.js"><link rel="prefetch" href="/assets/js/101.c61d684e.js"><link rel="prefetch" href="/assets/js/102.285bd25c.js"><link rel="prefetch" href="/assets/js/103.4f526643.js"><link rel="prefetch" href="/assets/js/104.4c6815e4.js"><link rel="prefetch" href="/assets/js/105.33dab04c.js"><link rel="prefetch" href="/assets/js/106.526a6b03.js"><link rel="prefetch" href="/assets/js/107.d8cc3f9a.js"><link rel="prefetch" href="/assets/js/108.40b4481d.js"><link rel="prefetch" href="/assets/js/109.54bbc004.js"><link rel="prefetch" href="/assets/js/11.3aeeeb29.js"><link rel="prefetch" href="/assets/js/110.0ea5c251.js"><link rel="prefetch" href="/assets/js/111.41a3a6f6.js"><link rel="prefetch" href="/assets/js/112.ac25be2e.js"><link rel="prefetch" href="/assets/js/113.22958d3b.js"><link rel="prefetch" href="/assets/js/114.64b61393.js"><link rel="prefetch" href="/assets/js/115.4fe312e4.js"><link rel="prefetch" href="/assets/js/116.96f11d3f.js"><link rel="prefetch" href="/assets/js/117.67f66e5e.js"><link rel="prefetch" href="/assets/js/118.44abe790.js"><link rel="prefetch" href="/assets/js/119.0f37c397.js"><link rel="prefetch" href="/assets/js/12.c49ffb5f.js"><link rel="prefetch" href="/assets/js/120.91ea3701.js"><link rel="prefetch" href="/assets/js/121.7d653a09.js"><link rel="prefetch" href="/assets/js/122.da7f58b5.js"><link rel="prefetch" href="/assets/js/123.2c7a6b39.js"><link rel="prefetch" href="/assets/js/124.a4af9b22.js"><link rel="prefetch" href="/assets/js/125.7991e53e.js"><link rel="prefetch" href="/assets/js/126.e649d780.js"><link rel="prefetch" href="/assets/js/127.72f4937c.js"><link rel="prefetch" href="/assets/js/128.244e88ab.js"><link rel="prefetch" href="/assets/js/129.af5ff9f3.js"><link rel="prefetch" href="/assets/js/13.a3c93fc5.js"><link rel="prefetch" href="/assets/js/130.83f0646e.js"><link rel="prefetch" href="/assets/js/131.3b19d657.js"><link rel="prefetch" href="/assets/js/14.cf592b1f.js"><link rel="prefetch" href="/assets/js/15.21ec75f1.js"><link rel="prefetch" href="/assets/js/16.0ea91d10.js"><link rel="prefetch" href="/assets/js/17.40a13ce2.js"><link rel="prefetch" href="/assets/js/18.dd7f01ea.js"><link rel="prefetch" href="/assets/js/19.8f84baee.js"><link rel="prefetch" href="/assets/js/20.1209ad96.js"><link rel="prefetch" href="/assets/js/21.07115a77.js"><link rel="prefetch" href="/assets/js/22.90adaf93.js"><link rel="prefetch" href="/assets/js/23.3d873c7f.js"><link rel="prefetch" href="/assets/js/24.47038a97.js"><link rel="prefetch" href="/assets/js/25.5abade75.js"><link rel="prefetch" href="/assets/js/26.915109ec.js"><link rel="prefetch" href="/assets/js/27.a2d5a59d.js"><link rel="prefetch" href="/assets/js/28.cb47832b.js"><link rel="prefetch" href="/assets/js/29.d923f25d.js"><link rel="prefetch" href="/assets/js/3.d339ea80.js"><link rel="prefetch" href="/assets/js/30.2c98fb87.js"><link rel="prefetch" href="/assets/js/31.69d641fa.js"><link rel="prefetch" href="/assets/js/32.17745bab.js"><link rel="prefetch" href="/assets/js/33.e46392bc.js"><link rel="prefetch" href="/assets/js/34.e560cff9.js"><link rel="prefetch" href="/assets/js/35.03c444e7.js"><link rel="prefetch" href="/assets/js/36.8bb26369.js"><link rel="prefetch" href="/assets/js/37.6bdb03e2.js"><link rel="prefetch" href="/assets/js/38.f3b8a7f7.js"><link rel="prefetch" href="/assets/js/39.d4bbba97.js"><link rel="prefetch" href="/assets/js/4.dd89b425.js"><link rel="prefetch" href="/assets/js/40.65b5c78f.js"><link rel="prefetch" href="/assets/js/41.954400bb.js"><link rel="prefetch" href="/assets/js/42.427ec57f.js"><link rel="prefetch" href="/assets/js/43.5636dfea.js"><link rel="prefetch" href="/assets/js/44.db959c03.js"><link rel="prefetch" href="/assets/js/45.022e1a03.js"><link rel="prefetch" href="/assets/js/46.3ec0b617.js"><link rel="prefetch" href="/assets/js/48.2e42c229.js"><link rel="prefetch" href="/assets/js/49.5509223e.js"><link rel="prefetch" href="/assets/js/5.a9002535.js"><link rel="prefetch" href="/assets/js/50.008a3791.js"><link rel="prefetch" href="/assets/js/51.8730230c.js"><link rel="prefetch" href="/assets/js/52.941159dc.js"><link rel="prefetch" href="/assets/js/53.dc3438fc.js"><link rel="prefetch" href="/assets/js/54.9278fc79.js"><link rel="prefetch" href="/assets/js/55.7c0de57a.js"><link rel="prefetch" href="/assets/js/56.76972f52.js"><link rel="prefetch" href="/assets/js/57.f8f9a2cd.js"><link rel="prefetch" href="/assets/js/58.86f32c57.js"><link rel="prefetch" href="/assets/js/59.744b1a39.js"><link rel="prefetch" href="/assets/js/6.a91ccf39.js"><link rel="prefetch" href="/assets/js/60.c8b8e44f.js"><link rel="prefetch" href="/assets/js/61.9279f25c.js"><link rel="prefetch" href="/assets/js/62.2beac0e4.js"><link rel="prefetch" href="/assets/js/63.72ca93cd.js"><link rel="prefetch" href="/assets/js/64.f2ee1b16.js"><link rel="prefetch" href="/assets/js/65.b82dacea.js"><link rel="prefetch" href="/assets/js/66.617ba77d.js"><link rel="prefetch" href="/assets/js/67.8cbedc66.js"><link rel="prefetch" href="/assets/js/68.f3fc5e8a.js"><link rel="prefetch" href="/assets/js/69.f6f79451.js"><link rel="prefetch" href="/assets/js/7.39ca541a.js"><link rel="prefetch" href="/assets/js/70.0aa04d89.js"><link rel="prefetch" href="/assets/js/71.41cad926.js"><link rel="prefetch" href="/assets/js/72.0119cbe6.js"><link rel="prefetch" href="/assets/js/73.26d9ad49.js"><link rel="prefetch" href="/assets/js/74.5070942e.js"><link rel="prefetch" href="/assets/js/75.c7c51eca.js"><link rel="prefetch" href="/assets/js/76.05ea7c14.js"><link rel="prefetch" href="/assets/js/77.f79457f9.js"><link rel="prefetch" href="/assets/js/78.e1679b1d.js"><link rel="prefetch" href="/assets/js/79.410bcac6.js"><link rel="prefetch" href="/assets/js/8.a179b1c6.js"><link rel="prefetch" href="/assets/js/80.7d22d6f1.js"><link rel="prefetch" href="/assets/js/81.df2db144.js"><link rel="prefetch" href="/assets/js/82.d07a436f.js"><link rel="prefetch" href="/assets/js/83.5c77ca74.js"><link rel="prefetch" href="/assets/js/84.b2f3d701.js"><link rel="prefetch" href="/assets/js/85.8cd95662.js"><link rel="prefetch" href="/assets/js/86.da06d5a4.js"><link rel="prefetch" href="/assets/js/87.89ed57e2.js"><link rel="prefetch" href="/assets/js/88.14d8d6c3.js"><link rel="prefetch" href="/assets/js/89.af1c909d.js"><link rel="prefetch" href="/assets/js/9.e69d9b47.js"><link rel="prefetch" href="/assets/js/90.271ad850.js"><link rel="prefetch" href="/assets/js/91.b323d526.js"><link rel="prefetch" href="/assets/js/92.104239b7.js"><link rel="prefetch" href="/assets/js/93.d1d166ad.js"><link rel="prefetch" href="/assets/js/94.c1decb67.js"><link rel="prefetch" href="/assets/js/95.470a65bd.js"><link rel="prefetch" href="/assets/js/96.d8010fd6.js"><link rel="prefetch" href="/assets/js/97.f3db7e87.js"><link rel="prefetch" href="/assets/js/98.ca5fbfe2.js"><link rel="prefetch" href="/assets/js/99.35a803f9.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.b0fce880.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">HyperExchange</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">Languages</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/getting-started/private-testnet.html" class="nav-link router-link-exact-active router-link-active">English</a></li><li class="dropdown-item"><!----> <a href="/zh/getting-started/private-testnet.html" class="nav-link">简体中文</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">Languages</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/getting-started/private-testnet.html" class="nav-link router-link-exact-active router-link-active">English</a></li><li class="dropdown-item"><!----> <a href="/zh/getting-started/private-testnet.html" class="nav-link">简体中文</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/" class="sidebar-link">What's HyperExchange</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/#what-is-hyperexchange" class="sidebar-link">What is HyperExchange?</a></li><li class="sidebar-sub-header"><a href="/#what-is-hiou" class="sidebar-link">What is HIOU</a></li><li class="sidebar-sub-header"><a href="/#what-is-feeacceptance" class="sidebar-link">What is FeeAcceptance</a></li><li class="sidebar-sub-header"><a href="/#what-is-a-hypercash-chain" class="sidebar-link">What is a HyperCash chain?</a></li><li class="sidebar-sub-header"><a href="/#what-is-the-cross-chain" class="sidebar-link">What is the Cross-chain?</a></li></ul></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Getting Started</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/getting-started/beginner-guide.html" class="sidebar-link">Beginner's Guide</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/getting-started/beginner-guide.html#welcome-to-hyperexchange" class="sidebar-link">Welcome To HyperExchange</a></li><li class="sidebar-sub-header"><a href="/getting-started/beginner-guide.html#applications" class="sidebar-link">Applications</a></li><li class="sidebar-sub-header"><a href="/getting-started/beginner-guide.html#user-guides" class="sidebar-link">User Guides</a></li><li class="sidebar-sub-header"><a href="/getting-started/beginner-guide.html#installation-guides" class="sidebar-link">Installation Guides</a></li><li class="sidebar-sub-header"><a href="/getting-started/beginner-guide.html#general-guides" class="sidebar-link">General Guides</a></li></ul></li><li><a href="/getting-started/hx-features.html" class="sidebar-link">HyperExchange Features</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/getting-started/hx-features.html#_100-reserve-ratio" class="sidebar-link">100% Reserve Ratio</a></li><li class="sidebar-sub-header"><a href="/getting-started/hx-features.html#efficiency" class="sidebar-link">Efficiency</a></li><li class="sidebar-sub-header"><a href="/getting-started/hx-features.html#smart-contracts" class="sidebar-link">Smart Contracts</a></li><li class="sidebar-sub-header"><a href="/getting-started/hx-features.html#fee-flexibility" class="sidebar-link">Fee Flexibility</a></li></ul></li><li><a href="/getting-started/obtaining-hx-test.html" class="sidebar-link">HX distribute</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/getting-started/obtaining-hx-test.html#hx" class="sidebar-link">HX</a></li><li class="sidebar-sub-header"><a href="/getting-started/obtaining-hx-test.html#incentive-systems" class="sidebar-link">Incentive Systems</a></li><li class="sidebar-sub-header"><a href="/getting-started/obtaining-hx-test.html#tourists" class="sidebar-link">Tourists</a></li><li class="sidebar-sub-header"><a href="/getting-started/obtaining-hx-test.html#tourists-2" class="sidebar-link">Tourists</a></li><li class="sidebar-sub-header"><a href="/getting-started/obtaining-hx-test.html#citizens" class="sidebar-link">Citizens</a></li><li class="sidebar-sub-header"><a href="/getting-started/obtaining-hx-test.html#senators" class="sidebar-link">Senators</a></li></ul></li><li><a href="/getting-started/obtaining-hx.html" class="sidebar-link">Obtaining HX in mainnet</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/getting-started/obtaining-hx.html#hx" class="sidebar-link">HX</a></li><li class="sidebar-sub-header"><a href="/getting-started/obtaining-hx.html#incentive-systems" class="sidebar-link">Incentive Systems</a></li><li class="sidebar-sub-header"><a href="/getting-started/obtaining-hx.html#tourists" class="sidebar-link">Tourists</a></li><li class="sidebar-sub-header"><a href="/getting-started/obtaining-hx.html#citizens" class="sidebar-link">Citizens</a></li><li class="sidebar-sub-header"><a href="/getting-started/obtaining-hx.html#senators" class="sidebar-link">Senators</a></li></ul></li><li><a href="/getting-started/private-testnet.html" class="active sidebar-link">Private Testnet Using Guide</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/getting-started/private-testnet.html#prerequisites" class="sidebar-link">PREREQUISITES</a></li><li class="sidebar-sub-header"><a href="/getting-started/private-testnet.html#folder-structure" class="sidebar-link">FOLDER STRUCTURE</a></li><li class="sidebar-sub-header"><a href="/getting-started/private-testnet.html#the-genesis-file" class="sidebar-link">THE GENESIS FILE</a></li><li class="sidebar-sub-header"><a href="/getting-started/private-testnet.html#get-the-blockchain-id" class="sidebar-link">GET THE BLOCKCHAIN ID</a></li><li class="sidebar-sub-header"><a href="/getting-started/private-testnet.html#witness-configuration" class="sidebar-link">WITNESS CONFIGURATION</a></li><li class="sidebar-sub-header"><a href="/getting-started/private-testnet.html#start-witness-node" class="sidebar-link">START WITNESS-NODE</a></li><li class="sidebar-sub-header"><a href="/getting-started/private-testnet.html#cli-usage" class="sidebar-link">CLI USAGE</a></li></ul></li><li><a href="/getting-started/public-testnet.html" class="sidebar-link">Public Testnet Using Guide</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/getting-started/public-testnet.html#download-and-startup-hxindicator" class="sidebar-link">Download and startup HXIndicator</a></li><li class="sidebar-sub-header"><a href="/getting-started/public-testnet.html#startup-and-setup" class="sidebar-link">Startup and setup</a></li><li class="sidebar-sub-header"><a href="/getting-started/public-testnet.html#create-a-new-account" class="sidebar-link">Create a new account</a></li><li class="sidebar-sub-header"><a href="/getting-started/public-testnet.html#obtaining-test-hx-coin" class="sidebar-link">Obtaining test HX coin</a></li><li class="sidebar-sub-header"><a href="/getting-started/public-testnet.html#obtaining-other-asset-test-coin" class="sidebar-link">Obtaining other asset test coin</a></li><li class="sidebar-sub-header"><a href="/getting-started/public-testnet.html#deposit" class="sidebar-link">Deposit</a></li><li class="sidebar-sub-header"><a href="/getting-started/public-testnet.html#transfer" class="sidebar-link">Transfer</a></li><li class="sidebar-sub-header"><a href="/getting-started/public-testnet.html#transaction-records" class="sidebar-link">Transaction Records</a></li><li class="sidebar-sub-header"><a href="/getting-started/public-testnet.html#asset-exchange" class="sidebar-link">Asset Exchange</a></li><li class="sidebar-sub-header"><a href="/getting-started/public-testnet.html#mining" class="sidebar-link">Mining</a></li></ul></li><li><a href="/getting-started/using-the-block-explorer.html" class="sidebar-link">Using the Block Explorer</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/getting-started/using-the-block-explorer.html#overview" class="sidebar-link">Overview</a></li><li class="sidebar-sub-header"><a href="/getting-started/using-the-block-explorer.html#home" class="sidebar-link">Home</a></li><li class="sidebar-sub-header"><a href="/getting-started/using-the-block-explorer.html#blocks" class="sidebar-link">Blocks</a></li><li class="sidebar-sub-header"><a href="/getting-started/using-the-block-explorer.html#transactions" class="sidebar-link">Transactions</a></li><li class="sidebar-sub-header"><a href="/getting-started/using-the-block-explorer.html#contracts" class="sidebar-link">Contracts</a></li></ul></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Wallet</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Advanced</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Development</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>FAQ</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Research</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="private-testnet-using-guide"><a href="#private-testnet-using-guide" aria-hidden="true" class="header-anchor">#</a> Private Testnet Using Guide</h1> <p>Last updated for v1.0.7</p> <p>In this page. We mainly talk about  <strong>private testnet</strong> that every developer could easily deploy .</p> <h2 id="prerequisites"><a href="#prerequisites" aria-hidden="true" class="header-anchor">#</a> PREREQUISITES</h2> <p>We assume that you have both <code>witness_node</code> and <code>cli_wallet</code> already compliled (or downloaded from the offical respository).you have deployed hx middleware successfully.if not yet,please refer <a href="/wallets/middleware-startup.html">Middleware Startup</a> to deploy.</p> <h2 id="folder-structure"><a href="#folder-structure" aria-hidden="true" class="header-anchor">#</a> FOLDER STRUCTURE</h2> <p>Create a new folder (we will refer to it as <code>[Testnet-Home]</code>) in any location you like and copy <code>witness_node</code> and <code>cli_wallet</code> there. The <code>[Testnet-Home]</code> folder will contain all files and folders related to the testnet.</p> <p>Open a Command Prompt window and switch the current directory to <code>[Testnet-Home]</code>.</p> <h2 id="the-genesis-file"><a href="#the-genesis-file" aria-hidden="true" class="header-anchor">#</a> THE GENESIS FILE</h2> <p>The genesis file defines the initial state of the network.Please find it as below:</p> <blockquote><p>Default genesis</p></blockquote> <p>The graphene code base has a default genesis block integrated that has all witnesses, committee members and funds and a single account called <code>nathan</code> available from a single private key:</p> <pre><code>5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3
+</code></pre> <p>Read below to find how to use this key, and go ahead to learn about how to define your own genesis file</p> <blockquote><p>Customization of the genesis file</p></blockquote> <p>We create a new genesis json file named my-genesis.json by running this command:</p> <pre><code>$ witness_node --create-genesis-json=my-genesis.json
+</code></pre> <p>The <code>my-genesis.json</code> file will be created in the <code>[Testnet-Home]</code> folder. Once this task is done, the witness node will terminate on its own.</p> <p>If you want to customize the network’s initial state, edit the newly created <code>my-genesis.json</code> file. This allows you to control things such as:</p> <ul><li>The accounts that exist at genesis, their names and public keys</li> <li>Assets and their initial status (including core asset)</li> <li>Initial values of chain parameters (including fees)</li></ul> <p>Example File:</p> <pre><code>{
+  &quot;initial_timestamp&quot;: &quot;2018-07-31T02:35:00&quot;,
+  &quot;max_core_supply&quot;: &quot;840000000000000&quot;,
+  &quot;initial_parameters&quot;: {
+&quot;current_fees&quot;: {
+  &quot;parameters&quot;: [[
+  0,{
+&quot;fee&quot;: 2000,
+&quot;price_per_kbyte&quot;: 1000
+  }
+],[
+  1,{
+&quot;fee&quot;: 500
+  }
+],[
+  2,{
+&quot;fee&quot;: 0
+  }
+],[
+  3,{
+&quot;fee&quot;: 2000
+  }
+],[
+  4,{
+&quot;fee&quot;: 0
+  }
+],[
+  5,{
+&quot;basic_fee&quot;: 500000,
+&quot;premium_fee&quot;: 200000,
+&quot;price_per_kbyte&quot;: 100
+  }
+],[
+  6,{
+&quot;fee&quot;: 200000000,
+&quot;price_per_kbyte&quot;: 100
+  }
+],[
+  7,{
+&quot;fee&quot;: 300000
+  }
+],[
+  8,{
+&quot;membership_annual_fee&quot;: 200000,
+&quot;membership_lifetime_fee&quot;: 1000000
+  }
+],[
+  9,{
+&quot;fee&quot;: 50000
+  }
+],[
+  10,{
+&quot;fee&quot;: 50000
+  }
+],[
+  11,{
+&quot;fee&quot;: 50000
+  }
+],[
+  12,{
+&quot;fee&quot;: 50000
+  }
+],[
+  13,{
+&quot;symbol3&quot;: 50000000,
+&quot;symbol4&quot;: 30000000,
+&quot;long_symbol&quot;: 500000,
+&quot;price_per_kbyte&quot;: 10
+  }
+],[
+  14,{
+&quot;fee&quot;: 50000,
+&quot;price_per_kbyte&quot;: 10
+  }
+],[
+  15,{
+&quot;fee&quot;: 50000
+  }
+],[
+  16,{
+&quot;fee&quot;: 50000
+  }
+],[
+  17,{
+&quot;fee&quot;: 2000,
+&quot;price_per_kbyte&quot;: 100
+  }
+],[
+  18,{
+&quot;fee&quot;: 2000
+  }
+],[
+  19,{
+&quot;fee&quot;: 100
+  }
+],[
+  20,{
+&quot;fee&quot;: 10000
+  }
+],[
+  21,{
+&quot;fee&quot;: 50000
+  }
+],[
+  22,{
+&quot;fee&quot;: 100
+  }
+],[
+  23,{
+&quot;fee&quot;: 100
+  }
+],[
+  24,{
+&quot;fee&quot;: 400000
+  }
+],[
+  25,{
+&quot;fee&quot;: 2000
+  }
+],[
+  26,{
+&quot;fee&quot;: 0
+  }
+],[
+  27,{
+&quot;fee&quot;: 0
+  }
+],[
+  28,{
+&quot;fee&quot;: 2000,
+&quot;price_per_kbyte&quot;: 10
+  }
+],[
+  29,{
+&quot;fee&quot;: 2000,
+&quot;price_per_kbyte&quot;: 10
+  }
+],[
+  30,{
+&quot;fee&quot;: 100
+  }
+],[
+  31,{
+&quot;fee&quot;: 100
+  }
+],[
+  32,{
+&quot;fee&quot;: 100
+  }
+],[
+  33,{
+&quot;fee&quot;: 2000,
+&quot;price_per_kbyte&quot;: 10
+  }
+],[
+  34,{
+&quot;fee&quot;: 0
+  }
+],[
+  35,{
+&quot;fee&quot;: 300000
+  }
+],[
+  36,{
+&quot;fee&quot;: 2000
+  }
+],[
+  37,{
+&quot;fee&quot;: 100
+  }
+],[
+  38,{
+&quot;fee&quot;: 350000
+  }
+],[
+  39,{
+&quot;fee&quot;: 100
+  }
+],[
+  40,{
+&quot;fee&quot;: 2000
+  }
+],[
+  41,{
+&quot;fee&quot;: 450000
+  }
+],[
+  42,{
+&quot;fee&quot;: 100,
+&quot;price_per_kbyte&quot;: 10
+  }
+],[
+  43,{
+&quot;fee&quot;: 100
+  }
+],[
+  44,{}
+],[
+  45,{
+&quot;fee&quot;: 2000,
+&quot;price_per_kbyte&quot;: 10
+  }
+],[
+  46,{
+&quot;fee&quot;: 2000
+  }
+],[
+  47,{
+&quot;fee&quot;: 2000
+  }
+],[
+  48,{
+&quot;fee&quot;: 500,
+&quot;price_per_output&quot;: 500
+  }
+],[
+  49,{
+&quot;fee&quot;: 500,
+&quot;price_per_output&quot;: 500
+  }
+],[
+  50,{
+&quot;fee&quot;: 500
+  }
+],[
+  51,{}
+],[
+  52,{
+&quot;fee&quot;: 2000
+  }
+],[
+  53,{}
+],[
+  54,{
+&quot;fee&quot;: 100
+  }
+],[
+  55,{
+&quot;fee&quot;: 2000
+  }
+],[
+  56,{
+&quot;fee&quot;: 2000
+  }
+],[
+  57,{
+&quot;fee&quot;: 2000
+  }
+],[
+  58,{
+&quot;fee&quot;: 2000
+  }
+],[
+  59,{
+&quot;fee&quot;: 2000
+  }
+],[
+  60,{
+&quot;fee&quot;: 2000
+  }
+],[
+  61,{
+&quot;fee&quot;: 2000
+  }
+],[
+  62,{
+&quot;fee&quot;: 2000
+  }
+],[
+  63,{
+&quot;fee&quot;: 2000
+  }
+],[
+  64,{
+&quot;fee&quot;: 2000
+  }
+],[
+  65,{
+&quot;fee&quot;: 2000
+  }
+],[
+  66,{
+&quot;fee&quot;: 2000
+  }
+],[
+  67,{
+&quot;fee&quot;: 2000
+  }
+],[
+  68,{
+&quot;fee&quot;: 2000
+  }
+],[
+  69,{
+&quot;fee&quot;: 2000
+  }
+],[
+  70,{
+&quot;fee&quot;: 2000
+  }
+],[
+  71,{
+&quot;fee&quot;: 2000
+  }
+],[
+  72,{
+&quot;fee&quot;: 2000
+  }
+],[
+  73,{
+&quot;fee&quot;: 2000
+  }
+],[
+  74,{
+&quot;fee&quot;: 2000
+  }
+],[
+  75,{
+&quot;fee&quot;: 2000
+  }
+],[
+  76,{
+&quot;fee&quot;: 2000,
+&quot;price_per_kbyte&quot;: 1000
+  }
+],[
+  77,{
+&quot;fee&quot;: 2000,
+&quot;price_per_kbyte&quot;: 1000
+  }
+],[
+  78,{
+&quot;fee&quot;: 2000,
+&quot;price_per_kbyte&quot;: 1000
+  }
+],[
+  79,{
+&quot;fee&quot;: 2000,
+&quot;price_per_kbyte&quot;: 1000
+  }
+],[
+  80,{
+&quot;fee&quot;: 2000,
+&quot;price_per_kbyte&quot;: 1000
+  }
+],[
+  81,{
+&quot;fee&quot;: 2000,
+&quot;price_per_kbyte&quot;: 1000
+  }
+],[
+  82,{
+&quot;fee&quot;: 2000
+  }
+],[
+  83,{
+&quot;fee&quot;: 2000
+  }
+],[
+  84,{
+&quot;fee&quot;: 2000
+  }
+],[
+  85,{
+&quot;fee&quot;: 2000
+  }
+],[
+  86,{
+&quot;fee&quot;: 2000
+  }
+],[
+  87,{
+&quot;fee&quot;: 2000
+  }
+],[
+  88,{
+&quot;fee&quot;: 2000
+  }
+],[
+  89,{
+&quot;fee&quot;: 2000
+  }
+]
+  ],
+  &quot;scale&quot;: 10000
+},
+&quot;block_interval&quot;: 5,
+&quot;maintenance_interval&quot;: 900,
+&quot;maintenance_skip_slots&quot;: 3,
+&quot;committee_proposal_review_period&quot;: 1209600,
+&quot;maximum_transaction_size&quot;: 2048,
+&quot;maximum_block_size&quot;: 2048000000,
+&quot;maximum_time_until_expiration&quot;: 86400,
+&quot;maximum_proposal_lifetime&quot;: 2419200,
+&quot;maximum_asset_whitelist_authorities&quot;: 10,
+&quot;maximum_asset_feed_publishers&quot;: 10,
+&quot;maximum_miner_count&quot;: 1001,
+&quot;maximum_guard_count&quot;: 15,
+&quot;minimum_guard_count&quot;: 7,
+&quot;maximum_authority_membership&quot;: 10,
+&quot;reserve_percent_of_fee&quot;: 2000,
+&quot;network_percent_of_fee&quot;: 2000,
+&quot;lifetime_referrer_percent_of_fee&quot;: 3000,
+&quot;cashback_vesting_period_seconds&quot;: 31536000,
+&quot;cashback_vesting_threshold&quot;: 10000,
+&quot;count_non_member_votes&quot;: true,
+&quot;allow_non_member_whitelists&quot;: false,
+&quot;miner_pay_per_block&quot;: 1000,
+&quot;worker_budget_per_day&quot;: 50000000,
+&quot;max_predicate_opcode&quot;: 1,
+&quot;fee_liquidation_threshold&quot;: 10000,
+&quot;accounts_per_fee_scale&quot;: 1000,
+&quot;account_fee_scale_bitshifts&quot;: 4,
+&quot;max_authority_depth&quot;: 2,
+&quot;min_pay_back_balance&quot;: 50000000,
+&quot;min_pay_back_balance_other_asset&quot;: [],
+&quot;extensions&quot;: []
+  },
+  &quot;initial_accounts&quot;: [{
+  &quot;name&quot;: &quot;miner0&quot;,
+  &quot;owner_key&quot;: &quot;HX5bqn6zdbs1CFC6ooNBZDRTmWraJjtWBqnst9y1UxSFYtSCzX77&quot;,
+  &quot;active_key&quot;: &quot;HX5bqn6zdbs1CFC6ooNBZDRTmWraJjtWBqnst9y1UxSFYtSCzX77&quot;,
+  &quot;is_lifetime_member&quot;: true
+},{
+  &quot;name&quot;: &quot;miner1&quot;,
+  &quot;owner_key&quot;: &quot;HX69GWR9Xsh74ZcicQicFVZkpNdzUgyeDHZRXM3Dj455Ebkjrch1&quot;,
+  &quot;active_key&quot;: &quot;HX69GWR9Xsh74ZcicQicFVZkpNdzUgyeDHZRXM3Dj455Ebkjrch1&quot;,
+  &quot;is_lifetime_member&quot;: true
+},{
+  &quot;name&quot;: &quot;miner2&quot;,
+  &quot;owner_key&quot;: &quot;HX4taeGZFJq2kB2cXazJbbjsWQocyTe7M976CkfRzvjtHN9jHXvn&quot;,
+  &quot;active_key&quot;: &quot;HX4taeGZFJq2kB2cXazJbbjsWQocyTe7M976CkfRzvjtHN9jHXvn&quot;,
+  &quot;is_lifetime_member&quot;: true
+},{
+  &quot;name&quot;: &quot;miner3&quot;,
+  &quot;owner_key&quot;: &quot;HX6L97VZfUCWdEjqQpAMw3fRxTnzHbp2mVdQZshHk7E1jkzAHeTa&quot;,
+  &quot;active_key&quot;: &quot;HX6L97VZfUCWdEjqQpAMw3fRxTnzHbp2mVdQZshHk7E1jkzAHeTa&quot;,
+  &quot;is_lifetime_member&quot;: true
+},{
+  &quot;name&quot;: &quot;miner4&quot;,
+  &quot;owner_key&quot;: &quot;HX5LPcQrUGmKfcG3he1hWf5bmuFbBzP1uZXLvNmKoQjSkGppm6XY&quot;,
+  &quot;active_key&quot;: &quot;HX5LPcQrUGmKfcG3he1hWf5bmuFbBzP1uZXLvNmKoQjSkGppm6XY&quot;,
+  &quot;is_lifetime_member&quot;: true
+},{
+  &quot;name&quot;: &quot;miner5&quot;,
+  &quot;owner_key&quot;: &quot;HX8Ejga5z6gbig3vnPVYdqA9TpcGCX2tJAatjV53xjRDjT6sNgHS&quot;,
+  &quot;active_key&quot;: &quot;HX8Ejga5z6gbig3vnPVYdqA9TpcGCX2tJAatjV53xjRDjT6sNgHS&quot;,
+  &quot;is_lifetime_member&quot;: true
+},{
+  &quot;name&quot;: &quot;miner6&quot;,
+  &quot;owner_key&quot;: &quot;HX51KmAmvETZYW1aaKrf5w1puzv1UzMzca7eLkbET6AaAv19EdPB&quot;,
+  &quot;active_key&quot;: &quot;HX51KmAmvETZYW1aaKrf5w1puzv1UzMzca7eLkbET6AaAv19EdPB&quot;,
+  &quot;is_lifetime_member&quot;: true
+},{
+  &quot;name&quot;: &quot;miner7&quot;,
+  &quot;owner_key&quot;: &quot;HX6A1uvEQ9vA3iWm61XEeE7g9zSHAutoFoqndFiDuAwY2VPTanFc&quot;,
+  &quot;active_key&quot;: &quot;HX6A1uvEQ9vA3iWm61XEeE7g9zSHAutoFoqndFiDuAwY2VPTanFc&quot;,
+  &quot;is_lifetime_member&quot;: true
+},{
+  &quot;name&quot;: &quot;miner8&quot;,
+  &quot;owner_key&quot;: &quot;HX5Dxx6J9EeMsYhseQ4Kte6oG5Dj5q25RXSg8uXsiGnGjRv9qMkJ&quot;,
+  &quot;active_key&quot;: &quot;HX5Dxx6J9EeMsYhseQ4Kte6oG5Dj5q25RXSg8uXsiGnGjRv9qMkJ&quot;,
+  &quot;is_lifetime_member&quot;: true
+},{
+  &quot;name&quot;: &quot;miner9&quot;,
+  &quot;owner_key&quot;: &quot;HX8JLi9shUiLDk1HBPwo3Twej71adUxRVRkJWhHxaVSiivR3LX2x&quot;,
+  &quot;active_key&quot;: &quot;HX8JLi9shUiLDk1HBPwo3Twej71adUxRVRkJWhHxaVSiivR3LX2x&quot;,
+  &quot;is_lifetime_member&quot;: true
+},{
+  &quot;name&quot;: &quot;miner10&quot;,
+  &quot;owner_key&quot;: &quot;HX7nYKaLqUAKbUC8kmJfPWMban7AQMydU6be7PGJCJhTSWLTpb7h&quot;,
+  &quot;active_key&quot;: &quot;HX7nYKaLqUAKbUC8kmJfPWMban7AQMydU6be7PGJCJhTSWLTpb7h&quot;,
+  &quot;is_lifetime_member&quot;: true
+},{
+  &quot;name&quot;: &quot;miner11&quot;,
+  &quot;owner_key&quot;: &quot;HX8C8mVHtxzkZJUaqC1QSUDdXSnFzqx6FAgoB8XtFzi2DxMnFWUQ&quot;,
+  &quot;active_key&quot;: &quot;HX8C8mVHtxzkZJUaqC1QSUDdXSnFzqx6FAgoB8XtFzi2DxMnFWUQ&quot;,
+  &quot;is_lifetime_member&quot;: true
+},{
+  &quot;name&quot;: &quot;miner12&quot;,
+  &quot;owner_key&quot;: &quot;HX7ojjUraz22uHYN86YHxcwwap2wfPiU7RaBJoBJ2xQV7hAx5WFp&quot;,
+  &quot;active_key&quot;: &quot;HX7ojjUraz22uHYN86YHxcwwap2wfPiU7RaBJoBJ2xQV7hAx5WFp&quot;,
+  &quot;is_lifetime_member&quot;: true
+},{
+  &quot;name&quot;: &quot;miner13&quot;,
+  &quot;owner_key&quot;: &quot;HX5mTizLNWbiMF4HgrmUd1jDmjoDbRiQrjWSh3xfGemBF9NTpkzk&quot;,
+  &quot;active_key&quot;: &quot;HX5mTizLNWbiMF4HgrmUd1jDmjoDbRiQrjWSh3xfGemBF9NTpkzk&quot;,
+  &quot;is_lifetime_member&quot;: true
+},{
+  &quot;name&quot;: &quot;miner14&quot;,
+  &quot;owner_key&quot;: &quot;HX5Jw3UUKdE9ocWJEt1S1yco6anZC8oWv9P9o2XFxpbqFsPXQeV1&quot;,
+  &quot;active_key&quot;: &quot;HX5Jw3UUKdE9ocWJEt1S1yco6anZC8oWv9P9o2XFxpbqFsPXQeV1&quot;,
+  &quot;is_lifetime_member&quot;: true
+},{
+  &quot;name&quot;: &quot;miner15&quot;,
+  &quot;owner_key&quot;: &quot;HX6BCoHi5pAbZHyXbVMK6RrxauSatqpn3FkFsr7U7nNRRgWnXdcE&quot;,
+  &quot;active_key&quot;: &quot;HX6BCoHi5pAbZHyXbVMK6RrxauSatqpn3FkFsr7U7nNRRgWnXdcE&quot;,
+  &quot;is_lifetime_member&quot;: true
+},{
+  &quot;name&quot;: &quot;miner16&quot;,
+  &quot;owner_key&quot;: &quot;HX6kvYvHpsJvoHBbaQXMrYAt8KHqWjPHCxfRMznzT6YDxCnGrvj7&quot;,
+  &quot;active_key&quot;: &quot;HX6kvYvHpsJvoHBbaQXMrYAt8KHqWjPHCxfRMznzT6YDxCnGrvj7&quot;,
+  &quot;is_lifetime_member&quot;: true
+},{
+  &quot;name&quot;: &quot;miner17&quot;,
+  &quot;owner_key&quot;: &quot;HX6WyKiwnSxCzUN9a8bUeEagz8Sked2zrJ1BabQkbqxog1Nbq9JC&quot;,
+  &quot;active_key&quot;: &quot;HX6WyKiwnSxCzUN9a8bUeEagz8Sked2zrJ1BabQkbqxog1Nbq9JC&quot;,
+  &quot;is_lifetime_member&quot;: true
+},{
+  &quot;name&quot;: &quot;miner18&quot;,
+  &quot;owner_key&quot;: &quot;HX6qbQbppQUzgHS8TrUcNjyw1wHhUqJbTTZKnHr8u37SoxFSfieN&quot;,
+  &quot;active_key&quot;: &quot;HX6qbQbppQUzgHS8TrUcNjyw1wHhUqJbTTZKnHr8u37SoxFSfieN&quot;,
+  &quot;is_lifetime_member&quot;: true
+},{
+  &quot;name&quot;: &quot;miner19&quot;,
+  &quot;owner_key&quot;: &quot;HX6sQuXCi7znykMcrtabvgtFqFjMCT1hKHdeNttadYkqEqvKiD3Q&quot;,
+  &quot;active_key&quot;: &quot;HX6sQuXCi7znykMcrtabvgtFqFjMCT1hKHdeNttadYkqEqvKiD3Q&quot;,
+  &quot;is_lifetime_member&quot;: true
+},{
+  &quot;name&quot;: &quot;miner20&quot;,
+  &quot;owner_key&quot;: &quot;HX8UQw5ZprXve3fu4aRbjqs3rfyMKTutvzg9AgJLNF5gKKriGwf4&quot;,
+  &quot;active_key&quot;: &quot;HX8UQw5ZprXve3fu4aRbjqs3rfyMKTutvzg9AgJLNF5gKKriGwf4&quot;,
+  &quot;is_lifetime_member&quot;: true
+},{
+  &quot;name&quot;: &quot;miner21&quot;,
+  &quot;owner_key&quot;: &quot;HX81JvHdNWm5kS4qoiPipNU9EiLgXe2Y8R516Qcg9FgShFoPzsts&quot;,
+  &quot;active_key&quot;: &quot;HX81JvHdNWm5kS4qoiPipNU9EiLgXe2Y8R516Qcg9FgShFoPzsts&quot;,
+  &quot;is_lifetime_member&quot;: true
+},{
+  &quot;name&quot;: &quot;miner22&quot;,
+  &quot;owner_key&quot;: &quot;HX6zBzBSG8mNun1FAi6RYs1XpA11Y31n1YhieaZFrEwaec8ABNFy&quot;,
+  &quot;active_key&quot;: &quot;HX6zBzBSG8mNun1FAi6RYs1XpA11Y31n1YhieaZFrEwaec8ABNFy&quot;,
+  &quot;is_lifetime_member&quot;: true
+},{
+  &quot;name&quot;: &quot;miner23&quot;,
+  &quot;owner_key&quot;: &quot;HX6XiMxd7nqyxzozt3UPWdjNNjpRQ9VHEZzsopu5mMHuGqRxkfeC&quot;,
+  &quot;active_key&quot;: &quot;HX6XiMxd7nqyxzozt3UPWdjNNjpRQ9VHEZzsopu5mMHuGqRxkfeC&quot;,
+  &quot;is_lifetime_member&quot;: true
+},{
+  &quot;name&quot;: &quot;miner24&quot;,
+  &quot;owner_key&quot;: &quot;HX54hh4baLS6fkee9PB6YGjxZaF8rZxwnRs3qL7LbHjtfPL78vFN&quot;,
+  &quot;active_key&quot;: &quot;HX54hh4baLS6fkee9PB6YGjxZaF8rZxwnRs3qL7LbHjtfPL78vFN&quot;,
+  &quot;is_lifetime_member&quot;: true
+},{
+  &quot;name&quot;: &quot;guard0&quot;,
+  &quot;owner_key&quot;: &quot;HX6pNcaS3ZFuo3gzwvxcFxTnNhbcbtLodEMPvAtSDQXLkRqNjNTo&quot;,
+  &quot;active_key&quot;: &quot;HX6pNcaS3ZFuo3gzwvxcFxTnNhbcbtLodEMPvAtSDQXLkRqNjNTo&quot;,
+  &quot;is_lifetime_member&quot;: true
+},{
+  &quot;name&quot;: &quot;guard1&quot;,
+  &quot;owner_key&quot;: &quot;HX5ZyfuVbqjTJ44VkzVqt7yLZoJuV15agjUkMXwsapC1xNqwkdZ5&quot;,
+  &quot;active_key&quot;: &quot;HX5ZyfuVbqjTJ44VkzVqt7yLZoJuV15agjUkMXwsapC1xNqwkdZ5&quot;,
+  &quot;is_lifetime_member&quot;: true
+},{
+  &quot;name&quot;: &quot;guard2&quot;,
+  &quot;owner_key&quot;: &quot;HX5P6vSL3cG8wdiiSvcHmsfAoxqWGkSMd65TibbrjG9qAfY7g9Ka&quot;,
+  &quot;active_key&quot;: &quot;HX5P6vSL3cG8wdiiSvcHmsfAoxqWGkSMd65TibbrjG9qAfY7g9Ka&quot;,
+  &quot;is_lifetime_member&quot;: true
+},{
+  &quot;name&quot;: &quot;guard3&quot;,
+  &quot;owner_key&quot;: &quot;HX6pf6v2N4VNX65eQCwf6gVNUhe2UurUVKsyyRWEoyEoDop5TXHK&quot;,
+  &quot;active_key&quot;: &quot;HX6pf6v2N4VNX65eQCwf6gVNUhe2UurUVKsyyRWEoyEoDop5TXHK&quot;,
+  &quot;is_lifetime_member&quot;: true
+},{
+  &quot;name&quot;: &quot;guard4&quot;,
+  &quot;owner_key&quot;: &quot;HX6oVVvTQni6EfiN4h4oyxTQ4ACW6eP15fEpZTCeS8JcXWwBUbXR&quot;,
+  &quot;active_key&quot;: &quot;HX6oVVvTQni6EfiN4h4oyxTQ4ACW6eP15fEpZTCeS8JcXWwBUbXR&quot;,
+  &quot;is_lifetime_member&quot;: true
+},{
+  &quot;name&quot;: &quot;guard5&quot;,
+  &quot;owner_key&quot;: &quot;HX5Qd3TyKic1t73dn5EDVJZ3WmszcKRz5GHaB8dVujCURsTTtYaN&quot;,
+  &quot;active_key&quot;: &quot;HX5Qd3TyKic1t73dn5EDVJZ3WmszcKRz5GHaB8dVujCURsTTtYaN&quot;,
+  &quot;is_lifetime_member&quot;: true
+},{
+  &quot;name&quot;: &quot;guard6&quot;,
+  &quot;owner_key&quot;: &quot;HX59JXtoH3eW8YmrGUfWAX58W7RWFY8Wp1Nbz2zQ4xRarNSNVSuq&quot;,
+  &quot;active_key&quot;: &quot;HX59JXtoH3eW8YmrGUfWAX58W7RWFY8Wp1Nbz2zQ4xRarNSNVSuq&quot;,
+  &quot;is_lifetime_member&quot;: true
+},{
+  &quot;name&quot;: &quot;nathan&quot;,
+  &quot;owner_key&quot;: &quot;HX6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV&quot;,
+  &quot;active_key&quot;: &quot;HX6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV&quot;,
+  &quot;is_lifetime_member&quot;: false
+}
+  ],
+  &quot;initial_assets&quot;: [],
+  &quot;initial_balances&quot;: [{
+  &quot;owner&quot;: &quot;HXFAbAx7yuxt725qSZvfwWqkdCwp9ZnUama&quot;,
+  &quot;asset_symbol&quot;: &quot;HX&quot;,
+  &quot;amount&quot;: &quot;620000000000000&quot;
+}
+  ],
+  &quot;initial_vesting_balances&quot;: [],
+  &quot;initial_active_miners&quot;: 25,
+  &quot;initial_miner_candidates&quot;: [{
+  &quot;owner_name&quot;: &quot;miner0&quot;,
+  &quot;block_signing_key&quot;: &quot;HX5bqn6zdbs1CFC6ooNBZDRTmWraJjtWBqnst9y1UxSFYtSCzX77&quot;
+},{
+  &quot;owner_name&quot;: &quot;miner1&quot;,
+  &quot;block_signing_key&quot;: &quot;HX69GWR9Xsh74ZcicQicFVZkpNdzUgyeDHZRXM3Dj455Ebkjrch1&quot;
+},{
+  &quot;owner_name&quot;: &quot;miner2&quot;,
+  &quot;block_signing_key&quot;: &quot;HX4taeGZFJq2kB2cXazJbbjsWQocyTe7M976CkfRzvjtHN9jHXvn&quot;
+},{
+  &quot;owner_name&quot;: &quot;miner3&quot;,
+  &quot;block_signing_key&quot;: &quot;HX6L97VZfUCWdEjqQpAMw3fRxTnzHbp2mVdQZshHk7E1jkzAHeTa&quot;
+},{
+  &quot;owner_name&quot;: &quot;miner4&quot;,
+  &quot;block_signing_key&quot;: &quot;HX5LPcQrUGmKfcG3he1hWf5bmuFbBzP1uZXLvNmKoQjSkGppm6XY&quot;
+},{
+  &quot;owner_name&quot;: &quot;miner5&quot;,
+  &quot;block_signing_key&quot;: &quot;HX8Ejga5z6gbig3vnPVYdqA9TpcGCX2tJAatjV53xjRDjT6sNgHS&quot;
+},{
+  &quot;owner_name&quot;: &quot;miner6&quot;,
+  &quot;block_signing_key&quot;: &quot;HX51KmAmvETZYW1aaKrf5w1puzv1UzMzca7eLkbET6AaAv19EdPB&quot;
+},{
+  &quot;owner_name&quot;: &quot;miner7&quot;,
+  &quot;block_signing_key&quot;: &quot;HX6A1uvEQ9vA3iWm61XEeE7g9zSHAutoFoqndFiDuAwY2VPTanFc&quot;
+},{
+  &quot;owner_name&quot;: &quot;miner8&quot;,
+  &quot;block_signing_key&quot;: &quot;HX5Dxx6J9EeMsYhseQ4Kte6oG5Dj5q25RXSg8uXsiGnGjRv9qMkJ&quot;
+},{
+  &quot;owner_name&quot;: &quot;miner9&quot;,
+  &quot;block_signing_key&quot;: &quot;HX8JLi9shUiLDk1HBPwo3Twej71adUxRVRkJWhHxaVSiivR3LX2x&quot;
+},{
+  &quot;owner_name&quot;: &quot;miner10&quot;,
+  &quot;block_signing_key&quot;: &quot;HX7nYKaLqUAKbUC8kmJfPWMban7AQMydU6be7PGJCJhTSWLTpb7h&quot;
+},{
+  &quot;owner_name&quot;: &quot;miner11&quot;,
+  &quot;block_signing_key&quot;: &quot;HX8C8mVHtxzkZJUaqC1QSUDdXSnFzqx6FAgoB8XtFzi2DxMnFWUQ&quot;
+},{
+  &quot;owner_name&quot;: &quot;miner12&quot;,
+  &quot;block_signing_key&quot;: &quot;HX7ojjUraz22uHYN86YHxcwwap2wfPiU7RaBJoBJ2xQV7hAx5WFp&quot;
+},{
+  &quot;owner_name&quot;: &quot;miner13&quot;,
+  &quot;block_signing_key&quot;: &quot;HX5mTizLNWbiMF4HgrmUd1jDmjoDbRiQrjWSh3xfGemBF9NTpkzk&quot;
+},{
+  &quot;owner_name&quot;: &quot;miner14&quot;,
+  &quot;block_signing_key&quot;: &quot;HX5Jw3UUKdE9ocWJEt1S1yco6anZC8oWv9P9o2XFxpbqFsPXQeV1&quot;
+},{
+  &quot;owner_name&quot;: &quot;miner15&quot;,
+  &quot;block_signing_key&quot;: &quot;HX6BCoHi5pAbZHyXbVMK6RrxauSatqpn3FkFsr7U7nNRRgWnXdcE&quot;
+},{
+  &quot;owner_name&quot;: &quot;miner16&quot;,
+  &quot;block_signing_key&quot;: &quot;HX6kvYvHpsJvoHBbaQXMrYAt8KHqWjPHCxfRMznzT6YDxCnGrvj7&quot;
+},{
+  &quot;owner_name&quot;: &quot;miner17&quot;,
+  &quot;block_signing_key&quot;: &quot;HX6WyKiwnSxCzUN9a8bUeEagz8Sked2zrJ1BabQkbqxog1Nbq9JC&quot;
+},{
+  &quot;owner_name&quot;: &quot;miner18&quot;,
+  &quot;block_signing_key&quot;: &quot;HX6qbQbppQUzgHS8TrUcNjyw1wHhUqJbTTZKnHr8u37SoxFSfieN&quot;
+},{
+  &quot;owner_name&quot;: &quot;miner19&quot;,
+  &quot;block_signing_key&quot;: &quot;HX6sQuXCi7znykMcrtabvgtFqFjMCT1hKHdeNttadYkqEqvKiD3Q&quot;
+},{
+  &quot;owner_name&quot;: &quot;miner20&quot;,
+  &quot;block_signing_key&quot;: &quot;HX8UQw5ZprXve3fu4aRbjqs3rfyMKTutvzg9AgJLNF5gKKriGwf4&quot;
+},{
+  &quot;owner_name&quot;: &quot;miner21&quot;,
+  &quot;block_signing_key&quot;: &quot;HX81JvHdNWm5kS4qoiPipNU9EiLgXe2Y8R516Qcg9FgShFoPzsts&quot;
+},{
+  &quot;owner_name&quot;: &quot;miner22&quot;,
+  &quot;block_signing_key&quot;: &quot;HX6zBzBSG8mNun1FAi6RYs1XpA11Y31n1YhieaZFrEwaec8ABNFy&quot;
+},{
+  &quot;owner_name&quot;: &quot;miner23&quot;,
+  &quot;block_signing_key&quot;: &quot;HX6XiMxd7nqyxzozt3UPWdjNNjpRQ9VHEZzsopu5mMHuGqRxkfeC&quot;
+},{
+  &quot;owner_name&quot;: &quot;miner24&quot;,
+  &quot;block_signing_key&quot;: &quot;HX54hh4baLS6fkee9PB6YGjxZaF8rZxwnRs3qL7LbHjtfPL78vFN&quot;
+}
+  ],
+  &quot;initial_guard_candidates&quot;: [{
+  &quot;owner_name&quot;: &quot;guard0&quot;
+},{
+  &quot;owner_name&quot;: &quot;guard1&quot;
+},{
+  &quot;owner_name&quot;: &quot;guard2&quot;
+},{
+  &quot;owner_name&quot;: &quot;guard3&quot;
+},{
+  &quot;owner_name&quot;: &quot;guard4&quot;
+},{
+  &quot;owner_name&quot;: &quot;guard5&quot;
+},{
+  &quot;owner_name&quot;: &quot;guard6&quot;
+}
+  ],
+  &quot;initial_worker_candidates&quot;: [],
+  &quot;initial_chain_id&quot;: &quot;aa34045518f1469a28fa4578240d5f039afa9959c0b95ce3b39674efa691fb21&quot;,
+  &quot;immutable_parameters&quot;: {
+&quot;min_guard_count&quot;: 7,
+&quot;min_miner_count&quot;: 25,
+&quot;num_special_accounts&quot;: 0,
+&quot;num_special_assets&quot;: 0
+  }
+}
+</code></pre> <h2 id="get-the-blockchain-id"><a href="#get-the-blockchain-id" aria-hidden="true" class="header-anchor">#</a> GET THE BLOCKCHAIN ID</h2> <p>The blockchain id is a hash of the genesis state. All transaction signatures are only valid for a single blockchain id. So editing the genesis file will change your blockchain id, and make you unable to sync with all existing chains .</p> <p>Run this command:</p> <pre><code>witness_node --data-dir=data   # to use the default genesis, or
+witness_node --data-dir=data --genesis-json=my-genesis.json   # your own genesis block
+</code></pre> <p>and when a message like this shows up:</p> <pre><code>3501235ms th_a main.cpp:165 main] Started witness node on a chain with 0 blocks.
+3501235ms th_a main.cpp:166 main] Chain ID is 8b7bd36a146a03d0e5d0a971e286098f41230b209d96f92465cd62bd64294824
+</code></pre> <p>… it means the initialization is completed. Use ctrl-c to close witness node.</p> <p>As a result, you should get two items:</p> <ul><li>A directory named <code>data</code> has been created with a file named <code>config.ini</code> located in it.</li> <li>Your blockchain id is now known - it’s displayed in the message above.</li></ul> <p>**NOTE:Note that your blockchain id will be different than the one used in the above example. Copy this id somewhere as you will be needing it later on.</p> <h2 id="witness-configuration"><a href="#witness-configuration" aria-hidden="true" class="header-anchor">#</a> WITNESS CONFIGURATION</h2> <pre><code>track-address = &quot;HXFynbZPgLeF5GfMXs9CCuEAreLGWSU4HK6&quot;
+track-address = &quot;HX7vBsFkAtgmhULMkHNkDVLoSR3kGbEfDvi&quot;
+
+# Endpoint for P2P node to listen on
+# p2p-endpoint = 
+
+# P2P nodes to connect to on startup (may specify multiple times)
+# seed-node = 
+
+# JSON array of P2P nodes to connect to on startup
+# seed-nodes = 
+
+# Pairs of [BLOCK_NUM,BLOCK_ID] that should be enforced as checkpoints.
+# checkpoint = 
+
+# Endpoint for websocket RPC to listen on
+# rpc-endpoint = 
+
+# Endpoint for TLS websocket RPC to listen on
+# rpc-tls-endpoint = 
+
+# The TLS certificate file for this server
+# server-pem = 
+
+# Password for this certificate
+# server-pem-password = 
+
+# File to read Genesis State from
+genesis-json = &quot;E:\link_mytest\genesis.json&quot;
+
+# Block signing key to use for init mineres, overrides genesis file
+# dbg-init-key = 
+
+# JSON file specifying API permissions
+api-access = &quot;E:\link_mytest\api-access.json&quot;
+
+# Miner in this node would not pack contract trx which gas price to low
+# min_gas_price = 
+
+# Enable block production, even if the chain is stale.
+enable-stale-production = true
+
+# Percent of miners (0-99) that must be participating in order to produce blocks
+required-participation = false
+
+# ID of miner controlled by this node (e.g. &quot;1.6.5&quot;, quotes are required, may specify one times)
+
+miner-id = &quot;1.6.1&quot;
+miner-id = &quot;1.6.2&quot;
+miner-id = &quot;1.6.3&quot;
+miner-id = &quot;1.6.4&quot;
+miner-id = &quot;1.6.5&quot;
+miner-id = &quot;1.6.6&quot;
+miner-id = &quot;1.6.7&quot;
+miner-id = &quot;1.6.8&quot;
+miner-id = &quot;1.6.9&quot;
+miner-id = &quot;1.6.10&quot;
+miner-id = &quot;1.6.11&quot;
+miner-id = &quot;1.6.12&quot;
+miner-id = &quot;1.6.13&quot;
+miner-id = &quot;1.6.14&quot;
+miner-id = &quot;1.6.15&quot;
+miner-id = &quot;1.6.16&quot;
+miner-id = &quot;1.6.17&quot;
+miner-id = &quot;1.6.18&quot;
+miner-id = &quot;1.6.19&quot;
+miner-id = &quot;1.6.20&quot;
+miner-id = &quot;1.6.21&quot;
+miner-id = &quot;1.6.22&quot;
+miner-id = &quot;1.6.23&quot;
+miner-id = &quot;1.6.24&quot;
+miner-id = &quot;1.6.25&quot;
+
+# Tuple of [PublicKey, WIF private key] (just append)
+private-key = [[&quot;HX6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV&quot;,&quot;5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3&quot;],[&quot;HX5bqn6zdbs1CFC6ooNBZDRTmWraJjtWBqnst9y1UxSFYtSCzX77&quot;,&quot;5JZDdTiLcahFtZo7M95ybDjT5VufrsYWfxiaQfJoP1zfbw8PmRA&quot;],[&quot;HX69GWR9Xsh74ZcicQicFVZkpNdzUgyeDHZRXM3Dj455Ebkjrch1&quot;,&quot;5K8mFWgAf2bd5AG8hKzjc9BgXKrnwqNT7PaUbJ7oWjHjQPwz8zF&quot;],[&quot;HX4taeGZFJq2kB2cXazJbbjsWQocyTe7M976CkfRzvjtHN9jHXvn&quot;,&quot;5K4RZCLQ6kUFps1eUncFkAJ7iUEsRXm694aD2W6tMxhFqzmWdD3&quot;],[&quot;HX6L97VZfUCWdEjqQpAMw3fRxTnzHbp2mVdQZshHk7E1jkzAHeTa&quot;,&quot;5JiDkVAXi6vpE6aEiDRh7WAwcGwr1ivrsN8Yh7eDwFbmz5BFCTz&quot;],[&quot;HX5LPcQrUGmKfcG3he1hWf5bmuFbBzP1uZXLvNmKoQjSkGppm6XY&quot;,&quot;5J5uekBwLhENsKGNShqBDoJdbHDaZMMrStVimGTfJ9V2vbAKpo9&quot;],[&quot;HX8Ejga5z6gbig3vnPVYdqA9TpcGCX2tJAatjV53xjRDjT6sNgHS&quot;,&quot;5KCmKbz9mD8ndbA5UBLC6kUVENCDkmHf9dpZ7ExKnB8LFWWyTmw&quot;],[&quot;HX51KmAmvETZYW1aaKrf5w1puzv1UzMzca7eLkbET6AaAv19EdPB&quot;,&quot;5JLvURaky1ryswgY785sQ4TiR3MrEon9ryKX71NatdJJ3AvtC2b&quot;],[&quot;HX6A1uvEQ9vA3iWm61XEeE7g9zSHAutoFoqndFiDuAwY2VPTanFc&quot;,&quot;5HvjWASwH2mYNodoMDdibW8tHW3u8HFQYS7vD3BtpeenCny1h2Q&quot;],[&quot;HX5Dxx6J9EeMsYhseQ4Kte6oG5Dj5q25RXSg8uXsiGnGjRv9qMkJ&quot;,&quot;5JDkmfS8YMWapcSCntX7wygJZPtELATJHMpPCvidTA19SF8Xo5u&quot;],[&quot;HX8JLi9shUiLDk1HBPwo3Twej71adUxRVRkJWhHxaVSiivR3LX2x&quot;,&quot;5HzByVyqvtXWXb9HM3TFS8mvrCf3NaDM1GRZQHuaiDgJG739a83&quot;],[&quot;HX7nYKaLqUAKbUC8kmJfPWMban7AQMydU6be7PGJCJhTSWLTpb7h&quot;,&quot;5KdAjgrJ7gwnbwQVK8vMXQJ5BW5PfMr5BtA5DpsQwCtCVGNqM8V&quot;],[&quot;HX8C8mVHtxzkZJUaqC1QSUDdXSnFzqx6FAgoB8XtFzi2DxMnFWUQ&quot;,&quot;5KbUi2Efd2bscQKtQ3a4RBvn4bVuaMfpCZwHpskWrUokRc3NXA1&quot;],[&quot;HX7ojjUraz22uHYN86YHxcwwap2wfPiU7RaBJoBJ2xQV7hAx5WFp&quot;,&quot;5K67sdMmoynLXK3Y3EiZ3Gfjw9Qn5UY9dQrGKed5V5DiZHzun7G&quot;],[&quot;HX5mTizLNWbiMF4HgrmUd1jDmjoDbRiQrjWSh3xfGemBF9NTpkzk&quot;,&quot;5JCBhwpxBSo7ABJweuNamtGoWbnbVJvGf4KAyKCgFFWTKGWD1vD&quot;],[&quot;HX5Jw3UUKdE9ocWJEt1S1yco6anZC8oWv9P9o2XFxpbqFsPXQeV1&quot;,&quot;5JyKyz1JJZTzN1a4ruvbykLia1WMM46TEJShhgLzWfsGQJVcHSK&quot;],[&quot;HX6BCoHi5pAbZHyXbVMK6RrxauSatqpn3FkFsr7U7nNRRgWnXdcE&quot;,&quot;5Hy5KPpkAoU2r9uaiqw4SECwNYyZMaR78BkuhbeLpw6tVBB66gn&quot;],[&quot;HX6kvYvHpsJvoHBbaQXMrYAt8KHqWjPHCxfRMznzT6YDxCnGrvj7&quot;,&quot;5JP1tX4BRrgZctxTmkAbam9m53DardLM6TrQtDS1EdgohGp6mtJ&quot;],[&quot;HX6WyKiwnSxCzUN9a8bUeEagz8Sked2zrJ1BabQkbqxog1Nbq9JC&quot;,&quot;5KkHjoSC1u5GhBdaNbGmTptwEg22AqtEk4ECQ8XQXfMFqXhDnHk&quot;],[&quot;HX6qbQbppQUzgHS8TrUcNjyw1wHhUqJbTTZKnHr8u37SoxFSfieN&quot;,&quot;5KjdpdNzwcx9A5XZGNquHWzqVcPvMPF9EXsDkY2STsvDQeNroZn&quot;],[&quot;HX6sQuXCi7znykMcrtabvgtFqFjMCT1hKHdeNttadYkqEqvKiD3Q&quot;,&quot;5KfshkiRmYvAvbf5rg8HXWZSifrTtR7htQyox7aVrCsw5t4Xgbk&quot;],[&quot;HX8UQw5ZprXve3fu4aRbjqs3rfyMKTutvzg9AgJLNF5gKKriGwf4&quot;,&quot;5JZ46AjQN7kCz7igUcQ3wGUFAviBDvBkxZ7xS6Pf5DHPQvFspwr&quot;],[&quot;HX81JvHdNWm5kS4qoiPipNU9EiLgXe2Y8R516Qcg9FgShFoPzsts&quot;,&quot;5JHa4RNxzehYdCMtVoqh55a5vNzAmENXtoGwXFxmNwtvTrduGHy&quot;],[&quot;HX6zBzBSG8mNun1FAi6RYs1XpA11Y31n1YhieaZFrEwaec8ABNFy&quot;,&quot;5J1HrKVzNQBwKXiTdMYaY6eVknm15mCeyV84Wt3TDMwwCLHxyWv&quot;],[&quot;HX6XiMxd7nqyxzozt3UPWdjNNjpRQ9VHEZzsopu5mMHuGqRxkfeC&quot;,&quot;5JtrnVGscfoYC8Hftk36hwXYUZjKBzL6fv8JBTeo6MbKgSL2vF1&quot;],[&quot;HX54hh4baLS6fkee9PB6YGjxZaF8rZxwnRs3qL7LbHjtfPL78vFN&quot;,&quot;5J3oHnGEze3gwidWjoznyTGgyJqFm3h8cFWg2DZaP55Rd1tUXVr&quot;],[&quot;HX6pNcaS3ZFuo3gzwvxcFxTnNhbcbtLodEMPvAtSDQXLkRqNjNTo&quot;,&quot;5JZe9Hv7twngWSEZzvvvDXP5RG1LJGixSz6WJ4D8te9x45kvDuG&quot;],[&quot;HX5ZyfuVbqjTJ44VkzVqt7yLZoJuV15agjUkMXwsapC1xNqwkdZ5&quot;,&quot;5JQT9vqrFW26817PELM7D3w6rqbZ5GDW43knB2bP5kBALQ2BRDi&quot;],[&quot;HX5P6vSL3cG8wdiiSvcHmsfAoxqWGkSMd65TibbrjG9qAfY7g9Ka&quot;,&quot;5Je6RMyd39B3W7QsC6XPHXFaTP31QmrtfiBxnmXDbeFz1pHE8CB&quot;],[&quot;HX6pf6v2N4VNX65eQCwf6gVNUhe2UurUVKsyyRWEoyEoDop5TXHK&quot;,&quot;5JhS8VntvNPKPU1ByiUMhUeu7HutUK9PfCyAUXGvqLB1dym7Hgt&quot;],[&quot;HX6oVVvTQni6EfiN4h4oyxTQ4ACW6eP15fEpZTCeS8JcXWwBUbXR&quot;,&quot;5JmaB7uQVGN6nKH1YyU4hSF6TmfCGJKoywimbJsRVkykF9swp1D&quot;],[&quot;HX5Qd3TyKic1t73dn5EDVJZ3WmszcKRz5GHaB8dVujCURsTTtYaN&quot;,&quot;5JPYHwjeHETE6xzMUo2TunSCpdfdAUjLBBUH2Jy2DuGQcdS2ism&quot;],[&quot;HX59JXtoH3eW8YmrGUfWAX58W7RWFY8Wp1Nbz2zQ4xRarNSNVSuq&quot;,&quot;5KLAzVUNPPci2JhQUQRpy1zsbjvyHQaRTATfLYk6jMnjrKZhx8U&quot;]]
+
+crosschain-ip = 117.78.44.37
+
+crosschain-port = 5005
+
+#  chain-type for crosschains  (e.g. [&quot;BTC&quot;], quotes are required,  specify one times)
+chain-type = [&quot;BTC&quot;,&quot;LTC&quot;,&quot;UB&quot;,&quot;HC&quot;]
+
+# Account ID to track history for (may specify multiple times)
+# track-account = 
+
+# Keep only those operations in memory that are related to account history tracking
+# partial-operations = 
+
+# Maximum number of operations per account will be kept in memory
+# max-ops-per-account = 
+
+# address to track history for (may specify multiple times)
+# track-address = 
+
+# guard-id = 
+
+# declare an appender named &quot;stderr&quot; that writes messages to the console
+[log.console_appender.stderr]
+stream=std_error
+
+# declare an appender named &quot;p2p&quot; that writes messages to p2p.log
+[log.file_appender.p2p]
+filename=logs/p2p/p2p.log
+# filename can be absolute or relative to this config file
+
+# route any messages logged to the default logger to the &quot;stderr&quot; logger we
+# declared above, if they are info level are higher
+[logger.default]
+level=info
+appenders=stderr
+
+# route messages sent to the &quot;p2p&quot; logger to the p2p appender declared above
+[logger.p2p]
+level=info
+appenders=p2p
+</code></pre> <h2 id="start-witness-node"><a href="#start-witness-node" aria-hidden="true" class="header-anchor">#</a> START WITNESS-NODE</h2> <pre><code>witness_node --data-dir=data
+</code></pre> <h2 id="cli-usage"><a href="#cli-usage" aria-hidden="true" class="header-anchor">#</a> CLI USAGE</h2> <p>We are now ready to connect the CLI to your testnet witness node. Keep your witness node running and in another Command Prompt window run this command:</p> <pre><code>cli_wallet --wallet-file=my-wallet.json --chain-id=8b7bd36a146a03d0e5d0a971e286098f41230b209d96f92465cd62bd64294824 --server-rpc-endpoint=ws://127.0.0.1:8090
+</code></pre> <p>**NOTE:
+Make sure to replace the above blockchain id 8b7bd36a...4294824 with your own blockchain id. The blockchain id passed to the CLI needs to match the id generated and used by the witness node.</p> <p>If you get the set_password prompt, it means your CLI has successfully connected to the testnet witness node.</p> <blockquote><p>Create a new wallet</p></blockquote> <p>First you need to create a new password for your wallet. This password is used to encrypt all the private keys in the wallet. For this tutorial we will use the password <code>supersecret</code> but obviously you are free to come up with your own combination of letters and numbers. Use this command to create the password:</p> <pre><code>&gt;&gt;&gt; set_password supersecret
+</code></pre> <p>Now you can unlock the newly created wallet:</p> <pre><code>unlock supersecret
+</code></pre> <blockquote><p>Import Miner/Guard accounts.</p></blockquote> <p>If you want to produce block,please import miner account in <code>&quot;initial_accounts&quot;</code> (<code>account name in my-genesis.json,private key in config.ini</code>) of my-genesis.json file.</p> <blockquote><p>Get HX For Testing</p></blockquote> <p>On Hyper Exchange chain, balance is kept in account. To import an account into your wallet, all you need to know is its name and its private key.  We will now import into the wallet an account called <code>nathan</code> using the import_key command:</p> <pre><code>import_key nathan 5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3
+</code></pre> <p>**NOTE:
+Note that <code>nathan</code> happens to be the account name defined in the genesis file. If you had edited your <code>my-genesies.json</code> file just after it was created, you could have put a different name there. Also, note that <code>5KQwrPbwdL...P79zkvFD3</code> is the private key defined in the <code>config.ini</code> file.</p> <p>Now you have got enough HX, If you want to use HX in another account, please transfer from account <code>nathan</code> to another account.</p> <hr></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/getting-started/obtaining-hx.html" class="prev">
+          Obtaining HX in mainnet
+        </a></span> <span class="next"><a href="/getting-started/public-testnet.html">
+          Public Testnet Using Guide
+        </a>
+        →
+      </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.edaa8358.js" defer></script><script src="/assets/js/2.dabf1d00.js" defer></script><script src="/assets/js/47.a36d1adf.js" defer></script>
+  </body>
+</html>

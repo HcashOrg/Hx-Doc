@@ -1,0 +1,3 @@
+# Overview
+
+Smart contracts help HyperExchange users achieve complex cross-chain transactions, asset certifications, etc., while laying the foundation for building cross-chain distributed commercial applications in the ecosystem.	

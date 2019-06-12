@@ -1,2 +1,0 @@
-HX Deployment Guide
-===================
