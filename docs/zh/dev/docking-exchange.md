@@ -15,8 +15,8 @@
 
 启动Rpc模式
 
-    启动hx_node --data-dir=$data-dir --rpc-enpoint=$server_ip 
-    启动hx_client --wallet-file=$walletname --server-rpc-endpoint=$server_ip --rpc-endpoint=$client_ip
+1. 启动hx_node --data-dir=$data-dir --rpc-enpoint=$server_ip 
+2. 启动hx_client --wallet-file=$walletname --server-rpc-endpoint=$server_ip --rpc-endpoint=$client_ip
 
 |参数      |说明|
 | -------:|:-------------------------------------------:|
@@ -26,10 +26,11 @@
 |--wallet-file|	指定的钱包文件，不指定则钱包会自动生成|
 
 示例：
-
+```
     hx_node --data-dir =./data --rpc-endpoint=127.0.0.1:9991
     hx_client --wallet-file=a.json --server-rpc-endpoint=”ws://127.0.0.1:9991” --rpc-endpoint=”127.0.0.1:9992”
-    其中--rpc-endpoint 参数127.0.0.1:9992 为用户访问hx节点的rpc入口
+```
+其中--rpc-endpoint 参数127.0.0.1:9992 为用户访问hx节点的rpc入口
 
 ## RPC使用规范
 

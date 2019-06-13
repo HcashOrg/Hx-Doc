@@ -232,7 +232,26 @@ module.exports = {
                 {
                     title: '开发指南',
                     children: [
-                        '/zh/dev/rpc-reference',
+                        {
+                            title: 'RPC 命令参考',
+                            children: [
+                                '/zh/dev/rpc-reference/rpc-introduce',
+                                '/zh/dev/rpc-reference/rpc-about',
+                                '/zh/dev/rpc-reference/rpc-get_account_addr',
+                                '/zh/dev/rpc-reference/rpc-get_account_count',
+                                '/zh/dev/rpc-reference/rpc-get_asset',
+                                '/zh/dev/rpc-reference/rpc-get_first_contract_address',
+                                '/zh/dev/rpc-reference/rpc-get_global_properties',
+                                '/zh/dev/rpc-reference/rpc-get-ntp-info',
+                                '/zh/dev/rpc-reference/rpc-help',
+                                '/zh/dev/rpc-reference/rpc-info',
+                                '/zh/dev/rpc-reference/rpc-is-locked',
+                                '/zh/dev/rpc-reference/rpc-network_get_connected_peers',
+                                '/zh/dev/rpc-reference/rpc-ntp_update_time',
+                                '/zh/dev/rpc-reference/rpc-wallet-create-account',
+                                '/zh/dev/rpc-reference/rpc-witness_node_stop',
+                            ]
+                        },
                         '/zh/dev/dapp',
                         '/zh/dev/docking-exchange',
                         {

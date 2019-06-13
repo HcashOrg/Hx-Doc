@@ -1,6 +1,6 @@
 # hx_node 使用
 
-本指南假设您已经使用[HyperExchange node 配置和启动](/wallets/hxnode-setup.md)，成功的启动了hx-node,hx中间件已经可以成功和其他的(BTC/LTC...)等链连接成功,下面将介绍hx-node的启动参数。
+本指南假设您已经使用[HyperExchange node 配置和启动](/wallets/hxnode-setup.md)，成功的启动了 hx_node ,hx中间件已经可以成功和其他的(BTC/LTC...)等链连接成功,下面将介绍 hx_node 的启动参数。
 
 ---
 
@@ -133,7 +133,7 @@
 
 ## 参数列表
 
-**hx-node启动参数列表:**
+**hx_node 启动参数列表:**
     
       -h [ --help ] Print this help message and exit.
       -d [ --data-dir ] arg (="witness_node_data_dir")   Directory containing databases,configuration file, etc.

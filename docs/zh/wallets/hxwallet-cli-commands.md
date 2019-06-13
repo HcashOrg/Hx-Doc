@@ -1,17 +1,17 @@
-# hx_client 命令
+# hx_client 命令参考
 
-本指导假设你已经成功启动了hx-node，如果没有请参考： [HyperExchange node配置和启动](/wallets/hxnode-setup.md) ，成功启动了hx-cli，如果没有请参考：[hx-cli启动](/wallets/hxwallet-cli.md).
+本指导假设你已经成功启动了hx-node，如果没有请参考： [hx_node配置和启动](/wallets/hxnode-setup.md) ，成功启动了hx-cli，如果没有请参考：[hx-client启动](/wallets/hxwallet-cli.md).
 
 如果是中间件是自己部署的，请检查是否已经成功启动，请参考[HyperExchange中间件启动](/wallets/middleware-startup.md).
 
-下面将介绍如果使用命令实现下列功能：/充值/提现/货币兑换.(用BTC 兑换 LTC)
+下面将介绍如果使用命令实现下列功能：/充值/提现/货币兑换.(用BTC 兑换 LTC，其他情况类似)
 
 ---
 
 ## 准备工作
 
 1.创建两个hx账户，一个和BTC绑定，一个和LTC绑定，操作之前请确保钱包是unlock状态。
-    
+```
     unlocked >>> wallet_create_account hxtest001
     wallet_create_account hxtest001
     1168399ms th_a   wallet.cpp:1082   save_wallet_file ] saving wallet to file wallet.json
@@ -21,9 +21,11 @@
     wallet_create_account hxtest002
     1680829ms th_a   wallet.cpp:1082   save_wallet_file ] saving wallet to file wallet.json
     "HX8Vx4U1HfPBhHQF8J2z55qyiMCaJBce5gQ"
-    
+```
+
 2.分别创建一个BTC地址和一个LTC地址。
 
+```
     unlocked >>> create_crosschain_symbol BTC
     create_crosschain_symbol BTC
     { "jsonrpc": "2.0", "id" : "45","method" : "Zchain.Addr.importAddr" ,"params" : {"chainId":"btc" ,"addr": "19QmVye31e2QfYXZShBD2VXissoM6QeppM"}}
@@ -42,11 +44,13 @@
       "pubkey": "0201115d04f29783acab2ce61fefd5e71678f3b99a1bb029e59600da1b67806b29",
       "wif_key": "T4GPU51McSfjJFtD8NKWnJj1qDWtef2452SjvMvsnqexcs7odn6E"
     }
+```
 
 “addr”表示地址，“wif_key”表示私钥。
 
 3.将创建的BTC地址和账户 `hxtest001`绑定,LTC地址和 `hxtest002绑定。
 
+```
     unlocked >>> bind_tunnel_account hxtest001 19QmVye31e2QfYXZShBD2VXissoM6QeppM BTC true
     bind_tunnel_account hxtest001 19QmVye31e2QfYXZShBD2VXissoM6QeppM BTC true
     {
@@ -102,9 +106,11 @@
       "block_num": 0,
       "trxid": "47a0ab550387694d3d5c9068723b44f7954b9281"
     }
+```
 
 4.查询绑定结果。
 
+```
     get_binding_account hxtest001 BTC
     [{
     "id": "2.6.0",
@@ -122,11 +128,13 @@
     "bind_account": "LPFnwvJFXziSzk35fXn3tj2JYQe4iHLLY8"
       }
     ]
+```
 
 ## Senator创建冷热多签钱包地址(用LTC举例)
 
 1.在hx链上创建LTC资产(如果你想通过senator创建新的资产，需要导入senator的私钥).
 
+```
     unlocked >>> import_key guard0 5JZe9Hv7twngWSEZzvvvDXP5RG1LJGixSz6WJ4D8te9x45kvDuG
     import_key guard0 5JZe9Hv7twngWSEZzvvvDXP5RG1LJGixSz6WJ4D8te9x45kvDuG
     297029ms th_a   wallet.cpp:532copy_wallet_file ] backing up wallet wallet.json to before-import-key-2856e806.wallet
@@ -161,10 +169,11 @@
       "block_num": 0,
       "trxid": "c035858485c926ea915f4945a6c2ff834a7d0e58"
     }
-    
+```
 
 2.更新hx链上所有的senators,更新之后，系统会创建一个新的LTC冷热多签钱包地址。
 
+```
     unlocked >>> update_asset_private_keys  guard0 LTC true
     unlocked >>> update_asset_private_keys  guard1 LTC true
     unlocked >>> update_asset_private_keys  guard2 LTC true
@@ -172,9 +181,11 @@
     unlocked >>> update_asset_private_keys  guard4 LTC true
     unlocked >>> update_asset_private_keys  guard5 LTC true
     unlocked >>> update_asset_private_keys  guard6 LTC true
+```
 
 3.查询LTC的冷热多签钱包地址
     
+```
     unlocked >>> get_multisig_account_pair LTC
     get_multisig_account_pair LTC
     [{
@@ -188,9 +199,11 @@
     "end_block": 4294967295
       }
     ]
+```
 
 4.发起一个使LTC冷热多签钱包地址生效的提案
 
+```
     unlocked >>> account_change_for_crosschain guard0 LTC MErU8FfsLhXPvkzgE2BRKTyeJQExTMiZMD MUC25gBfgyrUrUX241dT3BfU32AQGaZ19z 10000 true
 
     account_change_for_crosschain guard0 LTC MErU8FfsLhXPvkzgE2BRKTyeJQExTMiZMD MUC25gBfgyrUrUX241dT3BfU32AQGaZ19z 10000 true
@@ -231,9 +244,11 @@
       "block_num": 0,
       "trxid": "b503fa3d5a2513eba3c4e55c59345ec5376e53ec"
     }
+```
 
 5.获取提案ID
 
+```
     unlocked >>> get_proposal_for_voter guard0
     get_proposal_for_voter guard0
     [{
@@ -277,9 +292,11 @@
     "type": "committee"
       }
     ]
-    
+```
+
 6.对提案进行投票，超过三分之二的senators同意之后，该地址将生效
 
+```
     unlocked >>> approve_proposal guard0 1.10.1 {"key_approvals_to_add": ["HXC3X3WoKyqNQZDyPN3Pq55gX5sLhVJxZNh", "HXHd49CtDZZW7ySYZNQYaUurZNWW76HBnhU", "HXdXPBLRsiUCY1VxcDd4gGrkDcgCV3Jegb", "HXMkBpQ9nj1hHXwEGQvyZdFiRgRK78ixKPA", "HX3HmP3gqcDqYvHvVq2Hn44nuUDfSSBMU55"]}  true
 
     approve_proposal guard0 1.10.1 {"key_approvals_to_add": ["HXC3X3WoKyqNQZDyPN3Pq55gX5sLhVJxZNh", "HXHd49CtDZZW7ySYZNQYaUurZNWW76HBnhU", "HXdXPBLRsiUCY1VxcDd4gGrkDcgCV3Jegb", "HXMkBpQ9nj1hHXwEGQvyZdFiRgRK78ixKPA", "HX3HmP3gqcDqYvHvVq2Hn44nuUDfSSBMU55"]}  true
@@ -316,9 +333,11 @@
       "block_num": 0,
       "trxid": "ab889c45010eea6768ccff2d0d678c6ddcd71418"
     }
+```
 
 7.查询冷热多签钱包地址，如果"effective_block_num"不是0，说明已经生效了
 
+```
     unlocked >>> get_multisig_account_pair LTC
     get_multisig_account_pair LTC
     [{
@@ -332,7 +351,7 @@
     "end_block": 4294967295
       }
     ]
-
+```
 
 ## 充值
 
