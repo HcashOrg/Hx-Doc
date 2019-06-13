@@ -237,7 +237,8 @@ module.exports = {
                             children: [
                                 '/zh/dev/rpc-reference/rpc-introduce',
                                 '/zh/dev/rpc-reference/rpc-about',
-                                '/zh/dev/rpc-reference/rpc-get_account_addr',
+                                ['/zh/dev/rpc-reference/rpc-get_account_addr', 'get_account_addr'],
+                                ['/zh/dev/rpc-reference/rpc-get_account_balances', 'get_account_balances'],
                                 '/zh/dev/rpc-reference/rpc-get_account_count',
                                 '/zh/dev/rpc-reference/rpc-get_asset',
                                 '/zh/dev/rpc-reference/rpc-get_first_contract_address',
@@ -250,6 +251,30 @@ module.exports = {
                                 '/zh/dev/rpc-reference/rpc-ntp_update_time',
                                 '/zh/dev/rpc-reference/rpc-wallet-create-account',
                                 '/zh/dev/rpc-reference/rpc-witness_node_stop',
+                            ]
+                        },
+                        {
+                            title: '智能合约开发',
+                            children: [
+                                ['/zh/dev/glua/total', '文档索引'],
+                                {
+                                    title: 'glua 语言',
+                                    children: [
+                                        ['/zh/dev/glua/intro', '简介'],
+                                        ['/zh/dev/glua/tutorial', '入门教程'],
+                                        ['/zh/dev/glua/language-reference', '基本语法'],
+                                        ['/zh/dev/glua/glua-index', 'glua编程语言'],
+                                        ['/zh/dev/glua/language-syntax/global-variables', '全局函数'],
+                                        ['/zh/dev/glua/language-syntax/contract-index', '智能合约'],
+                                        ['/zh/dev/glua/language-syntax/local-scripts', '本地脚本'],
+                                        ['/zh/dev/glua/examples', '例子'],
+                                        ['/zh/dev/glua/howtos', 'HOWTO'],
+                                        ['/zh/dev/glua/token-syntax', '词法规则'],
+                                        ['/zh/dev/glua/parser-syntax', '语法规则'],
+                                        ['/zh/dev/glua/FAQs', '常见问题'],
+                                    ]
+                                },
+                                ['/zh/dev/glua/license', '源代码许可'],
                             ]
                         },
                         '/zh/dev/dapp',

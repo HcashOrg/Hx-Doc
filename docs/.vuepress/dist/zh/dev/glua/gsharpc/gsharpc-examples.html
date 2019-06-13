@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>HyperExchange</title>
+    <meta name="description" content="HX 文档">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.b0fce880.css" as="style"><link rel="preload" href="/assets/js/app.a394b41d.js" as="script"><link rel="preload" href="/assets/js/2.dabf1d00.js" as="script"><link rel="preload" href="/assets/js/107.c24f2d63.js" as="script"><link rel="prefetch" href="/assets/js/10.37562256.js"><link rel="prefetch" href="/assets/js/100.ddbaea3d.js"><link rel="prefetch" href="/assets/js/101.54f04da2.js"><link rel="prefetch" href="/assets/js/102.f293e238.js"><link rel="prefetch" href="/assets/js/103.c95411b9.js"><link rel="prefetch" href="/assets/js/104.72a94c97.js"><link rel="prefetch" href="/assets/js/105.5beea1a5.js"><link rel="prefetch" href="/assets/js/106.24e20332.js"><link rel="prefetch" href="/assets/js/108.fc336ac2.js"><link rel="prefetch" href="/assets/js/109.944620c3.js"><link rel="prefetch" href="/assets/js/11.9d85d897.js"><link rel="prefetch" href="/assets/js/110.4969f835.js"><link rel="prefetch" href="/assets/js/111.015ddd1a.js"><link rel="prefetch" href="/assets/js/112.2451a5c9.js"><link rel="prefetch" href="/assets/js/113.3c838480.js"><link rel="prefetch" href="/assets/js/114.880762a2.js"><link rel="prefetch" href="/assets/js/115.e7a6643c.js"><link rel="prefetch" href="/assets/js/116.7d649de8.js"><link rel="prefetch" href="/assets/js/117.d5cc8904.js"><link rel="prefetch" href="/assets/js/118.365b2ab7.js"><link rel="prefetch" href="/assets/js/119.fe2e5e24.js"><link rel="prefetch" href="/assets/js/12.52b0c526.js"><link rel="prefetch" href="/assets/js/120.8f793c6d.js"><link rel="prefetch" href="/assets/js/121.c905f02b.js"><link rel="prefetch" href="/assets/js/122.5dfc9025.js"><link rel="prefetch" href="/assets/js/123.c2663943.js"><link rel="prefetch" href="/assets/js/124.856ce2e4.js"><link rel="prefetch" href="/assets/js/125.f2bb6932.js"><link rel="prefetch" href="/assets/js/126.c9b7f15c.js"><link rel="prefetch" href="/assets/js/127.a7249f8e.js"><link rel="prefetch" href="/assets/js/128.f3fc54a7.js"><link rel="prefetch" href="/assets/js/129.f07088bc.js"><link rel="prefetch" href="/assets/js/13.6f046f1c.js"><link rel="prefetch" href="/assets/js/130.0e82464f.js"><link rel="prefetch" href="/assets/js/131.0c28e120.js"><link rel="prefetch" href="/assets/js/132.f04764ef.js"><link rel="prefetch" href="/assets/js/133.1f22b227.js"><link rel="prefetch" href="/assets/js/134.c3a319e9.js"><link rel="prefetch" href="/assets/js/135.809e2b1a.js"><link rel="prefetch" href="/assets/js/136.9457bb3c.js"><link rel="prefetch" href="/assets/js/137.060947e2.js"><link rel="prefetch" href="/assets/js/138.5595fb26.js"><link rel="prefetch" href="/assets/js/139.9e3e4790.js"><link rel="prefetch" href="/assets/js/14.0849f8f9.js"><link rel="prefetch" href="/assets/js/140.b3124f58.js"><link rel="prefetch" href="/assets/js/141.287b8fce.js"><link rel="prefetch" href="/assets/js/142.b7fa1e60.js"><link rel="prefetch" href="/assets/js/143.86405a40.js"><link rel="prefetch" href="/assets/js/144.a8595d3a.js"><link rel="prefetch" href="/assets/js/145.b238f904.js"><link rel="prefetch" href="/assets/js/146.9863fb94.js"><link rel="prefetch" href="/assets/js/147.2c5f3cb9.js"><link rel="prefetch" href="/assets/js/148.f0a1d3eb.js"><link rel="prefetch" href="/assets/js/149.9bef7e1e.js"><link rel="prefetch" href="/assets/js/15.40cafbb9.js"><link rel="prefetch" href="/assets/js/150.0d87b970.js"><link rel="prefetch" href="/assets/js/151.c79cffe2.js"><link rel="prefetch" href="/assets/js/152.e7443627.js"><link rel="prefetch" href="/assets/js/153.1c6aefde.js"><link rel="prefetch" href="/assets/js/154.95510c2d.js"><link rel="prefetch" href="/assets/js/155.de8074ac.js"><link rel="prefetch" href="/assets/js/156.8f0923c8.js"><link rel="prefetch" href="/assets/js/157.4d717cde.js"><link rel="prefetch" href="/assets/js/158.2f487c51.js"><link rel="prefetch" href="/assets/js/159.83157b9b.js"><link rel="prefetch" href="/assets/js/16.45e0aeb0.js"><link rel="prefetch" href="/assets/js/160.f6b6182e.js"><link rel="prefetch" href="/assets/js/161.46bca71d.js"><link rel="prefetch" href="/assets/js/162.6fbaad4f.js"><link rel="prefetch" href="/assets/js/163.1978355f.js"><link rel="prefetch" href="/assets/js/164.6b105b27.js"><link rel="prefetch" href="/assets/js/165.42d9aa43.js"><link rel="prefetch" href="/assets/js/166.c8d5a62b.js"><link rel="prefetch" href="/assets/js/167.575148f2.js"><link rel="prefetch" href="/assets/js/168.2a0aaa52.js"><link rel="prefetch" href="/assets/js/169.f3a7f544.js"><link rel="prefetch" href="/assets/js/17.d5065195.js"><link rel="prefetch" href="/assets/js/170.f993dc3d.js"><link rel="prefetch" href="/assets/js/171.2d2c8dcf.js"><link rel="prefetch" href="/assets/js/172.7ae05999.js"><link rel="prefetch" href="/assets/js/173.60d16603.js"><link rel="prefetch" href="/assets/js/174.31b88afe.js"><link rel="prefetch" href="/assets/js/175.36e3e6ff.js"><link rel="prefetch" href="/assets/js/176.27582367.js"><link rel="prefetch" href="/assets/js/177.87af4688.js"><link rel="prefetch" href="/assets/js/178.3de51771.js"><link rel="prefetch" href="/assets/js/179.e34b7ab9.js"><link rel="prefetch" href="/assets/js/18.ff186c83.js"><link rel="prefetch" href="/assets/js/180.7bf6270e.js"><link rel="prefetch" href="/assets/js/181.0e9be35a.js"><link rel="prefetch" href="/assets/js/182.86b98d98.js"><link rel="prefetch" href="/assets/js/183.aa4d1a4c.js"><link rel="prefetch" href="/assets/js/184.6094324b.js"><link rel="prefetch" href="/assets/js/185.d6fec33d.js"><link rel="prefetch" href="/assets/js/186.e8daf66c.js"><link rel="prefetch" href="/assets/js/187.4b365139.js"><link rel="prefetch" href="/assets/js/188.0852e398.js"><link rel="prefetch" href="/assets/js/189.f4497ac8.js"><link rel="prefetch" href="/assets/js/19.ace452f3.js"><link rel="prefetch" href="/assets/js/190.be5f7b97.js"><link rel="prefetch" href="/assets/js/191.65361541.js"><link rel="prefetch" href="/assets/js/192.b0d8274d.js"><link rel="prefetch" href="/assets/js/193.7b93f8f3.js"><link rel="prefetch" href="/assets/js/194.bdf842e8.js"><link rel="prefetch" href="/assets/js/195.6123e1bb.js"><link rel="prefetch" href="/assets/js/196.7b10538d.js"><link rel="prefetch" href="/assets/js/197.80f1bc61.js"><link rel="prefetch" href="/assets/js/198.cf76eb3e.js"><link rel="prefetch" href="/assets/js/199.146779f0.js"><link rel="prefetch" href="/assets/js/20.0e642a06.js"><link rel="prefetch" href="/assets/js/200.53457125.js"><link rel="prefetch" href="/assets/js/201.e89a22b6.js"><link rel="prefetch" href="/assets/js/21.07115a77.js"><link rel="prefetch" href="/assets/js/22.3680eb03.js"><link rel="prefetch" href="/assets/js/23.a2cea5ed.js"><link rel="prefetch" href="/assets/js/24.74773e70.js"><link rel="prefetch" href="/assets/js/25.a4feeecf.js"><link rel="prefetch" href="/assets/js/26.19a18997.js"><link rel="prefetch" href="/assets/js/27.1df4091d.js"><link rel="prefetch" href="/assets/js/28.e9510bbe.js"><link rel="prefetch" href="/assets/js/29.c9961a44.js"><link rel="prefetch" href="/assets/js/3.e1688b22.js"><link rel="prefetch" href="/assets/js/30.5972eca9.js"><link rel="prefetch" href="/assets/js/31.833daf77.js"><link rel="prefetch" href="/assets/js/32.0b059016.js"><link rel="prefetch" href="/assets/js/33.8824f8c9.js"><link rel="prefetch" href="/assets/js/34.67593fb1.js"><link rel="prefetch" href="/assets/js/35.3e7cf607.js"><link rel="prefetch" href="/assets/js/36.3172ce49.js"><link rel="prefetch" href="/assets/js/37.5350cfc7.js"><link rel="prefetch" href="/assets/js/38.93e8a424.js"><link rel="prefetch" href="/assets/js/39.54d92a72.js"><link rel="prefetch" href="/assets/js/4.dd89b425.js"><link rel="prefetch" href="/assets/js/40.f4642e86.js"><link rel="prefetch" href="/assets/js/41.d39a8673.js"><link rel="prefetch" href="/assets/js/42.d16b09cc.js"><link rel="prefetch" href="/assets/js/43.f360de4e.js"><link rel="prefetch" href="/assets/js/44.0fd0e7c1.js"><link rel="prefetch" href="/assets/js/45.11b5abf3.js"><link rel="prefetch" href="/assets/js/46.c008e01e.js"><link rel="prefetch" href="/assets/js/47.ab7dd0c8.js"><link rel="prefetch" href="/assets/js/48.0c8b1e7a.js"><link rel="prefetch" href="/assets/js/49.c9477b12.js"><link rel="prefetch" href="/assets/js/5.a9002535.js"><link rel="prefetch" href="/assets/js/50.4717135b.js"><link rel="prefetch" href="/assets/js/51.bd9177be.js"><link rel="prefetch" href="/assets/js/52.c5fdf56a.js"><link rel="prefetch" href="/assets/js/53.2058cac2.js"><link rel="prefetch" href="/assets/js/54.6dd43174.js"><link rel="prefetch" href="/assets/js/55.0ed4ed96.js"><link rel="prefetch" href="/assets/js/56.7fa4a4c1.js"><link rel="prefetch" href="/assets/js/57.6947890c.js"><link rel="prefetch" href="/assets/js/58.f238e79a.js"><link rel="prefetch" href="/assets/js/59.edc01849.js"><link rel="prefetch" href="/assets/js/6.1b09150e.js"><link rel="prefetch" href="/assets/js/60.5454c023.js"><link rel="prefetch" href="/assets/js/61.d2d57912.js"><link rel="prefetch" href="/assets/js/62.dc4d8af4.js"><link rel="prefetch" href="/assets/js/63.d99c596f.js"><link rel="prefetch" href="/assets/js/64.4951a32a.js"><link rel="prefetch" href="/assets/js/65.a386a0f2.js"><link rel="prefetch" href="/assets/js/66.1d90ec5a.js"><link rel="prefetch" href="/assets/js/67.0f2f2c8f.js"><link rel="prefetch" href="/assets/js/68.a2d81637.js"><link rel="prefetch" href="/assets/js/69.71bbe5fe.js"><link rel="prefetch" href="/assets/js/7.39ca541a.js"><link rel="prefetch" href="/assets/js/70.dbb47e75.js"><link rel="prefetch" href="/assets/js/71.50eceb8a.js"><link rel="prefetch" href="/assets/js/72.baf723f3.js"><link rel="prefetch" href="/assets/js/73.a5195f9e.js"><link rel="prefetch" href="/assets/js/74.d3e6d7a5.js"><link rel="prefetch" href="/assets/js/75.0fe727bd.js"><link rel="prefetch" href="/assets/js/76.474e7502.js"><link rel="prefetch" href="/assets/js/77.5b4b9a8c.js"><link rel="prefetch" href="/assets/js/78.87a2d53d.js"><link rel="prefetch" href="/assets/js/79.f4a8b7ac.js"><link rel="prefetch" href="/assets/js/8.a252e1f6.js"><link rel="prefetch" href="/assets/js/80.b21cda6f.js"><link rel="prefetch" href="/assets/js/81.c3a6db7c.js"><link rel="prefetch" href="/assets/js/82.a3725533.js"><link rel="prefetch" href="/assets/js/83.3e9bcab9.js"><link rel="prefetch" href="/assets/js/84.8b0c8c6d.js"><link rel="prefetch" href="/assets/js/85.1c411261.js"><link rel="prefetch" href="/assets/js/86.ac5e1532.js"><link rel="prefetch" href="/assets/js/87.5bfbd389.js"><link rel="prefetch" href="/assets/js/88.e95e6f1c.js"><link rel="prefetch" href="/assets/js/89.691d7cce.js"><link rel="prefetch" href="/assets/js/9.019edf44.js"><link rel="prefetch" href="/assets/js/90.964b010e.js"><link rel="prefetch" href="/assets/js/91.f9b945e7.js"><link rel="prefetch" href="/assets/js/92.35dc9218.js"><link rel="prefetch" href="/assets/js/93.4fd4436b.js"><link rel="prefetch" href="/assets/js/94.a985ce5f.js"><link rel="prefetch" href="/assets/js/95.71dc0335.js"><link rel="prefetch" href="/assets/js/96.a2ee539f.js"><link rel="prefetch" href="/assets/js/97.8d59b433.js"><link rel="prefetch" href="/assets/js/98.2cdce64c.js"><link rel="prefetch" href="/assets/js/99.3f0bcabf.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.b0fce880.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/zh/" class="home-link router-link-active"><!----> <span class="site-name">HyperExchange</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">选择语言</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/" class="nav-link">English</a></li><li class="dropdown-item"><!----> <a href="/zh/dev/glua/gsharpc/gsharpc-examples.html" class="nav-link router-link-exact-active router-link-active">简体中文</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">选择语言</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/" class="nav-link">English</a></li><li class="dropdown-item"><!----> <a href="/zh/dev/glua/gsharpc/gsharpc-examples.html" class="nav-link router-link-exact-active router-link-active">简体中文</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/zh/" class="sidebar-link">什么是HyperExchange</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/zh/#hyperexchange" class="sidebar-link">HyperExchange</a></li><li class="sidebar-sub-header"><a href="/zh/#hiou" class="sidebar-link">HIOU</a></li><li class="sidebar-sub-header"><a href="/zh/#手续费承兑单" class="sidebar-link">手续费承兑单</a></li><li class="sidebar-sub-header"><a href="/zh/#hypercash链" class="sidebar-link">HyperCash链</a></li><li class="sidebar-sub-header"><a href="/zh/#跨链" class="sidebar-link">跨链</a></li></ul></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>开始使用</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>钱包</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>高级</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>开发指南</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>FAQ</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>研究</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="gsharpc支持的c-语法的例子"><a href="#gsharpc支持的c-语法的例子" aria-hidden="true" class="header-anchor">#</a> gsharpc支持的C#语法的例子</h1> <h1 id="c-版合约例子"><a href="#c-版合约例子" aria-hidden="true" class="header-anchor">#</a> C#版合约例子</h1> <pre><code>using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+using static UVMCoreLib.UVMCoreFuncs;
+using UVMCoreLib;
+
+namespace DemoContract1
+{
+public class Storage
+{
+    public string Name { get; set; }
+    public int Age { get; set; }
+    public string Country; // field test
+    public bool IsMale { get; set; }
+    public UVMArray&lt;string&gt; ArrayDemo { get; set; }
+}
+
+public class MyEventEmitteer : IUVMEventEmitter
+{
+    public static void EmitHello(string eventArg)
+    {
+    Console.WriteLine(&quot;event Hello emited, arg is &quot; + eventArg);
+    }
+    public static void EmitHello2(string eventArg)
+    {
+    Console.WriteLine(&quot;event Hello2 emited, arg is &quot; + eventArg);
+    }
+}
+
+public class MyContract : UVMContract&lt;Storage&gt;
+{
+    public MyContract() : base(new Storage())
+    {
+    }
+    public override void init()
+    {
+    print(&quot;contract initing&quot;);
+    this.storage.Age = 100;
+    this.storage.Country = &quot;China&quot;;
+    this.storage.Name = &quot;C#&quot;;
+    this.storage.IsMale = true;
+    this.storage.ArrayDemo = UVMArray&lt;string&gt;.Create();
+    this.storage.ArrayDemo.Add(&quot;hello&quot;);
+    pprint(this);
+    print(&quot;this is contract init api&quot;);
+    }
+    public string GetAge(string arg)
+    {
+    print(&quot;this is contract getAge api&quot;);
+    return &quot;&quot; + this.storage.Age;
+    }
+    public string OfflineGetAge(string arg)
+    {
+    print(&quot;this is contract OfflineGetAge api&quot;);
+    print(&quot;age is &quot; + this.storage.Age);
+    return &quot;&quot; + this.storage.Age;
+    }
+    public void TestHello(string arg)
+    {
+    print(&quot;this is contract hello api with argument &quot; + arg);
+    }
+}
+
+public class ExampleLibClass
+{
+    public MyContract Main()
+    {
+    print(&quot;start of demo C# contract&quot;);              
+    var contract = new MyContract();       
+    print(&quot;end main&quot;);
+    return contract;
+    }
+}
+
+}
+</code></pre> <h1 id="c-中调用调试合约的例子"><a href="#c-中调用调试合约的例子" aria-hidden="true" class="header-anchor">#</a> C#中调用调试合约的例子</h1> <pre><code>using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace GsharpDemo1
+{
+class Program
+{
+    static void Main(string[] args)
+    {
+    var contractEntry = new ExampleLibClass();
+    var contract = contractEntry.Main();
+    contract.storage = new Storage();
+    contract.storage.Age = 25;
+    contract.storage.Name = &quot;gsharpc&quot;;
+    contract.storage.IsMale = true;
+    contract.storage.Country = &quot;China&quot;;
+    Console.WriteLine(contract.OfflineGetAge(&quot;hello&quot;));
+    }
+}
+}
+</code></pre> <h1 id="c-版更多语法的例子"><a href="#c-版更多语法的例子" aria-hidden="true" class="header-anchor">#</a> C#版更多语法的例子</h1> <pre><code>using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using static UVMCoreLib.UVMCoreFuncs;
+using UVMCoreLib;
+
+namespace Demo1
+{
+public class Storage
+{
+    public string Name { get; set; }
+    public int Age { get; set; }
+    public string Country; // field test
+    public bool IsMale { get; set; }
+}
+
+public class HelloContract
+{
+    public void SayHello(string arg)
+    {
+        print(&quot;hello, this is hello contract api SayHello with arg &quot; + tostring(arg));
+    }
+}
+
+public class MyEventEmitteer : IUVMEventEmitter
+{
+    public static void EmitHello(string eventArg)
+    {
+        Console.WriteLine(&quot;event Hello emited, arg is &quot; + eventArg);
+    }
+    public static void EmitHello2(string eventArg)
+    {
+        Console.WriteLine(&quot;event Hello2 emited, arg is &quot; + eventArg);
+    }
+}
+
+public class MyContract : UVMContract&lt;Storage&gt;
+{
+    public MyContract() : base(new Storage())
+    {
+    }
+    public override void init()
+    {
+        print(&quot;contract initing&quot;);
+        this.storage.Age = 100;
+        this.storage.Country = &quot;China&quot;;
+        this.storage.Name = &quot;C#&quot;;   
+        pprint(this);
+        print(&quot;this is contract init api end&quot;);
+    }
+    public string GetAge(string arg)
+    {
+        print(&quot;this is contract getAge api&quot;);
+        return &quot;&quot; + this.storage.Age;
+    }
+    public string OfflineGetAge(string arg)
+    {
+        print(&quot;this is contract OfflineGetAge api&quot;);
+        print(&quot;age is &quot; + this.storage.Age);
+        return &quot;&quot; + this.storage.Age;
+    }
+    public void TestHello(string arg)
+    {
+       print(&quot;this is contract hello api with argument &quot; + arg);
+    }
+}
+
+public class ExampleLibClass
+{
+    
+    public int SayHi()
+    {
+        Console.WriteLine(&quot;hello,\tCecil&quot;);
+        var a = 5;
+        var b = 100;
+        var sum = 3;       
+
+        if (b &gt; 50)
+        {
+            Console.WriteLine(&quot;hello, this is if condition=true branch&quot;);
+        }
+        else if (b &gt; 25)
+        {
+            Console.WriteLine(&quot;hello, this is if elseif condition branch&quot;);
+        }
+        else
+        {
+            Console.WriteLine(&quot;hello, this is if condition=else branch&quot;);
+        }
+        var d = &quot;a &quot; + sum;
+        Console.WriteLine(b);
+        Console.WriteLine(&quot;hello world&quot;);
+        Console.WriteLine(&quot;sum is &quot; + 123);
+        Console.WriteLine(&quot;sum is &quot; + d);
+        Console.WriteLine(a + b);
+
+        print(&quot;&quot; + 123);
+
+        return a + b + 1234;
+    }
+
+    public void TestIf()
+    {
+        Console.WriteLine(&quot;this is test if function&quot;);
+        var b = 30;
+        if (b &gt; 50)
+        {
+            Console.WriteLine(&quot;hello, this is if condition=true branch&quot;);
+        }
+        else if (b &gt; 25)
+        {
+            Console.WriteLine(&quot;hello, this is if elseif condition branch&quot;);
+        }
+        else
+        {
+            Console.WriteLine(&quot;hello, this is if condition=else branch&quot;);
+        }
+        }            
+
+        public void TestFor()
+        {
+        int sum = 0;
+        for (var i = 0; i &lt; 10; ++i)
+        {
+            sum += i;
+            Console.WriteLine(&quot;for loop in&quot;);
+        }
+        Console.WriteLine(&quot;test for sum is &quot; + sum); // sum=45
+    }
+
+    public void TestWhile()
+    {
+        int sum = 0;
+        int i = 0;
+        while (i &lt; 10)
+        {
+            sum += i;
+            Console.WriteLine(&quot;while loop in&quot;);
+            i++;
+        }
+        Console.WriteLine(&quot;test while loop sum is &quot; + sum); // sum=45
+        }
+
+        public void TestCompare()
+        {
+        var a = 5;
+        Console.WriteLine(&quot;5==5 is &quot; + ((a == 5) ? &quot;true&quot; : &quot;false&quot;));
+        Console.WriteLine(&quot;4&lt;5 is &quot; + ((4 &lt; a) ? &quot;true&quot; : &quot;false&quot;));
+
+        if (a == 5)
+        {
+            Console.WriteLine(&quot;a==5&quot;);
+        }
+        else
+        {
+            Console.WriteLine(&quot;a!=5&quot;);
+        }
+    }
+
+    public void TestContinue()
+    {
+        Console.WriteLine(&quot;test continue case&quot;);
+        int sum = 0;
+        for (var i = 0; i &lt; 10; ++i)
+        {
+            if (i == 5)
+            {
+            Console.WriteLine(&quot;continue when i=&quot; + i);
+            continue;
+            }
+            sum += i;
+            Console.WriteLine(&quot;for loop in&quot;);
+        }
+        Console.WriteLine(&quot;test for sum with continue is &quot; + sum); // sum=40
+    }
+
+    public void TestBreak()
+    {
+        Console.WriteLine(&quot;test break case&quot;);
+        int sum = 0;
+        for (var i = 0; i &lt; 10; ++i)
+        {
+            if (i == 5)
+            {
+            Console.WriteLine(&quot;break when i=&quot; + i);
+            break;
+            }
+            sum += i;
+            Console.WriteLine(&quot;for loop in&quot;);
+        }
+        Console.WriteLine(&quot;test for sum with break is &quot; + sum); // sum = 10
+        }
+
+        public int TestFuncArg(int a, int b, String name, bool c)
+        {
+        Console.WriteLine(a);
+        Console.WriteLine(b);
+        Console.WriteLine(&quot;name=&quot; + name); // name=C#
+        Console.WriteLine(&quot;c=&quot; + c); // c=true  
+        Console.WriteLine(&quot;hi &quot; + c); // hi true
+        Console.WriteLine(&quot;args a + b = &quot; + (a + b)); // a+b=11 when a = 5, b = 6
+        a = 10;
+        b = 20;
+        return a + b; // should be 30
+        }
+
+        public void TestMultiConcat()
+        {
+        int a = 1;
+        // 不支持超过2个字符串的字符串连接，因为.net数组是0-based，uvm数组是1-based
+        // Console.WriteLine(&quot;TestMultiConcat &quot; + a + &quot; and &quot; + a);
+    }
+
+    public void TestArithmeticOperators()
+    {
+        var a = 8;
+        var b = 3;
+        var c = a - b;
+        Console.WriteLine(&quot;8-3=&quot; + c); // 8-3=5
+        Console.WriteLine(&quot;8*3=&quot; + (a * b)); // 8*3=24
+        Console.WriteLine(&quot;8/3=&quot; + (a / b)); // 8/3=2, 整数除法
+        Console.WriteLine(&quot;8 div 3=&quot; + div(a, b)); // 8 div 3=2.666, 浮点除法
+        Console.WriteLine(&quot;8 idiv 3=&quot; + idiv(a, b)); // 8 idiv 3=2 整数除法
+        Console.WriteLine(&quot;7%3=&quot; + (7 % b)); // 7%3=1
+        // 因为0在uvm中是布尔真值，所以暂时用一个单独的函数库做布尔运算
+        Console.WriteLine(&quot;true &amp;&amp; false=&quot; + and(true, false)); // true &amp;&amp; false = false
+        Console.WriteLine(&quot;true || false=&quot; + or(true, false)); // true || false = true
+        Console.WriteLine(&quot;9&amp;3=&quot; + (9 &amp; b)); // 9&amp;3=1
+        Console.WriteLine(&quot;9|3=&quot; + (9 | b)); // 9|3=11
+        Console.WriteLine(&quot;9^3=&quot; + (9 ^ b)); // 9^3=10
+        Console.WriteLine(&quot;8&gt;&gt;3=&quot; + (a &gt;&gt; b)); // 8&gt;&gt;3=1
+        Console.WriteLine(&quot;8&lt;&lt;3=&quot; + (a &lt;&lt; 3)); // 8&lt;&lt;3=64     
+        var t = true;
+        print(&quot;-8=&quot; + (-a)); // -8=-8        
+        print(&quot;-8=&quot; + neg(a)); // -8=-8
+        print(&quot;!true=&quot; + (!t)); // !true=0   这里.net字节码把布尔当0/1 int处理  
+        print(&quot;!true=&quot; + not(t)); // !true=false        
+    }
+
+    public void TestPlainObject()
+    {
+        var storage = new Storage();
+        storage.Name = &quot;C#&quot;;
+        storage.Age = 100;
+        storage.IsMale = true;
+        storage.Country = &quot;China&quot;;
+        Console.WriteLine(&quot;storage name is &quot; + storage.Name);
+        Console.WriteLine(&quot;storage age is &quot; + storage.Age);
+        Console.WriteLine(&quot;storage isMale is &quot; + storage.IsMale);
+        print(&quot;storage country is &quot; + storage.Country);
+        pprint(storage);
+        pprint(null);
+    }
+
+    public void TestArray()
+    {
+        var array1 = UVMArray&lt;int?&gt;.Create();
+        array1.Add(1);
+        array1.Add(2);
+        array1.Add(3);
+        array1.Add(4);
+        pprint(array1);
+        print(&quot;array 1 size is &quot; + array1.Count()); // 4      
+        array1.Set(4, 2); 
+        print(&quot;array[4] is &quot; + array1.Get(4)); // 2  
+        array1.Pop();
+        print(&quot;array 1 after changed size is &quot; + array1.Count()); // 3
+        print(&quot;array[3] is &quot; + array1.Get(3)); // 3      
+        for (int i = 1; i &lt;= array1.Count(); ++i)
+        {
+            var item = array1.Get(i);
+            print(&quot;index: &quot; + i);
+            print(&quot;value: &quot; + item);
+        }
+    }
+
+    public void TestMap()
+    {
+        var map1 = UVMMap&lt;string&gt;.Create();
+        map1.Set(&quot;name&quot;, &quot;C#&quot;);
+        map1.Set(&quot;country&quot;, &quot;China&quot;);
+        Console.WriteLine(&quot;map1's name is &quot; + map1.Get(&quot;name&quot;));
+        Console.WriteLine(&quot;map1's country is &quot; + map1.Get(&quot;country&quot;));
+
+        // 遍历map的demo
+        var map1PairsIter = map1.Pairs();
+        pprint(map1PairsIter);
+        var keyValuePair = map1PairsIter(map1, null);
+        pprint(keyValuePair);
+        print(keyValuePair.Key);
+        print(keyValuePair.Value);
+        while (keyValuePair.Key != null)
+        {
+            Console.WriteLine(&quot;key: &quot; + tostring(keyValuePair.Key));
+            Console.WriteLine(&quot;value: &quot; + tostring(keyValuePair.Value));
+
+            if (keyValuePair.Key == &quot;name&quot;)
+            {
+            print(&quot;found key==name pair&quot;);
+            }
+            keyValuePair = map1PairsIter(map1, keyValuePair.Key);
+        }
+
+    }
+
+    public void TestEmitEvent()
+    {
+        MyEventEmitteer.EmitHello(&quot;hello&quot;);
+        var a = 3;
+        var b = 4;
+        MyEventEmitteer.EmitHello2(&quot;&quot; + (a + b)); 
+    }
+
+    public void TestModules()
+    {  
+        // 引用string模块，UVMStringModule类型是返回的模块对象的类型，必须用合适的类型来引用合适的模块
+        var strModule = importModule&lt;UVMStringModule&gt;(&quot;string&quot;);
+        pprint(&quot;string module: &quot; + tojsonstring(strModule));
+
+        // 可以调用string模块的函数来获取字符串长度，也可以用C#的字符串类型的内置Length属性来获取字符串长度
+        var helloLength = &quot;hello&quot;.Length;
+        var helloLength2 = strModule.Len(&quot;hello&quot;);
+        print(&quot;hello string length is: &quot; + helloLength);
+        print(&quot;hello string length2 is: &quot; + helloLength2);
+
+        var tableModule = importModule&lt;UVMTableModule&gt;(&quot;table&quot;);
+        var table1 = UVMArray&lt;string&gt;.Create();
+        table1.Add(&quot;a&quot;);
+        tableModule.Append(table1, &quot;b&quot;);
+        var table1Count = tableModule.Length(table1);
+        print(&quot;table1 size is: &quot; + table1Count);
+
+        var mathModule = importModule&lt;UVMMathModule&gt;(&quot;math&quot;);
+        var floor1 = mathModule.Floor(3.3);  
+        print(&quot;floor(3.3) = &quot; + floor1);
+
+        var abs1 = mathModule.Abs(-4);
+        print(&quot;abs(-4) = &quot; + abs1);
+
+        var pi = mathModule.pi;
+        print(&quot;pi = &quot; + pi);
+
+        var timeModule = importModule&lt;UVMTimeModule&gt;(&quot;time&quot;);            
+        print(&quot;date: &quot; + timeModule.Tostr(1494301754));
+
+        var jsonModule = importModule&lt;UVMJsonModule&gt;(&quot;json&quot;);
+        print(&quot;dumps of json module is: &quot; + jsonModule.Dumps(jsonModule));
+
+        var typeOfNumber = Type(123);
+        print(&quot;type(123) = &quot; + typeOfNumber);
+
+        var array1 = UVMArray&lt;string&gt;.Create();
+        array1.Add(&quot;a&quot;);
+        array1.Add(&quot;b&quot;);
+        print(&quot;rawlen(['a', 'b'])=&quot; + rawlen(array1));
+
+        print(&quot;caller_address = &quot; + tostring(caller_address())); // 非合约中会返回nil
+
+        var array1Iter = array1.Ipairs();
+        var array1keyValuePair = array1Iter(array1, 0);
+        while(array1keyValuePair.Key != null)
+        {                             
+            print(&quot;key: &quot; + array1keyValuePair.Key);
+            print(&quot;value: &quot; + array1keyValuePair.Value);
+            array1keyValuePair = array1Iter(array1, array1keyValuePair.Key);
+        }                                            
+    }
+
+    public void TestImportContract()
+    {
+        var helloContract = importContract&lt;HelloContract&gt;(&quot;hello&quot;);
+        helloContract.SayHello(&quot;C#&quot;);
+    }
+    
+    /**
+    * 这是程序入口，必需，且必须是非static方法.如果是要定义合约，需要返回类型是一个合约类型
+    */
+    public MyContract Main()
+    {
+        print(&quot;start of demo C# contract \r\n another line&quot;);
+        
+        var result = SayHi();
+        Console.WriteLine(&quot;SayHi result is &quot; + result);
+        TestIf();
+        TestFor();
+        TestWhile();
+        TestContinue();
+        TestCompare();
+        TestBreak();
+        var testFuncArgResult = TestFuncArg(5, 6, &quot;C#&quot;, true);
+        Console.WriteLine(&quot;testFuncArg result is &quot; + testFuncArgResult);
+        TestArithmeticOperators();
+        TestPlainObject();
+        TestArray();
+        TestMap();
+        TestEmitEvent();
+        TestModules();
+        
+        // TestImportContract();
+
+        var contract = new MyContract();
+
+        contract.storage = new Storage(); 
+        contract.init();
+
+        pprint(contract); 
+        
+        var offlineGetAgeRet = contract.OfflineGetAge(&quot;&quot;);
+        print(&quot;OfflineGetAge ret is &quot; + offlineGetAgeRet);    
+        
+        print(&quot;end main&quot;);
+        return contract;
+    }
+}
+}
+</code></pre></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.a394b41d.js" defer></script><script src="/assets/js/2.dabf1d00.js" defer></script><script src="/assets/js/107.c24f2d63.js" defer></script>
+  </body>
+</html>
