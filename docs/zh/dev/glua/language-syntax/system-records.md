@@ -1,5 +1,4 @@
-内置record类型
-=======
+# 内置record类型
 
 * `Contract<S>`类型，用于声明合约变量类型,S使用当前合约的storage类型替换
 
@@ -24,7 +23,7 @@
     let M: Contract<Storage> = {}
     function M:init()
         self.storage.age = 100
-        self.storage.author_name = 'uvm'
+        self.storage.author_name = 'glua'
         -- 这里self.id和self.name, self.storage.author_name是字符串类型，self.storage.age 是整数
         
     end

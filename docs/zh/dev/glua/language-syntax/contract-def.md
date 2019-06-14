@@ -1,7 +1,6 @@
-合约定义
-============
+# 合约定义
 
-# 一个基本的合约的格式
+## 一个基本的合约的格式
 
 
 
@@ -40,17 +39,17 @@
     return M   -- 这里是必须的，表示使用哪个对象代表本合约
 
 
-# 合约全局变量
+## 合约全局变量
 
 合约中可以通过caller和caller_address全局变量分别访问本次发起合约调用的用户的公钥和地址
 
 
-# 合约全局方法
+## 合约全局方法
 
-* [contract api reference](/contract-api-reference)
+* [智能合约API参考](/zh/dev/glua/language-syntax/contract-api-reference)
 
 
-# 如何在合约中调用一个链上已经存在的合约
+## 如何在合约中调用一个链上已经存在的合约
 
 可以通过import_contract/import_contract_from_address函数引用其他的链上正式合约，返回代表这个被引用的合约的对象，从而可以通过这个返回的对象调用这个被引用的用户自定义API。
 
@@ -64,14 +63,14 @@
     demo:hello("China")  -- 这里调用了名称为demo的正式合约的hello函数API，使用"China"作为参数
 
 
-# 合约的内置模块的使用
+## 合约的内置模块的使用
 
 合约中可以直接使用内置库的模块，不需要进行require
 
-[默认引入库](/auto-import-libs)
+[默认引入库](/zh/dev/glua/language-syntax/auto-import-libs)
 
 
-# 一个合约的整个生命周期流程
+## 一个合约的整个生命周期流程
 
 * 编写合约
 
@@ -86,21 +85,16 @@
 * 转账到合约
 
 
-# 合约定义的约束
+## 合约定义的约束
 
 * 合约作为一个特殊的模块，合约中不能定义全局变量，不能修改_ENV, _G的值，可以通过import_contract '合约名称'来加载合约，
   返回加载的合约模块信息，合约必须返回一个record类型的对象，表示合约的api，其中必须包含一个init函数。合约有id, name, storage等内置属性，注意不要用这些名字的API，否则会被覆盖掉。
-
 * 合约代码中，合约对象作为一个record类型，必须在合约代码结尾return这个record对象,return的这个对象代表了本合约，如果合约中用到了合约的storage，因为语法有静态类型检查，所以需要给合约的storage属性声明一个类型
-
 * 合约的id/name/storage这三个属性都是在执行时由区块链提供值的，并且这三个属性本身是只读的，但是storage属性的内容是可以改变的
-
-* 合约的storage需要声明为record类型，storage的record类型的各属性的类型只能是int, number, bool, string, Map<int>, Map<number>, Map<bool>, Map<string>, Array<int>, Array<number>, Array<bool>, Array<string> 其中某一种
-
-* 内置库有一个Contract<T>泛型可以作为合约类型的基类，具体使用时可以将合约要return的变量声明为Contract的实例类型（需要提供一个record类型作为合约storage的类型，作为Contract的类型变量）
+* 合约的storage需要声明为record类型，storage的record类型的各属性的类型只能是int, number, bool, string, `Map<int>`, `Map<number>`, `Map<bool>`, `Map<string>`, `Array<int>`, `Array<number>`, `Array<bool>`, `Array<string>` 其中某一种
+* 内置库有一个`Contract<T>`泛型可以作为合约类型的基类，具体使用时可以将合约要return的变量声明为Contract的实例类型（需要提供一个record类型作为合约storage的类型，作为Contract的类型变量）
 
 比如
-
 
 
     type Storage = {               -- 这里声明一个record类型，用来作为合约的storage的类型，名称自定义
@@ -121,7 +115,7 @@
 
     function M:testSomeLogic()
         let contract2 = import_contract 'contract2'   -- 这里需要引用已经上链的合约名字，如果使用不存在的合约名字，编译期会报错
-        contract2.storage.name = 'uvm' -- 这会编译期报错，因为合约中不能直接操作引用的其他合约的storage
+        contract2.storage.name = 'glua' -- 这会编译期报错，因为合约中不能直接操作引用的其他合约的storage
         self.storage.age = self.storage.age + 1
         if self.storage.age < 100 then
             transfer_from_contract_to_address('这里填入目标地址', 'HSR', 10000000)
@@ -136,5 +130,4 @@
     return M
 
 * 合约中不能直接操作引用的其他合约的storage，也不能调用合约本身或者其他合约的init,on_deposit,on_upgrade,on_destroy的API，编译期会报错
-
 * 合约代码在编译时，会加载一次合约API外的代码，所以如果合约API外代码有运行时问题也会在编译合约时报错

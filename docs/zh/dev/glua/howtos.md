@@ -16,7 +16,7 @@ HOWTOs
 event名称词法要求和变量名要求一样，但是最长支持49字符, EventArg是event的参数，要求值是最长1024字符的字符串
 
 调用合约的操作执行过程中抛出的event，会被记录到区块链中，区块链本地节点可以设置监控某合约的某event的回调脚本，
-然后在区块链同步到包含被监控的event的块时，会触发设置的脚本，回调脚本也是用uvm编写。
+然后在区块链同步到包含被监控的event的块时，会触发设置的脚本，回调脚本也是用hvm编写。
 
 # 3. 常见编译错误有哪些
 
@@ -37,9 +37,9 @@ event名称词法要求和变量名要求一样，但是最长支持49字符, Ev
 
 # 5. 支持多线程吗
 
-因为uvm主要是为了在区块链的节点上运行的，考虑到区块链上的一些特性尤其是为了达成共识，不支持多线程编程
+因为hvm主要是为了在区块链的节点上运行的，考虑到区块链上的一些特性尤其是为了达成共识，不支持多线程编程
 
-# 6. uvm中怎么使用随机数
+# 6. hvm中怎么使用随机数
 
 提供两种获取随机数的方式
 
@@ -60,7 +60,7 @@ event名称词法要求和变量名要求一样，但是最长支持49字符, Ev
 
     type Person = {
         id: string default "123",
-        name: string default "uvm",
+        name: string default "hvm",
         age ?: int = 24,  -- record属性默认值既可以用default也可以用=区分
         fn: (number, number) => number default 
                 function (a: number, b: number) 

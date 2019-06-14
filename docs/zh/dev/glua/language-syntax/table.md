@@ -1,5 +1,4 @@
-table类型
-============
+# table类型
 
 table类型是内置的一个基本类型，每个table值包含数组部分和哈希表两个部分，其中数组部分的索引从1开始，record类型在运行时也是表现为table类型。
 
@@ -11,7 +10,7 @@ table可以用点操作符或者中括号的方式修改和查询其中某个索
 
 
 
-    let a = { name='uvm', age=1 }
+    let a = { name='glua', age=1 }
     a[1] = 123   -- 给a的数组部分加入一个值123
     a['abc'] = 'China'    -- 给a的哈希表部分插入/修改索引’abc’对应的值
     a.abc = 'China'    -- 效果同a[‘abc’]

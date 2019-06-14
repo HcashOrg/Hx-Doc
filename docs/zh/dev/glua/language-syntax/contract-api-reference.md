@@ -1,5 +1,4 @@
-合约API函数
-==========
+# 合约API函数
 
 * 使用全局函数transfer_from_contract_to_address可以从当前合约（这个函数调用代码所在的合约）转账一定数额的某种资产给某个地址，第一个参数是目标地址（字符串），第二个参数是资产名称（比如HSR），第三个参数是转账数量的10万倍（int64类型），要求是正数
 
@@ -115,6 +114,6 @@
 
 * cbor_encode: (object) => string 把参数按cbor序列化方式序列化成二进制字节数组，并以16进制字符串的形式返回
 
-* cbor_decode: (string) => object 把16进制字符串对应的二进制字节数组按cbor序列化方式来反序列化成uvm对象
+* cbor_decode: (string) => object 把16进制字符串对应的二进制字节数组按cbor序列化方式来反序列化成glua对象
 
 * signature_recover: (string, string) => string 从第一个参数的签名（压缩签名格式，65字节，以16进制字符串表示）和第二个参数的原文摘要（32字节，以16进制字符串表示）

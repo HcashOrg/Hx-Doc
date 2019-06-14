@@ -7,7 +7,7 @@ require 加载某个模块，比如local math = require 'math'
 
 另外，非合约模式下还可以使用更多内置模块os, net, io, http, jsonrpc等
 
-[默认引入库](/language-syntax/auto-import-libs)
+[默认引入库](/zh/dev/glua/language-syntax/auto-import-libs)
 
 # os模块
 
@@ -196,8 +196,8 @@ http.finish_res(ctx)            把http回复内容传给客户端，必须调�
 
 
 
-[全局变量表](/language-syntax/global-variables)
+[全局变量表](/zh/dev/glua/language-syntax/global-variables)
 
 # 一些合约相关的API
 
-* [contract api reference](/language-syntax/contract-api-reference)
+* [contract api reference](/zh/dev/glua/language-syntax/contract-api-reference)

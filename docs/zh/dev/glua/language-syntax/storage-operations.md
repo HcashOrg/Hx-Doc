@@ -1,7 +1,7 @@
-storage操作
-=============
+# storage操作
 
-# storage简单介绍
+
+## storage简单介绍
 每个智能合约在区块链中可以存储查询一些状态数据，这个功能称作storage。
 
 在一个合约中的API函数中，可以用self.storage获取到当前合约的storage对象，import_contract加载的合约，禁止直接读写其storage
@@ -11,7 +11,7 @@ storage对象可以类似table操作，读取属性，写入属性，但是只�
 对storage的修改操作不会立刻提交，而是在当前lua堆栈关闭的时候，如果没有发生过错误，就自动提交storage的变更（只提交变更而不是storage本身）
 
 
-# storage的基本类型
+## storage的基本类型
 
 storage中各属性的类型可以使用`int`, `number`, `bool`, `string`, `Stream`, `Map<int>`, `Map<number>`, `Map<bool>`, `Map<string>`, 
 `Array<int>`, `Array<number>`, `Array<bool>`, `Array<string>`这些类型
@@ -29,7 +29,7 @@ storage操作比如：
     self.storage.tt = {name: {name: "hi"}} -- 错误，storage中嵌套table多层不允许
     self.storage.tt = {name: "hi", age: "2"} -- 正确
 
-# fast map storage
+## fast map storage
 
 storage中的map/array类型会在使用时直接加载整个map/array到内存，只适用于较小的map/array。如果要使用较大的map/array，请使用fast map类型的storage
 
