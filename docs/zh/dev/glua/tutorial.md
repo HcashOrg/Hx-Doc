@@ -1,63 +1,82 @@
-入门Tutorial
-===================
+# 入门Tutorial
 
 [[toc]]
 
-## 1. 开发环境
+## 开发流程
 
-glua可以用来编写智能合约放入区块链然后调用，也可以作为区块链的event回调脚本执行.
+![Start IDE](/zh/img/smart_contract_dev_process.png)
 
-在开发链上合约时，可以在区块链测试链上开发，编译glua合约源码文件生成字节码文件，然后把字节码注册到测试链，获取到一个合约地址，然后调用这个合约的某个API；
-
-在开发本地脚本时，可以在测试链上先编译glua脚本源码文件生成字节码文件，然后注册字节码文件为某个合约的某个event的回调脚本，当区块链同步到关联的event时就触发执行回调脚本。
-
-当要发布到正式链上时步骤和上面类似，测试链主要用来开发时使用。
-
-具体编译，注册合约，调用合约，注册脚本等的说明另见相关说明文档。
+通常我们在测试链上进行开发调试，当开发测试完成后，再部署到正式链使用。
 
 你需要什么：
 
-* 最新版本的底层钱包节点程序（内置glua编译器和解释器）
-* 一款你喜欢的编辑器
+1. IDE 开发环境
+2. 正式链账户及一定数量的代币
 
 
-你还需要什么：
+## 1. 开发环境
 
-* 需要连上区块链网络，并同步完成所有的数据块（正式链）
-* 一个拥有足够代币的账户，并保持钱包打开并处于解锁状态（正式链）
+1. 首先下载最新版 [AnyChain IDE](https://github.com/AnyChainOrg/AnyChainIDE/releases/download/v1.0.21/AnyChainIDE_win_1.0.21.zip)
+2. 解压后直接运行 `AnyChain.exe` 程序，打开IDE。
+3. 第一次启动时会提示设置数据目录的路径，根据自己实际情况选择合适的路径即可。
+4. 进入 IDE 主界面后选择 "文件" -> "配置" 菜单，可以设置语言为中文，启动类型设置为"测试链"。点击"确认"按钮后重启 IDE。
+5. 再次进入 IDE 后测试链已经运行，其中有一个默认的账户，存放足够的代币用于测试。
 
 
 ## 2. 你的第一个glua程序
 
+进入 IDE 主界面后点击工具栏第一个图标，新建一个程序文件，此时会弹出对话框，在对话框内选择合适的文件路径并输入文件名。然后点击确认按钮。
+此时一个默认的合约模板会自动生成。你可以直接使用模板代码，也可以输入下面的例子代码：
 
 
-    type Person = {
-        id: string default "123",
-        name: string default "glua",
-        age: int default 24
+    type Storage = {
+        -- insert new storage properties here
     }
 
-    var M = Contract<Person>()
+    var M = Contract<Storage>()
 
     function M:init()
-        let p = Person()
-        pprint(p.id, p.name, p.age)
+        print("初始化")
+        -- insert init code of contract here
     end
 
-    return M
+    -- 这里使用 offline 关键字表示 API 执行结果无需上链，具体参考"智能合约定义"一章。
+    offline function M:hello(arg: string)
+        emit hello(arg)
+        return("hello "..arg)
+    end
 
 
-## 3. 选择一个编辑器
+## 3. 编译、注册及调用
 
-我们提供了一个glua的IDE供开发使用，并提供和区块链的集成可以用来开发智能合约。但是也可以用各人自己喜欢的编辑器比如Visual Studio Code, Vim等编写，没有特别要求。
-但是还是更推荐使用我们提供的IDE工具，因为是为合约的开发定制化的开发工具，集成了很多的功能，可以为你省去了很多命令行操作的繁琐动作。
+1. 点击工具栏的"编译"按钮完成代码编译，生成".gpc"文件并输出该文件所在路径。
+2. 点击工具栏的"注册"按钮把编译好的合约代码注册上链。注意在弹出的对话框选择正确的合约代码文件。记录下返回信息中的 `contract_id`。
+3. 点击工具栏的"控制台"按钮，执行以下语句(请替换`contract_id`为实际值)。
+```
+    invoke_contract_offline "nathan" "contract_id" "hello" "123"
+```
+4. 控制台输出如下：
 
+```
+    >>>invoke_contract_offline "nathan" "HXTCQtETHn1MUjN3hJNTmWKe9gwFrZWFH12mN" "hello" "123"
+    {
+        "id": 2192,
+        "jsonrpc": "2.0",
+        "result": "hello 123"
+    }
+```
+
+通过以上简单几步，我们就创建了一个智能合约，并注册到测试链上。最后通过调用该智能合约的接口，我们获得了想要的输出。
 
 ## 4. 开始用glua编写智能合约
 
+通过以上简单的例子我们有了一个直观的感受。智能合约的开发过程非常简单。而开发实际的应用则需要复杂的业务逻辑，也可能要用到更为复杂的数据结构和控制流程。这里可以参考具体的语法参考文档。
+
 [语言参考](/zh/dev/glua/language-reference)
 
-## 5. 把智能合约注册到区块链上使用
 
+## 5. 编写应用
 
-另见API说明文档
+仅仅开发智能合约并不能完全满足用户的需求。对于普通用户来说，简单易用的界面是必需的，因此除了开发智能合约，一个产品化的DAPP还需要一个产品话的应用端。
+对于应用端程序来说，通过标准的RPC接口就可以访问智能合约的API。具体请参考[RPC 命令参考](/zh/dev/rpc-reference/rpc-introduce)。
+也可以参考一个实际的[DAPP例子](/zh/dev/dapp)。

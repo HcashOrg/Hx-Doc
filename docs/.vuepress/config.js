@@ -237,15 +237,22 @@ module.exports = {
                             children: [
                                 '/zh/dev/rpc-reference/rpc-introduce',
                                 '/zh/dev/rpc-reference/rpc-about',
+                                ['/zh/dev/rpc-reference/rpc-get_account', 'get_account'],
                                 ['/zh/dev/rpc-reference/rpc-get_account_addr', 'get_account_addr'],
                                 ['/zh/dev/rpc-reference/rpc-get_account_balances', 'get_account_balances'],
+                                ['/zh/dev/rpc-reference/rpc-get_account_by_addr', 'get_account_by_addr'],
                                 ['/zh/dev/rpc-reference/rpc-get_account_count', 'get_account_count'],
+                                ['/zh/dev/rpc-reference/rpc-get_account_id', 'get_account_id'],
+                                ['/zh/dev/rpc-reference/rpc-get_account_lock_balance', 'get_account_lock_balance'],
                                 ['/zh/dev/rpc-reference/rpc-get_asset', 'get_asset'],
+                                ['/zh/dev/rpc-reference/rpc-get_asset_imp', 'get_asset_imp'],
+                                ['/zh/dev/rpc-reference/rpc-get_contract_info', 'get_contract_info'],
                                 ['/zh/dev/rpc-reference/rpc-get_first_contract_address', 'get_first_contract_address'],
                                 ['/zh/dev/rpc-reference/rpc-get_global_properties', 'get_global_properties'],
                                 ['/zh/dev/rpc-reference/rpc-get-ntp-info', 'get_ntp_info'],
                                 '/zh/dev/rpc-reference/rpc-help',
                                 '/zh/dev/rpc-reference/rpc-info',
+                                ['/zh/dev/rpc-reference/rpc-invoke_contract_offline', 'invoke_contract_offline'],
                                 '/zh/dev/rpc-reference/rpc-is-locked',
                                 ['/zh/dev/rpc-reference/rpc-network_get_connected_peers', 'network_get_connected_peers'],
                                 ['/zh/dev/rpc-reference/rpc-ntp_update_time', 'ntp_update_time'],
@@ -256,6 +263,7 @@ module.exports = {
                         {
                             title: '智能合约开发',
                             children: [
+                                ['/zh/dev/contract-intro', '简介'],
                                 {
                                     title: 'glua 语言',
                                     children: [
@@ -287,9 +295,8 @@ module.exports = {
                                         ['/zh/dev/glua/language-syntax/module', '模块'],
                                         ['/zh/dev/glua/library-reference', '库函数参考'],
                                         {
-                                            title: '智能合约',
+                                            title: '使用glua编写智能合约',
                                             children: [
-                                                ['/zh/dev/glua/language-syntax/contract-intro', '智能合约介绍'],
                                                 ['/zh/dev/glua/language-syntax/contract-demo', '智能合约例子'],
                                                 ['/zh/dev/glua/language-syntax/contract-def', '智能合约定义'],
                                                 ['/zh/dev/glua/language-syntax/storage-operations', 'storage操作'],
@@ -306,7 +313,7 @@ module.exports = {
                                     ]
                                 },
                                 {
-                                    title: '使用 C# to 编写智能合约',
+                                    title: '使用 C# 编写智能合约',
                                     children: [
                                         ['/zh/dev/glua/gsharpc/gsharpc-intro', 'gsharpc介绍'],
                                         ['/zh/dev/glua/gsharpc/gsharpc-tutorial', 'gsharpc使用指南'],
