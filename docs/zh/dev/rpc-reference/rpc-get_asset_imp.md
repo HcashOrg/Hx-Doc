@@ -23,69 +23,83 @@ get_asset_imp 命令通过资产符号查询资产信息。
     "id": 1,
     "jsonrpc": "2.0",
     "result": {
-        "id": "1.2.38",
-        "membership_expiration_date": "1970-01-01T00:00:00",
-        "registrar": "1.2.4",
-        "referrer": "1.2.0",
-        "lifetime_referrer": "1.2.0",
-        "network_fee_percentage": 2000,
-        "lifetime_referrer_fee_percentage": 3000,
-        "referrer_rewards_percentage": 0,
-        "name": "nathan",
-        "addr": "HXTNa5ZMhvFYXSYN4E2sAKqDVBKZgU9AGEBfZ",
-        "owner": {
-            "weight_threshold": 1,
-            "account_auths": [],
-            "key_auths": [
-                [
-                    "HX6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV",
-                    1
-                ]
-            ],
-            "address_auths": []
-        },
-        "active": {
-            "weight_threshold": 1,
-            "account_auths": [],
-            "key_auths": [
-                [
-                    "HX6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV",
-                    1
-                ]
-            ],
-            "address_auths": []
-        },
+        "id": "1.3.0",
+        "symbol": "HX",
+        "precision": 5,
+        "issuer": "1.2.3",
         "options": {
-            "memo_key": "HX6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV",
-            "voting_account": "1.2.5",
-            "num_witness": 0,
-            "num_committee": 0,
-            "votes": [],
-            "miner_pledge_pay_back": 10,
+            "max_supply": "100000000000",
+            "market_fee_percent": 0,
+            "max_market_fee": "10000000000000000",
+            "issuer_permissions": 0,
+            "flags": 0,
+            "core_exchange_rate": {
+                "base": {
+                    "amount": 1,
+                    "asset_id": "1.3.0"
+                },
+                "quote": {
+                    "amount": 1,
+                    "asset_id": "1.3.0"
+                }
+            },
+            "whitelist_authorities": [],
+            "blacklist_authorities": [],
+            "whitelist_markets": [],
+            "blacklist_markets": [],
+            "description": "",
             "extensions": []
         },
-        "statistics": "2.9.38",
-        "whitelisting_accounts": [],
-        "blacklisting_accounts": [],
-        "whitelisted_accounts": [],
-        "blacklisted_accounts": [],
-        "owner_special_authority": [
-            0,
-            {}
-        ],
-        "active_special_authority": [
-            0,
-            {}
-        ],
-        "top_n_control_flags": 0,
-        "online": "true"
+        "dynamic_asset_data_id": "2.3.0",
+        "feeds": [],
+        "publishers": [],
+        "current_feed": {
+            "settlement_price": {
+                "base": {
+                    "amount": 0,
+                    "asset_id": "1.3.0"
+                },
+                "quote": {
+                    "amount": 0,
+                    "asset_id": "1.3.0"
+                }
+            },
+            "maintenance_collateral_ratio": 1750,
+            "maximum_short_squeeze_ratio": 1500,
+            "core_exchange_rate": {
+                "base": {
+                    "amount": 0,
+                    "asset_id": "1.3.0"
+                },
+                "quote": {
+                    "amount": 0,
+                    "asset_id": "1.3.0"
+                }
+            }
+        },
+        "current_feed_publication_time": "1970-01-01T00:00:00",
+        "allow_withdraw_deposit": true,
+        "dynamic_data": {
+            "id": "2.3.0",
+            "current_supply": "620005316300000",
+            "confidential_supply": 0,
+            "accumulated_fees": 0,
+            "fee_pool": 0,
+            "withdraw_limition": 0,
+            "gas_price": "5000000000"
+        }
     }
 }
 ```
 
 > 返回值
 
-- **id**: 账户 id
-- **addr**: 账户地址
-- **name**: 账户名
-
+- **id**: 资产 id
+- **symbol**: 资产符号
+- **precision**: 精度
+- **issuer**: 发行人
+- **options**: 资产选项
+  - **max_supply**: 最大供应量
+- **dynamic_data**: 动态数据
+  - **current_supply**: 当前供应量
+  - **gas_price**: gas 价格

@@ -9,5 +9,8 @@ RPC 是外部应用程序跟 HX 链交互的基本接口。HX 链提供的 RPC �
 1. 请参考[启动 RPC 服务](/zh/dev/docking-exchange.html#如何启动rpc服务端监听)
 2. 请参考[RPC 规范](/zh/dev/docking-exchange.html#RPC使用规范)
 
+> 名词
+
+1. `智能合约 id`：，每个智能合约都使用一个唯一的 hash 值来表示，我们称之为`智能合约 id`，也称为`智能合约地址`。
 
 本章提供 RPC 接口的完整参考手册。文档如有描述不符或不够详细的情况，请在github发起[文档issue](https://github.com/HcashOrg/Hx-Doc/issues)由官方进行修订。
